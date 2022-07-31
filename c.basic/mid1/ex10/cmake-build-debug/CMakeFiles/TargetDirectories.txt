@@ -1,0 +1,3 @@
+C:/E/embedded/repo/Master-Embedded-System-Diploma/c.basic/mid1/ex10/cmake-build-debug/CMakeFiles/ex10.dir
+C:/E/embedded/repo/Master-Embedded-System-Diploma/c.basic/mid1/ex10/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/E/embedded/repo/Master-Embedded-System-Diploma/c.basic/mid1/ex10/cmake-build-debug/CMakeFiles/rebuild_cache.dir
