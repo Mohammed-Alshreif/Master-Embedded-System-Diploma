@@ -1,0 +1,76 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x00000000         0x04000000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00010000                . = 0x10000
+
+.startup        0x00010000       0x10
+ startup.o(.text)
+ .text          0x00010000       0x10 startup.o
+                0x00010000                reset
+
+.text           0x00010010       0x70
+ *(.text)
+ .text          0x00010010       0x1c app.o
+                0x00010010                main
+ .text          0x0001002c       0x54 uart.o
+                0x0001002c                dend_uart0
+
+.glue_7         0x00010080        0x0
+ .glue_7        0x00010080        0x0 linker stubs
+
+.glue_7t        0x00010080        0x0
+ .glue_7t       0x00010080        0x0 linker stubs
+
+.vfp11_veneer   0x00010080        0x0
+ .vfp11_veneer  0x00010080        0x0 linker stubs
+
+.v4_bx          0x00010080        0x0
+ .v4_bx         0x00010080        0x0 linker stubs
+
+.iplt           0x00010080        0x0
+ .iplt          0x00010080        0x0 startup.o
+
+.rel.dyn        0x00010080        0x0
+ .rel.iplt      0x00010080        0x0 startup.o
+
+.data           0x00010080       0x64
+ *(.data)
+ .data          0x00010080        0x0 startup.o
+ .data          0x00010080       0x64 app.o
+                0x00010080                x
+ .data          0x000100e4        0x0 uart.o
+
+.igot.plt       0x000100e4        0x0
+ .igot.plt      0x000100e4        0x0 startup.o
+
+.bss            0x000100e4        0x0
+ *(.bss)
+ .bss           0x000100e4        0x0 startup.o
+ .bss           0x000100e4        0x0 app.o
+ .bss           0x000100e4        0x0 uart.o
+                0x000110e4                . = (. + 0x1000)
+                0x000110e4                stack_top = .
+LOAD app.o
+LOAD uart.o
+LOAD startup.o
+OUTPUT(mohammed.elf elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x2e
+ .ARM.attributes
+                0x00000000       0x22 startup.o
+ .ARM.attributes
+                0x00000022       0x32 app.o
+ .ARM.attributes
+                0x00000054       0x32 uart.o
+
+.comment        0x00000000       0x7e
+ .comment       0x00000000       0x7e app.o
+                                 0x7f (size before relaxing)
+ .comment       0x0000007e       0x7f uart.o

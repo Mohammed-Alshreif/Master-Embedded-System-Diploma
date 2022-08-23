@@ -1,0 +1,6 @@
+0001002c T dend_uart0
+00010010 T main
+00010000 T reset
+000110e0 D stack_top
+00010008 t stop
+0001007c D x
