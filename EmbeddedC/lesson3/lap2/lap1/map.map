@@ -1,0 +1,87 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x08000000         0x00020000         xr
+sram             0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x08000000       0x94
+ *(.vectors*)
+ .vectors       0x08000000       0x10 startup.o
+ *(.text*)
+ .text          0x08000010       0x7c main.o
+                0x08000010                main
+ .text          0x0800008c        0x8 startup.o
+ *(.rodata)
+
+.glue_7         0x08000094        0x0
+ .glue_7        0x08000094        0x0 linker stubs
+
+.glue_7t        0x08000094        0x0
+ .glue_7t       0x08000094        0x0 linker stubs
+
+.vfp11_veneer   0x08000094        0x0
+ .vfp11_veneer  0x08000094        0x0 linker stubs
+
+.v4_bx          0x08000094        0x0
+ .v4_bx         0x08000094        0x0 linker stubs
+
+.iplt           0x08000094        0x0
+ .iplt          0x08000094        0x0 main.o
+
+.rel.dyn        0x08000094        0x0
+ .rel.iplt      0x08000094        0x0 main.o
+
+.data           0x08000094        0x0
+ *(.data)
+ .data          0x08000094        0x0 main.o
+ .data          0x08000094        0x0 startup.o
+
+.igot.plt       0x08000094        0x0
+ .igot.plt      0x08000094        0x0 main.o
+
+.bss            0x20000000        0x0
+ *(.bss)
+ .bss           0x20000000        0x0 main.o
+ .bss           0x20000000        0x0 startup.o
+LOAD main.o
+LOAD startup.o
+OUTPUT(led_togle.elf elf32-littlearm)
+
+.debug_info     0x00000000      0x144
+ .debug_info    0x00000000      0x144 main.o
+
+.debug_abbrev   0x00000000       0xf3
+ .debug_abbrev  0x00000000       0xf3 main.o
+
+.debug_loc      0x00000000       0x38
+ .debug_loc     0x00000000       0x38 main.o
+
+.debug_aranges  0x00000000       0x20
+ .debug_aranges
+                0x00000000       0x20 main.o
+
+.debug_line     0x00000000      0x12c
+ .debug_line    0x00000000      0x12c main.o
+
+.debug_str      0x00000000      0x138
+ .debug_str     0x00000000      0x138 main.o
+                                0x175 (size before relaxing)
+
+.comment        0x00000000       0x7e
+ .comment       0x00000000       0x7e main.o
+                                 0x7f (size before relaxing)
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x33 main.o
+ .ARM.attributes
+                0x00000033       0x21 startup.o
+
+.debug_frame    0x00000000       0x2c
+ .debug_frame   0x00000000       0x2c main.o
