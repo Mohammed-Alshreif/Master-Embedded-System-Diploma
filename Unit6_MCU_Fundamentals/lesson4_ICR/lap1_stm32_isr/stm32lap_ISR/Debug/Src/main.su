@@ -1,0 +1,2 @@
+main.c:30:5:main	16	static
+main.c:63:6:EXTI0_IRQHandler	4	static
