@@ -1,0 +1,565 @@
+14:19:58 **** Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c:27:2: error: expected specifier-qualifier-list before 'res1'
+  res1 :1;
+  ^~~~
+../Src/main.c:32:23: error: initializer element is not constant
+ volatile PORT* portA =(volatile PORT*)(GPIOA_ODR);
+                       ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:21:35 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:34:23: error: initializer element is not constant
+ volatile PORT* portA =(volatile PORT*)(GPIOA_ODR);
+                       ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:25:59 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-size   GPIO_2led.elf 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+   text	   data	    bss	    dec	    hex	filename
+    636	      8	   1568	   2212	    8a4	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+14:28:23 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    732	     12	   1564	   2308	    904	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.list
+Finished building: GPIO_2led.bin
+ 
+ 
+14:30:59 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    732	     12	   1564	   2308	    904	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.list
+Finished building: GPIO_2led.bin
+ 
+ 
+14:38:00 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    732	     12	   1564	   2308	    904	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+15:08:34 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:41:15: error: invalid digit "2" in binary constant
+  GPIOA_CRL |=(0b01220122<<0);
+               ^~~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:09:00 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:41:15: error: invalid digit "2" in binary constant
+  GPIOA_CRL |=(0b01220122<<0);
+               ^~~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:10:05 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1564	   2304	    900	GPIO_2led.elf
+Finished building: default.size.stdout
+Finished building: GPIO_2led.list
+ 
+Finished building: GPIO_2led.bin
+ 
+ 
+15:26:28 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1564	   2304	    900	GPIO_2led.elf
+Finished building: default.size.stdout
+Finished building: GPIO_2led.list
+ 
+Finished building: GPIO_2led.bin
+ 
+ 
+15:28:57 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:25:58: error: invalid suffix "h" on integer constant
+ #define GPIOA_IDR *((volatile unsigned long*)(PORTA_BASE+0x08h))
+                                                          ^
+../Src/main.c:46:7: note: in expansion of macro 'GPIOA_IDR'
+   if((GPIOA_IDR>>0)&1==1){
+       ^~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:30:04 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:25:58: error: invalid suffix "h" on integer constant
+ #define GPIOA_IDR *((volatile unsigned long*)(PORTA_BASE+0x08h))
+                                                          ^
+../Src/main.c:46:9: note: in expansion of macro 'GPIOA_IDR'
+   if((( GPIOA_IDR >> 0)&1)==1){
+         ^~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:34:40 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:25:58: error: invalid suffix "h" on integer constant
+ #define GPIOA_IDR *((volatile unsigned long*)(PORTA_BASE+0x08h))
+                                                          ^
+../Src/main.c:46:8: note: in expansion of macro 'GPIOA_IDR'
+   if(((GPIOA_IDR &(1<<0))>>0)==1){
+        ^~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:38:59 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:26:57: error: invalid suffix "h" on integer constant
+ #define GPIOA_IDR *((volatile unsigned int*)(PORTA_BASE+0x08h))
+                                                         ^
+../Src/main.c:47:8: note: in expansion of macro 'GPIOA_IDR'
+   if(((GPIOA_IDR &(1<<0))>>0)==1){
+        ^~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:40:05 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	     12	   1564	   2300	    8fc	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+15:42:57 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	     12	   1564	   2300	    8fc	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.list
+Finished building: GPIO_2led.bin
+ 
+ 
+15:44:35 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	     12	   1564	   2300	    8fc	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.list
+Finished building: GPIO_2led.bin
+ 
+ 
+15:45:29 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1564	   2304	    900	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+15:51:27 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    728	     12	   1564	   2304	    900	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+15:53:17 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	     12	   1564	   2300	    8fc	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.list
+Finished building: GPIO_2led.bin
+ 
+ 
+15:59:59 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	     12	   1564	   2300	    8fc	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.list
+Finished building: GPIO_2led.bin
+ 
+ 
+16:02:30 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	     12	   1564	   2300	    8fc	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+16:04:17 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	     12	   1564	   2300	    8fc	GPIO_2led.elf
+Finished building: default.size.stdout
+Finished building: GPIO_2led.list
+ 
+Finished building: GPIO_2led.bin
+ 
+ 
+23:07:59 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:41:15: error: invalid suffix "b" on integer constant
+  GPIOA_CRL |=(0b 0001 1000 0001 1000<<0);
+               ^~
+../Src/main.c:41:18: error: expected ')' before numeric constant
+  GPIOA_CRL |=(0b 0001 1000 0001 1000<<0);
+                  ^~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+23:08:08 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:41:15: error: invalid suffix "b" on integer constant
+  GPIOA_CRL |=(0b 0001100000011000<<0);
+               ^~
+../Src/main.c:41:18: error: expected ')' before numeric constant
+  GPIOA_CRL |=(0b 0001100000011000<<0);
+                  ^~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+23:08:19 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	     12	   1564	   2300	    8fc	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.list
+Finished building: GPIO_2led.bin
+ 
+ 
+23:10:10 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    692	     12	   1564	   2268	    8dc	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+23:13:59 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    720	     12	   1564	   2296	    8f8	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+23:15:02 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    720	     12	   1564	   2296	    8f8	GPIO_2led.elf
+Finished building: default.size.stdout
+Finished building: GPIO_2led.list
+Finished building: GPIO_2led.bin
+ 
+ 
+ 
+23:16:22 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    720	     12	   1564	   2296	    8f8	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+23:17:39 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    720	     12	   1564	   2296	    8f8	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+23:19:14 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    720	     12	   1564	   2296	    8f8	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+23:24:26 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    736	     12	   1564	   2312	    908	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+23:30:56 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    768	     16	   1568	   2352	    930	GPIO_2led.elf
+Finished building: default.size.stdout
+Finished building: GPIO_2led.list
+Finished building: GPIO_2led.bin
+ 
+ 
+ 
+23:32:51 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    752	     16	   1568	   2336	    920	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
+23:32:54 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    752	     16	   1568	   2336	    920	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+23:35:15 **** Incremental Build of configuration Debug for project GPIO_2led ****
+make -j16 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "GPIO_2led.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\Unit7_MCU_Essential_Peripherals_lesson1_GPIO\lesson1lap1\GPIO_2led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_2led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_2led.elf
+ 
+arm-none-eabi-objdump -h -S  GPIO_2led.elf  > "GPIO_2led.list"
+arm-none-eabi-objcopy  -O binary  GPIO_2led.elf  "GPIO_2led.bin"
+arm-none-eabi-size   GPIO_2led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	     16	   1568	   2356	    934	GPIO_2led.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_2led.bin
+Finished building: GPIO_2led.list
+ 
+ 
