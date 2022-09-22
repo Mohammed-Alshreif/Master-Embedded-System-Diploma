@@ -1,0 +1,5 @@
+"STM32f103c6_DRIVERS/GPIO_DRIVER.o"
+"Src/main.o"
+"Src/syscalls.o"
+"Src/sysmem.o"
+"Startup/startup_stm32f103c6tx.o"
