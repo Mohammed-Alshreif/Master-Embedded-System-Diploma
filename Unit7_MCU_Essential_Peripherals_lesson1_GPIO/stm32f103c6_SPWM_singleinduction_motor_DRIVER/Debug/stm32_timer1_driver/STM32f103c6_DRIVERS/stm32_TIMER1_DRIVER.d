@@ -1,0 +1,2 @@
+stm32_timer1_driver/STM32f103c6_DRIVERS/stm32_TIMER1_DRIVER.o: \
+ ../stm32_timer1_driver/STM32f103c6_DRIVERS/stm32_TIMER1_DRIVER.c
