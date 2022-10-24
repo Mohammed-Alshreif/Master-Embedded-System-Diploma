@@ -1,0 +1,12 @@
+main.c:55:6:timer_INIT_CH2	24	static
+main.c:123:6:timer_INIT_CH1	24	static
+main.c:202:6:timer_INIT_CH3	24	static
+main.c:282:6:timer2_INIT_CH1	16	static
+main.c:308:6:timer3_INIT_CH2	24	static
+main.c:376:6:timer3_INIT_CH1	24	static
+main.c:455:6:timer3_INIT_CH3	24	static
+main.c:536:6:pwm_INIT	16	static
+main.c:578:6:frec_controle	16	static
+main.c:628:6:_delay_mss	24	static
+main.c:634:5:main	16	static
+main.c:692:6:TIM2_IRQHandler	16	static
