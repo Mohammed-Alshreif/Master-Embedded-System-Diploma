@@ -13,13 +13,13 @@ int arr_string_lingh[3];
 char * arr_data[3];
 uint16_t arr_data_RES[3];
 
-void(* GP_reseve_Callback)(void);
+void(* GP_reseve_Callback[3])(void);
 //===============================================================
 void send_string (){
 
 }
 //===============================================================
-void USART_INIT(USART_typeDef* USARTx,uint32_t mode,uint32_t word_length,uint8_t stop_bits,uint32_t baud_rate,uint32_t parity,uint32_t CLCK){
+void USART_INIT(USART_typeDef* USARTx,uint32_t mode,uint32_t word_length,uint32_t stop_bits,uint32_t baud_rate,uint32_t parity,uint32_t CLCK){
 
 	if(USARTx ==USART1){
 		USART1_Clock_Enable();
@@ -31,7 +31,7 @@ void USART_INIT(USART_typeDef* USARTx,uint32_t mode,uint32_t word_length,uint8_t
 		pinmode(GPIOA, pin10,GPIO_MODE_INTPUT_AF);
 		arr[0]=USART1;
 	}
-	if(USARTx ==USART2){
+	else if(USARTx ==USART2){
 		USART2_Clock_Enable();
 		GPIOA_Clock_Enable();
 		NVIC_USART2_interrupt_Enable;
@@ -41,7 +41,7 @@ void USART_INIT(USART_typeDef* USARTx,uint32_t mode,uint32_t word_length,uint8_t
 		pinmode(GPIOA, pin3,GPIO_MODE_INTPUT_AF);
 		arr[1]=USART2;
 	}
-	if(USARTx ==USART3){
+	else{
 		USART3_Clock_Enable();
 		GPIOB_Clock_Enable();
 		NVIC_USART3_interrupt_Enable;
@@ -173,8 +173,16 @@ void USART_SEND_STRING(USART_typeDef* USARTx,char* data){
 }
 
 void USART_READ_INTERRUPT_EN(USART_typeDef* USARTx,void *calback(void)){
-	GP_reseve_Callback = calback;
 
+	if(USARTx==USART1){
+		GP_reseve_Callback[0] = calback;
+	}
+	else if(USARTx==USART2){
+		GP_reseve_Callback[1] = calback;
+	}
+	else{
+		GP_reseve_Callback[2] = calback;
+	}
 	//RX INTRRUPT
 	//Bit 5 RXNEIE: RXNE interrupt enable
 	//This bit is set and cleared by software.
@@ -254,17 +262,18 @@ void USART1_IRQHandler(){
 		}
 		//pinwrite(GPIOB, pin1,HIGH);
 
-		GP_reseve_Callback();
-		for(long i=0;i<(10000);i++);
+		GP_reseve_Callback[0]();
+
+		for(long i=0;i<(20000);i++);
 		//pinwrite(GPIOB, pin1,LOW);
 		arr[0]->USART_SR &=~(1<<5);//clear
 		//arr[0]->USART_CR1 &=~Received_data_ready_to_be_read;
-		if((arr[0]->USART_SR>>3)&1){
-			volatile uint16_t w=USART1->USART_DR;
+		if(((arr[0]->USART_SR>>3)&1)|1){
+			volatile uint16_t d=USART1->USART_DR;
 			arr[0]->USART_SR &=~(1<<5);
 		}
 	}
-	if((arr[0]->USART_SR>>3)&1){
+	if(((arr[0]->USART_SR>>3)&1)|1){
 		volatile uint16_t w =USART1->USART_DR;
 		arr[0]->USART_SR &=~(1<<5);
 	}
@@ -313,11 +322,11 @@ void USART2_IRQHandler(){
 			if(((arr[1]->USART_CR1>>10)&1) ==1){
 				//Bit 10 PCE: Parity control enable
 				// 1: Parity control enabled
-				arr_data_RES[0] =(arr[1]->USART_DR & (uint16_t)0xff);
+				arr_data_RES[1] =(arr[1]->USART_DR & (uint16_t)0xff);
 			}
 			else{
 				//0: Parity control disabled
-				arr_data_RES[0]=arr[1]->USART_DR;
+				arr_data_RES[1]=arr[1]->USART_DR;
 			}
 		}
 		else{
@@ -326,23 +335,27 @@ void USART2_IRQHandler(){
 			if(((arr[1]->USART_CR1>>10)&1) ==1){
 				//Bit 10 PCE: Parity control enable
 				// 1: Parity control enabled
-				arr_data_RES[0] =(arr[1]->USART_DR & (uint16_t)0x7f);
+				arr_data_RES[1] =(arr[1]->USART_DR & (uint16_t)0x7f);
 			}
 			else{
 				//0: Parity control disabled
-				arr_data_RES[0] =(arr[1]->USART_DR & (uint16_t)0xff);
+				arr_data_RES[1] =(arr[1]->USART_DR & (uint16_t)0xff);
 			}
 		}
 		//pinwrite(GPIOB, pin1,HIGH);
 
-		GP_reseve_Callback();
-		for(long i=0;i<(10000);i++);
+		GP_reseve_Callback[1]();
+		for(long i=0;i<(20000);i++);
 		//pinwrite(GPIOB, pin1,LOW);
 		arr[1]->USART_SR &=~(1<<5);//clear
 		//arr[1]->USART_CR1 &=~Received_data_ready_to_be_read;
+		if(((arr[1]->USART_SR>>3)&1)|1){
+			volatile uint16_t d =USART2->USART_DR;
+			arr[1]->USART_SR &=~(1<<5);
+		}
 	}
-	if((arr[1]->USART_SR>>3)&1){
-		arr_data_RES[0]=USART1->USART_DR;
+	if(((arr[1]->USART_SR>>3)&1)|1){
+		volatile uint16_t w =USART2->USART_DR;
 		arr[1]->USART_SR &=~(1<<5);
 	}
 	//	_delay_ms(500);
@@ -390,11 +403,11 @@ void USART3_IRQHandler(){
 			if(((arr[2]->USART_CR1>>10)&1) ==1){
 				//Bit 10 PCE: Parity control enable
 				// 1: Parity control enabled
-				arr_data_RES[0] =(arr[2]->USART_DR & (uint16_t)0xff);
+				arr_data_RES[2] =(arr[2]->USART_DR & (uint16_t)0xff);
 			}
 			else{
 				//0: Parity control disabled
-				arr_data_RES[0]=arr[2]->USART_DR;
+				arr_data_RES[2]=arr[2]->USART_DR;
 			}
 		}
 		else{
@@ -403,23 +416,27 @@ void USART3_IRQHandler(){
 			if(((arr[2]->USART_CR1>>10)&1) ==1){
 				//Bit 10 PCE: Parity control enable
 				// 1: Parity control enabled
-				arr_data_RES[0] =(arr[2]->USART_DR & (uint16_t)0x7f);
+				arr_data_RES[2] =(arr[2]->USART_DR & (uint16_t)0x7f);
 			}
 			else{
 				//0: Parity control disabled
-				arr_data_RES[0] =(arr[2]->USART_DR & (uint16_t)0xff);
+				arr_data_RES[2] =(arr[2]->USART_DR & (uint16_t)0xff);
 			}
 		}
 		//pinwrite(GPIOB, pin1,HIGH);
 
-		GP_reseve_Callback();
-		for(long i=0;i<(10000);i++);
+		GP_reseve_Callback[2]();
+		for(long i=0;i<(20000);i++);
 		//pinwrite(GPIOB, pin1,LOW);
 		arr[2]->USART_SR &=~(1<<5);//clear
 		//arr[2]->USART_CR1 &=~Received_data_ready_to_be_read;
+		if(((arr[2]->USART_SR>>3)&1)|1){
+			volatile uint16_t d =USART3->USART_DR;
+			arr[2]->USART_SR &=~(1<<5);
+		}
 	}
-	if((arr[2]->USART_SR>>3)&1){
-		arr_data_RES[0]=USART1->USART_DR;
+	if(((arr[2]->USART_SR>>3)&1)|1){
+		volatile uint16_t w =USART3->USART_DR;
 		arr[2]->USART_SR &=~(1<<5);
 	}
 	//	_delay_ms(500);

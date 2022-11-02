@@ -81,7 +81,7 @@
 //10: 2 Stop bits
 //11: 1.5 Stop bit
 //The 0.5 Stop bit and 1.5 Stop bit are not available for UART4 & UART5
-#define stop_bits_1  		  (uint32_t)(0)
+#define stop_bits_1           (uint32_t)(0)
 #define stop_bits_HALF        (uint32_t)(1<<12)
 #define stop_bits_2           (uint32_t)(1<<13)
 #define stop_bits_ONE_HALF    (uint32_t)(0b11<<12)
@@ -107,7 +107,7 @@
 //======= APIs =======
 //---------------------
 
-void USART_INIT(USART_typeDef* USARTx,uint32_t mode,uint32_t word_length,uint8_t stop_bits,uint32_t baud_rate,uint32_t parity,uint32_t CLCK);
+void USART_INIT(USART_typeDef* USARTx,uint32_t mode,uint32_t word_length,uint32_t stop_bits,uint32_t baud_rate,uint32_t parity,uint32_t CLCK);
 void USART_READ_INTERRUPT_EN(USART_typeDef* USARTx,void *calback(void));
 void USART_RX_INTERRUPT_DE(USART_typeDef* USARTx);
 void USART_SEND(USART_typeDef* USARTx,uint16_t* data);
