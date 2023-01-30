@@ -1,0 +1,7 @@
+main.c:11:6:echo	8	static
+main.c:27:6:echo2	8	static
+main.c:43:6:ultrasonic_INIT	24	static
+main.c:50:6:ultrasonic_INIT2	24	static
+main.c:58:6:distance	8	static
+main.c:65:6:distance2	8	static
+main.c:72:5:main	8	static
