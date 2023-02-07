@@ -1,0 +1,51 @@
+#include "stm32f103c6_USART_SRIVER.h"
+#include "STM32_TIMERS_DRIVER.h"
+#include "GPIO_DRIVER.h"
+#include "stm32f103c6_ISR_DRIVER.h"
+#include "stm32_speed_DRIVER.h"
+#include "I2C_LCD.h"
+
+#define clk 8000000
+
+uint8_t flagA,flagB;
+int X;
+char text[4]={0};
+void intA(){
+	if((flagB==1)&&(flagA==0)){
+		flagB=0;
+		flagA=0;
+		++X;
+
+	}
+	else{
+		flagA=1;
+	}
+}
+void intB(){
+	if((flagA==1)&&(flagB==0)){
+		flagA=0;
+		flagB=0;
+		--X;
+	}
+	else{
+		flagB=1;
+	}
+}
+
+int main (){
+	GPIOA_Clock_Enable();
+	GPIOB_Clock_Enable();
+	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_8, stop_bits_1, baud_rate_9600, parity_none,clk);
+	EXTI(GPIOA,pin5,EXTI_Trigger_Falling,intB);
+	EXTI(GPIOA,pin4,EXTI_Trigger_Falling,intA);
+	while(1){
+		USART_SEND_STRING(USART1,"\n ");
+		delay(300, U_ms, clk);
+		sprintf(text,"%d",X);
+		USART_SEND_STRING(USART1,text);
+		delay(300, U_ms, clk);
+
+	}
+
+	return 0;
+}

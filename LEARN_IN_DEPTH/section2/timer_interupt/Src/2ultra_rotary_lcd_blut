@@ -1,0 +1,232 @@
+#include "stm32f103c6_USART_SRIVER.h"
+#include "STM32_TIMERS_DRIVER.h"
+#include "GPIO_DRIVER.h"
+#include "stm32f103c6_ISR_DRIVER.h"
+#include "stm32_speed_DRIVER.h"
+#include "I2C_LCD.h"
+
+#define clk 36000000
+#define address 0x3f
+
+int coun=10;
+uint32_t v=0;
+uint32_t v2=0;
+
+char text[4]={0};
+char text2 [4]={0};
+char text3 [5]={0};
+uint8_t flagecho=0;
+uint8_t flagecho2=0;
+
+
+int incoder_count =0;
+char flag_A=0,flag_B=0;
+
+
+void echo(void){
+	//TogglePin(GPIOB, pin0);
+	if(flagecho==0){
+		flagecho=1;
+		TIME_CALCULATION(clk, TIMER_START);
+
+	}
+	else{
+		//USART_SEND_STRING(USART1,"1:: \n ");
+		flagecho=0;
+		v=TIME_CALCULATION(clk, TIMER_STOP);
+		sprintf(text,"%d",((v)*170)/10000);
+		I2C_LCD_setcerser(I2C1, address,0,0);
+		I2C_LCD_write_string(I2C1,"s1= ",address);
+		I2C_LCD_write_INTnumber(I2C1, address,((v)*170)/10000);
+		USART_SEND_STRING(USART1,text);
+
+	}
+}
+void echo2(void){
+	TogglePin(GPIOB, pin1);
+	if(flagecho2==0){
+		flagecho2=1;
+		TIME_CALCULATION(clk, TIMER_START);
+
+	}
+	else{
+		//USART_SEND_STRING(USART1,"2:: \n ");
+		flagecho2=0;
+		v2=TIME_CALCULATION(clk, TIMER_STOP);
+		sprintf(text2,"%d",((v2)*170)/10000);
+		I2C_LCD_setcerser(I2C1, address,1,0);
+		I2C_LCD_write_string(I2C1,"s2= ",address);
+		I2C_LCD_write_INTnumber(I2C1, address,((v2)*170)/10000);
+		USART_SEND_STRING(USART1,text2);
+
+	}
+}
+void ultrasonic_INIT(){
+	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_8, stop_bits_1, baud_rate_9600, parity_none,clk);
+	GPIOA_Clock_Enable();
+	GPIOB_Clock_Enable();
+	pinmode(GPIOB, pin11,GPIO_MODE_OUTPUT_push_pull_Speed2);
+	EXTI(GPIOA,pin1,EXTI_Trigger_RisingAndFalling,echo);
+}
+void ultrasonic_INIT2(){
+	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_8, stop_bits_1, baud_rate_9600, parity_none,clk);
+	GPIOA_Clock_Enable();
+	GPIOB_Clock_Enable();
+	pinmode(GPIOB, pin0,GPIO_MODE_OUTPUT_push_pull_Speed2);
+	pinmode(GPIOB, pin1,GPIO_MODE_OUTPUT_push_pull_Speed2);
+	EXTI(GPIOA,pin2,EXTI_Trigger_RisingAndFalling,echo2);
+}
+void distance (){
+	pinwrite(GPIOB, pin11,HIGH);
+	delay(10, U_ms,clk);
+	pinwrite(GPIOB, pin11,LOW);
+	USART_SEND_STRING(USART1,"\n");
+
+}
+void distance2 (){
+	pinwrite(GPIOB, pin0,HIGH);
+	delay(10, U_ms,clk);
+	pinwrite(GPIOB, pin0,LOW);
+	USART_SEND_STRING(USART1,"\n");
+
+}
+
+
+
+
+void rotary_incoder_A(){
+	if((flag_B==1)&&(flag_A==0)){
+		incoder_count++;
+		flag_A=0;
+		flag_B=0;
+	}
+	else{
+		flag_A=1;
+		flag_B=0;
+	}
+}
+void rotary_incoder_B(){
+	if((flag_A==1)&&(flag_B==0)){
+		incoder_count--;
+		flag_A=0;
+		flag_B=0;
+	}
+	else{
+		flag_B=1;
+		flag_A=0;
+	}
+}
+int main (){
+	MCAL_speed_init(CLK_SORC_IN_CLK8MHz, mood_FAST_MOOD_36MHzCORE);
+	I2C_LCD_Init(I2C1,address);
+	delay(300, U_ms,clk);
+	ultrasonic_INIT();
+	ultrasonic_INIT2();
+
+	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_8, stop_bits_1, baud_rate_9600, parity_none,clk);
+	GPIOB_Clock_Enable();GPIOA_Clock_Enable();
+	EXTI(GPIOA,pin5,EXTI_Trigger_Falling,rotary_incoder_B);
+	EXTI(GPIOA,pin4,EXTI_Trigger_Falling,rotary_incoder_A);
+	while(1){
+		distance();
+		delay(60, U_ms,clk);
+		distance2();
+		delay(20, U_ms,clk);
+
+		USART_SEND_STRING(USART1,"\n ");
+		sprintf(text3,"%d",incoder_count);
+		I2C_LCD_setcerser(I2C1, address,1,8);
+		I2C_LCD_write_string(I2C1,text3,address);
+		USART_SEND_STRING(USART1,text3);
+		delay(350, U_ms,clk);
+		I2C_LCD_clear( I2C1,address);
+	}
+	return 0;
+
+}
+
+///*
+//
+//
+//#include <string.h>
+//#include "stm32f103c6_USART_SRIVER.h"
+//#include "STM32_TIMERS_DRIVER.h"
+//#include "GPIO_DRIVER.h"
+//#include "stm32f103c6_ISR_DRIVER.h"
+//int coun=10;
+//uint16_t v=0;
+//char text[8];
+//
+//uint8_t flagecho=0;
+//void time(void){
+//	pinwrite(GPIOB, pin0,1);
+//	for(int i=0;i<10000;i++);
+//	pinwrite(GPIOB, pin0,0);
+//}
+//
+//void echo(){
+//	pinwrite(GPIOB, pin0,HIGH);
+//	if(flagecho==0){
+//		flagecho=1;
+//		//TIME_CALCULATION(clk, TIMER_START);
+//
+//	}
+//	else{
+//		//USART_SEND_STRING(USART1,"\n ");
+//		flagecho=0;
+//	//	v=TIME_CALCULATION(clk, TIMER_STOP);
+//
+//
+//	}
+//	pinwrite(GPIOB, pin0,LOW);
+//}
+//int main(void)
+//{
+//	GPIOA_Clock_Enable();
+//	GPIOB_Clock_Enable();
+//	EXTI(GPIOA,pin1,EXTI_Trigger_Rising,echo);
+//	pinmode(GPIOB, pin11,GPIO_MODE_OUTPUT_push_pull_Speed2);
+//    pinmode(GPIOB, pin0,GPIO_MODE_OUTPUT_push_pull_Speed2);
+//	//pinwrite(GPIOB, pin10,HIGH);
+//	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_8, stop_bits_1, baud_rate_9600, parity_none,clk);
+//	//	PWM(TIM4, CH_1,50,1000,clk);
+//	//	PWM(TIM1, CH_1,50,1000,clk);
+//	//TogglePin(GPIOB, pin1);
+//	//TIMER_ISR(TIM3,1000,clk,time);
+//
+//
+//	pinwrite(GPIOB, pin11,HIGH);
+//	delay(10, U_ms,clk);
+//	pinwrite(GPIOB, pin11,LOW);
+//	while(1){
+//		//		TIME_CALCULATION(clk, TIMER_START);
+//		//		pinwrite(GPIOB, pin1,HIGH);
+//		delay(30,U_ms,clk);
+//		//		delay(1,U_ms,clk);delay(1,U_ms,clk);delay(12,U_ms,clk);delay(1,U_ms,clk);
+//		//		pinwrite(GPIOB, pin1,LOW);
+//		//if(coun>=0){
+//		//	TIMER_ISR(TIM3,10,clk,time);
+//		//coun--;
+//		//}
+//		//		v=TIME_CALCULATION(clk, TIMER_STOP);
+//		//		sprintf(text,"%d",v);
+//		//		USART_SEND_STRING(USART1,text);
+//		//		delay(300,U_ms,clk);
+//		pinwrite(GPIOB, pin11,HIGH);
+//		delay(10, U_ms,clk);
+//		pinwrite(GPIOB, pin11,LOW);
+//		delay(100,U_ms,clk);
+//		USART_SEND_STRING(USART1,"\n");
+//		delay(300,U_ms,clk);
+//		sprintf(text,"%d",v);
+//				USART_SEND_STRING(USART1,text);
+//
+//	}
+////}
+//
+//
+//
+//
+//
+// */
+
