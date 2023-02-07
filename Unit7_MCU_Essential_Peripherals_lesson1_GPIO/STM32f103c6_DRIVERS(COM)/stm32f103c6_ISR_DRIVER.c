@@ -108,7 +108,7 @@ void Disable_NVIC(uint16_t IRQ){
  * Note             -
  *================================================================ */
 
-void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void *function_addres(void)){
+void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void (*function_addres) (void)){
 
 	pinmode(PORTx,pin,GPIO_MODE_INTPUT_AF);//set pin to _INTPUT_AF
 

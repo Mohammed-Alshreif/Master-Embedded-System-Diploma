@@ -254,8 +254,10 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 }
 
 void delay(uint16_t time,uint8_t U,uint32_t clk){
+
 	TIMER2_CLOCK_Enable();//enable timer2 clock
-	delay_TIMER->TIMx_CR1 &=~(1<<0);
+
+	delay_TIMER->TIMx_CR1 &=~(1<<0);//timer off
 	///TIMERS_typeDef* TIMERx=TIM2;
 	char user_flage=1;
 	uint32_t user_top=0;
@@ -289,11 +291,13 @@ void delay(uint16_t time,uint8_t U,uint32_t clk){
 			user_flage=0;
 		}
 	}
-	delay_TIMER->TIMx_CR1 &=~(1<<0);
 
-	delay_TIMER->TIMx_CR1  |=(1<<2);
 
-	delay_TIMER->TIMx_DIER |=(1<<0);
+	delay_TIMER->TIMx_CR1 &=~(1<<0);//timer off
+
+	delay_TIMER->TIMx_CR1  |=(1<<2);//Only counter overflow/underflow generates an update
+
+	delay_TIMER->TIMx_DIER |=(1<<0);//Update interrupt enabled
 
 
 
@@ -301,15 +305,12 @@ void delay(uint16_t time,uint8_t U,uint32_t clk){
 
 	delay_TIMER->TIMx_PSC=(user_pre-1);//prescaller
 
-	delay_TIMER->TIMx_EGR |=(1<<0);
-	//		Bit 0 UG: Update generation
-	//		This bit can be set by software, it is automatically cleared by hardware.
-	//		0: No action
-	//		1: Re-initialize the counter and generates an update of the registers. Note that the prescaler
-	//		counter is cleared too (anyway the prescaler ratio is not affected). The counter is cleared if
-	//		the center-aligned mode is selected or if DIR=0 (upcounting), else it takes the auto-reload
-	//		value (TIMx_ARR) if DIR=1 (downcounting).
+	delay_TIMER->TIMx_EGR |=(1<<0);//1: Re-initialize the counter and generates an update of the registers. Note that the prescaler
+
 	delay_TIMER->TIMx_CR1 |=(1<<0);//enable the timer
+
+
+
 	delay_flag=1;
 	NVIC_TIM2_global_interrupt_Enable;
 	while(delay_flag){
@@ -381,7 +382,7 @@ uint32_t TIME_CALCULATION(uint32_t clk,uint8_t TIMER_ST){
 
 		TIM4->TIMx_PSC=0;//prescaller
 
-		TIM4->TIMx_EGR |=(1<<0);//		Bit 0 UG: Update generation
+		TIM4->TIMx_EGR |=(1<<0);//Bit 0 UG: Update generation
 
 		TIM4->TIMx_CR1 |=(1<<0);//enable the timer
 		NVIC_TIM4_global_interrupt_Enable;
@@ -399,10 +400,10 @@ uint32_t TIME_CALCULATION(uint32_t clk,uint8_t TIMER_ST){
 
 
 void TIM2_IRQHandler(){
-	delay_TIMER->TIMx_SR &=~(1<<0);
+	delay_TIMER->TIMx_SR &=~(1<<0);//Bit 0 UIF: Update interrupt flag
 	delay_flag=0;
 	//NVIC_TIM2_global_interrupt_Disable;
-	delay_TIMER->TIMx_CR1 &=~(1<<0);
+	delay_TIMER->TIMx_CR1 &=~(1<<0);//timer off
 
 }
 void TIM3_IRQHandler(){

@@ -63,6 +63,6 @@
  //API   ==  ==  ==  ==  ==
 //*************************
 
-void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void *function_addres(void));
+void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void (*function_addres) (void));
 
 #endif /* STM32F103C6_DRIVERS_INC_STM32F103C6_ISR_DRIVER_H_ */

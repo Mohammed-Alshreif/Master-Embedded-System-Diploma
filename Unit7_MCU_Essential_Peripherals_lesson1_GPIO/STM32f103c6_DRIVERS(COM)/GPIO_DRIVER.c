@@ -63,6 +63,17 @@ uint8_t getposition(uint16_t pin_num){
 // * @retval -none
 // * Note-
 void pinmode(GPIO_typeDef* GPIOx,uint16_t pin,uint32_t pinmode){
+	if(GPIOx==GPIOA){
+		GPIOA_Clock_Enable();
+
+	}
+	else if(GPIOx==GPIOB){
+		GPIOB_Clock_Enable();
+
+	}
+	else{
+		GPIOC_Clock_Enable();
+	}
 
 	if(pin<8){
 		GPIOx->GPIOx_CRL &=~(0xf<<(getposition(pin)));
