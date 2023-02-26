@@ -1,0 +1,10 @@
+LCD.c:10:6:_delay_ms	24	static
+LCD.c:13:6:LCD_SEND_EN	8	static
+LCD.c:19:6:LCD_write_CMD	16	static
+LCD.c:43:6:LCD_Init	8	static
+LCD.c:69:6:LCD_write_data	16	static
+LCD.c:91:6:LCD_write_string	16	static
+LCD.c:103:6:LCD_setcerser	24	static
+LCD.c:112:6:LCD_clear	8	static
+LCD.c:116:6:LCD_write_FLOATnumber	40	static
+LCD.c:121:6:LCD_write_INTnumber	40	static
