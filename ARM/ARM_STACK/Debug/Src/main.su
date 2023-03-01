@@ -1,0 +1,8 @@
+main.c:42:6:SVC_Handler	8	static
+main.c:46:6:fun_task_A	24	static
+main.c:51:6:TASK_A	8	static
+main.c:56:6:fun_task_B	24	static
+main.c:61:6:TASK_B	8	static
+main.c:65:6:ISR	4	static
+main.c:81:6:MAIN_OS	16	static,ignoring_inline_asm
+main.c:128:5:main	8	static
