@@ -1,0 +1,785 @@
+13:53:43 **** Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../STM32/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/EEPROM.d" -MT"STM32/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/EEPROM.o"
+arm-none-eabi-gcc "../STM32/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/GPIO_DRIVER.d" -MT"STM32/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../STM32/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/I2C_LCD.d" -MT"STM32/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/I2C_LCD.o"
+arm-none-eabi-gcc "../STM32/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/LCD.d" -MT"STM32/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/LCD.o"
+arm-none-eabi-gcc "../STM32/OS.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/OS.d" -MT"STM32/OS.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/OS.o"
+arm-none-eabi-gcc "../STM32/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/STM32_I2C_DRIVER.d" -MT"STM32/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../STM32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/STM32_TIMERS_DRIVER.d" -MT"STM32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../STM32/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/keypad.d" -MT"STM32/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/keypad.o"
+arm-none-eabi-gcc "../STM32/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32_speed_DRIVER.d" -MT"STM32/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../STM32/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32f103c6_ADC.d" -MT"STM32/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../STM32/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32f103c6_ISR_DRIVER.d" -MT"STM32/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../STM32/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32f103c6_SPI_DRIVER.d" -MT"STM32/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32f103c6_SPI_DRIVER.o"
+../STM32/stm32f103c6_ISR_DRIVER.c:8:10: fatal error: stm32f103c6_ISR_DRIVER.h: No such file or directory
+ #include "stm32f103c6_ISR_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../STM32/OS.c:7:10: fatal error: OS.h: No such file or directory
+ #include "OS.h"
+          ^~~~~~
+compilation terminated.
+../STM32/stm32_speed_DRIVER.c:8:10: fatal error: stm32_speed_DRIVER.h: No such file or directory
+ #include "stm32_speed_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../STM32/stm32f103c6_SPI_DRIVER.c:7:10: fatal error: stm32f103c6_SPI_DRIVER.h: No such file or directory
+ #include "stm32f103c6_SPI_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../STM32/LCD.c:8:10: fatal error: LCD.h: No such file or directory
+ #include "LCD.h"
+          ^~~~~~~
+compilation terminated.
+compilation terminated.
+../STM32/keypad.c:2:10: fatal error: keypad.h: No such file or directory
+ #include "keypad.h"
+          ^~~~~~~~~~
+compilation terminated.
+../STM32/GPIO_DRIVER.c:1:10: fatal error: STM32f103c6.h: No such file or directory
+ #include "STM32f103c6.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+../STM32/STM32_I2C_DRIVER.c:9:10: fatal error: STM32_I2C_DRIVER.h: No such file or directory
+ #include "STM32_I2C_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../STM32/EEPROM.c:8:10: fatal error: EEPROM.h: No such file or directory
+ #include "EEPROM.h"
+          ^~~~~~~~~~
+compilation terminated.
+../STM32/stm32f103c6_ADC.c:8:10: fatal error: stm32f103c6_ADC.h: No such file or directory
+ #include "stm32f103c6_ADC.h"
+          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../STM32/STM32_TIMERS_DRIVER.c:8:10: fatal error: STM32_TIMERS_DRIVER.h: No such file or directory
+ #include "STM32_TIMERS_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../STM32/I2C_LCD.c:8:10: fatal error: I2C_LCD.h: No such file or directory
+ #include "I2C_LCD.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [STM32/subdir.mk:62: STM32/OS.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [STM32/subdir.mk:74: STM32/stm32f103c6_ISR_DRIVER.o] Error 1
+make: *** [STM32/subdir.mk:70: STM32/stm32_speed_DRIVER.o] Error 1
+make: *** [STM32/subdir.mk:60: STM32/LCD.o] Error 1
+make: *** [STM32/subdir.mk:54: STM32/EEPROM.o] Error 1
+make: *** [STM32/subdir.mk:76: STM32/stm32f103c6_SPI_DRIVER.o] Error 1
+make: *** [STM32/subdir.mk:66: STM32/STM32_TIMERS_DRIVER.o] Error 1
+make: *** [STM32/subdir.mk:56: STM32/GPIO_DRIVER.o] Error 1
+make: *** [STM32/subdir.mk:68: STM32/keypad.o] Error 1
+make: *** [STM32/subdir.mk:72: STM32/stm32f103c6_ADC.o] Error 1
+make: *** [STM32/subdir.mk:58: STM32/I2C_LCD.o] Error 1
+make: *** [STM32/subdir.mk:64: STM32/STM32_I2C_DRIVER.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:54:41 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../STM32/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/EEPROM.d" -MT"STM32/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/EEPROM.o"
+arm-none-eabi-gcc "../STM32/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/GPIO_DRIVER.d" -MT"STM32/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../STM32/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/I2C_LCD.d" -MT"STM32/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/I2C_LCD.o"
+arm-none-eabi-gcc "../STM32/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/LCD.d" -MT"STM32/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/LCD.o"
+arm-none-eabi-gcc "../STM32/OS.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/OS.d" -MT"STM32/OS.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/OS.o"
+arm-none-eabi-gcc "../STM32/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/STM32_I2C_DRIVER.d" -MT"STM32/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../STM32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/STM32_TIMERS_DRIVER.d" -MT"STM32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../STM32/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/keypad.d" -MT"STM32/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/keypad.o"
+arm-none-eabi-gcc "../STM32/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32_speed_DRIVER.d" -MT"STM32/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../STM32/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32f103c6_ADC.d" -MT"STM32/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../STM32/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32f103c6_ISR_DRIVER.d" -MT"STM32/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../STM32/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32f103c6_SPI_DRIVER.d" -MT"STM32/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32f103c6_SPI_DRIVER.o"
+arm-none-eabi-gcc "../STM32/stm32f103c6_USART_SRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32f103c6_USART_SRIVER.d" -MT"STM32/stm32f103c6_USART_SRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32f103c6_USART_SRIVER.o"
+../STM32/GPIO_DRIVER.c:1:10: fatal error: STM32f103c6.h: No such file or directory
+ #include "STM32f103c6.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [STM32/subdir.mk:56: STM32/GPIO_DRIVER.o] Error 1
+make: *** Waiting for unfinished jobs....
+../STM32/EEPROM.c:8:10: fatal error: EEPROM.h: No such file or directory
+ #include "EEPROM.h"
+          ^~~~~~~~~~
+compilation terminated.
+../STM32/OS.c:7:10: fatal error: OS.h: No such file or directory
+ #include "OS.h"
+          ^~~~~~
+compilation terminated.
+make: *** [STM32/subdir.mk:54: STM32/EEPROM.o] Error 1
+../STM32/LCD.c:8:10: fatal error: LCD.h: No such file or directory
+ #include "LCD.h"
+          ^~~~~~~
+compilation terminated.
+../STM32/STM32_I2C_DRIVER.c:9:10: fatal error: STM32_I2C_DRIVER.h: No such file or directory
+ #include "STM32_I2C_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../STM32/keypad.c:2:10: fatal error: keypad.h: No such file or directory
+ #include "keypad.h"
+          ^~~~~~~~~~
+compilation terminated.
+../STM32/stm32f103c6_SPI_DRIVER.c:7:10: fatal error: stm32f103c6_SPI_DRIVER.h: No such file or directory
+ #include "stm32f103c6_SPI_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [STM32/subdir.mk:62: STM32/OS.o] Error 1
+../STM32/I2C_LCD.c:8:10: fatal error: I2C_LCD.h: No such file or directory
+ #include "I2C_LCD.h"
+          ^~~~~~~~~~~
+compilation terminated.
+../STM32/STM32_TIMERS_DRIVER.c:8:10: fatal error: STM32_TIMERS_DRIVER.h: No such file or directory
+ #include "STM32_TIMERS_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../STM32/stm32f103c6_ISR_DRIVER.c:8:10: fatal error: stm32f103c6_ISR_DRIVER.h: No such file or directory
+ #include "stm32f103c6_ISR_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [STM32/subdir.mk:60: STM32/LCD.o] Error 1
+make: *** [STM32/subdir.mk:76: STM32/stm32f103c6_SPI_DRIVER.o] Error 1
+make: *** [STM32/subdir.mk:64: STM32/STM32_I2C_DRIVER.o] Error 1
+make: *** [STM32/subdir.mk:58: STM32/I2C_LCD.o] Error 1
+make: *** [STM32/subdir.mk:66: STM32/STM32_TIMERS_DRIVER.o] Error 1
+make: *** [STM32/subdir.mk:68: STM32/keypad.o] Error 1
+../STM32/stm32_speed_DRIVER.c:8:10: fatal error: stm32_speed_DRIVER.h: No such file or directory
+ #include "stm32_speed_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [STM32/subdir.mk:74: STM32/stm32f103c6_ISR_DRIVER.o] Error 1
+../STM32/stm32f103c6_ADC.c:8:10: fatal error: stm32f103c6_ADC.h: No such file or directory
+ #include "stm32f103c6_ADC.h"
+          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../STM32/stm32f103c6_USART_SRIVER.c:9:10: fatal error: stm32f103c6_USART_SRIVER.h: No such file or directory
+ #include "stm32f103c6_USART_SRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [STM32/subdir.mk:70: STM32/stm32_speed_DRIVER.o] Error 1
+make: *** [STM32/subdir.mk:72: STM32/stm32f103c6_ADC.o] Error 1
+make: *** [STM32/subdir.mk:78: STM32/stm32f103c6_USART_SRIVER.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:55:15 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../STM32/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/EEPROM.d" -MT"STM32/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/EEPROM.o"
+arm-none-eabi-gcc "../STM32/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/GPIO_DRIVER.d" -MT"STM32/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../STM32/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/I2C_LCD.d" -MT"STM32/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/I2C_LCD.o"
+arm-none-eabi-gcc "../STM32/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/LCD.d" -MT"STM32/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/LCD.o"
+arm-none-eabi-gcc "../STM32/OS.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/OS.d" -MT"STM32/OS.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/OS.o"
+arm-none-eabi-gcc "../STM32/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/STM32_I2C_DRIVER.d" -MT"STM32/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../STM32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/STM32_TIMERS_DRIVER.d" -MT"STM32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../STM32/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/keypad.d" -MT"STM32/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/keypad.o"
+arm-none-eabi-gcc "../STM32/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32_speed_DRIVER.d" -MT"STM32/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../STM32/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32f103c6_ADC.d" -MT"STM32/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../STM32/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32f103c6_ISR_DRIVER.d" -MT"STM32/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../STM32/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32f103c6_SPI_DRIVER.d" -MT"STM32/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32f103c6_SPI_DRIVER.o"
+arm-none-eabi-gcc "../STM32/stm32f103c6_USART_SRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32/stm32f103c6_USART_SRIVER.d" -MT"STM32/stm32f103c6_USART_SRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32/stm32f103c6_USART_SRIVER.o"
+../STM32/I2C_LCD.c: In function 'I2C_LCD_write_FLOATnumber':
+../STM32/I2C_LCD.c:114:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt(num,digit,text);
+  ^~~~
+../STM32/LCD.c: In function 'LCD_write_FLOATnumber':
+../STM32/STM32_I2C_DRIVER.c: In function 'I2C_GetFlagStatus':
+../STM32/STM32_I2C_DRIVER.c:119:20: warning: variable 'dummy_Read' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t dummy_Read;
+                    ^~~~~~~~~~
+../STM32/LCD.c:118:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt(num,digit,text);
+  ^~~~
+../STM32/stm32f103c6_USART_SRIVER.c: In function 'USART1_IRQHandler':
+../STM32/stm32f103c6_USART_SRIVER.c:272:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d=USART1->USART_DR;
+                      ^
+../STM32/stm32f103c6_USART_SRIVER.c:277:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART1->USART_DR;
+                     ^
+../STM32/stm32f103c6_USART_SRIVER.c: In function 'USART2_IRQHandler':
+../STM32/stm32f103c6_USART_SRIVER.c:353:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d =USART2->USART_DR;
+                      ^
+../STM32/stm32f103c6_USART_SRIVER.c:358:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART2->USART_DR;
+                     ^
+../STM32/stm32f103c6_USART_SRIVER.c: In function 'USART3_IRQHandler':
+../STM32/stm32f103c6_USART_SRIVER.c:434:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d =USART3->USART_DR;
+                      ^
+../STM32/stm32f103c6_USART_SRIVER.c:439:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART3->USART_DR;
+                     ^
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-size   SVC.axf 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+   text	   data	    bss	    dec	    hex	filename
+   3136	     40	   1704	   4880	   1310	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+13:55:43 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3136	     40	   1704	   4880	   1310	SVC.axf
+Finished building: default.size.stdout
+ 
+14:22:55 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler':
+../Src/main.c:18:9: error: 'id' undeclared (first use in this function)
+  switch(id){
+         ^~
+../Src/main.c:18:9: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c: In function 'main':
+../Src/main.c:62:6: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  int x=0;
+      ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:23:04 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler':
+../Src/main.c:6:16: error: expected expression before '__asm'
+ #define SVC_ID __asm("TST lr,#0x4 \n\t" "ITE EQ \n\t"\
+                ^
+../Src/main.c:18:9: note: in expansion of macro 'SVC_ID'
+  switch(SVC_ID){
+         ^~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:62:6: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  int x=0;
+      ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:23:52 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler':
+../Src/main.c:6:16: error: expected expression before '__asm'
+ #define SVC_ID __asm("TST lr,#0x4 \n\t" "ITE EQ \n\t"\
+                ^
+../Src/main.c:16:10: note: in expansion of macro 'SVC_ID'
+  char ID=SVC_ID;
+          ^~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:62:6: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  int x=0;
+      ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:24:38 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler':
+../Src/main.c:6:17: error: expected expression before '__asm'
+ #define SVC_ID  __asm("TST lr,#0x4 \n\t" "ITE EQ \n\t"\
+                 ^
+../Src/main.c:16:10: note: in expansion of macro 'SVC_ID'
+  char ID=SVC_ID;
+          ^~~~~~
+../Src/main.c:16:7: warning: unused variable 'ID' [-Wunused-variable]
+  char ID=SVC_ID;
+       ^~
+../Src/main.c: In function 'main':
+../Src/main.c:62:6: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  int x=0;
+      ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:24:43 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:62:6: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  int x=0;
+      ^
+../Src/main.c: In function 'OS_SVC_SET':
+../Src/main.c:56:9: warning: 'result' is used uninitialized in this function [-Wuninitialized]
+  return result;
+         ^~~~~~
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3252	     40	   1704	   4996	   1384	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+14:25:16 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler':
+../Src/main.c:16:10: error: 'SVC_ID' undeclared (first use in this function)
+  char ID=SVC_ID;
+          ^~~~~~
+../Src/main.c:16:10: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:16:7: warning: unused variable 'ID' [-Wunused-variable]
+  char ID=SVC_ID;
+       ^~
+../Src/main.c: In function 'main':
+../Src/main.c:62:6: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  int x=0;
+      ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:25:29 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:6: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  int x=0;
+      ^
+../Src/main.c: In function 'OS_SVC_SET':
+../Src/main.c:57:9: warning: 'result' is used uninitialized in this function [-Wuninitialized]
+  return result;
+         ^~~~~~
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3280	     40	   1704	   5024	   13a0	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+14:26:31 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:15: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  volatile int x=0;
+               ^
+../Src/main.c: In function 'OS_SVC_SET':
+../Src/main.c:57:9: warning: 'result' is used uninitialized in this function [-Wuninitialized]
+  return result;
+         ^~~~~~
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3316	     40	   1704	   5060	   13c4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+14:43:50 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3316	     40	   1704	   5060	   13c4	SVC.axf
+Finished building: default.size.stdout
+ 
+14:58:23 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:66:15: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  volatile int x=0;
+               ^
+../Src/main.c: In function 'OS_SVC_SET':
+../Src/main.c:60:9: warning: 'result' is used uninitialized in this function [-Wuninitialized]
+  return result;
+         ^~~~~~
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3324	     40	   1704	   5068	   13cc	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.list
+Finished building: SVC.bin
+ 
+ 
+15:13:58 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:66:15: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  volatile int x=0;
+               ^
+../Src/main.c: In function 'OS_SVC_SET':
+../Src/main.c:60:9: warning: 'result' is used uninitialized in this function [-Wuninitialized]
+  return result;
+         ^~~~~~
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3324	     40	   1704	   5068	   13cc	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+15:19:55 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:66:15: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  volatile int x=0;
+               ^
+../Src/main.c: In function 'OS_SVC_SET':
+../Src/main.c:60:9: warning: 'result' is used uninitialized in this function [-Wuninitialized]
+  return result;
+         ^~~~~~
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3332	     40	   1704	   5076	   13d4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+15:31:47 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:15: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  volatile int x=0;
+               ^
+../Src/main.c: In function 'OS_SVC_SET':
+../Src/main.c:57:9: warning: 'result' is used uninitialized in this function [-Wuninitialized]
+  return result;
+         ^~~~~~
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3316	     40	   1704	   5060	   13c4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+15:43:26 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'OS_SVC_SERVICES':
+../Src/main.c:22:9: error: 'ID' undeclared (first use in this function)
+  switch(ID){
+         ^~
+../Src/main.c:22:9: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:24:7: warning: statement with no effect [-Wunused-value]
+   val1+val2;
+   ~~~~^~~~~
+../Src/main.c:28:7: warning: statement with no effect [-Wunused-value]
+   val1-val2;
+   ~~~~^~~~~
+../Src/main.c:18:10: warning: unused variable 'SVC_NUM' [-Wunused-variable]
+  uint8_t SVC_NUM =  *((uint8_t *)(((uint32_t*)STACK_FRAM_POINTER[6])-2));
+          ^~~~~~~
+../Src/main.c: At top level:
+../Src/main.c:40:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+../Src/main.c: In function 'main':
+../Src/main.c:76:15: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  volatile int x=0;
+               ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:43:41 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'OS_SVC_SERVICES':
+../Src/main.c:24:7: warning: statement with no effect [-Wunused-value]
+   val1+val2;
+   ~~~~^~~~~
+../Src/main.c:28:7: warning: statement with no effect [-Wunused-value]
+   val1-val2;
+   ~~~~^~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:77:15: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  volatile int x=0;
+               ^
+../Src/main.c: In function 'OS_SVC_SET':
+../Src/main.c:71:9: warning: 'result' is used uninitialized in this function [-Wuninitialized]
+  return result;
+         ^~~~~~
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3340	     40	   1704	   5084	   13dc	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+15:45:32 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:77:15: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  volatile int x=0;
+               ^
+../Src/main.c: In function 'OS_SVC_SET':
+../Src/main.c:71:9: warning: 'result' is used uninitialized in this function [-Wuninitialized]
+  return result;
+         ^~~~~~
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3364	     40	   1704	   5108	   13f4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.list
+Finished building: SVC.bin
+ 
+ 
+16:11:24 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:77:15: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+  volatile int x=3;
+               ^
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3364	     40	   1704	   5108	   13f4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+16:13:02 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o:C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/Debug/../Src/main.c:5: multiple definition of `x'
+STM32/STM32_TIMERS_DRIVER.o:C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/Debug/../STM32/STM32_TIMERS_DRIVER.c:20: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:50: SVC.axf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:13:56 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o:C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/Debug/../Src/main.c:6: multiple definition of `x'
+STM32/STM32_TIMERS_DRIVER.o:C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/Debug/../STM32/STM32_TIMERS_DRIVER.c:20: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:50: SVC.axf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+16:14:16 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3364	     44	   1700	   5108	   13f4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+16:16:38 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:7:1: warning: multi-line comment [-Wcomment]
+ //#define SVC_ID(ID)  __asm("TST lr,#4 \n\t" "ITE EQ \n\t"\
+ ^
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3364	     44	   1700	   5108	   13f4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+16:17:40 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:7:1: warning: multi-line comment [-Wcomment]
+ //#define SVC_ID(ID)  __asm("TST lr,#4 \n\t" "ITE EQ \n\t"\
+ ^
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3364	     44	   1700	   5108	   13f4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+16:27:45 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3364	     44	   1700	   5108	   13f4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+16:27:57 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:44:1: warning: 'NAKED' attribute directive ignored [-Wattributes]
+ __attribute((NAKED)) void SVC_Handler(){
+ ^~~~~~~~~~~
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3376	     44	   1700	   5120	   1400	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+16:28:16 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3364	     44	   1700	   5108	   13f4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+16:29:29 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3364	     44	   1700	   5108	   13f4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+16:32:44 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3364	     44	   1700	   5108	   13f4	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
+16:51:38 **** Incremental Build of configuration Debug for project SVC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ARM/SVC_LAST/SVC/STM32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SVC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ARM\SVC_LAST\SVC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SVC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SVC.axf
+ 
+arm-none-eabi-objdump -h -S  SVC.axf  > "SVC.list"
+arm-none-eabi-objcopy  -O binary  SVC.axf  "SVC.bin"
+arm-none-eabi-size   SVC.axf 
+   text	   data	    bss	    dec	    hex	filename
+   3360	     44	   1700	   5104	   13f0	SVC.axf
+Finished building: default.size.stdout
+ 
+Finished building: SVC.bin
+Finished building: SVC.list
+ 
+ 
