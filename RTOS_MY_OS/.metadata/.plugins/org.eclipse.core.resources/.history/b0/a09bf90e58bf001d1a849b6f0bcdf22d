@@ -1,0 +1,20 @@
+/*
+ * RTOS_CORTEX_M3_PORTING.c
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: 20102
+ */
+
+
+void HardFault_Handler(){
+	while(1);
+}
+void	MemManage_Handler(){
+	while(1);
+}
+void	BusFault_Handler(){
+	while(1);
+}
+void	UsageFault_Handler(){
+	while(1);
+}

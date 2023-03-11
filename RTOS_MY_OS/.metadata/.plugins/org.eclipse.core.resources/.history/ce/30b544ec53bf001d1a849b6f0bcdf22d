@@ -1,0 +1,7 @@
+#include "ALS"
+
+int main(void)
+{
+    /* Loop forever */
+	for(;;);
+}

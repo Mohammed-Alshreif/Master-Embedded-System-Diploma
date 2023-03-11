@@ -1,0 +1,7 @@
+#include "SCEDULER.h"
+
+int main(void)
+{
+    /* Loop forever */
+	for(;;);
+}

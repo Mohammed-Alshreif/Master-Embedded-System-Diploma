@@ -1,0 +1,44 @@
+/*
+ * RTOS_CORTEX_M3_PORTING.c
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: 20102
+ */
+#include "RTOS_CORTEX_M3_PORTING.h"
+#include "stm32_speed_DRIVER.h"
+void HardFault_Handler(){
+	while(1);
+}
+void	MemManage_Handler(){
+	while(1);
+}
+void	BusFault_Handler(){
+	while(1);
+}
+void	UsageFault_Handler(){
+	while(1);
+}
+
+//====================================
+void HARD_WARE_INIT(){
+
+
+}
+
+
+//====================================
+
+__attribute__((naked)) void SVC_Handler(){
+	__asm("TST lr,#4 \n\t"
+			"ITE EQ \n\t"
+			"MRSEQ r0,MSP \n\t"
+			"MRSNE r0,PSP \n\t"
+			"B OS_SVC_SERVICES");
+}
+
+
+
+
+//====================================
+//====================================
+

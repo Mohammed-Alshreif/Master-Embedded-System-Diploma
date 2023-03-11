@@ -1,0 +1,9 @@
+#include "SCEDULER.h"
+
+int main(void)
+{
+	HARD_WARE_INIT();
+
+    /* Loop forever */
+	for(;;);
+}

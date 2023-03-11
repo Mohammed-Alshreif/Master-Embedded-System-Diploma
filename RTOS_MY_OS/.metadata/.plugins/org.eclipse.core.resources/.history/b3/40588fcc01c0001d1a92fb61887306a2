@@ -1,0 +1,25 @@
+/*
+ * SCEDULER.h
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: MOHAMMED ALSHREIF
+ */
+
+#ifndef INC_SCEDULER_H_
+#define INC_SCEDULER_H_
+#include "RTOS_CORTEX_M3_PORTING.h"
+
+//========================================================
+typedef enum {
+	no_error,
+	RTOS_INIT_ERROR
+}OS_ERRORS;
+
+//===================TASK frame============================
+
+
+//=================== API ===========================
+
+OS_ERRORS ALSHREIF_RTOS_INIT();
+void ALSHREIF_RTOS_CREAT_TASK(TASK_FRAME_t* TASK);
+#endif /* INC_SCEDULER_H_ */

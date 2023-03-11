@@ -1,0 +1,28 @@
+01:21:15 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../ALSHREIF_RTOS/SCEDULER.c:71:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_CREATE_MAIN_STACK':
+../ALSHREIF_RTOS/SCEDULER.c:89:27: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  OS_CONTROL._MSP_STACK_TOP=&_estack;//top main stack
+                           ^
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5360	     40	   2736	   8136	   1fc8	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+Finished building: RTOS_PROJECT.list
+ 
+ 
+
+01:21:16 Build Finished. 0 errors, 2 warnings. (took 892ms)
+

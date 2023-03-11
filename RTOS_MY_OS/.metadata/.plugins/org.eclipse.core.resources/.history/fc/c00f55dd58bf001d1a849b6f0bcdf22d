@@ -1,0 +1,24 @@
+/*
+ * SCEDULER.h
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: 20102
+ */
+
+#ifndef INC_SCEDULER_H_
+#define INC_SCEDULER_H_
+#include "RTOS_CORTEX_M3_PORTING.h"
+
+
+
+
+
+
+//=================== API ===========================
+
+void OS_INIT(){
+	HARD_WARE_INIT();
+}
+
+
+#endif /* INC_SCEDULER_H_ */

@@ -1,0 +1,167 @@
+/*
+ * SCEDULER.c
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: 20102
+ */
+//===========================================================================
+#include "RTOS_FIFO.h"
+#define TASKS_NUMPER_DEFINE 100
+
+//===========================================================================
+FIFO_BUF_t READY_QUEUE;
+TASK_FRAME_t* READY_QUEUE_TABLE [TASKS_NUMPER_DEFINE];
+//===========================================================================
+TASK_FRAME_t IDLE_TASK;
+
+//===========================================================================
+
+struct {
+	TASK_FRAME_t * OS_TASKS[TASKS_NUMPER_DEFINE]; //SCEDULER TASKS TABLE
+	uint32_t _MSP_STACK_TOP;
+	uint32_t _MSP_STACK_END;
+	uint32_t _PSP_TASK_locator;
+	uint16_t NUMBER_OF_TASKS;
+	TASK_FRAME_t * CURENT_TASK;
+	TASK_FRAME_t * NEXT_TASK;
+	enum{
+		OS_Suspend,
+		OS_Running
+	}OS_MODE;
+
+}OS_CONTROL;
+//===============================idle_task_fun==================================
+
+void idle_task_fun(){
+	while(1){
+		__asm("NOP");
+	}
+}
+//=======================ALSHREIF_RTOS_CREAT_TASK_FRAM==========================
+
+void ALSHREIF_RTOS_CREAT_TASK_FRAM(TASK_FRAME_t* TASK){
+
+	/*
+	 *\\\\\ CPU stacking
+	 * Xpsr
+	 * PC
+	 * LR
+	 * R12
+	 * R4
+	 * R3
+	 * R2
+	 * R1
+	 * R0
+	 * \\\\Manual
+	 * r5
+	 * r6
+	 * r7
+	 * r8
+	 * r9
+	 * r10
+	 * r11
+	 * */
+	TASK->_PSP_STACK_CURENT=(uint32_t*)TASK->_PSP_STACK_TOP;
+	TASK->_PSP_STACK_CURENT--;
+	*(TASK->_PSP_STACK_CURENT)=0x0100000;//xpsr
+
+	TASK->_PSP_STACK_CURENT--;
+	(TASK->_PSP_STACK_CURENT)=(uint32_t*)TASK->TASK_FUNCTION;//pc
+
+	TASK->_PSP_STACK_CURENT--;
+	*(TASK->_PSP_STACK_CURENT)=0xFFFFFFFD;//lr
+
+	for(uint8_t i =0;i<13;i++){
+		TASK->_PSP_STACK_CURENT--;
+		*(TASK->_PSP_STACK_CURENT)=0x0;
+	}
+
+}
+//===============================CREATE_MAIN_STACK==============================
+void ALSHREIF_CREATE_MAIN_STACK(){
+	OS_CONTROL._MSP_STACK_TOP=&_estack;//top main stack
+	OS_CONTROL._MSP_STACK_END=OS_CONTROL._MSP_STACK_TOP-MAIN_STACK_SIZE;//end main stack
+	OS_CONTROL._PSP_TASK_locator =(OS_CONTROL._MSP_STACK_END-8);//locator task 1
+}
+//===============================ALSHREIF_RTOS_CREAT_TASK========================
+void ALSHREIF_RTOS_CREAT_TASK(TASK_FRAME_t* TASK){
+	TASK->_PSP_STACK_TOP=OS_CONTROL._PSP_TASK_locator;
+	TASK->_PSP_STACK_END=(TASK->_PSP_STACK_TOP-TASK->stack_size);
+	if(TASK->_PSP_STACK_END<_end_heap)while(1); //over flow
+	OS_CONTROL._PSP_TASK_locator=(TASK->_PSP_STACK_END-8);
+
+	ALSHREIF_RTOS_CREAT_TASK_FRAM(TASK);//pointer ((:
+
+}
+//=============================== RTOS_INIT =====================================
+OS_ERRORS ALSHREIF_RTOS_INIT(){
+	OS_ERRORS error =no_error;
+	//os mode
+	OS_CONTROL.OS_MODE=OS_Suspend;
+	//main stack of os
+	void ALSHREIF_CREATE_MAIN_STACK();
+	//init ready queue
+	OS_FIFO_INIT(&READY_QUEUE,READY_QUEUE_TABLE, TASKS_NUMPER_DEFINE);
+	//create idle task
+	strcpy(IDLE_TASK.NAME,"idle task");
+	IDLE_TASK.priority=255;
+	IDLE_TASK.TASK_FUNCTION=idle_task_fun;
+	IDLE_TASK.stack_size=100;
+
+	ALSHREIF_RTOS_CREAT_TASK(&IDLE_TASK);
+
+	IDLE_TASK.State=Suspend;
+
+	return error;
+}
+//===========================================================================
+
+void OS_SVC_SET(int id){
+	switch(id){
+	case 0:
+		__asm("SVC #0x01");//add
+		break;
+
+	case 1:
+		__asm("SVC #0x02");//sub
+		break;
+	case 2:
+		__asm("SVC #0x03");
+		break;
+	case 3:
+		__asm("SVC #0x04");
+		break;
+	}
+}
+
+
+void OS_SVC_SERVICES(int* STACK_FRAM_POINTER){
+	uint8_t SVC_NUM;
+	__asm(   "LDR r0,[r0,#24]\n\t"
+			"LDRB r0,[r0,#-2]\n\t"
+			"MOV %0,r0"
+			:"=r"(SVC_NUM));
+	//SVC_NUM=*((unsigned char*)(((unsigned char*)STACK_FRAM_POINTER[6])-2));
+	switch(SVC_NUM){
+	case 0x01:
+
+		break;
+
+	case 0x02:
+
+		break;
+	case 0x03:
+
+		break;
+	case 0x04:
+
+		break;
+	}
+
+
+}
+
+//===========================================================================
+void PendSV_Handler(){
+
+}
