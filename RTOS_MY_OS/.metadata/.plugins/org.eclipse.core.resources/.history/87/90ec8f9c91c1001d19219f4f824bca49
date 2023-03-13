@@ -1,0 +1,58 @@
+/*
+ * RTOS_CORTEX_M3_PORTING.h
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: 20102
+ */
+
+#ifndef INC_RTOS_CORTEX_M3_PORTING_H_
+#define INC_RTOS_CORTEX_M3_PORTING_H_
+#include "ARMCM3.h"
+#include "core_cm3.h"
+#include "stdint.h"
+#include "string.h"
+//====================================
+#define MAIN_STACK_SIZE 2048
+
+//====================================
+extern uint32_t volatile _estack;
+extern uint32_t volatile _end_heap;
+
+//====================================
+#define OS_set_PSP_stack(address) __asm volatile("MOV r0,%0 \n\t" "MSR psp,r0": : "r"(address))
+#define OS_get_PSP_stack(address) __asm volatile("MRS r0,psp \n\t" "MOV %0,r0":  "=r"(address))
+
+#define OS_set_MSP_stack(address) __asm volatile("MOV r0,%0 \n\t" "MSR msp,r0": : "r"(address))
+
+
+#define OS_SP2_PSP __asm volatile ("MRS r0,CONTROL \n\t ORR r0,r0,#2 \n\t MSR CONTROL,r0")
+#define OS_SP2_MSP __asm volatile ("MRS r0,CONTROL \n\t BIC r0,r0,#2 \n\t MSR CONTROL,r0")
+
+
+#define OS_CHANGE_CPU_PRIVILDEG  __asm(  "MRS r3,CONTROL \n\t"\
+		"BIC r3,r3,#0x1 \n\t"\
+		"MSR CONTROL,r3"\
+);
+#define OS_CHANGE_CPU_UNPRIVILDEG  __asm(  "MRS r3,CONTROL \n\t" \
+		"ORR r3,r3,#0x1 \n\t" \
+		"MSR CONTROL,r3" \
+);
+
+
+
+//==================================== API ==================
+
+void HARD_WARE_INIT();
+
+//====================================
+void OS_TRIGDER_PENDSV();
+//====================================
+void TIMER_START();
+//====================================
+//====================================
+//====================================
+//====================================
+
+
+
+#endif /* INC_RTOS_CORTEX_M3_PORTING_H_ */

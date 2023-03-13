@@ -1,0 +1,7 @@
+-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c
+-fno-rtti -funsigned-char -fshort-enums -fshort-wchar
+-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality 
+-IC:/Users/20102/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include
+-IC:/Keil_v5/ARM/CMSIS/Include
+-D__UVISION_VERSION="538" -DSTM32F10X_MD
+-o ./debug/sceduler.o -MD "ALSHREIF_RTOS/SCEDULER.c"

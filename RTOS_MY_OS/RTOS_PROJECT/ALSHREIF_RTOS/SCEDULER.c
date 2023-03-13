@@ -5,6 +5,7 @@
  *      Author: 20102
  */
 //===========================================================================
+#include "SCEDULER.h"
 #include "RTOS_FIFO.h"
 #define TASKS_NUMPER_DEFINE 100
 
@@ -38,9 +39,10 @@ typedef enum{
 	Wating_task
 }_SVC_ID;
 //===============================idle_task_fun==================================
-
+uint8_t idle=0;
 void idle_task_fun(){
 	while(1){
+		idle^=1;
 		__asm("NOP");
 	}
 }
@@ -86,7 +88,7 @@ void ALSHREIF_RTOS_CREAT_TASK_FRAM(TASK_FRAME_t* TASK){
 }
 //===============================CREATE_MAIN_STACK==============================
 void ALSHREIF_CREATE_MAIN_STACK(){
-	OS_CONTROL._MSP_STACK_TOP=&_estack;//top main stack
+	OS_CONTROL._MSP_STACK_TOP=(uint32_t volatile)&_estack;//top main stack
 	OS_CONTROL._MSP_STACK_END=OS_CONTROL._MSP_STACK_TOP-MAIN_STACK_SIZE;//end main stack
 	OS_CONTROL._PSP_TASK_locator =(OS_CONTROL._MSP_STACK_END-8);//locator task 1
 }
@@ -98,6 +100,11 @@ void ALSHREIF_RTOS_CREAT_TASK(TASK_FRAME_t* TASK){
 	OS_CONTROL._PSP_TASK_locator=(TASK->_PSP_STACK_END-8);
 
 	ALSHREIF_RTOS_CREAT_TASK_FRAM(TASK);//pointer ((:
+	//look , this function make an important role , it set _PSP_STACK_CURENT with un zero value
+	//in the first time in runtime when it context SAVE the idle task,
+	//and go to the next task this will make a problem because current_task->>_PSP_STACK_CURENT did not enter before
+	//so _PSP_STACK_CURENT will be zero and if it but zero in PSP it will make HardFault
+	//check @context tasks
 
 	OS_CONTROL.OS_TASKS[OS_CONTROL.NUMBER_OF_TASKS]=TASK;
 	OS_CONTROL.NUMBER_OF_TASKS++;
@@ -144,7 +151,9 @@ void bubble_sort(){
 //=====================
 void free_the_FIFO(){
 	TASK_FRAME_t* temp;//Because I went to pointer to pointer **
-	while(OS_FIFO_DEQUEUE(&READY_QUEUE,&temp) !=FIFO_EMPTY);//Address of the pointer
+	while(OS_FIFO_DEQUEUE(&READY_QUEUE,&temp) !=FIFO_EMPTY){//Address of the pointer
+
+	}
 }
 //=====================
 void ALSHREIF_RTOS_UPDATE_SCEDULER_TABLES(){
@@ -296,6 +305,7 @@ void OS_SVC_SERVICES(int* STACK_FRAM_POINTER){
 }
 
 //===========================================================================
+
 __attribute ((naked)) void PendSV_Handler(){
 
 	/*
@@ -323,7 +333,7 @@ __attribute ((naked)) void PendSV_Handler(){
 	 * r10
 	 * r11
 	 * */
-
+	//context SAVE
 	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT--;
 	__asm volatile("mov %0,r4 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
 	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
@@ -341,15 +351,30 @@ __attribute ((naked)) void PendSV_Handler(){
 	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
 	__asm volatile("mov %0,r11 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
 
-	//context tasks
+
+	// now (OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT) will save this address to the next execute of this task
+	//and it will enter to make BACK context switching in the next call back :)
+
+	//@context tasks
 	if (OS_CONTROL.NEXT_TASK != NULL){
 		OS_CONTROL.CURENT_TASK = OS_CONTROL.NEXT_TASK;
 		OS_CONTROL.NEXT_TASK = NULL ;
 	}
+	//context BACK
 
-	__asm volatile("mov r11,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	/*
+		\\\\Manual
+	 * r5
+	 * r6
+	 * r7
+	 * r8
+	 * r9
+	 * r10
+	 * r11
+	 * */
+	__asm volatile("mov r11,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT)) );//it stored from the last context :) @context tasks
 	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
-	__asm volatile("mov r10,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	__asm volatile("mov r10,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT)) );
 	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
 	__asm volatile("mov r9,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
 	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
@@ -364,8 +389,21 @@ __attribute ((naked)) void PendSV_Handler(){
 	__asm volatile("mov r4,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
 	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
 
-	OS_set_PSP_stack(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT);
-	__asm volatile("BX LR");
+	/*
+	 *\\\\\ CPU stacking in current task stack
+	 * Xpsr
+	 * PC
+	 * LR
+	 * R12
+	 * R4
+	 * R3
+	 * R2
+	 * R1
+	 * R0
+	 * >>>>PSP current because it comes from thread mode
+	 */
+	OS_set_PSP_stack(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT);//we but the PSP with current psp to force the cpu making this task context
+	__asm volatile("BX LR");//make cpu context back
 }
 
 
@@ -380,3 +418,30 @@ void ALSHREIF_RTOS_ACTIVAT_TASK(TASK_FRAME_t* TASK){
 void ALSHREIF_RTOS_TERMININAT_TASK(TASK_FRAME_t* TASK){
 	TASK->State=Suspend;
 }
+
+
+
+
+
+void ALSHREIF_RTOS_START_OS(){
+	OS_CONTROL.OS_MODE=OS_Running;//mode
+
+	OS_CONTROL.CURENT_TASK=&IDLE_TASK;//set current task
+	ALSHREIF_RTOS_ACTIVAT_TASK(&IDLE_TASK);//activate idle task
+	TIMER_START();//set timer every one m second
+	OS_set_PSP_stack(OS_CONTROL.CURENT_TASK->_PSP_STACK_TOP);
+	OS_SP2_PSP;
+	OS_CHANGE_CPU_UNPRIVILDEG;
+
+	OS_CONTROL.CURENT_TASK->TASK_FUNCTION();
+}
+uint8_t T_SYStick=0;
+void SysTick_Handler(){
+	OS_WHATE_NEXT();//to know the next task
+	//=====
+	OS_TRIGDER_PENDSV();//to make context switching
+
+	T_SYStick^=1;
+}
+
+

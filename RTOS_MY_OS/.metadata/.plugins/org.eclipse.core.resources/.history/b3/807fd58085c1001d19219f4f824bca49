@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+// Define a new type 'person' with two members
+typedef struct {
+    char name[20];
+    int age;
+} person;
+
+int main() {
+    // Declare a variable of type 'person'
+    person p1;
+
+    // Assign values to members of the 'person' variable
+    strcpy(p1.name, "John");
+    p1.age = 25;
+}

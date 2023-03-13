@@ -1,0 +1,69 @@
+#include "SCEDULER.h"
+
+
+void TASK1_fun(){
+	while(1);
+}
+void TASK2_fun(){
+	while(1);
+}
+void TASK3_fun(){
+	while(1);
+}
+int main(void)
+{
+	typedef struct { //TASK frame
+
+		uint32_t stack_size;
+		uint8_t priority;
+		void (*TASK_FUNCTION)();
+		uint32_t _PSP_STACK_TOP;//not entered by the user
+		uint32_t _PSP_STACK_END;//not entered by the user
+		uint32_t* _PSP_STACK_CURENT;//not entered by the user
+		char NAME[15];
+		enum {
+			Suspend,
+			Wating,
+			Ready,
+			Running
+		}State; //not entered by the user
+
+		struct{
+			enum {
+				enable,
+				disable
+			}blocking;
+			uint32_t TICKS;
+		}wating_time;
+
+	}TASK_FRAME_t;
+
+
+   TASK_FRAME_t TASK1,TASK2,TASK3;
+
+	volatile int x=0;
+	HARD_WARE_INIT();
+	ALSHREIF_RTOS_INIT();
+
+	strcpy(TASK1.NAME,"TASK1");
+	TASK1.TASK_FUNCTION=TASK1_fun;
+	TASK1.priority=2;
+	TASK1.stack_size=1024;
+
+	strcpy(TASK2.NAME,"TASK2");
+	TASK2.TASK_FUNCTION=TASK2_fun;
+	TASK2.priority=2;
+	TASK2.stack_size=1024;
+
+	strcpy(TASK3.NAME,"TASK3");
+	TASK3.TASK_FUNCTION=TASK3_fun;
+	TASK3.priority=2;
+	TASK3.stack_size=1024;
+
+	ALSHREIF_RTOS_CREAT_TASK(&TASK1);
+	ALSHREIF_RTOS_CREAT_TASK(&TASK2);
+	ALSHREIF_RTOS_CREAT_TASK(&TASK3);
+
+
+	while(1);
+}

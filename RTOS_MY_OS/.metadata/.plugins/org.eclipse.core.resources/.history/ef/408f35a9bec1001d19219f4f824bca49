@@ -1,0 +1,95 @@
+/*
+ * RTOS_FIFO.c
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: 20102
+ */
+
+
+#include "RTOS_FIFO.h"
+
+
+FIFO_status_t OS_FIFO_INIT (FIFO_BUF_t* fifo,FIFO_TYPE* buff , uint16_t length){
+
+	if(!buff )
+		return FIFO_NULL;
+
+	fifo->base = buff ;
+	fifo->head = fifo->base ;
+	fifo->tail = fifo->base ;
+	fifo->lenght = length;
+	fifo->count=0;
+
+	return FIFO_NO_ERROR;
+
+}
+
+/* *********************************** */
+
+FIFO_status_t OS_FIFO_ENQUEUE (FIFO_BUF_t* fifo,FIFO_TYPE item){
+
+	/* fifo null*/
+
+	if (!fifo->base || !fifo->lenght)
+		return FIFO_NULL;
+	/*fifo is full*/
+
+	/* fifo full */
+	if ((fifo->head == fifo->tail) && (fifo->count == fifo->lenght))
+		return FIFO_FULL;
+
+	*(fifo->tail)=item;
+	fifo->count++;
+
+	/*for circular fifo again */
+
+	/* circular enqueue */
+	if (fifo->tail == (((unsigned int)fifo->base + (4*fifo->lenght )) - 4 ))
+		fifo->tail = fifo->base;
+	else
+		fifo->tail++;
+
+	return FIFO_NO_ERROR;
+
+
+}
+
+/* *********************************** */
+
+FIFO_status_t OS_FIFO_DEQUEUE (FIFO_BUF_t* fifo, FIFO_TYPE* item){
+	/* check fifo valid */
+	if (!fifo->base || !fifo->lenght)
+		return FIFO_NULL;
+
+	/* fifo empty */
+	if (fifo->head == fifo->tail)
+		return FIFO_EMPTY;
+
+
+
+	*item = *(fifo->head);
+	fifo->count--;
+
+	/* circular dequeue */
+	if (fifo->head == (((uint16_t)fifo->base + (4*fifo->lenght )) - 4 ))
+		fifo->head = fifo->base;
+	else
+		fifo->head++;
+
+	return FIFO_NO_ERROR;
+}
+
+
+
+
+/* *********************************** */
+
+FIFO_status_t FIFO_is_full (FIFO_BUF_t* fifo){
+
+	if(!fifo->head || !fifo->base || !fifo->tail)
+		return FIFO_NULL;
+	if(fifo->count == fifo->lenght)
+		return FIFO_FULL;
+
+	return FIFO_NO_ERROR;
+}

@@ -9,39 +9,88 @@
 #include "RTOS_FIFO.h"
 
 
-FIFO_status_t OS_FIFO_INIT(FIFO_BUF_t * FIFO,FIFO_TYPE* arr,uint16_t size){
-	if(arr==NULL) return FIFO_NULL;
-	FIFO->base=arr;
-	FIFO->head=arr;
-	FIFO->tail=arr;
-	FIFO->lenght=size;
-	FIFO->count=0;
-	return FIFO_NO_ERROR;
-}
-FIFO_status_t OS_FIFO_ENQUEUE(FIFO_BUF_t * FIFO, FIFO_TYPE item){
-	if(FIFO->base==NULL||FIFO->head==NULL||FIFO->tail==NULL) return FIFO_NULL;
+FIFO_status_t OS_FIFO_INIT (FIFO_BUF_t* fifo,FIFO_TYPE* buff , uint16_t length){
 
-	if(FIFO->count >=FIFO->lenght) return FIFO_FULL;
-	FIFO->count++;
-	*(FIFO->head)=item;
+	if(!buff )
+		return FIFO_NULL;
 
-	if(FIFO->head>=(FIFO->base+(FIFO->lenght *sizeof(FIFO_TYPE))))
-		FIFO->head=FIFO->base;
-	else FIFO->head++;
+	fifo->base = buff ;
+	fifo->head = fifo->base ;
+	fifo->tail = fifo->base ;
+	fifo->lenght = length;
+	fifo->count=0;
 
 	return FIFO_NO_ERROR;
+
 }
-FIFO_status_t OS_FIFO_DEQUEUE(FIFO_BUF_t * FIFO, FIFO_TYPE* item){
-	if(FIFO->base==NULL||FIFO->head==NULL||FIFO->tail==NULL) return FIFO_NULL;
-	if(FIFO->count<=0) return FIFO_EMPTY;
 
-	*item = *(FIFO->tail);
+/* *********************************** */
 
-	if(FIFO->tail>=(FIFO->base+(FIFO->lenght *sizeof(FIFO_TYPE))))
-		FIFO->tail=FIFO->base;
-	else FIFO->tail++;
-	FIFO->count--;
+FIFO_status_t OS_FIFO_ENQUEUE (FIFO_BUF_t* fifo,FIFO_TYPE item){
+
+	/* fifo null*/
+
+	if (!fifo->base || !fifo->lenght)
+		return FIFO_NULL;
+	/*fifo is full*/
+
+	/* fifo full */
+	if ((fifo->head == fifo->tail) && (fifo->count == fifo->lenght))
+		return FIFO_FULL;
+
+	*(fifo->tail)=item;
+	fifo->count++;
+
+	/*for circular fifo again */
+
+	/* circular enqueue */
+	if (fifo->tail == (((unsigned int)fifo->base + (4*fifo->lenght )) - 4 ))
+		fifo->tail = fifo->base;
+	else
+		fifo->tail++;
+
+	return FIFO_NO_ERROR;
+
+
+}
+
+/* *********************************** */
+
+FIFO_status_t OS_FIFO_DEQUEUE (FIFO_BUF_t* fifo, FIFO_TYPE* item){
+	/* check fifo valid */
+	if (!fifo->base || !fifo->lenght)
+		return FIFO_NULL;
+
+	/* fifo empty */
+	if (fifo->head == fifo->tail)
+		return FIFO_EMPTY;
+
+
+
+	*item = *(fifo->head);
+	*(fifo->head)=NULL;
+	fifo->count--;
+
+	/* circular dequeue */
+	if (fifo->head == (((unsigned int)fifo->base + (4*fifo->lenght )) - 4 ))
+		fifo->head = fifo->base;
+	else
+		fifo->head++;
 
 	return FIFO_NO_ERROR;
 }
 
+
+
+
+/* *********************************** */
+
+FIFO_status_t FIFO_is_full (FIFO_BUF_t* fifo){
+
+	if(!fifo->head || !fifo->base || !fifo->tail)
+		return FIFO_NULL;
+	if(fifo->count == fifo->lenght)
+		return FIFO_FULL;
+
+	return FIFO_NO_ERROR;
+}

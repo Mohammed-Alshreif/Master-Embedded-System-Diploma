@@ -2411,3 +2411,1709 @@ java.io.FileNotFoundException: C:\E\embedded\test\final simulation code for my a
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2023-03-13 09:46:50.905 -----------------------------------------------
+eclipse.buildId=Version 1.4.0
+java.version=1.8.0_252
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ar_EG
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-03-13 09:47:13.254
+!MESSAGE Log4j initialized with config file C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-03-13 09:47:20.777
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2023-03-13 09:47:21.401
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-03-13 09:47:22.741
+!MESSAGE Connection to http://sw-center.st.com/stm32cubeide/openstlinux/updatesite1/p2.index failed on sw-center.st.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2023-03-13 09:47:22.994
+!MESSAGE Unknown Host: http://sw-center.st.com/stm32cubeide/openstlinux/updatesite1/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-03-13 09:47:23.000
+!MESSAGE Connection to http://sw-center.st.com/stm32cubeide/toolchains/7-2018-q2-update/1.7.0/p2.index failed on sw-center.st.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-03-13 09:47:23.235
+!MESSAGE Connection to http://sw-center.st.com/stm32cubeide/toolchains/7-2018-q2-update/1.7.0/content.xml.xz failed on sw-center.st.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2023-03-13 09:47:23.453
+!MESSAGE Unknown Host: http://sw-center.st.com/stm32cubeide/toolchains/7-2018-q2-update/1.7.0/content.xml.xz
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-03-13 09:47:23.457
+!MESSAGE Connection to http://sw-center.st.com/stm32cubeide/toolchains/7-2018-q2-update/p2.index failed on sw-center.st.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2023-03-13 09:47:23.680
+!MESSAGE Unknown Host: http://sw-center.st.com/stm32cubeide/toolchains/7-2018-q2-update/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-03-13 09:47:23.685
+!MESSAGE Connection to http://sw-center.st.com/stm32cubeide/updatesite1/p2.index failed on sw-center.st.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2023-03-13 09:47:23.906
+!MESSAGE Unknown Host: http://sw-center.st.com/stm32cubeide/updatesite1/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-03-13 09:47:23.911
+!MESSAGE Connection to https://download.eclipse.org/releases/2019-09/p2.index failed on download.eclipse.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2023-03-13 09:47:24.127
+!MESSAGE Unknown Host: https://download.eclipse.org/releases/2019-09/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2023-03-13 09:47:24.131
+!MESSAGE Connection to http://sw-center.st.com/stm32cubeide/toolchains/p2.index failed on sw-center.st.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2023-03-13 09:47:24.346
+!MESSAGE Unknown Host: http://sw-center.st.com/stm32cubeide/toolchains/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: sw-center.st.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1281)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:246)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jface 2 0 2023-03-13 09:48:05.625
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:512)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1965)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:686)
+	at java.util.concurrent.CompletableFuture.thenAccept(CompletableFuture.java:2010)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$0(NestedProjectsLabelProvider.java:80)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:379)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2308)
+	at org.eclipse.core.internal.events.NotificationManager$NotifyJob.run(NotificationManager.java:44)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.519
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.520
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.521
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.522
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.522
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.523
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.523
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.524
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.525
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.525
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.547
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.548
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.548
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.549
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.552
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.553
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.554
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.554
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.556
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.557
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.560
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.560
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.561
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.561
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.562
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.563
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.563
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.564
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.564
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.565
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.568
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.569
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.569
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.570
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.570
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.571
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.572
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.572
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.573
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.574
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.577
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.578
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.579
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.580
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.580
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.581
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.582
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.582
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.583
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.583
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.593
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.594
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.594
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.595
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.596
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.596
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.597
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.597
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.598
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.599
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.653
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.653
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.654
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.654
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.655
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.655
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.656
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.656
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.657
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.657
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.685
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.686
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.686
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.687
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.687
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.688
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.688
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.689
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.689
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.691
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.706
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.706
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.707
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.707
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.708
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.709
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.709
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.710
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2023-03-13 10:04:06.710
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2023-03-13 10:04:06.711
+!MESSAGE Falling back to default toolchain
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-13 10:04:36.224
+!MESSAGE Indexed 'RTOS_PROJECT' (١٩ sources, ٧٩ headers) in ١٫١٦ sec: ٣٬٣٧١ declarations; ٨٬٢٩٩ references; ٠ unresolved inclusions; ١ syntax errors; ٢ unresolved names (٠٫٠١٧٪؜)
+
+!ENTRY org.eclipse.cdt.ui 4 0 2023-03-13 17:56:20.407
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element main.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:486)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:583)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:65)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:641)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:365)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:79)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:64)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:346)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2023-03-13 17:56:20.407
+!MESSAGE Element main.c does not exist.
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2023-03-13 18:15:16.613
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+load "C:\\E\\embedded\\test\\final simulation code for my assignments\\RTOS_MY_OS\\RTOS_PROJECT\\Debug\\RTOS_PROJECT.axf" 
+
+Error message from debugger back end:
+Error erasing flash with vFlashErase packet
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+load "C:\\E\\embedded\\test\\final simulation code for my assignments\\RTOS_MY_OS\\RTOS_PROJECT\\Debug\\RTOS_PROJECT.axf" 
+
+Error message from debugger back end:
+Error erasing flash with vFlashErase packet
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:299)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+load "C:\\E\\embedded\\test\\final simulation code for my assignments\\RTOS_MY_OS\\RTOS_PROJECT\\Debug\\RTOS_PROJECT.axf" 
+
+Error message from debugger back end:
+Error erasing flash with vFlashErase packet
+java.lang.Exception: Error erasing flash with vFlashErase packet
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2023-03-13 18:15:16.614
+!MESSAGE Failed to execute MI command:
+load "C:\\E\\embedded\\test\\final simulation code for my assignments\\RTOS_MY_OS\\RTOS_PROJECT\\Debug\\RTOS_PROJECT.axf" 
+
+Error message from debugger back end:
+Error erasing flash with vFlashErase packet
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2023-03-13 18:15:16.614
+!MESSAGE Failed to execute MI command:
+load "C:\\E\\embedded\\test\\final simulation code for my assignments\\RTOS_MY_OS\\RTOS_PROJECT\\Debug\\RTOS_PROJECT.axf" 
+
+Error message from debugger back end:
+Error erasing flash with vFlashErase packet
+!STACK 0
+java.lang.Exception: Error erasing flash with vFlashErase packet
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.ui 4 0 2023-03-13 19:44:12.669
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StackOverflowError
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:182)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:271)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:271)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:317)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:271)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:271)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:271)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:271)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:257)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:271)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElementsRecursive(ModelServiceImpl.java:271)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElements(ModelServiceImpl.java:428)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.findElements(ModelServiceImpl.java:421)
+	at org.eclipse.ui.internal.WorkbenchPage.getViewReferences(WorkbenchPage.java:2503)
+	at org.eclipse.ui.internal.WorkbenchPage.getViewReferences(WorkbenchPage.java:2493)
+	at org.eclipse.ui.internal.WorkbenchPage.findViewReference(WorkbenchPage.java:1966)
+	at org.eclipse.cdt.ui.actions.ChangeBuildConfigActionBase.onSelectionChanged(ChangeBuildConfigActionBase.java:333)
+	at org.eclipse.cdt.ui.actions.BuildActiveConfigMenuAction.selectionChanged(BuildActiveConfigMenuAction.java:104)
+	at org.eclipse.ui.internal.PluginAction.refreshEnablement(PluginAction.java:194)
+	at org.eclipse.ui.internal.PluginAction.selectionChanged(PluginAction.java:257)
+	at org.eclipse.ui.internal.PluginAction.selectionChanged(PluginAction.java:281)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.notifyListeners(SelectionService.java:240)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.handleSelectionChanged(SelectionService.java:94)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.lambda$0(SelectionService.java:68)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$1.run(SelectionAggregator.java:123)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator.notifyListeners(SelectionAggregator.java:120)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator.access$2(SelectionAggregator.java:118)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$5.lambda$0(SelectionAggregator.java:220)
+	at org.eclipse.e4.core.contexts.RunAndTrack.runExternalCode(RunAndTrack.java:59)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$5.changed(SelectionAggregator.java:220)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:108)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:364)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.set(EclipseContext.java:379)
+	at org.eclipse.e4.ui.internal.workbench.SelectionServiceImpl.setSelection(SelectionServiceImpl.java:34)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.selectionChanged(CompatibilityPart.java:467)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:189)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryBlocksTreeViewPane$1.selectionChanged(MemoryBlocksTreeViewPane.java:303)
+	at org.eclipse.jface.viewers.Viewer$1.run(Viewer.java:151)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:148)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2118)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1655)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1084)
+	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.setSelection(InternalTreeModelViewer.java:1009)
+	at org.eclipse.jface.viewers.Viewer.setSelection(Viewer.java:376)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryBlocksTreeViewPane.selectionChanged(MemoryBlocksTreeViewPane.java:383)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryBlocksTreeViewPane.selectionChanged(MemoryBlocksTreeViewPane.java:499)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.setSelection(ViewPaneSelectionProvider.java:58)
+	at org.eclipse.debug.internal.ui.views.memory.AbstractMemoryViewPane.selectionChanged(AbstractMemoryViewPane.java:359)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.fireChanged(MemoryView.java:174)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.setSelection(MemoryView.java:166)
+	at org.eclipse.debug.internal.ui.views.memory.MemoryView$MemoryViewSelectionProvider.selectionChanged(MemoryView.java:187)
+	at org.eclipse.debug.internal.ui.views.memory.ViewPaneSelectionProvider.fireChanged(ViewPaneSelectionProvider.java:64)

@@ -23,6 +23,10 @@ void	UsageFault_Handler(){
 void HARD_WARE_INIT(){
 
 	__NVIC_SetPriority(PendSV_IRQn, 15) ;
+	pinmode(GPIOA, pin7, GPIO_MODE_OUTPUT_push_pull_Speed2);
+	pinmode(GPIOB, pin0, GPIO_MODE_OUTPUT_push_pull_Speed2);
+	pinmode(GPIOB, pin1, GPIO_MODE_OUTPUT_push_pull_Speed2);
+
 }
 
 
@@ -45,4 +49,12 @@ void OS_TRIGDER_PENDSV(){
 	SCB->ICSR |= SCB_ICSR_PENDSVSET_Msk ;
 }
 //====================================
+void TIMER_START(){
 
+	SysTick_Config( TICKS_TIMER);
+}
+//====================================
+//====================================
+//====================================
+//====================================
+//====================================

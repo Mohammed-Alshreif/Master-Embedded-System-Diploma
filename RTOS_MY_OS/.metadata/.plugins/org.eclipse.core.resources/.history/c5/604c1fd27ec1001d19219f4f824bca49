@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+// Define a new type 'person' with two members
+ struct {
+    char name[20];
+    int age;
+}  p1;
+
+int main() {
+    // Declare a variable of type 'person'
+    //person p1;
+
+    // Assign values to members of the 'person' variable
+ p1.name[0]='c';
+ p1.name[1]='c';
+ p1.name[2]='c';
+    p1.age = 25;
+
+    return 0;
+}
