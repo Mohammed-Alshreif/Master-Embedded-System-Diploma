@@ -8527,3 +8527,572 @@ Finished building: RTOS_PROJECT.bin
  
 Finished building: RTOS_PROJECT.list
  
+11:16:35 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../ALSHREIF_RTOS/SCEDULER.c:73:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6512	     40	   2752	   9304	   2458	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+Finished building: RTOS_PROJECT.bin
+ 
+ 
+Finished building: RTOS_PROJECT.list
+ 
+11:25:59 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../ALSHREIF_RTOS/RTOS_FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/RTOS_FIFO.d" -MT"ALSHREIF_RTOS/RTOS_FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/RTOS_FIFO.o"
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../ALSHREIF_RTOS/SCEDULER.c:73:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+../ALSHREIF_RTOS/RTOS_FIFO.c: In function 'OS_FIFO_ENQUEUE':
+../ALSHREIF_RTOS/RTOS_FIFO.c:47:17: warning: comparison between pointer and integer
+  if (fifo->tail == (((unsigned int)fifo->base + (4*fifo->lenght )) - 4 ))
+                 ^~
+../ALSHREIF_RTOS/RTOS_FIFO.c: In function 'OS_FIFO_DEQUEUE':
+../ALSHREIF_RTOS/RTOS_FIFO.c:75:17: warning: comparison between pointer and integer
+  if (fifo->head == (((unsigned int)fifo->base + (4*fifo->lenght )) - 4 ))
+                 ^~
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6512	     40	   2752	   9304	   2458	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+ 
+Finished building: RTOS_PROJECT.list
+ 
+11:40:29 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../ALSHREIF_RTOS/SCEDULER.c:73:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+../ALSHREIF_RTOS/SCEDULER.c: In function 'OS_SVC_SERVICES':
+../ALSHREIF_RTOS/SCEDULER.c:298:7: error: 'Wating_task' undeclared (first use in this function); did you mean 'SVC_Wating_task'?
+  case Wating_task:
+       ^~~~~~~~~~~
+       SVC_Wating_task
+../ALSHREIF_RTOS/SCEDULER.c:298:7: note: each undeclared identifier is reported only once for each function it appears in
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_WAITING_TIMING':
+../ALSHREIF_RTOS/SCEDULER.c:450:17: error: 'SVC_' undeclared (first use in this function); did you mean 'SCB'?
+      OS_SVC_SET(SVC_);
+                 ^~~~
+                 SCB
+make: *** [ALSHREIF_RTOS/subdir.mk:28: ALSHREIF_RTOS/SCEDULER.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+11:40:49 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../ALSHREIF_RTOS/SCEDULER.c:73:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6644	     40	   2752	   9436	   24dc	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+ 
+Finished building: RTOS_PROJECT.list
+ 
+11:51:42 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../ALSHREIF_RTOS/SCEDULER.c:73:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6656	     40	   2752	   9448	   24e8	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+Finished building: RTOS_PROJECT.list
+ 
+ 
+11:53:11 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6744	     40	   2752	   9536	   2540	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+ 
+Finished building: RTOS_PROJECT.list
+ 
+14:01:50 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6828	     40	   2800	   9668	   25c4	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+ 
+Finished building: RTOS_PROJECT.list
+ 
+14:08:05 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+../ALSHREIF_RTOS/SCEDULER.c:73:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+../Src/main.c: In function 'TASK2_fun':
+../Src/main.c:28:4: warning: implicit declaration of function 'ALSHREIF_RTOS_TERMININAT_TASK'; did you mean 'ALSHREIF_RTOS_TERMINAT_TASK'? [-Wimplicit-function-declaration]
+    ALSHREIF_RTOS_TERMININAT_TASK(TASK)(&TASK2);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ALSHREIF_RTOS_TERMINAT_TASK
+../Src/main.c:28:34: error: 'TASK' undeclared (first use in this function); did you mean 'TASK4'?
+    ALSHREIF_RTOS_TERMININAT_TASK(TASK)(&TASK2);
+                                  ^~~~
+                                  TASK4
+../Src/main.c:28:34: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:08:28 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6920	     40	   2808	   9768	   2628	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+Finished building: RTOS_PROJECT.bin
+ 
+ 
+Finished building: RTOS_PROJECT.list
+ 
+14:09:59 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6920	     40	   2808	   9768	   2628	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+ 
+Finished building: RTOS_PROJECT.list
+ 
+14:12:41 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6924	     40	   2808	   9772	   262c	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+ 
+Finished building: RTOS_PROJECT.list
+ 
+14:16:47 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6968	     40	   2808	   9816	   2658	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+Finished building: RTOS_PROJECT.bin
+Finished building: RTOS_PROJECT.list
+ 
+ 
+ 
+14:21:24 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6968	     40	   2808	   9816	   2658	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+Finished building: RTOS_PROJECT.list
+ 
+ 
+14:21:31 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6968	     40	   2808	   9816	   2658	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+ 
+Finished building: RTOS_PROJECT.list
+ 
+14:33:45 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6952	     40	   2816	   9808	   2650	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+Finished building: RTOS_PROJECT.list
+ 
+ 
+14:51:43 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../ALSHREIF_RTOS/RTOS_FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/RTOS_FIFO.d" -MT"ALSHREIF_RTOS/RTOS_FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/RTOS_FIFO.o"
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/RTOS_FIFO.c: In function 'OS_FIFO_ENQUEUE':
+../ALSHREIF_RTOS/RTOS_FIFO.c:47:17: warning: comparison between pointer and integer
+  if (fifo->tail == (((unsigned int)fifo->base + (4*fifo->lenght )) - 4 ))
+                 ^~
+../ALSHREIF_RTOS/RTOS_FIFO.c: In function 'OS_FIFO_DEQUEUE':
+../ALSHREIF_RTOS/RTOS_FIFO.c:75:17: warning: comparison between pointer and integer
+  if (fifo->head == (((unsigned int)fifo->base + (4*fifo->lenght )) - 4 ))
+                 ^~
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../ALSHREIF_RTOS/SCEDULER.c:73:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ALSHREIF_RTOS/SCEDULER.o: In function `DEADLOCK_RELEASE':
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:64: multiple definition of `DEADLOCK_RELEASE'
+ALSHREIF_RTOS/RTOS_FIFO.o:C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:64: first defined here
+Src/main.o: In function `DEADLOCK_RELEASE':
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:64: multiple definition of `DEADLOCK_RELEASE'
+ALSHREIF_RTOS/RTOS_FIFO.o:C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:64: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:51: RTOS_PROJECT.axf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:54:06 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../ALSHREIF_RTOS/RTOS_FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/RTOS_FIFO.d" -MT"ALSHREIF_RTOS/RTOS_FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/RTOS_FIFO.o"
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/RTOS_FIFO.c: In function 'OS_FIFO_ENQUEUE':
+../ALSHREIF_RTOS/RTOS_FIFO.c:47:17: warning: comparison between pointer and integer
+  if (fifo->tail == (((unsigned int)fifo->base + (4*fifo->lenght )) - 4 ))
+                 ^~
+../ALSHREIF_RTOS/RTOS_FIFO.c: In function 'OS_FIFO_DEQUEUE':
+../ALSHREIF_RTOS/RTOS_FIFO.c:75:17: warning: comparison between pointer and integer
+  if (fifo->head == (((unsigned int)fifo->base + (4*fifo->lenght )) - 4 ))
+                 ^~
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/GPIO_DRIVER.h:11:0,
+                 from ../Src/main.c:2:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../ALSHREIF_RTOS/SCEDULER.c:73:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_AcquireMutex':
+../ALSHREIF_RTOS/SCEDULER.c:486:3: error: 'm' undeclared (first use in this function)
+   m
+   ^
+../ALSHREIF_RTOS/SCEDULER.c:486:3: note: each undeclared identifier is reported only once for each function it appears in
+../ALSHREIF_RTOS/SCEDULER.c:487:2: error: expected ';' before '}' token
+  }
+  ^
+make: *** [ALSHREIF_RTOS/subdir.mk:28: ALSHREIF_RTOS/SCEDULER.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:54:50 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../ALSHREIF_RTOS/SCEDULER.c:73:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6952	     40	   2816	   9808	   2650	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+ 
+Finished building: RTOS_PROJECT.list
+ 
+14:59:09 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../ALSHREIF_RTOS/SCEDULER.c:73:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6952	     40	   2816	   9808	   2650	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+ 
+Finished building: RTOS_PROJECT.list
+ 
+15:04:35 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-gcc "../ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/CMSIS" -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/RTOS_MY_OS/RTOS_PROJECT/STM32f103c8_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"ALSHREIF_RTOS/SCEDULER.d" -MT"ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "ALSHREIF_RTOS/SCEDULER.o"
+../ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../ALSHREIF_RTOS/SCEDULER.c:73:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+arm-none-eabi-gcc -o "RTOS_PROJECT.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\RTOS_MY_OS\RTOS_PROJECT\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS_PROJECT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS_PROJECT.axf
+ 
+arm-none-eabi-objdump -h -S  RTOS_PROJECT.axf  > "RTOS_PROJECT.list"
+arm-none-eabi-objcopy  -O binary  RTOS_PROJECT.axf  "RTOS_PROJECT.bin"
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6952	     40	   2816	   9808	   2650	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+Finished building: RTOS_PROJECT.bin
+ 
+Finished building: RTOS_PROJECT.list
+ 
+15:04:55 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6952	     40	   2816	   9808	   2650	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 

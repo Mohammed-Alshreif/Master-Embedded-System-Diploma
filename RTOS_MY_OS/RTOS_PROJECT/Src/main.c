@@ -1,38 +1,84 @@
 #include "SCEDULER.h"
 #include "GPIO_DRIVER.h"
-TASK_FRAME_t TASK1,TASK2,TASK3;
-uint8_t T1,T2,T3;
+TASK_FRAME_t TASK1,TASK2,TASK3,TASK4;
+uint8_t T1,T2,T3,T4;
+
+
 void TASK1_fun(){
+	static volatile uint32_t co=0;
 	while(1){
 		T1^=1;
+		co++;
 		TogglePin(GPIOA, pin7);
+		//ALSHREIF_RTOS_TASK_WAIT(&TASK1, 100);
+		if(co==100){
+			co=0;
+			ALSHREIF_RTOS_ACTIVAT_TASK(&TASK2);
+
+		}
 	}
 }
 void TASK2_fun(){
+	static volatile uint32_t co=0;
 	while(1){
 		T2^=1;
+		co++;
 		TogglePin(GPIOB, pin0);
+		//ALSHREIF_RTOS_TASK_WAIT(&TASK2, 400);
+		if(co==100){
+			ALSHREIF_RTOS_ACTIVAT_TASK(&TASK3);
+
+		}
+		if(co==200){
+			co=0;
+			ALSHREIF_RTOS_TERMINAT_TASK(&TASK2);
+
+		}
 	}
 }
 void TASK3_fun(){
+	static volatile uint32_t co=0;
 	while(1){
 		T3^=1;
+		co++;
 		TogglePin(GPIOB, pin1);
+		//ALSHREIF_RTOS_TASK_WAIT(&TASK3, 1000);
+		if(co==100){
+			ALSHREIF_RTOS_ACTIVAT_TASK(&TASK4);
+		}
+		if(co==200){
+			co=0;
+			ALSHREIF_RTOS_TERMINAT_TASK(&TASK3);
+		}
 	}
 }
+void TASK4_fun(){
+	static volatile uint32_t co=0;
+	while(1){
+		T4^=1;
+		co++;
+		//ALSHREIF_RTOS_TASK_WAIT(&TASK4, 100);
+		if(co==300){
+			co=0;
+			ALSHREIF_RTOS_TERMINAT_TASK(&TASK4);
+		}
+	}
+}
+//============================================================================================================
 int main(void)
 {
+
 	HARD_WARE_INIT();
 	ALSHREIF_RTOS_INIT();
 
 	strcpy(TASK1.NAME,"TASK1");
 	TASK1.TASK_FUNCTION=TASK1_fun;
-	TASK1.priority=2;
+	TASK1.priority=4;
 	TASK1.stack_size=1024;
 
 	strcpy(TASK2.NAME,"TASK2");
 	TASK2.TASK_FUNCTION=TASK2_fun;
-	TASK2.priority=2;
+	TASK2.priority=3;
 	TASK2.stack_size=1024;
 
 	strcpy(TASK3.NAME,"TASK3");
@@ -40,13 +86,19 @@ int main(void)
 	TASK3.priority=2;
 	TASK3.stack_size=1024;
 
+	strcpy(TASK4.NAME,"TASK4");
+	TASK4.TASK_FUNCTION=TASK4_fun;
+	TASK4.priority=1;
+	TASK4.stack_size=1024;
+
 	ALSHREIF_RTOS_CREAT_TASK(&TASK1);
 	ALSHREIF_RTOS_CREAT_TASK(&TASK2);
 	ALSHREIF_RTOS_CREAT_TASK(&TASK3);
+	ALSHREIF_RTOS_CREAT_TASK(&TASK4);
 
 	ALSHREIF_RTOS_ACTIVAT_TASK(&TASK1);
-	ALSHREIF_RTOS_ACTIVAT_TASK(&TASK2);
-	ALSHREIF_RTOS_ACTIVAT_TASK(&TASK3);
+	//	ALSHREIF_RTOS_ACTIVAT_TASK(&TASK2);
+	//	ALSHREIF_RTOS_ACTIVAT_TASK(&TASK3);
 
 	ALSHREIF_RTOS_START_OS();
 	while(1);

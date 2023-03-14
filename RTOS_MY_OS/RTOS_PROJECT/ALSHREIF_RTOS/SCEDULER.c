@@ -36,14 +36,14 @@ struct {
 typedef enum{
 	SVC_ACTIVAT_task,
 	SVC_TERMINATE_task,
-	Wating_task
+	SVC_Wating_task
 }_SVC_ID;
 //===============================idle_task_fun==================================
 uint8_t idle=0;
 void idle_task_fun(){
 	while(1){
 		idle^=1;
-		__asm("NOP");
+		__asm("WFE");
 	}
 }
 //=======================ALSHREIF_RTOS_CREAT_TASK_FRAM==========================
@@ -232,7 +232,7 @@ void ALSHREIF_RTOS_UPDATE_SCEDULER_TABLES(){
 //======================================== SVC =====================================================
 
 void OS_SVC_SET(_SVC_ID ID){
-
+	//OS_SVC_SERVICES
 	switch(ID){
 	case SVC_ACTIVAT_task:
 		__asm("SVC #0x0");//ACTIVAT
@@ -240,7 +240,7 @@ void OS_SVC_SET(_SVC_ID ID){
 	case SVC_TERMINATE_task:
 		__asm("SVC #0x01");//TERMINATE
 		break;
-	case Wating_task:
+	case SVC_Wating_task:
 		__asm("SVC #0x02");//wating
 		break;
 	}
@@ -295,15 +295,16 @@ void OS_SVC_SERVICES(int* STACK_FRAM_POINTER){
 		}
 
 		break;
-	case Wating_task:
-
+	case SVC_Wating_task:
+		ALSHREIF_RTOS_UPDATE_SCEDULER_TABLES();//init to know the next task
+		//after the next SysTick_Handler will work because it decrement and check @ref_sheck_time
 		break;
 
 	}
 
 
 }
-
+//========================================================================================================
 //===========================================================================
 
 __attribute ((naked)) void PendSV_Handler(){
@@ -407,6 +408,7 @@ __attribute ((naked)) void PendSV_Handler(){
 }
 
 
+//========================================================================================================
 
 
 
@@ -415,13 +417,13 @@ void ALSHREIF_RTOS_ACTIVAT_TASK(TASK_FRAME_t* TASK){
 	OS_SVC_SET(SVC_ACTIVAT_task);
 
 }
-void ALSHREIF_RTOS_TERMININAT_TASK(TASK_FRAME_t* TASK){
+void ALSHREIF_RTOS_TERMINAT_TASK(TASK_FRAME_t* TASK){
 	TASK->State=Suspend;
+	OS_SVC_SET(SVC_TERMINATE_task);
 }
 
 
-
-
+//========================================================================================================
 
 void ALSHREIF_RTOS_START_OS(){
 	OS_CONTROL.OS_MODE=OS_Running;//mode
@@ -436,12 +438,77 @@ void ALSHREIF_RTOS_START_OS(){
 	OS_CONTROL.CURENT_TASK->TASK_FUNCTION();
 }
 uint8_t T_SYStick=0;
+//========================================================================================================
+void ALSHREIF_RTOS_WAITING_TIMING(){
+
+	for(int i=0;i<OS_CONTROL.NUMBER_OF_TASKS;i++){
+		if(OS_CONTROL.OS_TASKS[i]->State==Suspend){
+			if(OS_CONTROL.OS_TASKS[i]->wating_time.blocking==enable){
+
+				//@ref_sheck_time
+				if((--OS_CONTROL.OS_TASKS[i]->wating_time.TICKS)==0){
+					OS_CONTROL.OS_TASKS[i]->wating_time.blocking=disable;
+					OS_CONTROL.OS_TASKS[i]->State=Wating;
+
+					OS_SVC_SET(SVC_Wating_task);
+				}
+			}
+		}
+	}
+}
+//========================================================================================================
+
 void SysTick_Handler(){
 	OS_WHATE_NEXT();//to know the next task
 	//=====
 	OS_TRIGDER_PENDSV();//to make context switching
 
+	ALSHREIF_RTOS_WAITING_TIMING();
+
 	T_SYStick^=1;
+}
+//========================================================================================================
+
+void ALSHREIF_RTOS_TASK_WAIT(TASK_FRAME_t* TASK,uint32_t ticks_of_SysTick_Handler){
+	TASK->wating_time.blocking=enable;
+	TASK->wating_time.TICKS=ticks_of_SysTick_Handler;
+	TASK->State=Suspend;
+	OS_SVC_SET(SVC_TERMINATE_task);
+}
+
+//=======================================================================================================
+
+
+
+void ALSHREIF_RTOS_AcquireMutex(MUTEX_t * mutex,TASK_FRAME_t* TASK){
+
+	if(mutex->CURRENT_USER==NULL){
+		mutex->CURRENT_USER=TASK;
+	}
+	else{
+		if(mutex->NEXT_USER==NULL){
+			mutex->NEXT_USER=TASK;
+			TASK->State=Suspend;
+			OS_SVC_SET(SVC_TERMINATE_task);
+
+		}
+		else{
+			//TODO error section
+		}
+
+	}
 }
 
 
+
+void ALSHREIF_RTOS_ReleaseMutex(MUTEX_t * mutex){
+
+	if(mutex->CURRENT_USER!=NULL){
+		mutex->CURRENT_USER=mutex->NEXT_USER;
+		mutex->NEXT_USER=NULL;
+		mutex->CURRENT_USER->State=Wating;
+		OS_SVC_SET(SVC_ACTIVAT_task);
+
+	}
+
+}

@@ -42,6 +42,13 @@ typedef struct { //TASK frame
 
 }TASK_FRAME_t;
 
+//===========================Mutex====================
+typedef struct {
+	uint8_t*           POINTER_payload;
+	uint32_t           PayloadSize ;
+	TASK_FRAME_t* 	   CURRENT_USER ;
+	TASK_FRAME_t* 	   NEXT_USER ;
+} MUTEX_t;
 
 //=================== API ===========================
 
@@ -50,4 +57,12 @@ void ALSHREIF_RTOS_CREAT_TASK(TASK_FRAME_t* TASK);
 void ALSHREIF_RTOS_ACTIVAT_TASK(TASK_FRAME_t* TASK);
 void ALSHREIF_RTOS_TERMINAT_TASK(TASK_FRAME_t* TASK);
 void ALSHREIF_RTOS_START_OS();
+void ALSHREIF_RTOS_TASK_WAIT(TASK_FRAME_t* TASK,uint32_t ticks_of_SysTick_Handler);
+
+void ALSHREIF_RTOS_AcquireMutex(MUTEX_t * mutex,TASK_FRAME_t* TASK);
+void ALSHREIF_RTOS_ReleaseMutex(MUTEX_t * mutex);
+
+void DEADLOCK_RELEASE();//todo soon
+
+
 #endif /* INC_SCEDULER_H_ */
