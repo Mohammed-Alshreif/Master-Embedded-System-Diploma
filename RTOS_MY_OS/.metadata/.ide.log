@@ -392,3 +392,23 @@
 2023-03-14 11:08:19,598 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
 2023-03-14 11:08:20,333 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://archive.eclipse.org:443: The target server failed to respond
 2023-03-14 11:08:20,333 [INFO] RetryExec:113 - Retrying request to {s}->https://archive.eclipse.org:443
+2023-03-17 19:23:22,002 [INFO] Activator:178 - 
+
+
+2023-03-17 19:23:22,012 [INFO] Activator:179 - !SESSION log4j initialized
+2023-03-17 19:24:35,299 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://download.eclipse.org:443: The target server failed to respond
+2023-03-17 19:24:35,303 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2023-03-17 19:24:36,061 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://archive.eclipse.org:443: The target server failed to respond
+2023-03-17 19:24:36,061 [INFO] RetryExec:113 - Retrying request to {s}->https://archive.eclipse.org:443
+2023-03-17 22:38:04,654 [INFO] Activator:178 - 
+
+
+2023-03-17 22:38:04,657 [INFO] Activator:179 - !SESSION log4j initialized
+2023-03-18 01:25:36,204 [INFO] Activator:178 - 
+
+
+2023-03-18 01:25:36,209 [INFO] Activator:179 - !SESSION log4j initialized
+2023-03-18 01:26:37,058 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://download.eclipse.org:443: The target server failed to respond
+2023-03-18 01:26:37,060 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2023-03-18 01:26:37,816 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://archive.eclipse.org:443: The target server failed to respond
+2023-03-18 01:26:37,816 [INFO] RetryExec:113 - Retrying request to {s}->https://archive.eclipse.org:443

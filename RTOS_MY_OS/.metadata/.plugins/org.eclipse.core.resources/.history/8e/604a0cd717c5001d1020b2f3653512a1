@@ -1,0 +1,68 @@
+/*
+ * SCEDULER.h
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: MOHAMMED ALSHREIF
+ */
+
+#ifndef INC_SCEDULER_H_
+#define INC_SCEDULER_H_
+#include "RTOS_CORTEX_M3_PORTING.h"
+uint8_t sort1;
+//========================================================
+typedef enum {
+	no_error,
+	RTOS_INIT_ERROR
+}OS_ERRORS;
+
+//===================TASK frame============================
+typedef struct { //TASK frame
+
+	uint32_t stack_size;
+	uint8_t priority;
+	void (*TASK_FUNCTION)();
+	uint32_t _PSP_STACK_TOP;//not entered by the user
+	uint32_t _PSP_STACK_END;//not entered by the user
+	uint32_t* _PSP_STACK_CURENT;//not entered by the user
+	char NAME[15];
+	enum {
+		Suspend,
+		Wating,
+		Ready,
+		Running
+	}State; //not entered by the user
+
+	struct{
+		enum {
+			enable,
+			disable
+		}blocking;
+		uint32_t TICKS;
+	}wating_time;
+
+}TASK_FRAME_t;
+
+//===========================Mutex====================
+typedef struct {
+	uint8_t*           POINTER_payload;
+	uint32_t           PayloadSize ;
+	TASK_FRAME_t* 	   CURRENT_USER ;
+	TASK_FRAME_t* 	   NEXT_USER ;
+} MUTEX_t;
+
+//=================== API ===========================
+
+OS_ERRORS ALSHREIF_RTOS_INIT();
+void ALSHREIF_RTOS_CREAT_TASK(TASK_FRAME_t* TASK);
+void ALSHREIF_RTOS_ACTIVAT_TASK(TASK_FRAME_t* TASK);
+void ALSHREIF_RTOS_TERMINAT_TASK(TASK_FRAME_t* TASK);
+void ALSHREIF_RTOS_START_OS();
+void ALSHREIF_RTOS_TASK_WAIT(TASK_FRAME_t* TASK,uint32_t ticks_of_SysTick_Handler);
+
+void ALSHREIF_RTOS_AcquireMutex(MUTEX_t * mutex,TASK_FRAME_t* TASK);
+void ALSHREIF_RTOS_ReleaseMutex(MUTEX_t * mutex);
+
+void DEADLOCK_RELEASE();//todo soon
+
+
+#endif /* INC_SCEDULER_H_ */

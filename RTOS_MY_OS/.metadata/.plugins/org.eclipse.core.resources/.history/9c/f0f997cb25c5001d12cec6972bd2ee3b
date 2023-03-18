@@ -1,0 +1,60 @@
+/*
+ * RTOS_CORTEX_M3_PORTING.c
+ *
+ *  Created on: Mar 10, 2023
+ *      Author: 20102
+ */
+#include "RTOS_CORTEX_M3_PORTING.h"
+#include "stm32_speed_DRIVER.h"
+void HardFault_Handler(){
+	while(1);
+}
+void	MemManage_Handler(){
+	while(1);
+}
+void	BusFault_Handler(){
+	while(1);
+}
+void	UsageFault_Handler(){
+	while(1);
+}
+
+//====================================
+void HARD_WARE_INIT(){
+
+	__NVIC_SetPriority(PendSV_IRQn, 15) ;
+	pinmode(GPIOA, pin7, GPIO_MODE_OUTPUT_push_pull_Speed2);
+	pinmode(GPIOB, pin0, GPIO_MODE_OUTPUT_push_pull_Speed2);
+	pinmode(GPIOB, pin1, GPIO_MODE_OUTPUT_push_pull_Speed2);
+
+}
+
+
+//====================================
+
+__attribute__((naked)) void SVC_Handler(){
+	__asm("TST lr,#4 \n\t"
+			"ITE EQ \n\t"
+			"MRSEQ r0,MSP \n\t"
+			"MRSNE r0,PSP \n\t"
+			"B OS_SVC_SERVICES");
+}
+
+
+
+
+//====================================
+
+void OS_TRIGDER_PENDSV(){
+	SCB->ICSR |= SCB_ICSR_PENDSVSET_Msk ;
+}
+//====================================
+void TIMER_START(){
+
+	SysTick_Config( TICKS_TIMER);
+}
+//====================================
+//====================================
+//====================================
+//====================================
+//====================================

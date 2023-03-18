@@ -6,6 +6,7 @@
  */
 #include "RTOS_CORTEX_M3_PORTING.h"
 #include "stm32_speed_DRIVER.h"
+
 void HardFault_Handler(){
 	while(1);
 }
@@ -22,8 +23,10 @@ void	UsageFault_Handler(){
 //====================================
 void HARD_WARE_INIT(){
 
+	MCAL_speed_init(CLK_SORC_IN_CLK8MHz, mood_FAST_MOOD_36MHzCORE);
 	__NVIC_SetPriority(PendSV_IRQn, 15) ;
 	pinmode(GPIOA, pin7, GPIO_MODE_OUTPUT_push_pull_Speed2);
+	pinmode(GPIOA, pin6, GPIO_MODE_OUTPUT_push_pull_Speed2);
 	pinmode(GPIOB, pin0, GPIO_MODE_OUTPUT_push_pull_Speed2);
 	pinmode(GPIOB, pin1, GPIO_MODE_OUTPUT_push_pull_Speed2);
 

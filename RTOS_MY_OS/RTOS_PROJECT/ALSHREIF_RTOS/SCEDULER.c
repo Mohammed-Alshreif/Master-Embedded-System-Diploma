@@ -134,6 +134,7 @@ OS_ERRORS ALSHREIF_RTOS_INIT(){
 	return error;
 }
 //===========================================UPDATE_SCEDULER=======================================================
+
 void bubble_sort(){
 	unsigned int i, j , n;
 	TASK_FRAME_t* temp ;
@@ -148,7 +149,23 @@ void bubble_sort(){
 			}
 
 }
+
+void shell_sort() {
+	unsigned int i, j, n, gap;
+	TASK_FRAME_t *temp;
+	n = OS_CONTROL.NUMBER_OF_TASKS;
+	for (gap = n / 2; gap > 0; gap /= 2) {
+		for (i = gap; i < n; i++) {
+			temp = OS_CONTROL.OS_TASKS[i];
+			for (j = i; j >= gap && OS_CONTROL.OS_TASKS[j - gap]->priority > temp->priority; j -= gap) {
+				OS_CONTROL.OS_TASKS[j] = OS_CONTROL.OS_TASKS[j - gap];
+			}
+			OS_CONTROL.OS_TASKS[j] = temp;
+		}
+	}
+}
 //=====================
+
 void free_the_FIFO(){
 	TASK_FRAME_t* temp;//Because I went to pointer to pointer **
 	while(OS_FIFO_DEQUEUE(&READY_QUEUE,&temp) !=FIFO_EMPTY){//Address of the pointer
@@ -156,12 +173,14 @@ void free_the_FIFO(){
 	}
 }
 //=====================
-void ALSHREIF_RTOS_UPDATE_SCEDULER_TABLES(){
+
+void ALSHREIF_RTOS_UPDATE_SCEDULER_TABLES()
+{
 	//=====================
 	TASK_FRAME_t *NEXT_TASK,*CURENT_TASK;
 	uint8_t i=0;
 	//=====================
-	bubble_sort();//Rearrange  the SCEDULER table
+	shell_sort();//Rearrange  the SCEDULER table
 	//=====================
 	free_the_FIFO(); //free the FIFO
 
@@ -248,7 +267,7 @@ void OS_SVC_SET(_SVC_ID ID){
 //=====================
 void OS_WHATE_NEXT(){
 
-	if((READY_QUEUE.count==0)&&(OS_CONTROL.CURENT_TASK->State==Suspend)){
+	if((READY_QUEUE.count==0)&&(OS_CONTROL.CURENT_TASK->State==Suspend||OS_CONTROL.CURENT_TASK->State==Running)){
 		OS_FIFO_ENQUEUE(&READY_QUEUE, OS_CONTROL.CURENT_TASK); //go to fifo
 		OS_CONTROL.NEXT_TASK=OS_CONTROL.CURENT_TASK;
 	}
@@ -335,6 +354,9 @@ __attribute ((naked)) void PendSV_Handler(){
 	 * r11
 	 * */
 	//context SAVE
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT -= 8;
+	//	__asm volatile("stmia %0!, {r4-r11}" : : "r" (OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT));
+
 	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT--;
 	__asm volatile("mov %0,r4 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
 	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
@@ -361,8 +383,8 @@ __attribute ((naked)) void PendSV_Handler(){
 		OS_CONTROL.CURENT_TASK = OS_CONTROL.NEXT_TASK;
 		OS_CONTROL.NEXT_TASK = NULL ;
 	}
-	//context BACK
 
+	//context BACK
 	/*
 		\\\\Manual
 	 * r5
@@ -373,6 +395,9 @@ __attribute ((naked)) void PendSV_Handler(){
 	 * r10
 	 * r11
 	 * */
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT += 8;
+	//	__asm volatile("ldmia %0!, {r4-r11}" : : "r" (OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT));
+
 	__asm volatile("mov r11,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT)) );//it stored from the last context :) @context tasks
 	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
 	__asm volatile("mov r10,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT)) );
@@ -412,7 +437,10 @@ __attribute ((naked)) void PendSV_Handler(){
 
 
 
-void ALSHREIF_RTOS_ACTIVAT_TASK(TASK_FRAME_t* TASK){
+void ALSHREIF_RTOS_ACTIVAT_TASK(TASK_FRAME_t* CURENT_TASK,TASK_FRAME_t* TASK){
+	if(CURENT_TASK!=NULL){
+		CURENT_TASK->State=Wating;
+	}
 	TASK->State=Wating;
 	OS_SVC_SET(SVC_ACTIVAT_task);
 
@@ -429,7 +457,7 @@ void ALSHREIF_RTOS_START_OS(){
 	OS_CONTROL.OS_MODE=OS_Running;//mode
 
 	OS_CONTROL.CURENT_TASK=&IDLE_TASK;//set current task
-	ALSHREIF_RTOS_ACTIVAT_TASK(&IDLE_TASK);//activate idle task
+	ALSHREIF_RTOS_ACTIVAT_TASK(NULL,&IDLE_TASK);//activate idle task
 	TIMER_START();//set timer every one m second
 	OS_set_PSP_stack(OS_CONTROL.CURENT_TASK->_PSP_STACK_TOP);
 	OS_SP2_PSP;

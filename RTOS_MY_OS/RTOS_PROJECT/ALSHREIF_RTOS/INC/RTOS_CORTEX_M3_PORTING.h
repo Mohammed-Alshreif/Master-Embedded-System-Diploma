@@ -11,6 +11,8 @@
 #include "core_cm3.h"
 #include "stdint.h"
 #include "string.h"
+#include "GPIO_DRIVER.h"
+
 //====================================
 #define MAIN_STACK_SIZE 2048
 
@@ -19,7 +21,7 @@ extern uint32_t volatile _estack;
 extern uint32_t volatile _end_heap;
 
 //====================================
-#define TICKS_TIMER 8000
+#define TICKS_TIMER 36000
 //====================================
 #define OS_set_PSP_stack(address) __asm volatile("MOV r0,%0 \n\t" "MSR psp,r0": : "r"(address))
 #define OS_get_PSP_stack(address) __asm volatile("MRS r0,psp \n\t" "MOV %0,r0":  "=r"(address))
