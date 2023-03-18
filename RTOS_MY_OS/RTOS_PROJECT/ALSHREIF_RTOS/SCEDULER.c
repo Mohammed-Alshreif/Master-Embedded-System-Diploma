@@ -8,7 +8,6 @@
 #include "SCEDULER.h"
 #include "RTOS_FIFO.h"
 #define TASKS_NUMPER_DEFINE 100
-
 //===========================================================================
 FIFO_BUF_t READY_QUEUE;
 TASK_FRAME_t* READY_QUEUE_TABLE [TASKS_NUMPER_DEFINE];
@@ -267,9 +266,15 @@ void OS_SVC_SET(_SVC_ID ID){
 //=====================
 void OS_WHATE_NEXT(){
 
-	if((READY_QUEUE.count==0)&&(OS_CONTROL.CURENT_TASK->State==Suspend||OS_CONTROL.CURENT_TASK->State==Running)){
-		OS_FIFO_ENQUEUE(&READY_QUEUE, OS_CONTROL.CURENT_TASK); //go to fifo
-		OS_CONTROL.NEXT_TASK=OS_CONTROL.CURENT_TASK;
+	if((READY_QUEUE.count==0)){
+		//if fifo empty
+		if((OS_CONTROL.CURENT_TASK->State==Suspend||OS_CONTROL.CURENT_TASK->State==Running||OS_CONTROL.CURENT_TASK->State==Wating)){
+			//if CURENT_TASK Wating then it come from ALSHREIF_RTOS_ACTIVAT_TASK(task will be wait)
+			//SysTick_Handler will cut it and enter here
+
+			OS_FIFO_ENQUEUE(&READY_QUEUE, OS_CONTROL.CURENT_TASK); //go to fifo
+			OS_CONTROL.NEXT_TASK=OS_CONTROL.CURENT_TASK;
+		}
 	}
 	else{
 		/* fifo                 // first curent task not task1 nor task2 it is any task let say task_X
@@ -278,9 +283,9 @@ void OS_WHATE_NEXT(){
 		 *				     //then it enter again and we put next_task with task2 after FIFO_DEQUEUE & the curent task will be task1
 		 * */			    //so it enter to if() and enqueue the CURENT task (task1) to make the round robin and so on ...
 
-
+		if(READY_QUEUE.count==0){while(1);}//todo}
 		OS_FIFO_DEQUEUE(&READY_QUEUE,&OS_CONTROL.NEXT_TASK);
-		OS_CONTROL.NEXT_TASK->State=Running;
+		OS_CONTROL.NEXT_TASK->State=Running;//not if fifo is empty it will access to zero pointer
 
 		if((OS_CONTROL.CURENT_TASK->priority==OS_CONTROL.NEXT_TASK->priority)&&(OS_CONTROL.CURENT_TASK->State!=Suspend)){
 			OS_FIFO_ENQUEUE(&READY_QUEUE, OS_CONTROL.CURENT_TASK);
@@ -354,25 +359,25 @@ __attribute ((naked)) void PendSV_Handler(){
 	 * r11
 	 * */
 	//context SAVE
-	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT -= 8;
-	//	__asm volatile("stmia %0!, {r4-r11}" : : "r" (OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT));
+	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT -= 8;
+	__asm volatile("stmia %0!, {r4-r11}" : : "r" (OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT));
 
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT--;
-	__asm volatile("mov %0,r4 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
-	__asm volatile("mov %0,r5 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
-	__asm volatile("mov %0,r6 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
-	__asm volatile("mov %0,r7 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
-	__asm volatile("mov %0,r8 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
-	__asm volatile("mov %0,r9 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
-	__asm volatile("mov %0,r10 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
-	__asm volatile("mov %0,r11 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT--;
+	//	__asm volatile("mov %0,r4 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
+	//	__asm volatile("mov %0,r5 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
+	//	__asm volatile("mov %0,r6 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
+	//	__asm volatile("mov %0,r7 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
+	//	__asm volatile("mov %0,r8 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
+	//	__asm volatile("mov %0,r9 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
+	//	__asm volatile("mov %0,r10 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT-- ;
+	//	__asm volatile("mov %0,r11 " : "=r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
 
 
 	// now (OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT) will save this address to the next execute of this task
@@ -395,25 +400,26 @@ __attribute ((naked)) void PendSV_Handler(){
 	 * r10
 	 * r11
 	 * */
-	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT += 8;
-	//	__asm volatile("ldmia %0!, {r4-r11}" : : "r" (OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT));
 
-	__asm volatile("mov r11,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT)) );//it stored from the last context :) @context tasks
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
-	__asm volatile("mov r10,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT)) );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
-	__asm volatile("mov r9,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
-	__asm volatile("mov r8,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
-	__asm volatile("mov r7,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
-	__asm volatile("mov r6,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
-	__asm volatile("mov r5,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
-	__asm volatile("mov r4,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
-	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
+	__asm volatile("ldmia %0!, {r4-r11}" : : "r" (OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT));
+	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT += 8;
+
+	//	__asm volatile("mov r11,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT)) );//it stored from the last context :) @context tasks
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
+	//	__asm volatile("mov r10,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT)) );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
+	//	__asm volatile("mov r9,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
+	//	__asm volatile("mov r8,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
+	//	__asm volatile("mov r7,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
+	//	__asm volatile("mov r6,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
+	//	__asm volatile("mov r5,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
+	//	__asm volatile("mov r4,%0 " : : "r" (*(OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT))  );
+	//	OS_CONTROL.CURENT_TASK->_PSP_STACK_CURENT++ ;
 
 	/*
 	 *\\\\\ CPU stacking in current task stack
@@ -465,7 +471,7 @@ void ALSHREIF_RTOS_START_OS(){
 
 	OS_CONTROL.CURENT_TASK->TASK_FUNCTION();
 }
-uint8_t T_SYStick=0;
+
 //========================================================================================================
 void ALSHREIF_RTOS_WAITING_TIMING(){
 
@@ -487,13 +493,13 @@ void ALSHREIF_RTOS_WAITING_TIMING(){
 //========================================================================================================
 
 void SysTick_Handler(){
+	//=====
 	OS_WHATE_NEXT();//to know the next task
 	//=====
 	OS_TRIGDER_PENDSV();//to make context switching
-
+	//=====
 	ALSHREIF_RTOS_WAITING_TIMING();
-
-	T_SYStick^=1;
+	//=====
 }
 //========================================================================================================
 
