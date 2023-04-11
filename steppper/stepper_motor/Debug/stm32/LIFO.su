@@ -1,0 +1,3 @@
+LIFO.c:10:15:LIFO_INIT	24	static
+LIFO.c:20:15:LIFO_PUSH	16	static
+LIFO.c:29:15:LIFO_POP	16	static

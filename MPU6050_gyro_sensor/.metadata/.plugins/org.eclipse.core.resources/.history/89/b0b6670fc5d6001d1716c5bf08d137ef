@@ -1,0 +1,32 @@
+/*
+ * MPU6050.c
+ *
+ *  Created on: Apr 9, 2023
+ *      Author: 20102
+ */
+
+
+#include "MPU6050.h"
+
+void MPU6050_init(uint16_t clk){
+	I2C_INIT(I2C1,clk);
+}
+
+void MPU6050_write(uint8_t register_addres, uint8_t *data, uint8_t Data_Length){
+
+	uint8_t i=0;
+	uint8_t buffer[3];
+	buffer[0] = (uint8_t)(register_addres);
+
+
+	for( i =1 ; i< (Data_Length+1) ; i++){
+
+		buffer[i]= data[i-1];
+	}
+
+	I2C_Master_Send(I2C1, buffer, Data_Length+1, MPU6050_addres, WithStop, Start);
+}
+
+void MPU6050_read(uint16_t register_addres, uint8_t *data, uint8_t Data_Length){
+
+}

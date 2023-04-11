@@ -1,0 +1,57 @@
+#include "MPU6050.h"
+#include "stm32f103c6_USART_SRIVER.h"
+#include "STM32_TIMERS_DRIVER.h"
+#include "math.h"
+#define clk 8000000
+
+char buf[4];
+uint8_t data[6];
+float Accel_X_RAW = 0;
+float Accel_Y_RAW = 0;
+float Accel_Z_RAW = 0;
+
+int16_t Gyro_X_RAW = 0;
+int16_t Gyro_Y_RAW = 0;
+int16_t Gyro_Z_RAW = 0;
+
+float GxL, GyL, GzL, Gx, Gy, Gz;
+
+float elapsedTime, currentTime, previousTime;
+float accAngleX, accAngleY, gyroAngleX, gyroAngleY, gyroAngleZ,yaw,roll,pitch;
+int main(void)
+{
+	MPU6050_init(clk);
+	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_9, stop_bits_2, baud_rate_9600, parity_even,8000000);
+
+	/* Loop forever */
+	while(1){
+
+
+		MPU6050_read(GYRO_XOUT_H_REG, data, 6);
+		Gyro_X_RAW = (int16_t)(data[0] << 8 | data [1]);
+		Gyro_Y_RAW = (int16_t)(data[2] << 8 | data [3]);
+		Gyro_Z_RAW = (int16_t)(data[4] << 8 | data [5]);
+		Gx = Gyro_X_RAW/65.5;
+		Gy = Gyro_Y_RAW/65.5;
+		Gz = Gyro_Z_RAW/65.5;
+
+
+		MPU6050_read(ACCEL_XOUT_H_REG, data, 6);
+		Accel_X_RAW = (int16_t)(data[0] << 8 | data [1]) / 4096;
+		Accel_Y_RAW = (int16_t)(data[2] << 8 | data [3]) / 4096;
+		Accel_Z_RAW = (int16_t)(data[4] << 8 | data [5]) / 4096;
+
+		accAngleX = (atan(Accel_Y_RAW / sqrt(pow(Accel_X_RAW, 2) + pow(Accel_Z_RAW, 2))) * 180 / 3.14) - 0.58; // AccErrorX ~(0.58) See the calculate_IMU_error()custom function for more details
+		accAngleY = (atan(-1 * Accel_X_RAW / sqrt(pow(Accel_Y_RAW, 2) + pow(Accel_Z_RAW, 2))) * 180 / 3.14) + 1.58; // AccErrorY ~(-1.58)
+
+
+
+
+
+		sprintf (buf, "%d", (int)accAngleX);
+		USART_SEND_STRING(USART1,buf);
+		for(int i=0;i<1000;i++);
+		USART_SEND_STRING(USART1," \n");
+		for(int i=0;i<1000;i++);
+	}
+}

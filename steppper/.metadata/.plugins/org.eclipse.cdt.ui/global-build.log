@@ -1,0 +1,1269 @@
+15:25:08 **** Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/EEPROM.d" -MT"STM32f103c8_drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/EEPROM.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/FIFO.d" -MT"STM32f103c8_drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/FIFO.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/GPIO_DRIVER.d" -MT"STM32f103c8_drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/I2C_LCD.d" -MT"STM32f103c8_drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/LCD.d" -MT"STM32f103c8_drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/LCD.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/LIFO.d" -MT"STM32f103c8_drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/LIFO.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/STM32_I2C_DRIVER.d" -MT"STM32f103c8_drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/STM32_TIMERS_DRIVER.d" -MT"STM32f103c8_drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/keypad.d" -MT"STM32f103c8_drivers/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/keypad.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/stm32_speed_DRIVER.d" -MT"STM32f103c8_drivers/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/stm32f103c6_ADC.d" -MT"STM32f103c8_drivers/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/stm32f103c6_ISR_DRIVER.d" -MT"STM32f103c8_drivers/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/stm32f103c6_ISR_DRIVER.o"
+../STM32f103c8_drivers/STM32_I2C_DRIVER.c:9:10: fatal error: STM32_I2C_DRIVER.h: No such file or directory
+ #include "STM32_I2C_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../STM32f103c8_drivers/FIFO.c:7:10: fatal error: FIFO.h: No such file or directory
+ #include "FIFO.h"
+          ^~~~~~~~
+../STM32f103c8_drivers/stm32f103c6_ADC.c:8:10: fatal error: stm32f103c6_ADC.h: No such file or directory
+ #include "stm32f103c6_ADC.h"
+          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+compilation terminated.
+../STM32f103c8_drivers/EEPROM.c:8:10: fatal error: EEPROM.h: No such file or directory
+ #include "EEPROM.h"
+          ^~~~~~~~~~
+compilation terminated.
+../STM32f103c8_drivers/stm32f103c6_ISR_DRIVER.c:8:10: fatal error: stm32f103c6_ISR_DRIVER.h: No such file or directory
+ #include "stm32f103c6_ISR_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../STM32f103c8_drivers/stm32_speed_DRIVER.c:8:10: fatal error: stm32_speed_DRIVER.h: No such file or directory
+ #include "stm32_speed_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [STM32f103c8_drivers/subdir.mk:69: STM32f103c8_drivers/STM32_I2C_DRIVER.o] Error 1
+make: *** Waiting for unfinished jobs....
+../STM32f103c8_drivers/LIFO.c:8:10: fatal error: LIFO.h: No such file or directory
+ #include "LIFO.h"
+          ^~~~~~~~
+compilation terminated.
+../STM32f103c8_drivers/I2C_LCD.c:8:10: fatal error: I2C_LCD.h: No such file or directory
+ #include "I2C_LCD.h"
+          ^~~~~~~~~~~
+compilation terminated.
+../STM32f103c8_drivers/STM32_TIMERS_DRIVER.c:8:10: fatal error: STM32_TIMERS_DRIVER.h: No such file or directory
+ #include "STM32_TIMERS_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [STM32f103c8_drivers/subdir.mk:77: STM32f103c8_drivers/stm32f103c6_ADC.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:57: STM32f103c8_drivers/EEPROM.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:59: STM32f103c8_drivers/FIFO.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:67: STM32f103c8_drivers/LIFO.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:71: STM32f103c8_drivers/STM32_TIMERS_DRIVER.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:75: STM32f103c8_drivers/stm32_speed_DRIVER.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:79: STM32f103c8_drivers/stm32f103c6_ISR_DRIVER.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:63: STM32f103c8_drivers/I2C_LCD.o] Error 1
+../STM32f103c8_drivers/GPIO_DRIVER.c:1:10: fatal error: STM32f103c6.h: No such file or directory
+ #include "STM32f103c6.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+../STM32f103c8_drivers/LCD.c:8:10: fatal error: LCD.h: No such file or directory
+ #include "LCD.h"
+          ^~~~~~~
+compilation terminated.
+make: *** [STM32f103c8_drivers/subdir.mk:65: STM32f103c8_drivers/LCD.o] Error 1
+../STM32f103c8_drivers/keypad.c:2:10: fatal error: keypad.h: No such file or directory
+ #include "keypad.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [STM32f103c8_drivers/subdir.mk:61: STM32f103c8_drivers/GPIO_DRIVER.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:73: STM32f103c8_drivers/keypad.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:25:46 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/EEPROM.d" -MT"STM32f103c8_drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/EEPROM.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/FIFO.d" -MT"STM32f103c8_drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/FIFO.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/GPIO_DRIVER.d" -MT"STM32f103c8_drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/I2C_LCD.d" -MT"STM32f103c8_drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/LCD.d" -MT"STM32f103c8_drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/LCD.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/LIFO.d" -MT"STM32f103c8_drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/LIFO.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/STM32_I2C_DRIVER.d" -MT"STM32f103c8_drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/STM32_TIMERS_DRIVER.d" -MT"STM32f103c8_drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/STM32_TIMERS_DRIVER.o"
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+arm-none-eabi-gcc "../STM32f103c8_drivers/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/keypad.d" -MT"STM32f103c8_drivers/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/keypad.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/stm32_speed_DRIVER.d" -MT"STM32f103c8_drivers/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/stm32_speed_DRIVER.o"
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+arm-none-eabi-gcc "../STM32f103c8_drivers/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/stm32f103c6_ADC.d" -MT"STM32f103c8_drivers/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/stm32f103c6_ADC.o"
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Src/subdir.mk:26: Src/syscalls.o] Error 1
+make: *** [Src/subdir.mk:28: Src/sysmem.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:57: STM32f103c8_drivers/EEPROM.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:61: STM32f103c8_drivers/GPIO_DRIVER.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:63: STM32f103c8_drivers/I2C_LCD.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:59: STM32f103c8_drivers/FIFO.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:65: STM32f103c8_drivers/LCD.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [STM32f103c8_drivers/subdir.mk:67: STM32f103c8_drivers/LIFO.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:69: STM32f103c8_drivers/STM32_I2C_DRIVER.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [STM32f103c8_drivers/subdir.mk:73: STM32f103c8_drivers/keypad.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:71: STM32f103c8_drivers/STM32_TIMERS_DRIVER.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:75: STM32f103c8_drivers/stm32_speed_DRIVER.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [STM32f103c8_drivers/subdir.mk:77: STM32f103c8_drivers/stm32f103c6_ADC.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:25:53 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/EEPROM.d" -MT"STM32f103c8_drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/EEPROM.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/FIFO.d" -MT"STM32f103c8_drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/FIFO.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/GPIO_DRIVER.d" -MT"STM32f103c8_drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/I2C_LCD.d" -MT"STM32f103c8_drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/LCD.d" -MT"STM32f103c8_drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/LCD.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/LIFO.d" -MT"STM32f103c8_drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/LIFO.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/STM32_I2C_DRIVER.d" -MT"STM32f103c8_drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/STM32_TIMERS_DRIVER.d" -MT"STM32f103c8_drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/STM32_TIMERS_DRIVER.o"
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+arm-none-eabi-gcc "../STM32f103c8_drivers/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/keypad.d" -MT"STM32f103c8_drivers/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/keypad.o"
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+arm-none-eabi-gcc "../STM32f103c8_drivers/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/stm32_speed_DRIVER.d" -MT"STM32f103c8_drivers/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/stm32f103c6_ADC.d" -MT"STM32f103c8_drivers/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/stm32f103c6_ADC.o"
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [Src/subdir.mk:26: Src/syscalls.o] Error 1
+make: *** Waiting for unfinished jobs....
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [STM32f103c8_drivers/subdir.mk:57: STM32f103c8_drivers/EEPROM.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [Src/subdir.mk:28: Src/sysmem.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:59: STM32f103c8_drivers/FIFO.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:63: STM32f103c8_drivers/I2C_LCD.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:67: STM32f103c8_drivers/LIFO.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:61: STM32f103c8_drivers/GPIO_DRIVER.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [STM32f103c8_drivers/subdir.mk:65: STM32f103c8_drivers/LCD.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [STM32f103c8_drivers/subdir.mk:69: STM32f103c8_drivers/STM32_I2C_DRIVER.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [STM32f103c8_drivers/subdir.mk:73: STM32f103c8_drivers/keypad.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:71: STM32f103c8_drivers/STM32_TIMERS_DRIVER.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [STM32f103c8_drivers/subdir.mk:75: STM32f103c8_drivers/stm32_speed_DRIVER.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:77: STM32f103c8_drivers/stm32f103c6_ADC.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:27:30 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/EEPROM.d" -MT"STM32f103c8_drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/EEPROM.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/FIFO.d" -MT"STM32f103c8_drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/FIFO.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/GPIO_DRIVER.d" -MT"STM32f103c8_drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/I2C_LCD.d" -MT"STM32f103c8_drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/LCD.d" -MT"STM32f103c8_drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/LCD.o"
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+arm-none-eabi-gcc "../STM32f103c8_drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/LIFO.d" -MT"STM32f103c8_drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/LIFO.o"
+arm-none-eabi-gcc "../STM32f103c8_drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/مجلد جديد/stepper_motor/STM32f103c8_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_drivers/STM32_I2C_DRIVER.d" -MT"STM32f103c8_drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_drivers/STM32_I2C_DRIVER.o"
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [Startup/subdir.mk:18: Startup/startup_stm32f103c8tx.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Src/subdir.mk:26: Src/syscalls.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** [Src/subdir.mk:28: Src/sysmem.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:57: STM32f103c8_drivers/EEPROM.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:59: STM32f103c8_drivers/FIFO.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [STM32f103c8_drivers/subdir.mk:61: STM32f103c8_drivers/GPIO_DRIVER.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [STM32f103c8_drivers/subdir.mk:65: STM32f103c8_drivers/LCD.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:63: STM32f103c8_drivers/I2C_LCD.o] Error 1
+make: *** [STM32f103c8_drivers/subdir.mk:67: STM32f103c8_drivers/LIFO.o] Error 1
+cc1.exe: error: C:/Users/20102/Desktop/???????? ????????/stepper_motor/STM32f103c8_drivers/inc: Invalid argument
+make: *** [STM32f103c8_drivers/subdir.mk:69: STM32f103c8_drivers/STM32_I2C_DRIVER.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:31:22 **** Clean-only build of configuration Debug for project stepper_motor ****
+make -j16 clean 
+rm -rf *
+ 
+15:31:23 **** Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "stepper_motor.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.elf
+ 
+arm-none-eabi-size   stepper_motor.elf 
+arm-none-eabi-objdump -h -S  stepper_motor.elf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.elf  "stepper_motor.bin"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+15:32:27 **** Clean-only build of configuration Debug for project stepper_motor ****
+make -j16 clean 
+rm -rf *
+ 
+15:32:27 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/EEPROM.d" -MT"stm32/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/EEPROM.o"
+arm-none-eabi-gcc "../stm32/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/FIFO.d" -MT"stm32/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/FIFO.o"
+arm-none-eabi-gcc "../stm32/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/GPIO_DRIVER.d" -MT"stm32/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../stm32/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/I2C_LCD.d" -MT"stm32/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/I2C_LCD.o"
+arm-none-eabi-gcc "../stm32/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/LCD.d" -MT"stm32/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/LCD.o"
+arm-none-eabi-gcc "../stm32/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/LIFO.d" -MT"stm32/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/LIFO.o"
+arm-none-eabi-gcc "../stm32/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_I2C_DRIVER.d" -MT"stm32/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../stm32/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/keypad.d" -MT"stm32/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/keypad.o"
+arm-none-eabi-gcc "../stm32/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/stm32_speed_DRIVER.d" -MT"stm32/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../stm32/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/stm32f103c6_ADC.d" -MT"stm32/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/stm32f103c6_ADC.o"
+../stm32/EEPROM.c:8:10: fatal error: EEPROM.h: No such file or directory
+ #include "EEPROM.h"
+          ^~~~~~~~~~
+compilation terminated.
+arm-none-eabi-gcc "../stm32/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/stm32f103c6_ISR_DRIVER.d" -MT"stm32/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/stm32f103c6_ISR_DRIVER.o"
+../stm32/GPIO_DRIVER.c:1:10: fatal error: STM32f103c6.h: No such file or directory
+ #include "STM32f103c6.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+../stm32/FIFO.c:7:10: fatal error: FIFO.h: No such file or directory
+ #include "FIFO.h"
+          ^~~~~~~~
+compilation terminated.
+../stm32/LIFO.c:8:10: fatal error: LIFO.h: No such file or directory
+ #include "LIFO.h"
+          ^~~~~~~~
+compilation terminated.
+arm-none-eabi-gcc "../stm32/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/stm32f103c6_SPI_DRIVER.d" -MT"stm32/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/stm32f103c6_SPI_DRIVER.o"
+../stm32/LCD.c:8:10: fatal error: LCD.h: No such file or directory
+ #include "LCD.h"
+          ^~~~~~~
+compilation terminated.
+make: *** [stm32/subdir.mk:57: stm32/EEPROM.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [stm32/subdir.mk:59: stm32/FIFO.o] Error 1
+make: *** [stm32/subdir.mk:61: stm32/GPIO_DRIVER.o] Error 1
+make: *** [stm32/subdir.mk:65: stm32/LCD.o] Error 1
+make: *** [stm32/subdir.mk:67: stm32/LIFO.o] Error 1
+../stm32/I2C_LCD.c:8:10: fatal error: I2C_LCD.h: No such file or directory
+ #include "I2C_LCD.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [stm32/subdir.mk:63: stm32/I2C_LCD.o] Error 1
+../stm32/STM32_I2C_DRIVER.c:9:10: fatal error: STM32_I2C_DRIVER.h: No such file or directory
+ #include "STM32_I2C_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [stm32/subdir.mk:69: stm32/STM32_I2C_DRIVER.o] Error 1
+../stm32/STM32_TIMERS_DRIVER.c:8:10: fatal error: STM32_TIMERS_DRIVER.h: No such file or directory
+ #include "STM32_TIMERS_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [stm32/subdir.mk:71: stm32/STM32_TIMERS_DRIVER.o] Error 1
+../stm32/stm32_speed_DRIVER.c:8:10: fatal error: stm32_speed_DRIVER.h: No such file or directory
+ #include "stm32_speed_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [stm32/subdir.mk:75: stm32/stm32_speed_DRIVER.o] Error 1
+../stm32/keypad.c:2:10: fatal error: keypad.h: No such file or directory
+ #include "keypad.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [stm32/subdir.mk:73: stm32/keypad.o] Error 1
+../stm32/stm32f103c6_ADC.c:8:10: fatal error: stm32f103c6_ADC.h: No such file or directory
+ #include "stm32f103c6_ADC.h"
+          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../stm32/stm32f103c6_ISR_DRIVER.c:8:10: fatal error: stm32f103c6_ISR_DRIVER.h: No such file or directory
+ #include "stm32f103c6_ISR_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [stm32/subdir.mk:77: stm32/stm32f103c6_ADC.o] Error 1
+../stm32/stm32f103c6_SPI_DRIVER.c:7:10: fatal error: stm32f103c6_SPI_DRIVER.h: No such file or directory
+ #include "stm32f103c6_SPI_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [stm32/subdir.mk:79: stm32/stm32f103c6_ISR_DRIVER.o] Error 1
+make: *** [stm32/subdir.mk:81: stm32/stm32f103c6_SPI_DRIVER.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:33:04 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/EEPROM.d" -MT"stm32/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/EEPROM.o"
+arm-none-eabi-gcc "../stm32/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/FIFO.d" -MT"stm32/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/FIFO.o"
+arm-none-eabi-gcc "../stm32/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/GPIO_DRIVER.d" -MT"stm32/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../stm32/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/I2C_LCD.d" -MT"stm32/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/I2C_LCD.o"
+arm-none-eabi-gcc "../stm32/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/LCD.d" -MT"stm32/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/LCD.o"
+arm-none-eabi-gcc "../stm32/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/LIFO.d" -MT"stm32/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/LIFO.o"
+arm-none-eabi-gcc "../stm32/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_I2C_DRIVER.d" -MT"stm32/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../stm32/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/keypad.d" -MT"stm32/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/keypad.o"
+arm-none-eabi-gcc "../stm32/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/stm32_speed_DRIVER.d" -MT"stm32/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../stm32/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/stm32f103c6_ADC.d" -MT"stm32/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../stm32/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/stm32f103c6_ISR_DRIVER.d" -MT"stm32/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../stm32/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/stm32f103c6_SPI_DRIVER.d" -MT"stm32/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/stm32f103c6_SPI_DRIVER.o"
+arm-none-eabi-gcc "../stm32/stm32f103c6_USART_SRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/stm32f103c6_USART_SRIVER.d" -MT"stm32/stm32f103c6_USART_SRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/stm32f103c6_USART_SRIVER.o"
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../stm32/STM32_I2C_DRIVER.c: In function 'I2C_GetFlagStatus':
+../stm32/STM32_I2C_DRIVER.c:119:20: warning: variable 'dummy_Read' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t dummy_Read;
+                    ^~~~~~~~~~
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../stm32/LCD.c: In function 'LCD_write_FLOATnumber':
+../stm32/LCD.c:118:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt(num,digit,text);
+  ^~~~
+../stm32/stm32f103c6_USART_SRIVER.c: In function 'USART1_IRQHandler':
+../stm32/stm32f103c6_USART_SRIVER.c:272:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d=USART1->USART_DR;
+                      ^
+../stm32/stm32f103c6_USART_SRIVER.c:277:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART1->USART_DR;
+                     ^
+../stm32/stm32f103c6_USART_SRIVER.c: In function 'USART2_IRQHandler':
+../stm32/stm32f103c6_USART_SRIVER.c:353:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d =USART2->USART_DR;
+                      ^
+../stm32/stm32f103c6_USART_SRIVER.c:358:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART2->USART_DR;
+                     ^
+../stm32/stm32f103c6_USART_SRIVER.c: In function 'USART3_IRQHandler':
+../stm32/stm32f103c6_USART_SRIVER.c:434:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d =USART3->USART_DR;
+                      ^
+../stm32/stm32f103c6_USART_SRIVER.c:439:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART3->USART_DR;
+                     ^
+../stm32/I2C_LCD.c: In function 'I2C_LCD_write_FLOATnumber':
+../stm32/I2C_LCD.c:114:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt(num,digit,text);
+  ^~~~
+arm-none-eabi-gcc -o "stepper_motor.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.elf
+ 
+arm-none-eabi-size   stepper_motor.elf 
+arm-none-eabi-objdump -h -S  stepper_motor.elf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.elf  "stepper_motor.bin"
+   text	   data	    bss	    dec	    hex	filename
+   3136	     40	   1704	   4880	   1310	stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+15:35:57 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:6:39: error: 'mood_FAST_MOOD_72MHzCORE' undeclared (first use in this function); did you mean 'mood_FAST_MOOD_36MHzCORE'?
+  MCAL_speed_init(CLK_SORC_IN_CLK8MHz, mood_FAST_MOOD_72MHzCORE);//speed of all 36MHz
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~
+                                       mood_FAST_MOOD_36MHzCORE
+../Src/main.c:6:39: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:37:27 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.elf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.elf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.elf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5900	     40	   1704	   7644	   1ddc	stepper_motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+15:37:44 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5900	     40	   1704	   7644	   1ddc	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+15:43:56 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5900	     40	   1704	   7644	   1ddc	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+15:50:41 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5900	     40	   1704	   7644	   1ddc	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+15:51:38 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5900	     40	   1704	   7644	   1ddc	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+15:52:03 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5904	     40	   1704	   7648	   1de0	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+16:01:10 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5900	     40	   1704	   7644	   1ddc	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+16:01:19 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5900	     40	   1704	   7644	   1ddc	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+16:01:59 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5900	     40	   1704	   7644	   1ddc	stepper_motor.axf
+Finished building: default.size.stdout
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+ 
+17:05:34 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5904	     40	   1704	   7648	   1de0	stepper_motor.axf
+Finished building: default.size.stdout
+Finished building: stepper_motor.bin
+ 
+ 
+Finished building: stepper_motor.list
+ 
+17:06:16 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5904	     40	   1704	   7648	   1de0	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+17:07:20 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5900	     40	   1704	   7644	   1ddc	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+17:08:00 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5904	     40	   1704	   7648	   1de0	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.list
+Finished building: stepper_motor.bin
+ 
+ 
+17:08:24 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5904	     40	   1704	   7648	   1de0	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+17:08:40 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5904	     40	   1704	   7648	   1de0	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.list
+Finished building: stepper_motor.bin
+ 
+ 
+17:08:52 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5904	     40	   1704	   7648	   1de0	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+17:09:13 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5904	     40	   1704	   7648	   1de0	stepper_motor.axf
+Finished building: default.size.stdout
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+ 
+17:09:36 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5904	     40	   1704	   7648	   1de0	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+17:18:36 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5916	     40	   1704	   7660	   1dec	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+17:22:30 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5928	     40	   1704	   7672	   1df8	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+17:30:47 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+In file included from C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc/STM32_TIMERS_DRIVER.h:13:0,
+                 from ../stm32/STM32_TIMERS_DRIVER.c:8:
+../stm32/STM32_TIMERS_DRIVER.c: In function 'PWM':
+C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc/STM32f103c6.h:358:67: error: called object is not a function or function pointer
+ #define NVIC_TIM3_global_interrupt_Enable             (NVIC_ISER0 |= 1<<29 )
+                                                       ~~~~~~~~~~~~^~~~~~~~~~
+../stm32/STM32_TIMERS_DRIVER.c:149:4: note: in expansion of macro 'NVIC_TIM3_global_interrupt_Enable'
+    NVIC_TIM3_global_interrupt_Enable();
+    ^
+make: *** [stm32/subdir.mk:71: stm32/STM32_TIMERS_DRIVER.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:30:52 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5944	     40	   1704	   7688	   1e08	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+17:31:01 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5944	     40	   1704	   7688	   1e08	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+17:33:22 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5904	     40	   1704	   7648	   1de0	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+17:48:06 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../stm32/STM32_TIMERS_DRIVER.c:8:0:
+C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc/STM32_TIMERS_DRIVER.h:66:1: warning: data definition has no type or storage class
+ stepper_motor_steps(uint32_t CH,uint32_t num_steps,uint32_t duty_cycle,uint32_t freq,uint32_t clk);
+ ^~~~~~~~~~~~~~~~~~~
+C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc/STM32_TIMERS_DRIVER.h:66:1: warning: type defaults to 'int' in declaration of 'stepper_motor_steps' [-Wimplicit-int]
+In file included from ../Src/main.c:1:0:
+C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc/STM32_TIMERS_DRIVER.h:66:1: warning: data definition has no type or storage class
+ stepper_motor_steps(uint32_t CH,uint32_t num_steps,uint32_t duty_cycle,uint32_t freq,uint32_t clk);
+ ^~~~~~~~~~~~~~~~~~~
+C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc/STM32_TIMERS_DRIVER.h:66:1: warning: type defaults to 'int' in declaration of 'stepper_motor_steps' [-Wimplicit-int]
+../stm32/STM32_TIMERS_DRIVER.c:278:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ stepper_motor_steps(uint32_t CH,uint32_t num_steps,uint32_t duty_cycle,uint32_t freq,uint32_t clk){
+ ^~~~~~~~~~~~~~~~~~~
+../stm32/STM32_TIMERS_DRIVER.c: In function 'stepper_motor_steps':
+../stm32/STM32_TIMERS_DRIVER.c:387:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5976	     40	   1712	   7728	   1e30	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+17:48:24 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5976	     40	   1712	   7728	   1e30	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+17:50:02 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   4752	     40	   1712	   6504	   1968	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+17:54:40 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   4752	     40	   1712	   6504	   1968	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+17:55:45 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   4756	     40	   1712	   6508	   196c	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+17:57:50 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   4752	     40	   1712	   6504	   1968	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+17:58:13 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   4752	     40	   1712	   6504	   1968	stepper_motor.axf
+Finished building: default.size.stdout
+Finished building: stepper_motor.list
+Finished building: stepper_motor.bin
+ 
+ 
+ 
+18:01:05 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   4752	     40	   1712	   6504	   1968	stepper_motor.axf
+Finished building: default.size.stdout
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+ 
+18:01:32 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   4752	     40	   1712	   6504	   1968	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+18:02:51 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   4752	     40	   1712	   6504	   1968	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+18:04:12 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   4752	     40	   1712	   6504	   1968	stepper_motor.axf
+Finished building: default.size.stdout
+Finished building: stepper_motor.bin
+ 
+ 
+Finished building: stepper_motor.list
+ 
+18:12:32 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:12:28: warning: passing argument 2 of 'stepper_motor_steps' makes pointer from integer without a cast [-Wint-conversion]
+  stepper_motor_steps(CH_3, 400, 50, 2000, 36000000);
+                            ^~~
+In file included from ../Src/main.c:1:0:
+C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc/STM32_TIMERS_DRIVER.h:71:6: note: expected 'GPIO_typeDef * {aka struct <anonymous> *}' but argument is of type 'int'
+ void stepper_motor_steps(uint32_t CH,GPIO_typeDef* GPIOx,uint16_t pin,uint32_t num_steps,uint32_t duty_cycle,uint32_t freq,uint8_t direction_,uint32_t clk);
+      ^~~~~~~~~~~~~~~~~~~
+../Src/main.c:12:2: error: too few arguments to function 'stepper_motor_steps'
+  stepper_motor_steps(CH_3, 400, 50, 2000, 36000000);
+  ^~~~~~~~~~~~~~~~~~~
+In file included from ../Src/main.c:1:0:
+C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc/STM32_TIMERS_DRIVER.h:71:6: note: declared here
+ void stepper_motor_steps(uint32_t CH,GPIO_typeDef* GPIOx,uint16_t pin,uint32_t num_steps,uint32_t duty_cycle,uint32_t freq,uint8_t direction_,uint32_t clk);
+      ^~~~~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:13:49 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   4868	     40	   1712	   6620	   19dc	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+18:14:39 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5268	     40	   1712	   7020	   1b6c	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+18:17:17 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32/STM32_TIMERS_DRIVER.d" -MT"stm32/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5268	     40	   1712	   7020	   1b6c	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+18:17:50 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5280	     40	   1712	   7032	   1b78	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.list
+Finished building: stepper_motor.bin
+ 
+ 
+18:18:47 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5444	     40	   1712	   7196	   1c1c	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+18:19:28 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5456	     40	   1712	   7208	   1c28	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+18:44:27 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5516	     40	   1712	   7268	   1c64	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+18:45:26 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5272	     40	   1712	   7024	   1b70	stepper_motor.axf
+Finished building: default.size.stdout
+Finished building: stepper_motor.bin
+ 
+ 
+Finished building: stepper_motor.list
+ 
+18:46:04 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5600	     40	   1712	   7352	   1cb8	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+18:46:48 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5600	     40	   1712	   7352	   1cb8	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+18:47:56 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5620	     40	   1712	   7372	   1ccc	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+18:49:32 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5620	     40	   1712	   7372	   1ccc	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+Finished building: stepper_motor.list
+ 
+ 
+18:50:21 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5532	     40	   1712	   7284	   1c74	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+18:50:43 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5516	     40	   1712	   7268	   1c64	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 

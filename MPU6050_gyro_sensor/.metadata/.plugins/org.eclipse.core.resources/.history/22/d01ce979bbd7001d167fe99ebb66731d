@@ -1,0 +1,45 @@
+#include "MPU6050.h"
+#include "stm32f103c6_USART_SRIVER.h"
+#define clk 8000000
+
+char buf[4];
+uint8_t data[6];
+int16_t Accel_X_RAW = 0;
+int16_t Accel_Y_RAW = 0;
+int16_t Accel_Z_RAW = 0;
+
+int16_t Gyro_X_RAW = 0;
+int16_t Gyro_Y_RAW = 0;
+int16_t Gyro_Z_RAW = 0;
+
+float Ax, Ay, Az, Gx, Gy, Gz;
+int main(void)
+{
+	MPU6050_init(clk);
+	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_9, stop_bits_2, baud_rate_9600, parity_even,8000000);
+
+	/* Loop forever */
+	while(1){
+
+		MPU6050_read(GYRO_XOUT_H_REG, data, 6);
+		Gyro_X_RAW = (int16_t)(data[0] << 8 | data [1]);
+		Gyro_Y_RAW = (int16_t)(data[2] << 8 | data [3]);
+		Gyro_Z_RAW = (int16_t)(data[4] << 8 | data [5]);
+
+		/*** convert the RAW values into dps (°/s)
+			     we have to divide according to the Full scale value set in FS_SEL
+			     I have configured FS_SEL = 0. So I am dividing by 131.0
+			     for more details check GYRO_CONFIG Register              ****/
+
+		Gx = Gyro_X_RAW;
+		Gy = Gyro_Y_RAW;
+		Gz = Gyro_Z_RAW/131.0;
+		sprintf (buf, "%d", (int)Gy);
+		USART_SEND_STRING(USART1,buf);
+
+		for(int i=0;i<10000;i++);
+		USART_SEND_STRING(USART1," \n");
+		for(int i=0;i<100;i++);
+
+	}
+}

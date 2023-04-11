@@ -1,0 +1,13 @@
+/*
+ * MPU6050.h
+ *
+ *  Created on: Apr 9, 2023
+ *      Author: 20102
+ */
+
+#ifndef INC_MPU6050_H_
+#define INC_MPU6050_H_
+
+
+
+#endif /* INC_MPU6050_H_ */

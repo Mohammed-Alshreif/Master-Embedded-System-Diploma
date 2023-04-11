@@ -1,0 +1,20 @@
+18:50:43 **** Incremental Build of configuration Debug for project stepper_motor ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/Users/20102/Desktop/steppper/stepper_motor/stm32/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stepper_motor.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\steppper\stepper_motor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_motor.axf
+ 
+arm-none-eabi-objdump -h -S  stepper_motor.axf  > "stepper_motor.list"
+arm-none-eabi-objcopy  -O binary  stepper_motor.axf  "stepper_motor.bin"
+arm-none-eabi-size   stepper_motor.axf 
+   text	   data	    bss	    dec	    hex	filename
+   5516	     40	   1712	   7268	   1c64	stepper_motor.axf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_motor.bin
+ 
+Finished building: stepper_motor.list
+ 
+
+18:50:45 Build Finished. 0 errors, 0 warnings. (took 1s.691ms)
+

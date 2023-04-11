@@ -1,0 +1,16 @@
+#include "STM32_TIMERS_DRIVER.h"
+#include "stm32_speed_DRIVER.h"
+#include "GPIO_DRIVER.h"
+int main(void)
+{
+	MCAL_speed_init(CLK_SORC_IN_CLK8MHz, mood_FAST_MOOD_36MHzCORE);//speed of all 36MHz
+	//	PWM(TIM2, CH_1,50,5000,36000000);
+	//	PWM(TIM2, CH_2,40,5000,36000000);
+	//	PWM(TIM2, CH_3,20,5000,36000000);
+	//	PWM(TIM2, CH_4,10,5000,36000000);
+
+	PWM(TIM3, CH_3,50,50,36000000);
+	while(1){
+
+	}
+}

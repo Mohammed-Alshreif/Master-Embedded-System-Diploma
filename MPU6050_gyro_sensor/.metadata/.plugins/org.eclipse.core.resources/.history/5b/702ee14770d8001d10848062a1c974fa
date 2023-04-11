@@ -1,0 +1,79 @@
+#include "MPU6050.h"
+#include "stm32f103c6_USART_SRIVER.h"
+#include "STM32_TIMERS_DRIVER.h"
+#include "stdlib.h"
+#include "stdio.h"
+#include "math.h"
+#define clk 8000000
+uint8_t Data1;
+char buf[4];
+uint8_t data[6];
+float Accel_X_RAW = 0;
+float Accel_Y_RAW = 0;
+float Accel_Z_RAW = 0;
+
+int16_t Gyro_X_RAW = 0;
+int16_t Gyro_Y_RAW = 0;
+int16_t Gyro_Z_RAW = 0;
+
+float GxL, GyL, GzL, Gx, Gy, Gz;
+
+float elapsedTime, currentTime, previousTime;
+float accAngleX, accAngleY, gyroAngleX, gyroAngleY, gyroAngleZ,yaw,roll,pitch;
+int main(void)
+{
+	MPU6050_init(clk);
+	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_9, stop_bits_2, baud_rate_9600, parity_even,8000000);
+
+	/* Loop forever */
+	while(1){
+		Data1 = 0x00;
+		MPU6050_write(PWR_MGMT_1_REG, &Data1, 1);
+
+		// Set DATA RATE of 1KHz by writing SMPLRT_DIV register
+
+		Data1 = 0x05;
+		MPU6050_write(0x1A, &Data1, 1);
+
+		//		Data = 0x07;
+		//		MPU6050_write(SMPLRT_DIV_REG, &Data, 1);
+
+		// Set accelerometer configuration in ACCEL_CONFIG Register
+		// XA_ST=0,YA_ST=0,ZA_ST=0, FS_SEL=0 -> ± 2g
+		Data1 = 0x10;
+		MPU6050_write(ACCEL_CONFIG_REG, &Data1, 1);
+		MPU6050_read(ACCEL_XOUT_H_REG, data, 6);
+		Accel_X_RAW = (int16_t)(data[0] << 8 | data [1]) / 4096;
+		Accel_Y_RAW = (int16_t)(data[2] << 8 | data [3]) / 4096;
+		Accel_Z_RAW = (int16_t)(data[4] << 8 | data [5]) / 4096;
+
+		accAngleX = (atan(Accel_Y_RAW / sqrt(pow(Accel_X_RAW, 2) + pow(Accel_Z_RAW, 2))) * 180 / 3.14) - 0.58; // AccErrorX ~(0.58) See the calculate_IMU_error()custom function for more details
+		accAngleY = (atan(-1 * Accel_X_RAW / sqrt(pow(Accel_Y_RAW, 2) + pow(Accel_Z_RAW, 2))) * 180 / 3.14) + 1.58; // AccErrorY ~(-1.58)
+
+
+		// Set Gyroscopic configuration in GYRO_CONFIG Register
+		// XG_ST=0,YG_ST=0,ZG_ST=0, FS_SEL=0 -> ± 250 °/s
+		Data1 = 0x08;
+		MPU6050_write(GYRO_CONFIG_REG, &Data1, 1);
+
+
+		MPU6050_read(GYRO_XOUT_H_REG, data, 6);
+		Gyro_X_RAW = (int16_t)(data[0] << 8 | data [1]);
+		Gyro_Y_RAW = (int16_t)(data[2] << 8 | data [3]);
+		Gyro_Z_RAW = (int16_t)(data[4] << 8 | data [5]);
+		Gx = Gyro_X_RAW/65.5;
+		Gy = Gyro_Y_RAW/65.5;
+		Gz = Gyro_Z_RAW/65.5;
+
+
+
+
+
+
+		gcvt(Accel_X_RAW,3,buf);
+		USART_SEND_STRING(USART1,buf);
+		delay(3, U_ms, clk);
+		USART_SEND_STRING(USART1," \n");
+		delay(1, U_ms, clk);
+	}
+}
