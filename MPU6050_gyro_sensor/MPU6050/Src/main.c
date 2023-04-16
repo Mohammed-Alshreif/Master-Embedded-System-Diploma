@@ -4,7 +4,7 @@
 #include "math.h"
 #define clk 8000000
 uint8_t Data1;
-char buf[4];
+char buf[5];
 uint8_t data[6];
 float Accel_X_RAW = 0;
 float Accel_Y_RAW = 0;
@@ -16,8 +16,9 @@ int16_t Gyro_Z_RAW = 0;
 
 float GxL, GyL, GzL, Gx, Gy, Gz;
 
-float elapsedTime, currentTime, previousTime;
+float elapsedTime=0.015, currentTime, previousTime;
 float accAngleX, accAngleY, gyroAngleX, gyroAngleY, gyroAngleZ,yaw,roll,pitch;
+
 int main(void)
 {
 	MPU6050_init(clk);
@@ -42,9 +43,9 @@ int main(void)
 		MPU6050_write(ACCEL_CONFIG_REG, &Data1, 1);
 
 		MPU6050_read(ACCEL_XOUT_H_REG, data, 6);
-		Accel_X_RAW = ((int16_t)(data[0] << 8 | data [1])*10) / 4096;
-		Accel_Y_RAW = ((int16_t)(data[2] << 8 | data [3])*10) / 4096;
-		Accel_Z_RAW = ((int16_t)(data[4] << 8 | data [5])*10) / 4096;
+		Accel_X_RAW = ((int16_t)(data[0] << 8 | data [1])) / 4096.0;
+		Accel_Y_RAW = ((int16_t)(data[2] << 8 | data [3])) / 4096.0;
+		Accel_Z_RAW = ((int16_t)(data[4] << 8 | data [5])) / 4096.0;
 
 		accAngleX = (atan(Accel_Y_RAW / sqrt(pow(Accel_X_RAW, 2) + pow(Accel_Z_RAW, 2))) * 180 / 3.14) - 0.58; // AccErrorX ~(0.58) See the calculate_IMU_error()custom function for more details
 		accAngleY = (atan(-1 * Accel_X_RAW / sqrt(pow(Accel_Y_RAW, 2) + pow(Accel_Z_RAW, 2))) * 180 / 3.14) + 1.58; // AccErrorY ~(-1.58)
@@ -60,19 +61,44 @@ int main(void)
 		Gyro_X_RAW = (int16_t)(data[0] << 8 | data [1]);
 		Gyro_Y_RAW = (int16_t)(data[2] << 8 | data [3]);
 		Gyro_Z_RAW = (int16_t)(data[4] << 8 | data [5]);
-		Gx = Gyro_X_RAW/65.5;
-		Gy = Gyro_Y_RAW/65.5;
-		Gz = Gyro_Z_RAW/65.5;
+		Gx = Gyro_X_RAW/65.5+ 2.7;
+		Gy = Gyro_Y_RAW/65.5 - .86;
+		Gz = Gyro_Z_RAW/65.5+ 0.40;
+//		if((-1>Gx)&&(Gx<1)){
+//			Gx=0;
+//		}
+//		if((-1>Gy)&&(Gy<1)){
+//			Gy=0;
+//		}
+//		if((-1>Gz)&&(Gz<1)){
+//			Gz=0;
+//		}
+		elapsedTime=TIME_CALCULATION(clk, TIMER_STOP);
+		elapsedTime/=1000000;
+		gyroAngleX = gyroAngleX + Gx * elapsedTime; // deg/s * s = deg
+		gyroAngleY = gyroAngleY + Gy * elapsedTime;
+		yaw =  yaw + Gz * elapsedTime;
+		TIME_CALCULATION(clk, TIMER_START);
+		// Complementary filter - combine acceleromter and gyro angle values
+		roll = 0.96 * gyroAngleX + 0.04 * accAngleX;
+		pitch = 0.96 * gyroAngleY + 0.04 * accAngleY;
 
 
 
-
-
-
-		sprintf (buf, "%d", (int)accAngleX);
+		sprintf (buf, "%d", (int)roll);
 		USART_SEND_STRING(USART1,buf);
 		delay(3, U_ms, clk);
-		USART_SEND_STRING(USART1," \n");
+		USART_SEND_STRING(USART1,"Y \n");
+		delay(1, U_ms, clk);
+		sprintf (buf, "%d", (int)pitch);
+		USART_SEND_STRING(USART1,buf);
+		delay(4, U_ms, clk);
+		USART_SEND_STRING(USART1,"X \n");
+		delay(1, U_ms, clk);
+		sprintf (buf, "%d", (int)(yaw));
+		USART_SEND_STRING(USART1,buf);
+		delay(3, U_ms, clk);
+		USART_SEND_STRING(USART1,"Z \n");
 		delay(1, U_ms, clk);
 	}
 }
