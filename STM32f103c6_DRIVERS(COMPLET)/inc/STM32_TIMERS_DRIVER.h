@@ -26,10 +26,10 @@
 //@delay
 #define U_ms     0 //milli seconds
 #define U_us     1 //micro seconds
-
+//===========================================
 #define TIMER_START    1
 #define TIMER_STOP     0
-
+//==========================================
 #define WAVE_NUMBER_4   4
 #define WAVE_NUMBER_5   5
 #define WAVE_NUMBER_6   6
@@ -40,8 +40,13 @@
 #define WAVE_NUMBER_11  11
 #define WAVE_NUMBER_12  12
 #define WAVE_NUMBER_13  13
+//======================================
+#define direction_unticlk 1
+#define direction_clk     0
 
+//======================================
 
+//======================================
 /*
 //timer1 ch_1 --> A8  <> timer2 ch_1 --> A0 <> timer3 ch_1 --> A6 <> timer4 ch_1 --> B6
 //timer1 ch_2 --> A9  <> timer2 ch_2 --> A1 <> timer3 ch_2 --> A7 <> timer4 ch_2 --> B7
@@ -62,4 +67,6 @@ uint32_t TIME_CALCULATION(uint32_t clk,uint8_t TIMER_ST);
 //========================SPWM==================
 void SPWM_SINGLE_PHASE_INIT(uint8_t WAVE_NUMBER,uint8_t freq,uint32_t clk);
 void SPWM_WRITE(uint8_t freq,uint8_t WAVE_NUMBER,uint32_t clk);
+
+void stepper_motor_steps(uint32_t CH,GPIO_typeDef* GPIOx,uint16_t pin,uint32_t num_steps,uint32_t duty_cycle,uint32_t freq,uint8_t direction_,uint32_t clk);
 #endif /* INC_STM32_TIMERS_DRIVER_H_ */

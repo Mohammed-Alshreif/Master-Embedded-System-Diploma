@@ -31,7 +31,9 @@ void (*ISRcalback[2]) (void);
 
 //====================================
 void SPWM_timer_INIT(uint32_t pre ,uint32_t duty_cycle,uint32_t peak ,uint8_t SPWM_MOOD_);
-
+//==================================== stepper motor
+static uint32_t stepper_steps=0;
+static uint8_t stepper_flage=0;
 //===============================================================================================
 
 void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,uint32_t clk){
@@ -272,6 +274,122 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 }
 
 
+//=======================================================================================
+void stepper_motor_steps(uint32_t CH,GPIO_typeDef* GPIOx,uint16_t pin,uint32_t num_steps,uint32_t duty_cycle,uint32_t freq,uint8_t direction_,uint32_t clk){
+
+	TIMER3_CLOCK_Enable();//enable timer3 clock
+	GPIOA_Clock_Enable();//enable porta clock
+	GPIOB_Clock_Enable();//enable porta clock
+	AFIO_Clock_Enable();//enable AF io clock
+	NVIC_TIM3_global_interrupt_Enable;
+	TIM3->TIMx_CR1 &=~(1<<0);//Counter disabled
+
+	pinmode(GPIOx, pin, GPIO_MODE_OUTPUT_push_pull_Speed2);
+	pinwrite(GPIOx, pin, direction_);
+
+	stepper_flage=1;
+	stepper_steps=num_steps;
+
+	char user_flage=1;
+	uint32_t user_top=0;
+	uint32_t user_pre=1;
+
+	while(user_flage==1){
+		user_top = (clk)/(freq * user_pre );
+		if(user_top>=32000){
+			user_pre+=2;
+		}
+		else{
+			user_flage=0;
+		}
+	}
+
+
+
+	//====================TIM3===================
+
+
+
+
+	if(CH==CH_1){
+		pinmode(GPIOA, pin6, GPIO_MODE_OUTPUT_AF_push_pull_Speed50);
+		TIM3->TIMx_CCMR1 |=(1<<3);
+		TIM3->TIMx_CCER |=(1<<0);
+		TIM3->TIMx_CCMR1 |=(0b110<<4);
+		TIM3->TIMx_CCR1=(user_top*duty_cycle/100);//duty cycle
+		TIM3->TIMx_DIER |=(0b11<<0);
+	}
+	else if(CH==CH_2){
+		pinmode(GPIOA, pin7, GPIO_MODE_OUTPUT_AF_push_pull_Speed50);
+		TIM3->TIMx_CCMR1 |=(1<<11);
+		TIM3->TIMx_CCER |=(1<<4);
+		TIM3->TIMx_CCMR1 |=(0b110<<12);
+		TIM3->TIMx_CCR2=(user_top*duty_cycle/100);//duty cycle
+		TIM3->TIMx_DIER |=(0b101<<0);
+	}
+	else if(CH==CH_3){
+		pinmode(GPIOB, pin0, GPIO_MODE_OUTPUT_AF_push_pull_Speed50);
+		TIM3->TIMx_CCMR2 |=(1<<3);
+		TIM3->TIMx_CCER |=(1<<8);
+		TIM3->TIMx_CCMR2 |=(0b110<<4);
+		TIM3->TIMx_CCR3=(user_top*duty_cycle/100);//duty cycle
+		TIM3->TIMx_DIER |=(0b0001<<0);
+	}
+	else if(CH==CH_4){
+		pinmode(GPIOB, pin1, GPIO_MODE_OUTPUT_AF_push_pull_Speed50);
+		TIM3->TIMx_CCMR2 |=(1<<11);
+		TIM3->TIMx_CCER |=(1<<12);
+		TIM3->TIMx_CCMR2 |=(0b110<<12);
+		TIM3->TIMx_CCR4=(user_top*duty_cycle/100);//duty cycle
+		TIM3->TIMx_DIER |=(0b10001<<0);
+	}
+
+	//	ARPE: Auto-reload preload enable
+	//	0: TIMx_ARR register is not buffered
+	//	1: TIMx_ARR register is buffered
+	TIM3->TIMx_CR1 |=(1<<7);
+
+
+	//	110: PWM mode 1 - In upcounting, channel 1 is active as long as TIMx_CNT<TIMx_CCR1
+
+
+	TIM3->TIMx_ARR=user_top;//frec peak value
+
+	TIM3->TIMx_PSC=(user_pre-1);//prescaller
+
+	//	Bit 15 MOE: Main output enable
+	//	This bit is cleared asynchronously by hardware as soon as the break input is active. It is set
+	//	by software or automatically depending on the AOE bit. It is acting only on the channels
+	//	which are configured in output.
+	//	0: OC and OCN outputs are disabled or forced to idle state.
+	//	1: OC and OCN outputs are enabled if their respective enable bits are set (CCxE, CCxNE in
+	//	TIMx_CCER register).
+	//	See OC/OCN enable description for more details
+	//TIMERx->TIMx_BDTR |=(1<<15);
+
+	//	Bit 2 CC2IE: Capture/Compare 2 interrupt enable
+	//	0: CC2 interrupt disabled
+	//	1: CC2 interrupt enabled
+	//	Bit 1 CC1IE: Capture/Compare 1 interrupt enable
+	//	0: CC1 interrupt disabled
+	//	1: CC1 interrupt enabled
+	//	Bit 0 UIE: Update interrupt enable
+	//	0: Update interrupt disabled
+	//	1: Update interrupt enabled
+	TIM3->TIMx_DIER |=(0b1<<0);
+
+	//	UG: Update generation
+	//	This bit can be set by software, it is automatically cleared by hardware.
+	//	0: No action
+	//	1: Reinitialize the counter and generates an update of the registers. Note that the prescaler
+	//	counter is cleared too (anyway the prescaler ratio is not affected). The counter is cleared if
+	//	the center-aligned mode is selected or if DIR=0 (upcounting), else it takes the auto-reload
+	//	value (TIMx_ARR) if DIR=1 (downcounting).
+	TIM3->TIMx_EGR |=(1<<0);
+
+	TIM3->TIMx_CR1 |=(1<<0);//enable the timer
+
+}
 //=======================================================================================
 void delay(uint16_t time,uint8_t U,uint32_t clk){
 
@@ -549,12 +667,27 @@ void TIM2_IRQHandler(){
 
 }
 void TIM3_IRQHandler(){
-	//pinwrite(GPIOB, pin10,LOW);
-	ISR_TIMER_COPY->TIMx_CR1 &=~(1<<0);
-	ISR_TIMER_COPY->TIMx_SR &=~(1<<0);
-	ISRcalback[0]();
-	//NVIC_TIM3_global_interrupt_Disable;
-	//pinwrite(GPIOB, pin10,HIGH);
+	if(stepper_flage==1){
+		TIM3->TIMx_SR &=~(1<<0);
+
+		if(stepper_steps !=0){
+			stepper_steps--;
+		}
+		else{
+			stepper_flage=0;
+			TIM3->TIMx_CR1 &=~(1<<0);//Counter disabled
+		}
+
+	}
+	else{
+		//pinwrite(GPIOB, pin10,LOW);
+		ISR_TIMER_COPY->TIMx_CR1 &=~(1<<0);
+		ISR_TIMER_COPY->TIMx_SR &=~(1<<0);
+		ISRcalback[0]();
+		//NVIC_TIM3_global_interrupt_Disable;
+		//pinwrite(GPIOB, pin10,HIGH);
+	}
+
 }
 
 void TIM4_IRQHandler(){

@@ -1,17 +1,45 @@
-16:22:21 **** Incremental Build of configuration Debug for project MPU6050 ****
+15:33:35 **** Incremental Build of configuration Debug for project MPU6050 ****
 make -j16 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/Unit7_MCU_Essential_Peripherals_lesson1_GPIO/MPU6050_gyro_sensor/MPU6050/STM32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
 ../Src/main.c: In function 'main':
-../Src/main.c:73:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+../Src/main.c:76:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
    USART_SEND_STRING(USART1,buf);
                             ^~~
 In file included from ../Src/main.c:2:0:
 C:/E/embedded/test/final simulation code for my assignments/Unit7_MCU_Essential_Peripherals_lesson1_GPIO/MPU6050_gyro_sensor/MPU6050/STM32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
  void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
       ^~~~~~~~~~~~~~~~~
-../Src/main.c:75:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
-   USART_SEND_STRING(USART1," \n");
-                            ^~~~~
+../Src/main.c:78:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING(USART1,"Y \n");
+                            ^~~~~~
+In file included from ../Src/main.c:2:0:
+C:/E/embedded/test/final simulation code for my assignments/Unit7_MCU_Essential_Peripherals_lesson1_GPIO/MPU6050_gyro_sensor/MPU6050/STM32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:81:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING(USART1,buf);
+                            ^~~
+In file included from ../Src/main.c:2:0:
+C:/E/embedded/test/final simulation code for my assignments/Unit7_MCU_Essential_Peripherals_lesson1_GPIO/MPU6050_gyro_sensor/MPU6050/STM32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:83:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING(USART1,"X \n");
+                            ^~~~~~
+In file included from ../Src/main.c:2:0:
+C:/E/embedded/test/final simulation code for my assignments/Unit7_MCU_Essential_Peripherals_lesson1_GPIO/MPU6050_gyro_sensor/MPU6050/STM32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:86:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING(USART1,buf);
+                            ^~~
+In file included from ../Src/main.c:2:0:
+C:/E/embedded/test/final simulation code for my assignments/Unit7_MCU_Essential_Peripherals_lesson1_GPIO/MPU6050_gyro_sensor/MPU6050/STM32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:88:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING(USART1,"Z \n");
+                            ^~~~~~
 In file included from ../Src/main.c:2:0:
 C:/E/embedded/test/final simulation code for my assignments/Unit7_MCU_Essential_Peripherals_lesson1_GPIO/MPU6050_gyro_sensor/MPU6050/STM32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
  void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
@@ -23,7 +51,7 @@ arm-none-eabi-objdump -h -S  MPU6050.axf  > "MPU6050.list"
 arm-none-eabi-objcopy  -O binary  MPU6050.axf  "MPU6050.bin"
 arm-none-eabi-size   MPU6050.axf 
    text	   data	    bss	    dec	    hex	filename
-  17664	    144	   1824	  19632	   4cb0	MPU6050.axf
+  19184	    148	   1828	  21160	   52a8	MPU6050.axf
 Finished building: default.size.stdout
  
 Finished building: MPU6050.bin
@@ -31,5 +59,5 @@ Finished building: MPU6050.bin
 Finished building: MPU6050.list
  
 
-16:22:21 Build Finished. 0 errors, 2 warnings. (took 900ms)
+15:33:36 Build Finished. 0 errors, 6 warnings. (took 824ms)
 

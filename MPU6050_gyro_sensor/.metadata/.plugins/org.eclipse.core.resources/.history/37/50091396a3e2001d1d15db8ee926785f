@@ -24,7 +24,6 @@ int main(void)
 	MPU6050_init(clk);
 	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_9, stop_bits_2, baud_rate_9600, parity_even,clk);
 
-	delay(1000, U_ms, clk);
 	/* Loop forever */
 	while(1){
 		//init accel
