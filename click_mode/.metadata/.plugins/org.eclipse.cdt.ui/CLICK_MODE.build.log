@@ -1,0 +1,10 @@
+22:32:50 **** Incremental Build of configuration Debug for project CLICK_MODE ****
+make -j16 all 
+arm-none-eabi-size   CLICK_MODE.axf 
+   text	   data	    bss	    dec	    hex	filename
+   7272	     44	   1820	   9136	   23b0	CLICK_MODE.axf
+Finished building: default.size.stdout
+ 
+
+22:32:50 Build Finished. 0 errors, 0 warnings. (took 252ms)
+

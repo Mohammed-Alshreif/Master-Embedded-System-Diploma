@@ -1,0 +1,62 @@
+/*
+ * CLICK_MODE.c
+ *
+ *  Created on: May 5, 2023
+ *      Author: 20102
+ */
+
+#include "CLICK_MODE.h"
+
+uint8_t timer_flag=0;
+uint8_t PIN_NUMPERS=0;
+
+typedef struct BUTTON{
+	CLICK_MODE mode;
+	uint8_t INTERUPPT_FLAG;
+
+}BUTTON;
+
+BUTTON trak_button[16];
+
+int num =0;
+void CLICK_ISR(interrupt_data* isr_data,uint8_t interupt_num){
+
+	num=isr_data[interupt_num].pin;
+
+	trak_button[num].CURENT_POS_STAT=1;
+	trak_button[num].INTERUPPT_FLAG++;
+
+
+
+	if(!timer_flag)
+		TIMER_ISR(TIM3,500,8000000,time_handler);
+}
+void time_handler(){
+	timer_flag=0;
+
+	for(int i =0;i<PIN_NUMPERS;i++){
+			if(trak_button[i].INTERUPPT_FLAG>0){
+				trak_button[i].mode=double_press;
+			}
+			else{
+				trak_button[i].mode=single_press;
+			}
+		}
+
+}
+
+
+
+
+
+
+void CLICK_MODE_INIT(GPIO_typeDef* GPIOx,uint16_t pins_numper,uint8_t* arr_pins){
+
+	PIN_NUMPERS=pins_numper;
+
+	for(int i =0;i<pins_numper;i++){
+		EXTI(GPIOx,*arr_pins, EXTI_Trigger_RisingAndFalling, CLICK_ISR);
+		arr_pins++;
+	}
+
+}

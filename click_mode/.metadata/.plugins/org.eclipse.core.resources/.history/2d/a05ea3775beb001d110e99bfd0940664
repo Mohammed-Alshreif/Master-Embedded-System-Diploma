@@ -1,0 +1,22 @@
+/*
+ * CLICK_MODE.h
+ *
+ *  Created on: May 5, 2023
+ *      Author: 20102
+ */
+
+#ifndef INC_CLICK_MODE_H_
+#define INC_CLICK_MODE_H_
+#include "GPIO_DRIVER.h"
+#include "stdint.h"
+
+typedef enum CLICK_MODE {
+	single_press=1,
+	double_press,
+	long_press
+};
+
+void CLICK_MODE_INIT();
+CLICK_MODE  CLICK_MODE_UPDATE();
+
+#endif /* INC_CLICK_MODE_H_ */

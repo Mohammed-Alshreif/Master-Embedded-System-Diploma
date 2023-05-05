@@ -1,0 +1,2 @@
+stm32f103c6_ADC.c:13:6:ADC_INIT	16	static
+stm32f103c6_ADC.c:65:10:ADC_READ	16	static

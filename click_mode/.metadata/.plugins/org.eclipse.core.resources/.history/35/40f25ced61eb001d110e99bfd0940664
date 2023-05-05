@@ -1,0 +1,27 @@
+/*
+ * CLICK_MODE.c
+ *
+ *  Created on: May 5, 2023
+ *      Author: 20102
+ */
+
+#include "CLICK_MODE.h"
+
+
+void CLICK_ISR(){
+
+}
+
+
+
+
+
+
+void CLICK_MODE_INIT(GPIO_typeDef* GPIOx,uint16_t pins_numper,uint8_t* arr_pins){
+
+	for(int i =0;i<pins_numper;i++){
+		EXTI(GPIOx,*arr_pins, EXTI_Trigger_RisingAndFalling, CLICK_ISR);
+		arr_pins++;
+	}
+
+}

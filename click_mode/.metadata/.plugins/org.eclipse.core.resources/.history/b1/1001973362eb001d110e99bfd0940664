@@ -1,0 +1,6 @@
+#include "CLICK_MODE.h"
+int main(void)
+{
+    /* Loop forever */
+	for(;;);
+}

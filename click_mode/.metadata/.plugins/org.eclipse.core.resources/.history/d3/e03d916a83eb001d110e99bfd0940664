@@ -1,0 +1,25 @@
+/*
+ * CLICK_MODE.h
+ *
+ *  Created on: May 5, 2023
+ *      Author: 20102
+ */
+
+#ifndef INC_CLICK_MODE_H_
+#define INC_CLICK_MODE_H_
+#include "GPIO_DRIVER.h"
+#include "stdint.h"
+#include "STM32_TIMERS_DRIVER.h"
+#include "stm32f103c6_ISR_DRIVER.h"
+
+typedef enum CLICK_MODE {
+	NOT_press=1,
+	single_press,
+	double_press,
+	long_press
+}CLICK_MODE;
+
+void CLICK_MODE_INIT(GPIO_typeDef* GPIOx,uint16_t pins_numper,uint8_t* arr_pins);
+CLICK_MODE CLICK_MODE_UPDATE();
+
+#endif /* INC_CLICK_MODE_H_ */

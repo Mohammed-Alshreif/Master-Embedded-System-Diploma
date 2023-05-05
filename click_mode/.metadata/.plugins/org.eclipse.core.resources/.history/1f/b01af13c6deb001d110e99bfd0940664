@@ -1,0 +1,25 @@
+#include "CLICK_MODE.h"
+int num =0;
+void fun1(interrupt_data* isr_data,uint8_t interupt_num){
+
+	num=isr_data[interupt_num]->pin;
+	num=isr_data[interupt_num]->port;
+}
+void fun2(interrupt_data* isr_data,uint8_t interupt_num){
+
+	num=isr_data[interupt_num]->pin;
+	num=isr_data[interupt_num]->port;
+}
+void fun3(interrupt_data* isr_data,uint8_t interupt_num){
+
+	num=isr_data[interupt_num]->pin;
+	num=isr_data[interupt_num]->port;
+}
+int main(void)
+{
+	EXTI(GPIOA, pin0,EXTI_Trigger_Rising,fun1);
+	EXTI(GPIOB, pin1,EXTI_Trigger_Rising,fun2);
+	EXTI(GPIOC, pin2,EXTI_Trigger_Rising,fun3);
+	/* Loop forever */
+	for(;;);
+}

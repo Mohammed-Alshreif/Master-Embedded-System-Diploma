@@ -1,0 +1,9 @@
+#include "CLICK_MODE.h"
+uint8_t arr_putton[3]={0};
+
+int main(void)
+{
+	CLICK_MODE_INIT(GPIOA,1,arr_putton);
+	/* Loop forever */
+	for(;;);
+}
