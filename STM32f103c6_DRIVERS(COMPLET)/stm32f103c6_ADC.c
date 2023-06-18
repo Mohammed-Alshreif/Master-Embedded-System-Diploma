@@ -65,14 +65,21 @@ void ADC_INIT(ADC_typeDef* ADCx,uint8_t ADC_STATE_){
 uint16_t ADC_READ(ADC_typeDef* ADCx,uint8_t ADC_pin){
 	if(flag_ADC_INIT){
 
-		if(ADC_pin>0b0111)
+		if(ADC_pin<0b0111)
 			pinmode(GPIOA, ADC_pin, GPIO_MODE_ANALOG);
 		else
 			pinmode(GPIOB, ADC_pin, GPIO_MODE_ANALOG);
 
+		ADCx->ADC_CR2=0;
+		ADCx->ADC_SQR3 =0;
 
 		//Bits 4:0 SQ1[4:0]: first conversion in regular sequence
-		ADCx->ADC_SQR3 |=(ADC_pin<<0);
+		ADCx->ADC_SQR3 |=(ADC_pin << 0);
+
+
+
+
+
 
 		//		Bit 0 ADON: A/D converter ON / OFF
 		//		This bit is set and cleared by software. If this bit holds a value of zero and a 1 is written to it
@@ -82,6 +89,15 @@ uint16_t ADC_READ(ADC_typeDef* ADCx,uint8_t ADC_pin){
 		//		0: Disable ADC conversion/calibration and go to power down mode.
 		//		1: Enable ADC and to start conversion
 		ADCx->ADC_CR2 |=(1<<0);
+		ADCx->ADC_CR2 |=(1<<0);
+
+		//		Bit 22 SWSTART: Start conversion of regular channels
+		//		This bit is set by software to start conversion and cleared by hardware as soon as
+		//		conversion starts. It starts a conversion of a group of regular channels if SWSTART is
+		//		selected as trigger event by the EXTSEL[2:0] bits.
+		//		0: Reset state
+		//		1: Starts conversion of regular channels
+		ADCx->ADC_CR2 |=(1<<22);
 
 		//		Bit 1 EOC: End of conversion
 		//		This bit is set by hardware at the end of a group channel conversion (regular or injected). It is

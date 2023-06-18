@@ -67,7 +67,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR1 |=(1<<3); //Output compare 1 preload enable
 			TIMERx->TIMx_CCER |=(1<<0); // Capture/Compare 1 output enable
 			TIMERx->TIMx_CCMR1 |=(0b110<<4);//110: PWM mode 1 - In upcounting, channel 1 is active
-			TIMERx->TIMx_CCR1=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR1=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_BDTR |=(1<<15); // Main output enable
 			TIMERx->TIMx_DIER |=(0b11<<0);//Update interrupt enable Capture/Compare 1 interrupt enable
 		}
@@ -77,7 +77,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR1 |=(1<<11);
 			TIMERx->TIMx_CCER |=(1<<4);
 			TIMERx->TIMx_CCMR1 |=(0b110<<12);
-			TIMERx->TIMx_CCR2=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR2=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_BDTR |=(1<<15);
 			TIMERx->TIMx_DIER |=(0b101<<0);
 		}
@@ -86,7 +86,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR2 |=(1<<3);
 			TIMERx->TIMx_CCER |=(1<<8);
 			TIMERx->TIMx_CCMR2 |=(0b110<<4);
-			TIMERx->TIMx_CCR3=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR3=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_BDTR |=(1<<15);
 			TIMERx->TIMx_DIER |=(0b1001<<0);
 		}
@@ -95,7 +95,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR2 |=(1<<11);
 			TIMERx->TIMx_CCER |=(1<<12);
 			TIMERx->TIMx_CCMR2 |=(0b110<<12);
-			TIMERx->TIMx_CCR4=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR4=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_BDTR |=(1<<15);
 			TIMERx->TIMx_DIER |=(0b10001<<0);
 		}
@@ -113,7 +113,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR1 |=(1<<3);
 			TIMERx->TIMx_CCER |=(1<<0);
 			TIMERx->TIMx_CCMR1 |=(0b110<<4);
-			TIMERx->TIMx_CCR1=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR1=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b11<<0);
 		}
 		else if(CH==CH_2){
@@ -121,7 +121,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR1 |=(1<<11);
 			TIMERx->TIMx_CCER |=(1<<4);
 			TIMERx->TIMx_CCMR1 |=(0b110<<12);
-			TIMERx->TIMx_CCR2=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR2=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b101<<0);
 		}
 		else if(CH==CH_3){
@@ -129,7 +129,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR2 |=(1<<3);
 			TIMERx->TIMx_CCER |=(1<<8);
 			TIMERx->TIMx_CCMR2 |=(0b110<<4);
-			TIMERx->TIMx_CCR3=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR3=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b1001<<0);
 		}
 		else if(CH==CH_4){
@@ -137,7 +137,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR2 |=(1<<11);
 			TIMERx->TIMx_CCER |=(1<<12);
 			TIMERx->TIMx_CCMR2 |=(0b110<<12);
-			TIMERx->TIMx_CCR4=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR4=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b10001<<0);
 		}
 	}
@@ -154,7 +154,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR1 |=(1<<3);
 			TIMERx->TIMx_CCER |=(1<<0);
 			TIMERx->TIMx_CCMR1 |=(0b110<<4);
-			TIMERx->TIMx_CCR1=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR1=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b11<<0);
 		}
 		else if(CH==CH_2){
@@ -162,7 +162,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR1 |=(1<<11);
 			TIMERx->TIMx_CCER |=(1<<4);
 			TIMERx->TIMx_CCMR1 |=(0b110<<12);
-			TIMERx->TIMx_CCR2=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR2=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b101<<0);
 		}
 		else if(CH==CH_3){
@@ -170,7 +170,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR2 |=(1<<3);
 			TIMERx->TIMx_CCER |=(1<<8);
 			TIMERx->TIMx_CCMR2 |=(0b110<<4);
-			TIMERx->TIMx_CCR3=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR3=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b1001<<0);
 		}
 		else if(CH==CH_4){
@@ -178,7 +178,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR2 |=(1<<11);
 			TIMERx->TIMx_CCER |=(1<<12);
 			TIMERx->TIMx_CCMR2 |=(0b110<<12);
-			TIMERx->TIMx_CCR4=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR4=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b10001<<0);
 		}
 	}
@@ -196,7 +196,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR1 |=(1<<3);
 			TIMERx->TIMx_CCER |=(1<<0);
 			TIMERx->TIMx_CCMR1 |=(0b110<<4);
-			TIMERx->TIMx_CCR1=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR1=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b11<<0);
 		}
 		else if(CH==CH_2){
@@ -204,7 +204,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR1 |=(1<<11);
 			TIMERx->TIMx_CCER |=(1<<4);
 			TIMERx->TIMx_CCMR1 |=(0b110<<12);
-			TIMERx->TIMx_CCR2=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR2=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b101<<0);
 		}
 		else if(CH==CH_3){
@@ -212,7 +212,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR2 |=(1<<3);
 			TIMERx->TIMx_CCER |=(1<<8);
 			TIMERx->TIMx_CCMR2 |=(0b110<<4);
-			TIMERx->TIMx_CCR3=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR3=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b1001<<0);
 		}
 		else if(CH==CH_4){
@@ -220,7 +220,7 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 			TIMERx->TIMx_CCMR2 |=(1<<11);
 			TIMERx->TIMx_CCER |=(1<<12);
 			TIMERx->TIMx_CCMR2 |=(0b110<<12);
-			TIMERx->TIMx_CCR4=(user_top*duty_cycle/100);//duty cycle
+			TIMERx->TIMx_CCR4=(user_top*duty_cycle/1000);//duty cycle
 			TIMERx->TIMx_DIER |=(0b10001<<0);
 		}
 	}
