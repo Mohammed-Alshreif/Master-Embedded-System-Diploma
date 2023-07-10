@@ -1,0 +1,842 @@
+2023-06-20 09:02:59,695 [INFO] Activator:178 - 
+
+
+2023-06-20 09:02:59,699 [INFO] Activator:179 - !SESSION log4j initialized
+2023-06-20 09:03:05,786 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824
+2023-06-20 09:03:05,805 [INFO] DbMcusXml:70 - Set database path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/mcu/
+2023-06-20 09:03:05,810 [INFO] DbBoardsPdsc:56 - Set plugin database path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/boardmanager/
+2023-06-20 09:03:05,811 [INFO] DbMcus:258 - Set plugin images path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/
+2023-06-20 09:03:05,811 [INFO] DbBoards:264 - Set plugin images path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/
+2023-06-20 09:03:05,815 [INFO] DbExamples:326 - Set plugin images path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/
+2023-06-20 09:03:05,826 [INFO] DbMcusDocs:112 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:05,830 [INFO] DbMcusJson:63 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:05,831 [INFO] DbBoardsDocs:112 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:05,834 [INFO] DbBoardsJson:56 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:05,839 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-06-20 09:03:05,844 [INFO] DbExamplesSqlite:800 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:05,990 [INFO] RulesReader:52 - Compatibility file has been processed (209 Rules)
+2023-06-20 09:03:06,145 [INFO] MicroXplorer:564 - Detected Java Version = 1.8.0_252
+2023-06-20 09:03:06,145 [INFO] DbMcusXml:70 - Set database path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/mcu/
+2023-06-20 09:03:06,146 [INFO] DbBoardsPdsc:56 - Set plugin database path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/boardmanager/
+2023-06-20 09:03:06,147 [INFO] DbMcus:258 - Set plugin images path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/
+2023-06-20 09:03:06,147 [INFO] DbBoards:264 - Set plugin images path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/
+2023-06-20 09:03:06,147 [INFO] DbExamples:326 - Set plugin images path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/
+2023-06-20 09:03:06,147 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,148 [INFO] DbMcusDocs:112 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:06,148 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,149 [INFO] DbMcusJson:63 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:06,149 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,149 [INFO] DbBoardsDocs:112 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:06,150 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,150 [INFO] DbBoardsJson:56 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:06,151 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,151 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,152 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-06-20 09:03:06,152 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,152 [INFO] DbExamplesSqlite:800 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:06,304 [INFO] MainPanel:189 - HeapMemory: 268435456
+2023-06-20 09:03:06,542 [INFO] DbMcusXml:70 - Set database path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/mcu/
+2023-06-20 09:03:06,542 [INFO] DbBoardsPdsc:56 - Set plugin database path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/boardmanager/
+2023-06-20 09:03:06,543 [INFO] DbMcus:258 - Set plugin images path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/
+2023-06-20 09:03:06,543 [INFO] DbBoards:264 - Set plugin images path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/
+2023-06-20 09:03:06,543 [INFO] DbExamples:326 - Set plugin images path to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/
+2023-06-20 09:03:06,544 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,545 [INFO] DbMcusDocs:112 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:06,545 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,546 [INFO] DbMcusJson:63 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:06,546 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,546 [INFO] DbBoardsDocs:112 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:06,546 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,547 [INFO] DbBoardsJson:56 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:06,547 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,547 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,548 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-06-20 09:03:06,548 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\20102\.stmcufinder\plugins\mcufinder/ => C:\Users\20102\.stmcufinder\plugins\mcufinder
+2023-06-20 09:03:06,548 [INFO] DbExamplesSqlite:800 - Set database path to: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/
+2023-06-20 09:03:06,582 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824
+2023-06-20 09:03:06,584 [INFO] PluginManage:178 - Search for loadable plugins [exclusion list=, ]
+2023-06-20 09:03:06,587 [INFO] PluginManage:292 - Check plugin analytics
+2023-06-20 09:03:06,811 [INFO] AnalyticsPlugin:203 - Accepted Software Licenses: 
+2023-06-20 09:03:06,812 [INFO] AnalyticsPlugin:205 - Accepted CMSIS Pack Licenses: 
+2023-06-20 09:03:06,812 [INFO] AnalyticsPlugin:207 - Accepted Firmware Licenses: 
+2023-06-20 09:03:06,812 [INFO] PluginManage:342 - Loaded plugin analytics (category:tool,tabindex:-1)
+2023-06-20 09:03:06,813 [INFO] PluginManage:292 - Check plugin clock
+2023-06-20 09:03:06,843 [INFO] PluginManage:342 - Loaded plugin clock (category:base,tabindex:2)
+2023-06-20 09:03:06,844 [INFO] PluginManage:292 - Check plugin ddr
+2023-06-20 09:03:06,847 [INFO] PluginManage:342 - Loaded plugin ddr (category:tool,tabindex:6)
+2023-06-20 09:03:06,847 [INFO] PluginManage:292 - Check plugin filemanager
+2023-06-20 09:03:06,996 [INFO] PluginManage:342 - Loaded plugin filemanager (category:base,tabindex:10)
+2023-06-20 09:03:06,997 [INFO] PluginManage:292 - Check plugin ipmanager
+2023-06-20 09:03:07,008 [INFO] PluginManage:342 - Loaded plugin ipmanager (category:base,tabindex:5)
+2023-06-20 09:03:07,008 [INFO] PluginManage:292 - Check plugin pinoutandconfiguration
+2023-06-20 09:03:07,030 [INFO] PluginManage:342 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2023-06-20 09:03:07,030 [INFO] PluginManage:292 - Check plugin pinoutconfig
+2023-06-20 09:03:07,077 [INFO] PluginManage:342 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2023-06-20 09:03:07,077 [INFO] PluginManage:292 - Check plugin power
+2023-06-20 09:03:07,106 [INFO] PluginManage:342 - Loaded plugin power (category:power,tabindex:4)
+2023-06-20 09:03:07,106 [INFO] PluginManage:292 - Check plugin projectmanager
+2023-06-20 09:03:07,127 [INFO] PluginManage:342 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2023-06-20 09:03:07,127 [INFO] PluginManage:292 - Check plugin thirdparty
+2023-06-20 09:03:07,390 [INFO] ThirdPartyDb:333 - Open Third Party DataBase File (C:/Users/20102/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 94 ms. number of Sw pack : 74
+2023-06-20 09:03:07,396 [INFO] PluginManage:342 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2023-06-20 09:03:07,396 [INFO] PluginManage:292 - Check plugin tools
+2023-06-20 09:03:07,475 [INFO] PluginManage:342 - Loaded plugin tools (category:base,tabindex:7)
+2023-06-20 09:03:07,475 [INFO] PluginManage:292 - Check plugin tutovideos
+2023-06-20 09:03:07,792 [INFO] PluginManage:342 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2023-06-20 09:03:07,792 [INFO] PluginManage:292 - Check plugin updater
+2023-06-20 09:03:07,808 [INFO] PluginManage:342 - Loaded plugin updater (category:base,tabindex:12)
+2023-06-20 09:03:07,809 [INFO] PluginManage:265 - PluginManage : Loaded plugins [13]
+2023-06-20 09:03:08,045 [INFO] PinOutPanel:1418 - setPackage(No Configuration,No Configuration)
+2023-06-20 09:03:08,212 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,213 [INFO] PluginManager:200 - loadIPPluginJar : add adc
+2023-06-20 09:03:08,257 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,257 [INFO] PluginManager:200 - loadIPPluginJar : add aes
+2023-06-20 09:03:08,315 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,315 [INFO] PluginManager:200 - loadIPPluginJar : add can
+2023-06-20 09:03:08,347 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,347 [INFO] PluginManager:200 - loadIPPluginJar : add comp
+2023-06-20 09:03:08,392 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,392 [INFO] PluginManager:200 - loadIPPluginJar : add cryp
+2023-06-20 09:03:08,436 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,436 [INFO] PluginManager:200 - loadIPPluginJar : add dfsdm
+2023-06-20 09:03:08,453 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,453 [INFO] PluginManager:200 - loadIPPluginJar : add dma
+2023-06-20 09:03:08,483 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,484 [INFO] PluginManager:200 - loadIPPluginJar : add fatfs
+2023-06-20 09:03:08,556 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,556 [INFO] PluginManager:200 - loadIPPluginJar : add fmc
+2023-06-20 09:03:08,573 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,573 [INFO] PluginManager:200 - loadIPPluginJar : add freertos
+2023-06-20 09:03:08,605 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,605 [INFO] PluginManager:200 - loadIPPluginJar : add genericplugin
+2023-06-20 09:03:08,726 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,727 [INFO] PluginManager:200 - loadIPPluginJar : add gfxmmu
+2023-06-20 09:03:08,940 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,940 [INFO] PluginManager:200 - loadIPPluginJar : add gic
+2023-06-20 09:03:08,960 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:08,961 [INFO] PluginManager:200 - loadIPPluginJar : add gpio
+2023-06-20 09:03:09,053 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,053 [INFO] PluginManager:200 - loadIPPluginJar : add gtzc
+2023-06-20 09:03:09,092 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,092 [INFO] PluginManager:200 - loadIPPluginJar : add hash
+2023-06-20 09:03:09,159 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,159 [INFO] PluginManager:200 - loadIPPluginJar : add i2c
+2023-06-20 09:03:09,213 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,213 [INFO] PluginManager:200 - loadIPPluginJar : add i2s
+2023-06-20 09:03:09,225 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,225 [INFO] PluginManager:200 - loadIPPluginJar : add ipddr
+2023-06-20 09:03:09,272 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,272 [INFO] PluginManager:200 - loadIPPluginJar : add ltdc
+2023-06-20 09:03:09,296 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,297 [INFO] PluginManager:200 - loadIPPluginJar : add mdma
+2023-06-20 09:03:09,311 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,312 [INFO] PluginManager:200 - loadIPPluginJar : add nvic
+2023-06-20 09:03:09,361 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,362 [INFO] PluginManager:200 - loadIPPluginJar : add opamp
+2023-06-20 09:03:09,437 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,438 [INFO] PluginManager:200 - loadIPPluginJar : add openamp
+2023-06-20 09:03:09,493 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,494 [INFO] PluginManager:200 - loadIPPluginJar : add pdm2pcm
+2023-06-20 09:03:09,513 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,516 [INFO] PluginManager:200 - loadIPPluginJar : add plateformsettings
+2023-06-20 09:03:09,551 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,552 [INFO] PluginManager:200 - loadIPPluginJar : add quadspi
+2023-06-20 09:03:09,566 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,566 [INFO] PluginManager:200 - loadIPPluginJar : add resmgrutility
+2023-06-20 09:03:09,629 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,629 [INFO] PluginManager:200 - loadIPPluginJar : add sai
+2023-06-20 09:03:09,682 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,682 [INFO] PluginManager:200 - loadIPPluginJar : add spi
+2023-06-20 09:03:09,751 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,752 [INFO] PluginManager:200 - loadIPPluginJar : add stm32_wpan
+2023-06-20 09:03:09,789 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,790 [INFO] PluginManager:200 - loadIPPluginJar : add tim
+2023-06-20 09:03:09,870 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,870 [INFO] PluginManager:200 - loadIPPluginJar : add touchsensing
+2023-06-20 09:03:09,904 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,905 [INFO] PluginManager:200 - loadIPPluginJar : add tracer_emb
+2023-06-20 09:03:09,946 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,946 [INFO] PluginManager:200 - loadIPPluginJar : add ts
+2023-06-20 09:03:09,992 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:09,992 [INFO] PluginManager:200 - loadIPPluginJar : add tsc
+2023-06-20 09:03:10,039 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:10,039 [INFO] PluginManager:200 - loadIPPluginJar : add ucpd
+2023-06-20 09:03:10,099 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2023-06-20 09:03:10,100 [INFO] PluginManager:200 - loadIPPluginJar : add usart
+2023-06-20 09:03:10,788 [INFO] CubeProgrammer:457 - [DDR PANEL] - PathOfProgrammer: null
+2023-06-20 09:03:11,652 [FATAL] Updater:282 - Updater called before beeing initialized
+2023-06-20 09:03:11,842 [FATAL] Updater:282 - Updater called before beeing initialized
+2023-06-20 09:03:11,843 [WARN] ThirdParty:775 - waiting for thirdparty lock release [close project]
+2023-06-20 09:03:11,843 [INFO] ThirdParty:777 - entering critical section [close project]
+2023-06-20 09:03:11,844 [INFO] ThirdParty:790 - exiting critical section [close project]
+2023-06-20 09:03:11,847 [INFO] PinOutPanel:1418 - setPackage(No Configuration,No Configuration)
+2023-06-20 09:03:11,848 [FATAL] Updater:282 - Updater called before beeing initialized
+2023-06-20 09:03:11,861 [ERROR] Updater:967 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2023-06-20 09:03:11,863 [INFO] CubeProgrammer:457 - [DDR PANEL] - PathOfProgrammer: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.4.0.202007081208\tools\bin
+2023-06-20 09:03:11,887 [INFO] ProgrammerExecThread:148 - [ProgrammerAPI] CubeProgrammer command construction: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.4.0.202007081208\tools\bin\STM32_Programmer_CLI.exe -l
+2023-06-20 09:03:12,216 [INFO] MainDdrPanel:49 - [DDR PANEL] SETTER - Set cubeProgrammerPath to: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.4.0.202007081208\tools\bin
+2023-06-20 09:03:12,337 [INFO] Updater:904 - Updater Version found : 6.0.0
+2023-06-20 09:03:12,360 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824
+2023-06-20 09:03:12,624 [INFO] MainUpdater:2268 - connection check result : 10
+2023-06-20 09:03:12,625 [INFO] MainUpdater:2935 - Updater definition file requires update
+2023-06-20 09:03:12,626 [INFO] MainUpdater:239 - Updater Check For Update Now.
+2023-06-20 09:03:12,626 [INFO] MicroXplorer:414 - Change Database Version : DB.6.0.0
+2023-06-20 09:03:12,709 [INFO] ServerAccessManage:348 - Download File updaters.zip
+2023-06-20 09:03:12,871 [INFO] FileExtend:225 - Unzip File : updaters.zip
+2023-06-20 09:03:12,872 [INFO] FileExtend:240 - Standard Zip Deflate
+2023-06-20 09:03:13,407 [WARN] IntegrityCheckThread:61 - waiting for thirdparty lock release [integrity check]
+2023-06-20 09:03:13,408 [INFO] IntegrityCheckThread:63 - entering critical section [integrity check]
+2023-06-20 09:03:13,409 [WARN] MainUpdater:1087 - Updater busy. Cannot search thirdparties
+2023-06-20 09:03:13,508 [INFO] ServerAccessManage:348 - Download File PacksControlFlags.xml
+2023-06-20 09:03:13,654 [INFO] ServerAccessManage:348 - Download File cubemx.pidx
+2023-06-20 09:03:14,017 [INFO] ServerAccessManage:348 - Download File STMicroelectronics.FP-SNS-FLIGHT1.pdsc
+2023-06-20 09:03:14,236 [INFO] ServerAccessManage:348 - Download File STMicroelectronics.FP-SNS-MOTENV1.pdsc
+2023-06-20 09:03:14,873 [INFO] ServerAccessManage:348 - Download File STMicroelectronics.X-CUBE-NFC7.pdsc
+2023-06-20 09:03:15,349 [INFO] ServerAccessManage:348 - Download File STMicroelectronics.X-CUBE-AZRTOS-L4.pdsc
+2023-06-20 09:03:15,817 [INFO] ServerAccessManage:348 - Download File STMicroelectronics.X-CUBE-AZRTOS-WL.pdsc
+2023-06-20 09:03:16,225 [WARN] PopulateThirdPartyThread:96 - Error when creating pack: C:/Users/20102/.stm32cubemx/thirdparties/pdsc/STMicroelectronics.FP-SNS-FLIGHT1.pdsc
+2023-06-20 09:03:16,230 [WARN] PopulateThirdPartyThread:96 - Error when creating pack: C:/Users/20102/.stm32cubemx/thirdparties/pdsc/STMicroelectronics.FP-SNS-MOTENV1.pdsc
+2023-06-20 09:03:16,274 [INFO] CheckServerUpdateThread:102 - End of CheckServer Thread
+2023-06-20 09:03:16,332 [INFO] MainUpdater:2268 - connection check result : 10
+2023-06-20 09:03:16,333 [INFO] ThirdPartyDb:299 - Save Third Party DataBase File (C:/Users/20102/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) [forced]
+2023-06-20 09:03:16,452 [ERROR] WebUtils:615 - Updater is busy
+2023-06-20 09:03:16,452 [ERROR] WebUtils:615 - Updater is busy
+2023-06-20 09:03:16,452 [ERROR] WebUtils:615 - Updater is busy
+2023-06-20 09:03:16,453 [ERROR] WebUtils:615 - Updater is busy
+2023-06-20 09:03:16,453 [ERROR] WebUtils:615 - Updater is busy
+2023-06-20 09:03:16,616 [ERROR] ConditionMgr:436 - getConditionDescription Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-06-20 09:03:16,633 [ERROR] ConditionMgr:1027 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-06-20 09:03:16,633 [ERROR] ConditionMgr:1027 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-06-20 09:03:16,636 [ERROR] ConditionMgr:1027 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-06-20 09:03:16,640 [INFO] ThirdPartyDb:299 - Save Third Party DataBase File (C:/Users/20102/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) [forced]
+2023-06-20 09:03:16,800 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2023-06-20 09:03:16,804 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2023-06-20 09:03:16,807 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2023-06-20 09:03:16,810 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2023-06-20 09:03:16,813 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2023-06-20 09:03:16,836 [INFO] ThirdPartyDb:299 - Save Third Party DataBase File (C:/Users/20102/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) [forced]
+2023-06-20 09:03:16,951 [INFO] PopulateThirdPartyThread:50 - Ending populate Thread
+2023-06-20 09:03:16,952 [INFO] ThirdPartyDb:299 - Save Third Party DataBase File (C:/Users/20102/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) [forced]
+2023-06-20 09:03:17,035 [INFO] Engine:289 - softwarePackList size : 77
+2023-06-20 09:03:17,067 [INFO] Engine:301 - compute dependency for SwPack FP-ATR-ASTRA1 have been done, and update is requested
+2023-06-20 09:03:17,138 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AI have been done, and update is requested
+2023-06-20 09:03:17,204 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-ALS have been done, and update is requested
+2023-06-20 09:03:17,244 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-BLE1 have been done, and update is requested
+2023-06-20 09:03:17,293 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-BLE2 have been done, and update is requested
+2023-06-20 09:03:17,420 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-BLEMGR have been done, and update is requested
+2023-06-20 09:03:17,448 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,448 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,449 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,449 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,449 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,449 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,449 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,449 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,449 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,449 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,450 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,450 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,450 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,450 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,450 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,450 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,450 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:17,450 [INFO] Engine:305 - compute dependency for SwPack X-CUBE-DISPLAY have been done, no update is requested
+2023-06-20 09:03:17,471 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-EEPRMA1 have been done, and update is requested
+2023-06-20 09:03:17,526 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-GNSS1 have been done, and update is requested
+2023-06-20 09:03:17,550 [INFO] ServerAccessManage:348 - Download File crdb.zip
+2023-06-20 09:03:17,588 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-ISPU have been done, and update is requested
+2023-06-20 09:03:17,950 [INFO] FileExtend:225 - Unzip File : crdb.zip
+2023-06-20 09:03:17,953 [INFO] FileExtend:240 - Standard Zip Deflate
+2023-06-20 09:03:17,991 [INFO] LoadUrlFilesThread:135 - End of LoadUrlFiles Thread
+2023-06-20 09:03:18,070 [INFO] ServerAccessManage:348 - Download File tutoVideoDB.zip
+2023-06-20 09:03:18,113 [INFO] FileExtend:225 - Unzip File : tutoVideoDB.zip
+2023-06-20 09:03:18,115 [INFO] FileExtend:240 - Standard Zip Deflate
+2023-06-20 09:03:18,133 [INFO] LoadUrlFilesThread:135 - End of LoadUrlFiles Thread
+2023-06-20 09:03:18,138 [ERROR] DbUtils:114 - File not found: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/mcusDocs.json._tmp_
+2023-06-20 09:03:18,142 [WARN] DbUtils:163 - success is not a boolean!
+2023-06-20 09:03:18,143 [ERROR] DbMcusDocs:83 - No MCUs documents found !
+2023-06-20 09:03:18,143 [ERROR] DbFile:108 - Temporary file not found: C:\Users\20102\.stmcufinder\plugins\mcufinder\mcu\mcusDocs.json._tmp_
+2023-06-20 09:03:18,174 [INFO] DbMcusDocs:145 - JSON generation date=Tue Nov 16 18:17:54 EET 2021 (1637079474)
+2023-06-20 09:03:18,175 [INFO] DbMcusXml:100 - Load MCU database from C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/mcu/families.xml
+2023-06-20 09:03:18,262 [INFO] ThirdPartyDb:299 - Save Third Party DataBase File (C:/Users/20102/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) [forced]
+2023-06-20 09:03:18,553 [ERROR] DbUtils:114 - File not found: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/mcusFeaturesAndDescription.json._tmp_
+2023-06-20 09:03:18,553 [WARN] DbUtils:163 - success is not a boolean!
+2023-06-20 09:03:18,553 [ERROR] DbFile:108 - Temporary file not found: C:\Users\20102\.stmcufinder\plugins\mcufinder\mcu\mcusFeaturesAndDescription.json._tmp_
+2023-06-20 09:03:18,558 [INFO] DbMcus:175 - Found 1761 MCUs (1722 are supported by CubeMX, 1722 are visible in CubeMX)
+2023-06-20 09:03:18,559 [INFO] ApiDb:201 - Load user favorites file C:\Users\20102/.stm32cubemx/favorites.mcus.txt: 0 item(s)
+2023-06-20 09:03:18,560 [INFO] ApiDb:205 - User favorites MCUs=[]
+2023-06-20 09:03:18,560 [INFO] DbMcus:187 - Set 0 / 0 favorites MCUs
+2023-06-20 09:03:18,561 [ERROR] DbMcusDocs:83 - No MCUs documents found !
+2023-06-20 09:03:18,563 [INFO] ApiDb:226 - Save user favorites file C:\Users\20102/.stm32cubemx/favorites.mcus.txt: 0 item(s)
+2023-06-20 09:03:18,563 [INFO] ApiDb:230 - User favorites MCUs=[]
+2023-06-20 09:03:18,564 [INFO] DbMcusXml:100 - Load MCU database from C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/mcu/families.xml
+2023-06-20 09:03:18,999 [INFO] DbMcusJson:92 - JSON generation date=Tue Nov 16 18:17:54 EET 2021 (1637079474)
+2023-06-20 09:03:19,372 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-MEMS1 have been done, and update is requested
+2023-06-20 09:03:19,404 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-NFC4 have been done, and update is requested
+2023-06-20 09:03:19,431 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-NFC7 have been done, and update is requested
+2023-06-20 09:03:19,454 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-SFXS2LP1 have been done, and update is requested
+2023-06-20 09:03:19,511 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-SUBG2 have been done, and update is requested
+2023-06-20 09:03:19,558 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-TOF1 have been done, and update is requested
+2023-06-20 09:03:19,574 [INFO] Engine:305 - compute dependency for SwPack X-CUBE-TOUCHGFX have been done, no update is requested
+2023-06-20 09:03:19,586 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-ALGOBUILD have been done, and update is requested
+2023-06-20 09:03:19,613 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-H7 have been done, and update is requested
+2023-06-20 09:03:19,636 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-F4 have been done, and update is requested
+2023-06-20 09:03:19,681 [INFO] DbMcus:175 - Found 1761 MCUs (1722 are supported by CubeMX, 1911 are visible in CubeMX)
+2023-06-20 09:03:19,682 [INFO] ApiDb:201 - Load user favorites file C:\Users\20102/.stm32cubemx/favorites.mcus.txt: 0 item(s)
+2023-06-20 09:03:19,682 [INFO] ApiDb:205 - User favorites MCUs=[]
+2023-06-20 09:03:19,682 [INFO] DbMcus:187 - Set 0 / 0 favorites MCUs
+2023-06-20 09:03:19,690 [ERROR] DbUtils:114 - File not found: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/boardsDocs.json._tmp_
+2023-06-20 09:03:19,690 [WARN] DbUtils:163 - success is not a boolean!
+2023-06-20 09:03:19,690 [ERROR] DbBoardsDocs:83 - No boards documents found !
+2023-06-20 09:03:19,690 [ERROR] DbFile:108 - Temporary file not found: C:\Users\20102\.stmcufinder\plugins\mcufinder\mcu\boardsDocs.json._tmp_
+2023-06-20 09:03:19,702 [INFO] DbBoardsDocs:145 - JSON generation date=Tue Nov 16 18:17:54 EET 2021 (1637079474)
+2023-06-20 09:03:19,710 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-F7 have been done, and update is requested
+2023-06-20 09:03:19,722 [INFO] DbBoardsPdsc:94 - Found 23 items
+2023-06-20 09:03:19,732 [INFO] DbBoardsPdsc:94 - Found 9 items
+2023-06-20 09:03:19,735 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-L4 have been done, and update is requested
+2023-06-20 09:03:19,743 [INFO] DbBoardsPdsc:94 - Found 29 items
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,749 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,750 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:19,751 [INFO] Engine:305 - compute dependency for SwPack X-CUBE-AZRTOS-L5 have been done, no update is requested
+2023-06-20 09:03:19,752 [INFO] DbBoardsPdsc:94 - Found 1 items
+2023-06-20 09:03:19,782 [INFO] DbBoardsPdsc:94 - Found 44 items
+2023-06-20 09:03:19,784 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-G0 have been done, and update is requested
+2023-06-20 09:03:19,797 [INFO] DbBoardsPdsc:94 - Found 40 items
+2023-06-20 09:03:19,802 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-G4 have been done, and update is requested
+2023-06-20 09:03:19,807 [INFO] DbBoardsPdsc:94 - Found 2 items
+2023-06-20 09:03:19,816 [INFO] DbBoardsPdsc:94 - Found 4 items
+2023-06-20 09:03:19,819 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-WL have been done, and update is requested
+2023-06-20 09:03:19,824 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-DK: unknown feature type=Audio, name=, username=Audio stereo codec with Headphone Amp (CS42L51-CNZ), n=1
+2023-06-20 09:03:19,825 [WARN] DbBoardsPdsc:258 - Board STM32H735G-DK: unknown feature type=Audio, name=, username=Audio stereo codec with Headphone Amp (WM8994ECS/R), n=1
+2023-06-20 09:03:19,827 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-EVAL: unknown feature type=Audio, name=, username=Multi-Channel Audio Codec (CS42L51-CNZ), n=1
+2023-06-20 09:03:19,828 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-EVAL: unknown feature type=Meter, name=, username=Power-metering and Temperature-monitoring with sigma-delta modulators, n=1
+2023-06-20 09:03:19,828 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-EVAL: unknown feature type=Motor, name=, username=Motor Control, n=1
+2023-06-20 09:03:19,829 [ERROR] DbUtils:114 - File not found: C:\Users\20102\.stmcufinder\plugins\mcufinder//mcu/boards.json._tmp_
+2023-06-20 09:03:19,829 [WARN] DbUtils:163 - success is not a boolean!
+2023-06-20 09:03:19,830 [ERROR] DbFile:108 - Temporary file not found: C:\Users\20102\.stmcufinder\plugins\mcufinder\mcu\boards.json._tmp_
+2023-06-20 09:03:19,830 [INFO] DbBoards:117 - Found 152 boards (149 are supported by CubeMX)
+2023-06-20 09:03:19,832 [INFO] DbBoardsDocs:145 - JSON generation date=Tue Nov 16 18:17:54 EET 2021 (1637079474)
+2023-06-20 09:03:19,834 [INFO] Engine:301 - compute dependency for SwPack I-CUBE-wolfSSL have been done, and update is requested
+2023-06-20 09:03:19,836 [ERROR] DbBoardsDocs:83 - No boards documents found !
+2023-06-20 09:03:19,838 [INFO] DbBoardsDocs:145 - JSON generation date=Tue Nov 16 18:17:54 EET 2021 (1637079474)
+2023-06-20 09:03:19,839 [ERROR] DbBoardsDocs:83 - No boards documents found !
+2023-06-20 09:03:19,839 [WARN] DbBoards:127 - board B-G474E-DPOW1 has no document id list !
+2023-06-20 09:03:19,839 [WARN] DbBoards:127 - board B-L072Z-LRWAN1 has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board B-L462E-CELL1 has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board B-L475E-IOT01A1 has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board B-L475E-IOT01A2 has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board B-L4S5I-IOT01A has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F030R8 has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F031K6 has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F042K6 has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F070RB has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F072RB has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F091RC has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F103RB has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F207ZG has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F302R8 has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F303K8 has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F303RE has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F303ZE has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F334R8 has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F401RE has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F410RB has no document id list !
+2023-06-20 09:03:19,840 [WARN] DbBoards:127 - board NUCLEO-F411RE has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-F412ZG has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-F413ZH has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-F429ZI has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-F439ZI has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-F446RE has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-F446ZE has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-F722ZE has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-F746ZG has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-F767ZI has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-G031K8 has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-G070RB has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-G071RB has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-G431KB has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-G431RB has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-G474RE has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-G491RE has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-H723ZG has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-H743ZI has no document id list !
+2023-06-20 09:03:19,841 [WARN] DbBoards:127 - board NUCLEO-H743ZI2 has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-H745ZI-Q has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-H753ZI has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-H755ZI-Q has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-H7A3ZI-Q has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L010RB has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L011K4 has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L031K6 has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L053R8 has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L073RZ has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L152RE has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L412KB has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L412RB-P has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L432KC has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L433RC-P has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L452RE has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L452RE-P has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L476RG has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L496ZG has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L496ZG-P has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L4P5ZG has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L4R5ZI has no document id list !
+2023-06-20 09:03:19,842 [WARN] DbBoards:127 - board NUCLEO-L4R5ZI-P has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board NUCLEO-L552ZE-Q has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board NUCLEO-WB55RG has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board P-NUCLEO-WB55 has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board P-NUCLEO-WB55-Nucleo has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board P-NUCLEO-WB55-USBDongle has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board STEVAL-BFA001V1B has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board STEVAL-BFA001V2B has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board STEVAL-IDP005V1 has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board STEVAL-IDP005V2 has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board STEVAL-MKSBOX1V1 has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board STEVAL-STWINKT1 has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board STM32072B-EVAL has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board STM32091C-EVAL has no document id list !
+2023-06-20 09:03:19,843 [WARN] DbBoards:127 - board STM32100E-EVAL has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM3210C-EVAL has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM3210E-EVAL has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM3220G-EVAL has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM3221G-EVAL has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM32303C-EVAL has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM32303E-EVAL has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM32373C-EVAL has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM3240G-EVAL has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM3241G-EVAL has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM32429I-EVAL1 has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM32439I-EVAL2 has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM32446E-EVAL has no document id list !
+2023-06-20 09:03:19,844 [WARN] DbBoards:127 - board STM32469I-EVAL has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32479I-EVAL has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32746G-EVAL2 has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32756G-EVAL2 has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32F0308-DISCO has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32F072B-DISCO has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32F0DISCOVERY has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32F3348-DISCO has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32F3DISCOVERY has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32F401C-DISCO has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32F407G-DISC1 has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32F411E-DISCO has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32F412G-DISCO has no document id list !
+2023-06-20 09:03:19,845 [WARN] DbBoards:127 - board STM32F413H-DISCO has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32F429I-DISC1 has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32F469I-DISCO has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32F723E-DISCO has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32F7308-DK has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32F746G-DISCO has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32F7508-DK has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32F769I-DISC1 has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32F769I-DISCO has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32F769I-EVAL has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32F779I-EVAL has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32G0316-DISCO has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32G071B-DISCO has no document id list !
+2023-06-20 09:03:19,846 [WARN] DbBoards:127 - board STM32G081B-EVAL has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32G474E-EVAL has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32G474E-EVAL1 has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32G484E-EVAL has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32H735G-DK has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32H743I-EVAL has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32H743I-EVAL2 has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32H745I-DISCO has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32H747I-DISC1 has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32H747I-DISCO has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32H747I-EVAL has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32H750B-DK has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32H753I-EVAL has no document id list !
+2023-06-20 09:03:19,847 [WARN] DbBoards:127 - board STM32H753I-EVAL2 has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32H757I-EVAL has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32H7B3I-DK has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32H7B3I-EVAL has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32L-DISCOVERY has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32L0538-DISCO has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32L073Z-EVAL has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32L100C-DISCO has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32L152C-DISCO has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32L152D-EVAL has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32L476G-DISCO has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32L476G-EVAL has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32L496G-DISCO has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32L4P5G-DK has no document id list !
+2023-06-20 09:03:19,848 [WARN] DbBoards:127 - board STM32L4R9I-DISCO has no document id list !
+2023-06-20 09:03:19,849 [WARN] DbBoards:127 - board STM32L4R9I-EVAL has no document id list !
+2023-06-20 09:03:19,849 [WARN] DbBoards:127 - board STM32L552E-EV has no document id list !
+2023-06-20 09:03:19,849 [WARN] DbBoards:127 - board STM32L562E-DK has no document id list !
+2023-06-20 09:03:19,849 [WARN] DbBoards:127 - board STM32MP157A-DK1 has no document id list !
+2023-06-20 09:03:19,849 [WARN] DbBoards:127 - board STM32MP157A-EV1 has no document id list !
+2023-06-20 09:03:19,849 [WARN] DbBoards:127 - board STM32MP157C-DK2 has no document id list !
+2023-06-20 09:03:19,849 [WARN] DbBoards:127 - board STM32MP157C-EV1 has no document id list !
+2023-06-20 09:03:19,849 [WARN] DbBoards:127 - board STM32MP157F-EV1 has no document id list !
+2023-06-20 09:03:19,849 [WARN] DbBoards:127 - board STM32VLDISCOVERY has no document id list !
+2023-06-20 09:03:19,854 [INFO] Engine:305 - compute dependency for SwPack I-CUBE-UNISONRTOS have been done, no update is requested
+2023-06-20 09:03:19,957 [ERROR] DbBoards:192 - No image file URL for board B-L462E-CELL1
+2023-06-20 09:03:20,173 [INFO] Engine:301 - compute dependency for SwPack I-CUBE-embOS have been done, and update is requested
+2023-06-20 09:03:20,187 [INFO] Engine:301 - compute dependency for SwPack I-Cube-SoM-uGOAL have been done, and update is requested
+2023-06-20 09:03:20,200 [INFO] Engine:301 - compute dependency for SwPack I-CUBE-CANOPEN have been done, and update is requested
+2023-06-20 09:03:20,215 [INFO] Engine:305 - compute dependency for SwPack FreeRTOS have been done, no update is requested
+2023-06-20 09:03:20,215 [INFO] Engine:305 - compute dependency for SwPack lwIP have been done, no update is requested
+2023-06-20 09:03:20,215 [INFO] Engine:305 - compute dependency for SwPack lwIP have been done, no update is requested
+2023-06-20 09:03:20,216 [INFO] Engine:305 - compute dependency for SwPack MBEDTLS have been done, no update is requested
+2023-06-20 09:03:20,216 [INFO] Engine:305 - compute dependency for SwPack MBEDTLS have been done, no update is requested
+2023-06-20 09:03:20,216 [INFO] Engine:305 - compute dependency for SwPack PDM2PCM have been done, no update is requested
+2023-06-20 09:03:20,216 [INFO] Engine:305 - compute dependency for SwPack PDM2PCM have been done, no update is requested
+2023-06-20 09:03:20,216 [INFO] Engine:305 - compute dependency for SwPack PDM2PCM have been done, no update is requested
+2023-06-20 09:03:20,220 [INFO] Engine:305 - compute dependency for SwPack USB_DEVICE have been done, no update is requested
+2023-06-20 09:03:20,220 [INFO] Engine:305 - compute dependency for SwPack USB_DEVICE have been done, no update is requested
+2023-06-20 09:03:20,220 [INFO] Engine:305 - compute dependency for SwPack USB_DEVICE have been done, no update is requested
+2023-06-20 09:03:20,224 [INFO] Engine:305 - compute dependency for SwPack USB_HOST have been done, no update is requested
+2023-06-20 09:03:20,224 [INFO] Engine:305 - compute dependency for SwPack USB_HOST have been done, no update is requested
+2023-06-20 09:03:20,228 [INFO] Engine:301 - compute dependency for SwPack FP-ATR-ASTRA1 have been done, and update is requested
+2023-06-20 09:03:20,248 [INFO] Engine:301 - compute dependency for SwPack FP-ATR-SIGFOX1 have been done, and update is requested
+2023-06-20 09:03:20,268 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AI have been done, and update is requested
+2023-06-20 09:03:20,296 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-BLEMGR have been done, and update is requested
+2023-06-20 09:03:20,367 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-TOF1 have been done, and update is requested
+2023-06-20 09:03:20,386 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-BLE1 have been done, and update is requested
+2023-06-20 09:03:20,414 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-BLEMGR have been done, and update is requested
+2023-06-20 09:03:20,442 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-ISPU have been done, and update is requested
+2023-06-20 09:03:21,286 [INFO] ApiDb:201 - Load user favorites file C:\Users\20102/.stm32cubemx/favorites.boards.txt: 0 item(s)
+2023-06-20 09:03:21,287 [INFO] ApiDb:205 - User favorites Boards=[]
+2023-06-20 09:03:21,287 [INFO] DbBoards:206 - Set 0 / 0 favorites Boards
+2023-06-20 09:03:21,289 [ERROR] DbBoardsDocs:83 - No boards documents found !
+2023-06-20 09:03:21,289 [INFO] ApiDb:226 - Save user favorites file C:\Users\20102/.stm32cubemx/favorites.boards.txt: 0 item(s)
+2023-06-20 09:03:21,290 [INFO] ApiDb:230 - User favorites Boards=[]
+2023-06-20 09:03:21,293 [INFO] DbBoardsPdsc:94 - Found 23 items
+2023-06-20 09:03:21,295 [INFO] DbBoardsPdsc:94 - Found 9 items
+2023-06-20 09:03:21,298 [INFO] DbBoardsPdsc:94 - Found 29 items
+2023-06-20 09:03:21,300 [INFO] DbBoardsPdsc:94 - Found 1 items
+2023-06-20 09:03:21,305 [INFO] DbBoardsPdsc:94 - Found 44 items
+2023-06-20 09:03:21,310 [INFO] DbBoardsPdsc:94 - Found 40 items
+2023-06-20 09:03:21,312 [INFO] DbBoardsPdsc:94 - Found 2 items
+2023-06-20 09:03:21,314 [INFO] DbBoardsPdsc:94 - Found 4 items
+2023-06-20 09:03:21,317 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-DK: unknown feature type=Audio, name=, username=Audio stereo codec with Headphone Amp (CS42L51-CNZ), n=1
+2023-06-20 09:03:21,318 [WARN] DbBoardsPdsc:258 - Board STM32H735G-DK: unknown feature type=Audio, name=, username=Audio stereo codec with Headphone Amp (WM8994ECS/R), n=1
+2023-06-20 09:03:21,321 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-EVAL: unknown feature type=Audio, name=, username=Multi-Channel Audio Codec (CS42L51-CNZ), n=1
+2023-06-20 09:03:21,321 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-EVAL: unknown feature type=Meter, name=, username=Power-metering and Temperature-monitoring with sigma-delta modulators, n=1
+2023-06-20 09:03:21,321 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-EVAL: unknown feature type=Motor, name=, username=Motor Control, n=1
+2023-06-20 09:03:21,352 [INFO] DbBoardsJson:85 - JSON generation date=Tue Nov 16 18:17:54 EET 2021 (1637079474)
+2023-06-20 09:03:21,358 [INFO] DbBoards:117 - Found 166 boards (149 are supported by CubeMX)
+2023-06-20 09:03:21,359 [INFO] DbBoardsDocs:145 - JSON generation date=Tue Nov 16 18:17:54 EET 2021 (1637079474)
+2023-06-20 09:03:21,363 [INFO] DbBoardsDocs:81 - Found 209 boards documents
+2023-06-20 09:03:21,363 [WARN] DbBoards:127 - board B-L475E-IOT01A2 has no document id list !
+2023-06-20 09:03:21,365 [WARN] DbBoards:127 - board NUCLEO-H743ZI has no document id list !
+2023-06-20 09:03:21,366 [WARN] DbBoards:127 - board P-NUCLEO-WB55-Nucleo has no document id list !
+2023-06-20 09:03:21,366 [WARN] DbBoards:127 - board P-NUCLEO-WB55-USBDongle has no document id list !
+2023-06-20 09:03:21,366 [WARN] DbBoards:127 - board STEVAL-BFA001V1B has no document id list !
+2023-06-20 09:03:21,366 [WARN] DbBoards:127 - board STEVAL-BFA001V2B has no document id list !
+2023-06-20 09:03:21,366 [WARN] DbBoards:127 - board STEVAL-IDP005V1 has no document id list !
+2023-06-20 09:03:21,366 [WARN] DbBoards:127 - board STEVAL-IDP005V2 has no document id list !
+2023-06-20 09:03:21,366 [WARN] DbBoards:127 - board STEVAL-MKSBOX1V1 has no document id list !
+2023-06-20 09:03:21,366 [WARN] DbBoards:127 - board STEVAL-STWINKT1 has no document id list !
+2023-06-20 09:03:21,366 [WARN] DbBoards:127 - board STEVAL-STWINKT1B has no document id list !
+2023-06-20 09:03:21,367 [WARN] DbBoards:127 - board STM32439I-EVAL2 has no document id list !
+2023-06-20 09:03:21,367 [WARN] DbBoards:127 - board STM32F401C-DISCO has no document id list !
+2023-06-20 09:03:21,368 [WARN] DbBoards:127 - board STM32F769I-DISC1 has no document id list !
+2023-06-20 09:03:21,368 [WARN] DbBoards:127 - board STM32G474E-EVAL1 has no document id list !
+2023-06-20 09:03:21,368 [WARN] DbBoards:127 - board STM32H743I-EVAL2 has no document id list !
+2023-06-20 09:03:21,368 [WARN] DbBoards:127 - board STM32H747I-DISC1 has no document id list !
+2023-06-20 09:03:21,369 [WARN] DbBoards:127 - board STM32H753I-EVAL2 has no document id list !
+2023-06-20 09:03:21,369 [WARN] DbBoards:127 - board STM32L-DISCOVERY has no document id list !
+2023-06-20 09:03:21,413 [ERROR] DbBoards:189 - Image file not found for board B-L462E-CELL1: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/B-L462E-CELL1_small.jpg
+2023-06-20 09:03:21,438 [ERROR] DbBoards:189 - Image file not found for board B-U585I-IOT02A: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/B-U585I-IOT02A_small.jpg
+2023-06-20 09:03:21,497 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-F413ZH: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo-f413zh_small.jpg
+2023-06-20 09:03:21,628 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-L552ZE-Q: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo_l552ze_q_small.jpg
+2023-06-20 09:03:21,628 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-U575ZI-Q: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo-u575zi-q_small.jpg
+2023-06-20 09:03:21,628 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-WB15CC: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo-wb15cc_small.jpg
+2023-06-20 09:03:21,628 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-WB55RG: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo-wb55rg_small.jpg
+2023-06-20 09:03:21,629 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-WL55JC: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo-wl55jc-small.jpg
+2023-06-20 09:03:21,728 [ERROR] DbBoards:189 - Image file not found for board STEVAL-STWINKT1B: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/steval-stwinkt1b_small.jpg
+2023-06-20 09:03:21,908 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-MEMS1 have been done, and update is requested
+2023-06-20 09:03:21,931 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-NFC4 have been done, and update is requested
+2023-06-20 09:03:21,947 [ERROR] DbBoards:189 - Image file not found for board STM32G0C1E-EV: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/stm32g0c1e-eval_small.jpg
+2023-06-20 09:03:21,948 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,948 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,948 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,948 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,948 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,948 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,949 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,950 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,951 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,952 [ERROR] DependencyParser:1297 - StateRcvOpen_Cte Bad Token : )
+2023-06-20 09:03:21,952 [INFO] Engine:305 - compute dependency for SwPack X-CUBE-AZRTOS-L5 have been done, no update is requested
+2023-06-20 09:03:21,959 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-WB have been done, and update is requested
+2023-06-20 09:03:21,983 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-H7 have been done, and update is requested
+2023-06-20 09:03:22,006 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-EEPRMA1 have been done, and update is requested
+2023-06-20 09:03:22,015 [ERROR] DbBoards:189 - Image file not found for board STM32H7B3I-EVAL: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/stm32h7b3ieval_small.jpg
+2023-06-20 09:03:22,019 [INFO] Engine:305 - compute dependency for SwPack X-CUBE-TOUCHGFX have been done, no update is requested
+2023-06-20 09:03:22,025 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-NFC4 have been done, and update is requested
+2023-06-20 09:03:22,039 [INFO] Engine:305 - compute dependency for SwPack X-CUBE-TOUCHGFX have been done, no update is requested
+2023-06-20 09:03:22,153 [ERROR] DbBoards:189 - Image file not found for board STM32U575I-EV: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/stm32u575i-ev_small.jpg
+2023-06-20 09:03:22,174 [ERROR] DbBoards:189 - Image file not found for board STM32WB5MM-DK: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/STM32WB5MM-DK_small.jpg
+2023-06-20 09:03:22,174 [INFO] ApiDb:201 - Load user favorites file C:\Users\20102/.stm32cubemx/favorites.boards.txt: 0 item(s)
+2023-06-20 09:03:22,174 [INFO] ApiDb:205 - User favorites Boards=[]
+2023-06-20 09:03:22,175 [INFO] DbBoards:206 - Set 0 / 0 favorites Boards
+2023-06-20 09:03:22,473 [INFO] McuFinderGlobals:40 - Set McuFinder mode to 2 (CubeIDE integrated)
+2023-06-20 09:03:22,646 [INFO] CrossSelectorPresenter:1330 - Cross Selector saved comparison directory: C:\Users\20102\.stmcufinder\plugins\mcufinder\mcu\cs_comparisons_mx
+2023-06-20 09:03:22,653 [INFO] MultiScanPanel:193 - Auto-refresh data requested => check proxy status ongoing
+2023-06-20 09:03:22,655 [INFO] FinderPluginLoader:87 - Searching for filters in installed packs
+2023-06-20 09:03:23,155 [INFO] LoadUrlFilesThread:162 - End of LoadServerUrlFiles without Thread
+2023-06-20 09:03:23,160 [INFO] DetailPanel:331 - Set advertising image to C:/Users/20102/STM32Cube/Repository/\stm32cubemx-promo_image.jpg
+2023-06-20 09:03:23,734 [INFO] ServerAccessManage:348 - Download File mcusDocs.json._tmp_
+2023-06-20 09:03:23,881 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-MEMS1 have been done, and update is requested
+2023-06-20 09:03:23,894 [INFO] LoadUrlFilesThread:135 - End of LoadUrlFiles Thread
+2023-06-20 09:03:23,904 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AI have been done, and update is requested
+2023-06-20 09:03:23,931 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-BLEMGR have been done, and update is requested
+2023-06-20 09:03:23,981 [INFO] ServerAccessManage:348 - Download File mcusFeaturesAndDescription.json._tmp_
+2023-06-20 09:03:24,323 [INFO] Engine:301 - compute dependency for SwPack I-CUBE-embOS have been done, and update is requested
+2023-06-20 09:03:24,336 [INFO] Engine:301 - compute dependency for SwPack I-CUBE-Cesium have been done, and update is requested
+2023-06-20 09:03:24,417 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-TOF1 have been done, and update is requested
+2023-06-20 09:03:24,430 [INFO] Engine:305 - compute dependency for SwPack X-CUBE-TOUCHGFX have been done, no update is requested
+2023-06-20 09:03:24,432 [INFO] Engine:301 - compute dependency for SwPack FP-ATR-ASTRA1 have been done, and update is requested
+2023-06-20 09:03:26,352 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-MEMS1 have been done, and update is requested
+2023-06-20 09:03:26,377 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-H7 have been done, and update is requested
+2023-06-20 09:03:26,396 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-G4 have been done, and update is requested
+2023-06-20 09:03:26,410 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AI have been done, and update is requested
+2023-06-20 09:03:26,422 [INFO] Engine:305 - compute dependency for SwPack X-CUBE-TOUCHGFX have been done, no update is requested
+2023-06-20 09:03:26,428 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-NFC7 have been done, and update is requested
+2023-06-20 09:03:26,452 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-L4 have been done, and update is requested
+2023-06-20 09:03:26,468 [INFO] Engine:301 - compute dependency for SwPack X-CUBE-AZRTOS-WL have been done, and update is requested
+2023-06-20 09:03:26,480 [INFO] ThirdPartyDb:299 - Save Third Party DataBase File (C:/Users/20102/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) [forced]
+2023-06-20 09:03:26,519 [INFO] ThirdPartyDb:299 - Save Third Party DataBase File (C:/Users/20102/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) [forced]
+2023-06-20 09:03:26,519 [INFO] LoadServerUpdatesThread:309 - End of LoadServerUpdate Thread
+2023-06-20 09:03:26,605 [INFO] LoadUrlFilesThread:135 - End of LoadUrlFiles Thread
+2023-06-20 09:03:26,616 [INFO] IntegrityCheckThread:76 - exiting critical section [integrity check]
+2023-06-20 09:03:26,616 [INFO] IntegrityCheckThread:79 - End integrity checks thread
+2023-06-20 09:03:26,700 [INFO] ServerAccessManage:348 - Download File boardsDocs.json._tmp_
+2023-06-20 09:03:26,723 [INFO] LoadUrlFilesThread:135 - End of LoadUrlFiles Thread
+2023-06-20 09:03:26,807 [INFO] ServerAccessManage:348 - Download File boards.json._tmp_
+2023-06-20 09:03:26,961 [INFO] LoadUrlFilesThread:135 - End of LoadUrlFiles Thread
+2023-06-20 09:03:27,101 [INFO] ServerAccessManage:348 - Download File cube-finder-db.zip
+2023-06-20 09:03:36,853 [INFO] FileExtend:225 - Unzip File : cube-finder-db.zip
+2023-06-20 09:03:36,855 [INFO] FileExtend:240 - Standard Zip Deflate
+2023-06-20 09:03:37,830 [INFO] LoadUrlFilesThread:135 - End of LoadUrlFiles Thread
+2023-06-20 09:03:39,219 [INFO] ServerAccessManage:348 - Download File crdb.zip
+2023-06-20 09:03:39,613 [INFO] FileExtend:225 - Unzip File : crdb.zip
+2023-06-20 09:03:39,615 [INFO] FileExtend:240 - Standard Zip Deflate
+2023-06-20 09:03:39,658 [INFO] LoadUrlFilesThread:135 - End of LoadUrlFiles Thread
+2023-06-20 09:03:39,744 [INFO] ServerAccessManage:348 - Download File tutoVideoDB.zip
+2023-06-20 09:03:39,779 [INFO] FileExtend:225 - Unzip File : tutoVideoDB.zip
+2023-06-20 09:03:39,781 [INFO] FileExtend:240 - Standard Zip Deflate
+2023-06-20 09:03:39,804 [INFO] LoadUrlFilesThread:135 - End of LoadUrlFiles Thread
+2023-06-20 09:03:39,812 [INFO] DbMcusDocs:145 - JSON generation date=Tue Nov 16 18:17:54 EET 2021 (1637079474)
+2023-06-20 09:03:40,058 [INFO] DbMcusDocs:81 - Found 682 MCUs documents
+2023-06-20 09:03:40,061 [INFO] ApiDb:226 - Save user favorites file C:\Users\20102/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2023-06-20 09:03:40,062 [INFO] ApiDb:230 - User favorites MCUs=[]
+2023-06-20 09:03:40,063 [INFO] DbMcusXml:100 - Load MCU database from C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/mcu/families.xml
+2023-06-20 09:03:40,482 [INFO] DbMcusJson:92 - JSON generation date=Tue Nov 16 18:17:54 EET 2021 (1637079474)
+2023-06-20 09:03:41,253 [INFO] DbMcus:175 - Found 1761 MCUs (1722 are supported by CubeMX, 1911 are visible in CubeMX)
+2023-06-20 09:03:41,253 [INFO] ApiDb:201 - Load user favorites file C:\Users\20102/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2023-06-20 09:03:41,254 [INFO] ApiDb:205 - User favorites MCUs=[]
+2023-06-20 09:03:41,254 [INFO] DbMcus:187 - Set 0 / 0 favorites MCUs
+2023-06-20 09:03:41,367 [INFO] McuFilterPanel:245 - Update 0 favorites MCUs
+2023-06-20 09:03:41,672 [INFO] DbBoardsDocs:145 - JSON generation date=Tue Nov 16 18:17:54 EET 2021 (1637079474)
+2023-06-20 09:03:41,676 [INFO] DbBoardsDocs:81 - Found 209 boards documents
+2023-06-20 09:03:41,678 [INFO] ApiDb:226 - Save user favorites file C:\Users\20102/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2023-06-20 09:03:41,679 [INFO] ApiDb:230 - User favorites Boards=[]
+2023-06-20 09:03:41,683 [INFO] DbBoardsPdsc:94 - Found 23 items
+2023-06-20 09:03:41,686 [INFO] DbBoardsPdsc:94 - Found 9 items
+2023-06-20 09:03:41,690 [INFO] DbBoardsPdsc:94 - Found 29 items
+2023-06-20 09:03:41,692 [INFO] DbBoardsPdsc:94 - Found 1 items
+2023-06-20 09:03:41,699 [INFO] DbBoardsPdsc:94 - Found 44 items
+2023-06-20 09:03:41,706 [INFO] DbBoardsPdsc:94 - Found 40 items
+2023-06-20 09:03:41,708 [INFO] DbBoardsPdsc:94 - Found 2 items
+2023-06-20 09:03:41,711 [INFO] DbBoardsPdsc:94 - Found 4 items
+2023-06-20 09:03:41,715 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-DK: unknown feature type=Audio, name=, username=Audio stereo codec with Headphone Amp (CS42L51-CNZ), n=1
+2023-06-20 09:03:41,716 [WARN] DbBoardsPdsc:258 - Board STM32H735G-DK: unknown feature type=Audio, name=, username=Audio stereo codec with Headphone Amp (WM8994ECS/R), n=1
+2023-06-20 09:03:41,718 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-EVAL: unknown feature type=Audio, name=, username=Multi-Channel Audio Codec (CS42L51-CNZ), n=1
+2023-06-20 09:03:41,718 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-EVAL: unknown feature type=Meter, name=, username=Power-metering and Temperature-monitoring with sigma-delta modulators, n=1
+2023-06-20 09:03:41,718 [WARN] DbBoardsPdsc:258 - Board STM32H7B3I-EVAL: unknown feature type=Motor, name=, username=Motor Control, n=1
+2023-06-20 09:03:41,738 [INFO] DbBoardsJson:85 - JSON generation date=Tue Nov 16 18:17:54 EET 2021 (1637079474)
+2023-06-20 09:03:41,746 [INFO] DbBoards:117 - Found 166 boards (149 are supported by CubeMX)
+2023-06-20 09:03:41,747 [WARN] DbBoards:127 - board B-L475E-IOT01A2 has no document id list !
+2023-06-20 09:03:41,748 [WARN] DbBoards:127 - board NUCLEO-H743ZI has no document id list !
+2023-06-20 09:03:41,748 [WARN] DbBoards:127 - board P-NUCLEO-WB55-Nucleo has no document id list !
+2023-06-20 09:03:41,748 [WARN] DbBoards:127 - board P-NUCLEO-WB55-USBDongle has no document id list !
+2023-06-20 09:03:41,748 [WARN] DbBoards:127 - board STEVAL-BFA001V1B has no document id list !
+2023-06-20 09:03:41,748 [WARN] DbBoards:127 - board STEVAL-BFA001V2B has no document id list !
+2023-06-20 09:03:41,749 [WARN] DbBoards:127 - board STEVAL-IDP005V1 has no document id list !
+2023-06-20 09:03:41,749 [WARN] DbBoards:127 - board STEVAL-IDP005V2 has no document id list !
+2023-06-20 09:03:41,749 [WARN] DbBoards:127 - board STEVAL-MKSBOX1V1 has no document id list !
+2023-06-20 09:03:41,749 [WARN] DbBoards:127 - board STEVAL-STWINKT1 has no document id list !
+2023-06-20 09:03:41,749 [WARN] DbBoards:127 - board STEVAL-STWINKT1B has no document id list !
+2023-06-20 09:03:41,749 [WARN] DbBoards:127 - board STM32439I-EVAL2 has no document id list !
+2023-06-20 09:03:41,750 [WARN] DbBoards:127 - board STM32F401C-DISCO has no document id list !
+2023-06-20 09:03:41,750 [WARN] DbBoards:127 - board STM32F769I-DISC1 has no document id list !
+2023-06-20 09:03:41,750 [WARN] DbBoards:127 - board STM32G474E-EVAL1 has no document id list !
+2023-06-20 09:03:41,750 [WARN] DbBoards:127 - board STM32H743I-EVAL2 has no document id list !
+2023-06-20 09:03:41,750 [WARN] DbBoards:127 - board STM32H747I-DISC1 has no document id list !
+2023-06-20 09:03:41,751 [WARN] DbBoards:127 - board STM32H753I-EVAL2 has no document id list !
+2023-06-20 09:03:41,751 [WARN] DbBoards:127 - board STM32L-DISCOVERY has no document id list !
+2023-06-20 09:03:41,796 [ERROR] DbBoards:189 - Image file not found for board B-L462E-CELL1: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/B-L462E-CELL1_small.jpg
+2023-06-20 09:03:41,832 [ERROR] DbBoards:189 - Image file not found for board B-U585I-IOT02A: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/B-U585I-IOT02A_small.jpg
+2023-06-20 09:03:41,914 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-F413ZH: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo-f413zh_small.jpg
+2023-06-20 09:03:42,084 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-L552ZE-Q: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo_l552ze_q_small.jpg
+2023-06-20 09:03:42,084 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-U575ZI-Q: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo-u575zi-q_small.jpg
+2023-06-20 09:03:42,085 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-WB15CC: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo-wb15cc_small.jpg
+2023-06-20 09:03:42,085 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-WB55RG: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo-wb55rg_small.jpg
+2023-06-20 09:03:42,085 [ERROR] DbBoards:189 - Image file not found for board NUCLEO-WL55JC: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/nucleo-wl55jc-small.jpg
+2023-06-20 09:03:42,175 [ERROR] DbBoards:189 - Image file not found for board STEVAL-STWINKT1B: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/steval-stwinkt1b_small.jpg
+2023-06-20 09:03:42,368 [ERROR] DbBoards:189 - Image file not found for board STM32G0C1E-EV: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/stm32g0c1e-eval_small.jpg
+2023-06-20 09:03:42,443 [ERROR] DbBoards:189 - Image file not found for board STM32H7B3I-EVAL: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/stm32h7b3ieval_small.jpg
+2023-06-20 09:03:42,579 [ERROR] DbBoards:189 - Image file not found for board STM32U575I-EV: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/stm32u575i-ev_small.jpg
+2023-06-20 09:03:42,596 [ERROR] DbBoards:189 - Image file not found for board STM32WB5MM-DK: C:\ST\STM32CubeIDE_1.4.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.0.0.202007160824\\db\/plugins/mcufinder/images/boards/STM32WB5MM-DK_small.jpg
+2023-06-20 09:03:42,596 [INFO] ApiDb:201 - Load user favorites file C:\Users\20102/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2023-06-20 09:03:42,596 [INFO] ApiDb:205 - User favorites Boards=[]
+2023-06-20 09:03:42,597 [INFO] DbBoards:206 - Set 0 / 0 favorites Boards
+2023-06-20 09:03:42,752 [INFO] LoadUrlFilesThread:162 - End of LoadServerUrlFiles without Thread
+2023-06-20 09:03:42,752 [INFO] MultiScanPanel:787 - Refresh data is succesful
+2023-06-20 09:03:42,754 [INFO] McuFilterPanel:245 - Update 0 favorites MCUs
+2023-06-20 09:03:46,252 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://download.eclipse.org:443: The target server failed to respond
+2023-06-20 09:03:46,254 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2023-06-20 09:03:46,975 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://archive.eclipse.org:443: The target server failed to respond
+2023-06-20 09:03:46,975 [INFO] RetryExec:113 - Retrying request to {s}->https://archive.eclipse.org:443
+2023-06-20 09:03:50,936 [INFO] MultiScanPanel:193 - Auto-refresh data requested => check proxy status ongoing
+2023-06-20 09:03:51,024 [INFO] LoadUrlFilesThread:162 - End of LoadServerUrlFiles without Thread
+2023-06-20 09:03:51,025 [INFO] DetailPanel:331 - Set advertising image to C:/Users/20102/STM32Cube/Repository/\stm32cubemx-promo_image.jpg
+2023-06-20 09:03:51,060 [INFO] MultiScanPanel:729 - adjusting invalid saved split location: -0.02
+2023-06-20 09:03:51,073 [INFO] BoardFilterPanel:214 - Update 0 favorites Boards
+2023-06-20 09:03:51,075 [INFO] MultiScanPanel:729 - adjusting invalid saved split location: -0.02
+2023-06-20 09:04:29,689 [INFO] ApiDb:226 - Save user favorites file C:\Users\20102/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2023-06-20 09:04:29,690 [INFO] ApiDb:230 - User favorites MCUs=[]
+2023-06-20 09:04:29,691 [INFO] ApiDb:226 - Save user favorites file C:\Users\20102/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2023-06-20 09:04:29,692 [INFO] ApiDb:230 - User favorites Boards=[]
+2023-06-20 09:04:35,425 [INFO] MainUpdater:2268 - connection check result : 10
+2023-06-20 09:04:35,515 [INFO] McuFinderGlobals:40 - Set McuFinder mode to 2 (CubeIDE integrated)
+2023-06-20 09:04:35,531 [INFO] CrossSelectorPresenter:1330 - Cross Selector saved comparison directory: C:\Users\20102\.stmcufinder\plugins\mcufinder\mcu\cs_comparisons_mx
+2023-06-20 09:04:35,533 [INFO] MultiScanPanel:193 - Auto-refresh data requested => check proxy status ongoing
+2023-06-20 09:04:35,534 [INFO] FinderPluginLoader:87 - Searching for filters in installed packs
+2023-06-20 09:04:35,702 [INFO] LoadUrlFilesThread:162 - End of LoadServerUrlFiles without Thread
+2023-06-20 09:04:35,702 [INFO] DetailPanel:331 - Set advertising image to C:/Users/20102/STM32Cube/Repository/\stm32cubemx-promo_image.jpg
+2023-06-20 09:04:35,902 [INFO] McuFilterPanel:245 - Update 0 favorites MCUs
+2023-06-20 09:04:54,304 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.8.4
+2023-06-20 09:04:54,304 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.8.3
+2023-06-20 09:04:54,304 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.8.2
+2023-06-20 09:04:54,305 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.8.1
+2023-06-20 09:04:54,305 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.8.0
+2023-06-20 09:05:00,488 [INFO] ApiDb:226 - Save user favorites file C:\Users\20102/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2023-06-20 09:05:00,489 [INFO] ApiDb:230 - User favorites MCUs=[]
+2023-06-22 12:19:00,207 [INFO] Activator:178 - 
+
+
+2023-06-22 12:19:00,212 [INFO] Activator:179 - !SESSION log4j initialized
+2023-06-26 18:41:27,743 [INFO] Activator:178 - 
+
+
+2023-06-26 18:41:27,749 [INFO] Activator:179 - !SESSION log4j initialized
+2023-06-26 18:42:17,165 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://download.eclipse.org:443: The target server failed to respond
+2023-06-26 18:42:17,169 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2023-06-26 18:42:17,996 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://archive.eclipse.org:443: The target server failed to respond
+2023-06-26 18:42:17,996 [INFO] RetryExec:113 - Retrying request to {s}->https://archive.eclipse.org:443
+2023-06-29 14:52:13,448 [INFO] Activator:178 - 
+
+
+2023-06-29 14:52:13,452 [INFO] Activator:179 - !SESSION log4j initialized
+2023-07-04 18:28:11,911 [INFO] Activator:178 - 
+
+
+2023-07-04 18:28:11,915 [INFO] Activator:179 - !SESSION log4j initialized
+2023-07-04 18:28:54,049 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://download.eclipse.org:443: The target server failed to respond
+2023-07-04 18:28:54,051 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2023-07-04 18:28:54,804 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://archive.eclipse.org:443: The target server failed to respond
+2023-07-04 18:28:54,804 [INFO] RetryExec:113 - Retrying request to {s}->https://archive.eclipse.org:443
+2023-07-04 18:28:55,757 [INFO] RetryExec:97 - I/O exception (java.net.SocketException) caught when processing request to {s}->https://download.eclipse.org:443: Connection reset
+2023-07-04 18:28:55,758 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2023-07-04 19:20:26,009 [INFO] Activator:178 - 
+
+
+2023-07-04 19:20:26,013 [INFO] Activator:179 - !SESSION log4j initialized
+2023-07-04 19:21:10,288 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://download.eclipse.org:443: The target server failed to respond
+2023-07-04 19:21:10,291 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2023-07-04 19:21:11,020 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://archive.eclipse.org:443: The target server failed to respond
+2023-07-04 19:21:11,021 [INFO] RetryExec:113 - Retrying request to {s}->https://archive.eclipse.org:443
+2023-07-10 17:58:53,233 [INFO] Activator:178 - 
+
+
+2023-07-10 17:58:53,242 [INFO] Activator:179 - !SESSION log4j initialized
+2023-07-10 17:59:16,728 [INFO] RetryExec:97 - I/O exception (java.net.SocketException) caught when processing request to {}->http://sw-center.st.com:80: Socket Closed
+2023-07-10 17:59:16,733 [INFO] RetryExec:113 - Retrying request to {}->http://sw-center.st.com:80

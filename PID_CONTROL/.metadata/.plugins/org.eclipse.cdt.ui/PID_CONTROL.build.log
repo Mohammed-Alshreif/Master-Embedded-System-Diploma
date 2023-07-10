@@ -1,0 +1,35 @@
+20:17:03 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+
+20:17:04 Build Finished. 0 errors, 2 warnings. (took 821ms)
+

@@ -1,0 +1,1530 @@
+09:06:23 **** Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32_drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/EEPROM.d" -MT"stm32_drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/EEPROM.o"
+arm-none-eabi-gcc "../stm32_drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/FIFO.d" -MT"stm32_drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/FIFO.o"
+arm-none-eabi-gcc "../stm32_drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/GPIO_DRIVER.d" -MT"stm32_drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/I2C_LCD.d" -MT"stm32_drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../stm32_drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/LCD.d" -MT"stm32_drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/LCD.o"
+arm-none-eabi-gcc "../stm32_drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/LIFO.d" -MT"stm32_drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/LIFO.o"
+arm-none-eabi-gcc "../stm32_drivers/MPU6050.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/MPU6050.d" -MT"stm32_drivers/MPU6050.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/MPU6050.o"
+arm-none-eabi-gcc "../stm32_drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/STM32_I2C_DRIVER.d" -MT"stm32_drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/STM32_TIMERS_DRIVER.d" -MT"stm32_drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/keypad.d" -MT"stm32_drivers/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/keypad.o"
+arm-none-eabi-gcc "../stm32_drivers/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/stm32_speed_DRIVER.d" -MT"stm32_drivers/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/stm32f103c6_ADC.d" -MT"stm32_drivers/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../stm32_drivers/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/stm32f103c6_ISR_DRIVER.d" -MT"stm32_drivers/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/stm32f103c6_SPI_DRIVER.d" -MT"stm32_drivers/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/stm32f103c6_SPI_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/stm32f103c6_USART_SRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/stm32f103c6_USART_SRIVER.d" -MT"stm32_drivers/stm32f103c6_USART_SRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/stm32f103c6_USART_SRIVER.o"
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+../stm32_drivers/LIFO.c:8:10: fatal error: LIFO.h: No such file or directory
+ #include "LIFO.h"
+          ^~~~~~~~
+compilation terminated.
+../stm32_drivers/I2C_LCD.c:8:10: fatal error: I2C_LCD.h: No such file or directory
+ #include "I2C_LCD.h"
+          ^~~~~~~~~~~
+compilation terminated.
+../stm32_drivers/STM32_TIMERS_DRIVER.c:8:10: fatal error: STM32_TIMERS_DRIVER.h: No such file or directory
+ #include "STM32_TIMERS_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../stm32_drivers/keypad.c:2:10: fatal error: keypad.h: No such file or directory
+ #include "keypad.h"
+          ^~~~~~~~~~
+compilation terminated.
+../stm32_drivers/stm32_speed_DRIVER.c:8:10: fatal error: stm32_speed_DRIVER.h: No such file or directory
+ #include "stm32_speed_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../stm32_drivers/LCD.c:8:10: fatal error: LCD.h: No such file or directory
+ #include "LCD.h"
+          ^~~~~~~
+compilation terminated.
+../stm32_drivers/stm32f103c6_USART_SRIVER.c:9:10: fatal error: stm32f103c6_USART_SRIVER.h: No such file or directory
+ #include "stm32f103c6_USART_SRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../stm32_drivers/stm32f103c6_ISR_DRIVER.c:8:10: fatal error: stm32f103c6_ISR_DRIVER.h: No such file or directory
+ #include "stm32f103c6_ISR_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../stm32_drivers/GPIO_DRIVER.c:1:10: fatal error: STM32f103c6.h: No such file or directory
+ #include "STM32f103c6.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+../stm32_drivers/stm32f103c6_SPI_DRIVER.c:7:10: fatal error: stm32f103c6_SPI_DRIVER.h: No such file or directory
+ #include "stm32f103c6_SPI_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../stm32_drivers/EEPROM.c:8:10: fatal error: EEPROM.h: No such file or directory
+ #include "EEPROM.h"
+          ^~~~~~~~~~
+compilation terminated.
+make: *** [stm32_drivers/subdir.mk:70: stm32_drivers/LIFO.o] Error 1
+make: *** Waiting for unfinished jobs....
+../stm32_drivers/MPU6050.c:9:10: fatal error: MPU6050.h: No such file or directory
+ #include "MPU6050.h"
+          ^~~~~~~~~~~
+compilation terminated.
+../stm32_drivers/FIFO.c:7:10: fatal error: FIFO.h: No such file or directory
+ #include "FIFO.h"
+          ^~~~~~~~
+compilation terminated.
+make: *** [stm32_drivers/subdir.mk:78: stm32_drivers/keypad.o] Error 1
+../stm32_drivers/stm32f103c6_ADC.c:8:10: fatal error: stm32f103c6_ADC.h: No such file or directory
+ #include "stm32f103c6_ADC.h"
+          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [stm32_drivers/subdir.mk:80: stm32_drivers/stm32_speed_DRIVER.o] Error 1
+make: *** [stm32_drivers/subdir.mk:88: stm32_drivers/stm32f103c6_USART_SRIVER.o] Error 1
+make: *** [stm32_drivers/subdir.mk:86: stm32_drivers/stm32f103c6_SPI_DRIVER.o] Error 1
+make: *** [stm32_drivers/subdir.mk:68: stm32_drivers/LCD.o] Error 1
+make: *** [stm32_drivers/subdir.mk:76: stm32_drivers/STM32_TIMERS_DRIVER.o] Error 1
+make: *** [stm32_drivers/subdir.mk:72: stm32_drivers/MPU6050.o] Error 1
+make: *** [stm32_drivers/subdir.mk:66: stm32_drivers/I2C_LCD.o] Error 1
+make: *** [stm32_drivers/subdir.mk:60: stm32_drivers/EEPROM.o] Error 1
+../stm32_drivers/STM32_I2C_DRIVER.c:9:10: fatal error: STM32_I2C_DRIVER.h: No such file or directory
+ #include "STM32_I2C_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~
+make: *** [stm32_drivers/subdir.mk:64: stm32_drivers/GPIO_DRIVER.o] Error 1
+compilation terminated.
+make: *** [stm32_drivers/subdir.mk:62: stm32_drivers/FIFO.o] Error 1
+make: *** [stm32_drivers/subdir.mk:82: stm32_drivers/stm32f103c6_ADC.o] Error 1
+make: *** [stm32_drivers/subdir.mk:84: stm32_drivers/stm32f103c6_ISR_DRIVER.o] Error 1
+make: *** [stm32_drivers/subdir.mk:74: stm32_drivers/STM32_I2C_DRIVER.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+09:06:40 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32_drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/EEPROM.d" -MT"stm32_drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/EEPROM.o"
+arm-none-eabi-gcc "../stm32_drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/FIFO.d" -MT"stm32_drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/FIFO.o"
+arm-none-eabi-gcc "../stm32_drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/GPIO_DRIVER.d" -MT"stm32_drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/I2C_LCD.d" -MT"stm32_drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../stm32_drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/LCD.d" -MT"stm32_drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/LCD.o"
+arm-none-eabi-gcc "../stm32_drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/LIFO.d" -MT"stm32_drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/LIFO.o"
+arm-none-eabi-gcc "../stm32_drivers/MPU6050.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/MPU6050.d" -MT"stm32_drivers/MPU6050.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/MPU6050.o"
+arm-none-eabi-gcc "../stm32_drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/STM32_I2C_DRIVER.d" -MT"stm32_drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/STM32_TIMERS_DRIVER.d" -MT"stm32_drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/keypad.d" -MT"stm32_drivers/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/keypad.o"
+arm-none-eabi-gcc "../stm32_drivers/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/stm32_speed_DRIVER.d" -MT"stm32_drivers/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/stm32f103c6_ADC.d" -MT"stm32_drivers/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../stm32_drivers/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/stm32f103c6_ISR_DRIVER.d" -MT"stm32_drivers/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/stm32f103c6_SPI_DRIVER.d" -MT"stm32_drivers/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/stm32f103c6_SPI_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/stm32f103c6_USART_SRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/stm32f103c6_USART_SRIVER.d" -MT"stm32_drivers/stm32f103c6_USART_SRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/stm32f103c6_USART_SRIVER.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../stm32_drivers/I2C_LCD.c: In function 'I2C_LCD_write_FLOATnumber':
+../stm32_drivers/I2C_LCD.c:114:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt(num,digit,text);
+  ^~~~
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+../stm32_drivers/LCD.c: In function 'LCD_write_FLOATnumber':
+../stm32_drivers/LCD.c:118:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt(num,digit,text);
+  ^~~~
+../stm32_drivers/STM32_I2C_DRIVER.c: In function 'I2C_GetFlagStatus':
+../stm32_drivers/STM32_I2C_DRIVER.c:119:20: warning: variable 'dummy_Read' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t dummy_Read;
+                    ^~~~~~~~~~
+../stm32_drivers/stm32f103c6_USART_SRIVER.c: In function 'USART1_IRQHandler':
+../stm32_drivers/stm32f103c6_USART_SRIVER.c:272:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d=USART1->USART_DR;
+                      ^
+../stm32_drivers/stm32f103c6_USART_SRIVER.c:277:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART1->USART_DR;
+                     ^
+../stm32_drivers/stm32f103c6_USART_SRIVER.c: In function 'USART2_IRQHandler':
+../stm32_drivers/stm32f103c6_USART_SRIVER.c:353:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d =USART2->USART_DR;
+                      ^
+../stm32_drivers/stm32f103c6_USART_SRIVER.c:358:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART2->USART_DR;
+                     ^
+../stm32_drivers/stm32f103c6_USART_SRIVER.c: In function 'USART3_IRQHandler':
+../stm32_drivers/stm32f103c6_USART_SRIVER.c:434:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d =USART3->USART_DR;
+                      ^
+../stm32_drivers/stm32f103c6_USART_SRIVER.c:439:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART3->USART_DR;
+                     ^
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "PID_CONTROL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.elf
+ 
+arm-none-eabi-size   PID_CONTROL.elf 
+arm-none-eabi-objdump -h -S  PID_CONTROL.elf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.elf  "PID_CONTROL.bin"
+   text	   data	    bss	    dec	    hex	filename
+   3208	     40	   1712	   4960	   1360	PID_CONTROL.elf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+Finished building: PID_CONTROL.list
+ 
+ 
+09:09:57 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:122:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:125:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.elf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.elf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.elf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14596	    144	   1776	  16516	   4084	PID_CONTROL.elf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:11:17 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:116:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:119:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c: At top level:
+../Src/main.c:127:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+09:11:31 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:116:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:119:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.elf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.elf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.elf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9944	    140	   1732	  11816	   2e28	PID_CONTROL.elf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:17:49 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+   9944	    140	   1732	  11816	   2e28	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:18:30 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+   9944	    140	   1732	  11816	   2e28	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+09:37:22 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:116:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:119:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  14572	    144	   1776	  16492	   406c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:37:51 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:103:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:106:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  14140	    144	   1776	  16060	   3ebc	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:44:32 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:78:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:81:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1772	  15724	   3d6c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:45:14 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:78:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:81:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1772	  15724	   3d6c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:47:33 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:78:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:81:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1772	  15724	   3d6c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:48:14 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:78:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:81:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1772	  15724	   3d6c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:48:19 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:78:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:81:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1772	  15724	   3d6c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:51:04 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:78:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:81:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13816	    140	   1772	  15728	   3d70	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:52:15 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:78:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:81:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13816	    140	   1772	  15728	   3d70	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:52:55 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:78:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:81:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1772	  15724	   3d6c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:55:42 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:78:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:81:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1772	  15724	   3d6c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:57:47 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:64:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:67:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1764	  15716	   3d64	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:57:58 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:64:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:67:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1764	  15716	   3d64	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:58:40 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:64:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:67:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1764	  15716	   3d64	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:59:47 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:64:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:67:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1764	  15716	   3d64	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+09:59:54 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:64:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:67:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	    140	   1764	  15716	   3d64	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+18:42:41 **** Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+19:56:56 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+19:59:50 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:01:28 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:02:33 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:05:09 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:07:10 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:07:38 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:08:06 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:09:40 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:09:48 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13616	    140	   1764	  15520	   3ca0	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:10:31 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13616	    140	   1764	  15520	   3ca0	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:15:15 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:16:58 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13616	    140	   1764	  15520	   3ca0	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:20:38 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:22:26 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:23:30 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:23:53 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+20:25:36 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:26:54 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:27:44 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+18:30:01 **** Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+   8796	     40	   1712	  10548	   2934	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+19:18:20 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+19:22:57 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+   6996	     40	   1712	   8748	   222c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
+20:17:03 **** Incremental Build of configuration Debug for project PID_CONTROL ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:63:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,"\n ");
+                             ^~~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+../Src/main.c:66:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1,text);
+                             ^~~~
+In file included from ../Src/main.c:11:0:
+C:/E/embedded/test/final simulation code for my assignments/PID_CONTROL/PID_CONTROL/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PID_CONTROL.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\PID_CONTROL\PID_CONTROL\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PID_CONTROL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PID_CONTROL.axf
+ 
+arm-none-eabi-objdump -h -S  PID_CONTROL.axf  > "PID_CONTROL.list"
+arm-none-eabi-objcopy  -O binary  PID_CONTROL.axf  "PID_CONTROL.bin"
+arm-none-eabi-size   PID_CONTROL.axf 
+   text	   data	    bss	    dec	    hex	filename
+  13612	    140	   1764	  15516	   3c9c	PID_CONTROL.axf
+Finished building: default.size.stdout
+ 
+Finished building: PID_CONTROL.bin
+ 
+Finished building: PID_CONTROL.list
+ 
