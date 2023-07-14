@@ -57,10 +57,10 @@ void PWM(TIMERS_typeDef* TIMERx,uint32_t CH,uint32_t duty_cycle,uint32_t freq,ui
 
 
 //Enter in while loop and after timer interrupt it break the loop
-void delay(uint16_t time,uint8_t U,uint32_t clk);
+void delay(float time,uint8_t U,uint32_t clk);
 
 
-void TIMER_ISR(TIMERS_typeDef* ISR_TIMER,uint16_t time_ms,uint32_t clk,void (*calback) (void));
+void TIMER_ISR(TIMERS_typeDef* ISR_TIMER,uint16_t time_ms,uint8_t U,uint32_t clk,void (*calback) (void));
 uint32_t TIME_CALCULATION(uint32_t clk,uint8_t TIMER_ST);
 
 

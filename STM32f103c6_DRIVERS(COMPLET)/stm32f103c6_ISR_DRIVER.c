@@ -12,8 +12,11 @@
  * 				  Generic Variables
  *-------------------------------------------------
  */
+static uint8_t interrupt_numpers=0;
 
-void(* GP_IRQ_Callback[15])(void);
+interrupt_data ARR_INTERRUPT_TRACK[16];
+
+void(* GP_IRQ_Callback[15])(interrupt_data* isr_data,uint8_t interupt_num);
 /*
  * ------------------------------------------------
  * 				  Generic Functions
@@ -108,161 +111,161 @@ void Disable_NVIC(uint16_t IRQ){
  * Note             -
  *================================================================ */
 
-void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void (*function_addres) (void)){
+void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void (*function_addres)(interrupt_data* isr_data,uint8_t interupt_num)){
 
 	pinmode(PORTx,pin,GPIO_MODE_INTPUT_AF);//set pin to _INTPUT_AF
-
+	AFIO_Clock_Enable();
 	//AFIO_EXTICR1
-		//	0000: PA[x] pin
-		//	0001: PB[x] pin
-		//	0010: PC[x] pin
-		//	0011: PD[x] pin
+	//	0000: PA[x] pin
+	//	0001: PB[x] pin
+	//	0010: PC[x] pin
+	//	0011: PD[x] pin
 
-		switch(pin){
-		case pin0:
-			AFIO->AFIO_EXTICR1 &=~(0b1111<<0);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR1 &=~(0b1111<<0);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR1 |= (0b0001<<0);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR1 |= (0b0010<<0);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR1 |= (0b0011<<0);}
+	switch(pin){
+	case pin0:
+		AFIO->AFIO_EXTICR1 &=~(0b1111<<0);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR1 &=~(0b1111<<0);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR1 |= (0b0001<<0);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR1 |= (0b0010<<0);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR1 |= (0b0011<<0);}
 
-			break;
-		case pin1:
-			AFIO->AFIO_EXTICR1 &=~(0b1111<<4);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR1 &=~(0b1111<<4);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR1 |= (0b0001<<4);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR1 |= (0b0010<<4);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR1 |= (0b0011<<4);}
+		break;
+	case pin1:
+		AFIO->AFIO_EXTICR1 &=~(0b1111<<4);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR1 &=~(0b1111<<4);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR1 |= (0b0001<<4);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR1 |= (0b0010<<4);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR1 |= (0b0011<<4);}
 
-			break;
-		case pin2:
-			AFIO->AFIO_EXTICR1 &=~(0b1111<<8);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR1 &=~(0b1111<<8);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR1 |= (0b0001<<8);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR1 |= (0b0010<<8);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR1 |= (0b0011<<8);}
+		break;
+	case pin2:
+		AFIO->AFIO_EXTICR1 &=~(0b1111<<8);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR1 &=~(0b1111<<8);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR1 |= (0b0001<<8);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR1 |= (0b0010<<8);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR1 |= (0b0011<<8);}
 
-			break;
-		case pin3:
-			AFIO->AFIO_EXTICR1 &=~(0b1111<<12);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR1 &=~(0b1111<<12);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR1 |= (0b0001<<12);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR1 |= (0b0010<<12);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR1 |= (0b0011<<12);}
+		break;
+	case pin3:
+		AFIO->AFIO_EXTICR1 &=~(0b1111<<12);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR1 &=~(0b1111<<12);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR1 |= (0b0001<<12);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR1 |= (0b0010<<12);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR1 |= (0b0011<<12);}
 
-			break;
-			//			AFIO_EXTICR2
-			//			0000: PA[x] pin
-			//			0001: PB[x] pin
-			//			0010: PC[x] pin
-			//			0011: PD[x] pin
-		case pin4:
-			AFIO->AFIO_EXTICR2 &=~(0b1111<<0);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR2 &=~(0b1111<<0);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR2 |= (0b0001<<0);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR2 |= (0b0010<<0);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR2 |= (0b0011<<0);}
+		break;
+		//			AFIO_EXTICR2
+		//			0000: PA[x] pin
+		//			0001: PB[x] pin
+		//			0010: PC[x] pin
+		//			0011: PD[x] pin
+	case pin4:
+		AFIO->AFIO_EXTICR2 &=~(0b1111<<0);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR2 &=~(0b1111<<0);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR2 |= (0b0001<<0);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR2 |= (0b0010<<0);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR2 |= (0b0011<<0);}
 
-			break;
-		case pin5:
-			AFIO->AFIO_EXTICR2 &=~(0b1111<<4);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR2 &=~(0b1111<<4);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR2 |= (0b0001<<4);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR2 |= (0b0010<<4);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR2 |= (0b0011<<4);}
+		break;
+	case pin5:
+		AFIO->AFIO_EXTICR2 &=~(0b1111<<4);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR2 &=~(0b1111<<4);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR2 |= (0b0001<<4);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR2 |= (0b0010<<4);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR2 |= (0b0011<<4);}
 
-			break;
-		case pin6:
-			AFIO->AFIO_EXTICR2 &=~(0b1111<<8);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR2 &=~(0b1111<<8);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR2 |= (0b0001<<8);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR2 |= (0b0010<<8);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR2 |= (0b0011<<8);}
+		break;
+	case pin6:
+		AFIO->AFIO_EXTICR2 &=~(0b1111<<8);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR2 &=~(0b1111<<8);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR2 |= (0b0001<<8);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR2 |= (0b0010<<8);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR2 |= (0b0011<<8);}
 
-			break;
-		case pin7:
-			AFIO->AFIO_EXTICR2 &=~(0b1111<<12);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR2 &=~(0b1111<<12);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR2 |= (0b0001<<12);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR2 |= (0b0010<<12);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR2 |= (0b0011<<12);}
+		break;
+	case pin7:
+		AFIO->AFIO_EXTICR2 &=~(0b1111<<12);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR2 &=~(0b1111<<12);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR2 |= (0b0001<<12);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR2 |= (0b0010<<12);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR2 |= (0b0011<<12);}
 
-			break;
-			//			AFIO_EXTICR3
-			//			0000: PA[x] pin
-			//			0001: PB[x] pin
-			//			0010: PC[x] pin
-			//			0011: PD[x] pin
-		case pin8:
-			AFIO->AFIO_EXTICR3 &=~(0b1111<<0);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR3 &=~(0b1111<<0);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR3 |= (0b0001<<0);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR3 |= (0b0010<<0);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR3 |= (0b0011<<0);}
+		break;
+		//			AFIO_EXTICR3
+		//			0000: PA[x] pin
+		//			0001: PB[x] pin
+		//			0010: PC[x] pin
+		//			0011: PD[x] pin
+	case pin8:
+		AFIO->AFIO_EXTICR3 &=~(0b1111<<0);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR3 &=~(0b1111<<0);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR3 |= (0b0001<<0);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR3 |= (0b0010<<0);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR3 |= (0b0011<<0);}
 
-			break;
-		case pin9:
-			AFIO->AFIO_EXTICR3 &=~(0b1111<<4);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR3 &=~(0b1111<<4);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR3 |= (0b0001<<4);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR3 |= (0b0010<<4);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR3 |= (0b0011<<4);}
+		break;
+	case pin9:
+		AFIO->AFIO_EXTICR3 &=~(0b1111<<4);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR3 &=~(0b1111<<4);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR3 |= (0b0001<<4);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR3 |= (0b0010<<4);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR3 |= (0b0011<<4);}
 
-			break;
-		case pin10:
-			AFIO->AFIO_EXTICR3 &=~(0b1111<<8);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR3 &=~(0b1111<<8);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR3 |= (0b0001<<8);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR3 |= (0b0010<<8);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR3 |= (0b0011<<8);}
+		break;
+	case pin10:
+		AFIO->AFIO_EXTICR3 &=~(0b1111<<8);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR3 &=~(0b1111<<8);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR3 |= (0b0001<<8);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR3 |= (0b0010<<8);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR3 |= (0b0011<<8);}
 
-			break;
-		case pin11:
-			AFIO->AFIO_EXTICR3 &=~(0b1111<<12);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR3 &=~(0b1111<<12);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR3 |= (0b0001<<12);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR3 |= (0b0010<<12);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR3 |= (0b0011<<12);}
+		break;
+	case pin11:
+		AFIO->AFIO_EXTICR3 &=~(0b1111<<12);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR3 &=~(0b1111<<12);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR3 |= (0b0001<<12);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR3 |= (0b0010<<12);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR3 |= (0b0011<<12);}
 
-			break;
-			//			AFIO_EXTICR4
-			//			0000: PA[x] pin
-			//			0001: PB[x] pin
-			//			0010: PC[x] pin
-			//			0011: PD[x] pin
-		case pin12:
-			AFIO->AFIO_EXTICR4 &=~(0b1111<<0);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR4 &=~(0b1111<<0);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR4 |= (0b0001<<0);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR4 |= (0b0010<<0);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR4 |= (0b0011<<0);}
+		break;
+		//			AFIO_EXTICR4
+		//			0000: PA[x] pin
+		//			0001: PB[x] pin
+		//			0010: PC[x] pin
+		//			0011: PD[x] pin
+	case pin12:
+		AFIO->AFIO_EXTICR4 &=~(0b1111<<0);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR4 &=~(0b1111<<0);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR4 |= (0b0001<<0);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR4 |= (0b0010<<0);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR4 |= (0b0011<<0);}
 
-			break;
-		case pin13:
-			AFIO->AFIO_EXTICR4 &=~(0b1111<<4);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR4 &=~(0b1111<<4);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR4 |= (0b0001<<4);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR4 |= (0b0010<<4);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR4 |= (0b0011<<4);}
+		break;
+	case pin13:
+		AFIO->AFIO_EXTICR4 &=~(0b1111<<4);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR4 &=~(0b1111<<4);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR4 |= (0b0001<<4);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR4 |= (0b0010<<4);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR4 |= (0b0011<<4);}
 
-			break;
-		case pin14:
-			AFIO->AFIO_EXTICR4 &=~(0b1111<<8);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR4 &=~(0b1111<<8);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR4 |= (0b0001<<8);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR4 |= (0b0010<<8);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR4 |= (0b0011<<8);}
+		break;
+	case pin14:
+		AFIO->AFIO_EXTICR4 &=~(0b1111<<8);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR4 &=~(0b1111<<8);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR4 |= (0b0001<<8);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR4 |= (0b0010<<8);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR4 |= (0b0011<<8);}
 
-			break;
-		case pin15:
-			AFIO->AFIO_EXTICR4 &=~(0b1111<<12);
-			if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR4 &=~(0b1111<<12);}
-			else if(PORTx==GPIOB){AFIO->AFIO_EXTICR4 |= (0b0001<<12);}
-			else if(PORTx==GPIOC){AFIO->AFIO_EXTICR4 |= (0b0010<<12);}
-			else if(PORTx==GPIOD){AFIO->AFIO_EXTICR4 |= (0b0011<<12);}
+		break;
+	case pin15:
+		AFIO->AFIO_EXTICR4 &=~(0b1111<<12);
+		if(PORTx==GPIOA)     {AFIO->AFIO_EXTICR4 &=~(0b1111<<12);}
+		else if(PORTx==GPIOB){AFIO->AFIO_EXTICR4 |= (0b0001<<12);}
+		else if(PORTx==GPIOC){AFIO->AFIO_EXTICR4 |= (0b0010<<12);}
+		else if(PORTx==GPIOD){AFIO->AFIO_EXTICR4 |= (0b0011<<12);}
 
-			break;
-		}
+		break;
+	}
 	//================================================
 	//3- Update Rising or Falling Register
 	EXIT->EXTI_RTSR &=~(1<<pin);
@@ -277,9 +280,20 @@ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void (*function
 		EXIT->EXTI_RTSR |= (1<<pin);
 		EXIT->EXTI_FTSR |= (1<<pin);
 	}
-	//4- Update IRQ Handling callback
-	GP_IRQ_Callback[pin] =function_addres;
 
+
+	//4- Update IRQ Handling callback
+	ARR_INTERRUPT_TRACK[interrupt_numpers].pin=pin;
+	if(PORTx==GPIOA)     {ARR_INTERRUPT_TRACK[interrupt_numpers].port=1;}
+	else if(PORTx==GPIOB){ARR_INTERRUPT_TRACK[interrupt_numpers].port=2;}
+	else if(PORTx==GPIOC){ARR_INTERRUPT_TRACK[interrupt_numpers].port=3;}
+	else if(PORTx==GPIOD){ARR_INTERRUPT_TRACK[interrupt_numpers].port=4;}
+
+
+	GP_IRQ_Callback[interrupt_numpers++] =(void(*)(interrupt_data* isr_data,uint8_t interupt_num))function_addres;
+	if(interrupt_numpers>=15){
+		interrupt_numpers=0;
+	}
 
 	EXIT->EXTI_IMR |=(1<<pin);
 
@@ -291,45 +305,45 @@ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void (*function
 void EXTI0_IRQHandler(void){
 	// clear bit in pending register (EXTI_PR)
 	EXIT->EXTI_PR |= (1<<0);
-	GP_IRQ_Callback[0]();
+	GP_IRQ_Callback[0](ARR_INTERRUPT_TRACK,0);
 }
 
 void EXTI1_IRQHandler(void){
 	EXIT->EXTI_PR |= (1<<1);
-	GP_IRQ_Callback[1]();
+	GP_IRQ_Callback[1](ARR_INTERRUPT_TRACK,1);
 
 }
 
 void EXTI2_IRQHandler(void){
 	EXIT->EXTI_PR |= (1<<2);
-	GP_IRQ_Callback[2]();
+	GP_IRQ_Callback[2](ARR_INTERRUPT_TRACK,2);
 }
 
 void EXTI3_IRQHandler(void){
 	EXIT->EXTI_PR |= (1<<3);
-	GP_IRQ_Callback[3]();
+	GP_IRQ_Callback[3](ARR_INTERRUPT_TRACK,3);
 }
 
 void EXTI4_IRQHandler(void){
 	EXIT->EXTI_PR |= (1<<4);
-	GP_IRQ_Callback[4]();
+	GP_IRQ_Callback[4](ARR_INTERRUPT_TRACK,4);
 }
 
 void EXTI9_5_IRQHandler(void){
-	if(EXIT->EXTI_PR & (1<<5)) {EXIT->EXTI_PR |= (1<<5); GP_IRQ_Callback[5]();  }
-	if(EXIT->EXTI_PR & (1<<6)) {EXIT->EXTI_PR |= (1<<6); GP_IRQ_Callback[6]();  }
-	if(EXIT->EXTI_PR & (1<<7)) {EXIT->EXTI_PR |= (1<<7); GP_IRQ_Callback[7]();  }
-	if(EXIT->EXTI_PR & (1<<8)) {EXIT->EXTI_PR |= (1<<8); GP_IRQ_Callback[8]();  }
-	if(EXIT->EXTI_PR & (1<<9)) {EXIT->EXTI_PR |= (1<<9); GP_IRQ_Callback[9]();  }
+	if(EXIT->EXTI_PR & (1<<5)) {EXIT->EXTI_PR |= (1<<5); GP_IRQ_Callback[5](ARR_INTERRUPT_TRACK,5);  }
+	if(EXIT->EXTI_PR & (1<<6)) {EXIT->EXTI_PR |= (1<<6); GP_IRQ_Callback[6](ARR_INTERRUPT_TRACK,6);  }
+	if(EXIT->EXTI_PR & (1<<7)) {EXIT->EXTI_PR |= (1<<7); GP_IRQ_Callback[7](ARR_INTERRUPT_TRACK,7);  }
+	if(EXIT->EXTI_PR & (1<<8)) {EXIT->EXTI_PR |= (1<<8); GP_IRQ_Callback[8](ARR_INTERRUPT_TRACK,8);  }
+	if(EXIT->EXTI_PR & (1<<9)) {EXIT->EXTI_PR |= (1<<9); GP_IRQ_Callback[9](ARR_INTERRUPT_TRACK,9);  }
 }
 
 void EXTI15_10_IRQHandler(void){
-	if(EXIT->EXTI_PR & (1<<10)) {EXIT->EXTI_PR |= (1<<10); GP_IRQ_Callback[10]();  }
-	if(EXIT->EXTI_PR & (1<<11)) {EXIT->EXTI_PR |= (1<<11); GP_IRQ_Callback[11]();  }
-	if(EXIT->EXTI_PR & (1<<12)) {EXIT->EXTI_PR |= (1<<12); GP_IRQ_Callback[12]();  }
-	if(EXIT->EXTI_PR & (1<<13)) {EXIT->EXTI_PR |= (1<<13); GP_IRQ_Callback[13]();  }
-	if(EXIT->EXTI_PR & (1<<14)) {EXIT->EXTI_PR |= (1<<14); GP_IRQ_Callback[14]();  }
-	if(EXIT->EXTI_PR & (1<<15)) {EXIT->EXTI_PR |= (1<<15); GP_IRQ_Callback[15]();  }
+	if(EXIT->EXTI_PR & (1<<10)) {EXIT->EXTI_PR |= (1<<10); GP_IRQ_Callback[10](ARR_INTERRUPT_TRACK,10);  }
+	if(EXIT->EXTI_PR & (1<<11)) {EXIT->EXTI_PR |= (1<<11); GP_IRQ_Callback[11](ARR_INTERRUPT_TRACK,11);  }
+	if(EXIT->EXTI_PR & (1<<12)) {EXIT->EXTI_PR |= (1<<12); GP_IRQ_Callback[12](ARR_INTERRUPT_TRACK,12);  }
+	if(EXIT->EXTI_PR & (1<<13)) {EXIT->EXTI_PR |= (1<<13); GP_IRQ_Callback[13](ARR_INTERRUPT_TRACK,13);  }
+	if(EXIT->EXTI_PR & (1<<14)) {EXIT->EXTI_PR |= (1<<14); GP_IRQ_Callback[14](ARR_INTERRUPT_TRACK,14);  }
+	if(EXIT->EXTI_PR & (1<<15)) {EXIT->EXTI_PR |= (1<<15); GP_IRQ_Callback[15](ARR_INTERRUPT_TRACK,15);  }
 
 }
 

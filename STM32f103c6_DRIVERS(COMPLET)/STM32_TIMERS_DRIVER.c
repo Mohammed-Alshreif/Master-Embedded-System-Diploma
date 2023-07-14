@@ -391,7 +391,7 @@ void stepper_motor_steps(uint32_t CH,GPIO_typeDef* GPIOx,uint16_t pin,uint32_t n
 
 }
 //=======================================================================================
-void delay(uint16_t time,uint8_t U,uint32_t clk){
+void delay(float time,uint8_t U,uint32_t clk){
 
 	TIMER2_CLOCK_Enable();//enable timer2 clock
 
@@ -458,7 +458,7 @@ void delay(uint16_t time,uint8_t U,uint32_t clk){
 
 //==================================================================================================
 
-void TIMER_ISR(TIMERS_typeDef* ISR_TIMER,uint16_t time_ms,uint32_t clk,void (*calback) (void)){
+void TIMER_ISR(TIMERS_typeDef* ISR_TIMER,uint16_t time_ms,uint8_t U,uint32_t clk,void (*calback) (void)){
 
 	TIMER3_CLOCK_Enable();//enable timer3 clock
 	ISR_TIMER->TIMx_CR1 &=~(1<<0);
@@ -469,25 +469,34 @@ void TIMER_ISR(TIMERS_typeDef* ISR_TIMER,uint16_t time_ms,uint32_t clk,void (*ca
 	uint32_t user_top=0;
 	uint32_t user_pre=1;
 	uint8_t  increase=2;
+	uint32_t unit =1000;
+	if (U == 0){
+			unit = 1000;
+			if (time_ms > 3000)increase = 100;
+			else increase = 10;
+		}
+		else {
+			unit = 1000000;
+			if (time_ms > 3000)increase = 10;
+			else increase = 5;
+		}
 
-	if (time_ms > 3000)increase = 100;
-	else increase = 10;
+		while(user_flage==1){
+			user_top = (clk/unit*time_ms)/( user_pre );
+			if(user_top>=32000){
 
-	while(user_flage==1){
-		user_top = (clk/1000*time_ms)/( user_pre );
-		if(user_top>=32000){
+				if(user_pre>65530){
+					user_pre=65530;
+					user_flage=0;
+				}
+				else user_pre+=increase;
 
-			if(user_pre>65530){
-				user_pre=65530;
+			}
+			else{
 				user_flage=0;
 			}
-			else user_pre+=increase;
+		}
 
-		}
-		else{
-			user_flage=0;
-		}
-	}
 
 
 	ISR_TIMER->TIMx_CR1 &=~(1<<0);
