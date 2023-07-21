@@ -1,0 +1,3 @@
+WS2812b_LED.c:11:6:sendByte	24	static
+WS2812b_LED.c:29:6:sendColor	16	static
+WS2812b_LED.c:38:6:WS2812b_LED_INIT	8	static

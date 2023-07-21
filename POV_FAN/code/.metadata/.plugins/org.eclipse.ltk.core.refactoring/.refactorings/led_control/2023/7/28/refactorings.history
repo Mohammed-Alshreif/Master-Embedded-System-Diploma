@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;led_control/STM32f103c8&apos; to &apos;STM32f103c8_DRIVERS&apos;" description="Rename resource &apos;STM32f103c8&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="STM32f103c8" name="STM32f103c8_DRIVERS" stamp="1689361741218" updateReferences="true"/>
+</session>
