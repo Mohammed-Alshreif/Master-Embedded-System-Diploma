@@ -1,0 +1,62 @@
+/**
+ ******************************************************************************
+ * @file           : main.c
+ * @author         : MOHAMMED Adel Alshreif
+ * @brief          : Main program body
+ ******************************************************************************
+ ******************************************************************************
+ */
+#include "WS2812b_LED.h"
+#define clk 36000000
+#define TIME_DELAY 63 //mine 55us
+
+
+uint8_t (*(POV_STRING[]))[8][5]={&L,&sp,&E,&sp,&A,&sp,&R,&sp,&N,&sp,&sp,&I,&sp,&N,&sp,&sp,&D,&sp,&E,&sp,&P,&sp,&T,&sp,&H,(void*)0};
+uint16_t arr[12][3]={{255,0,0},{227,100,80},{227,255,80},{227,255,80},{227,255,80},{227,0,255}
+					,{227,0,80},{227,47,80},{227,100,100},{0,255,255},{0,255,5},{0,0,255}};
+
+
+
+uint8_t INDEX;
+
+int main(void)
+{
+	WS2812b_LED_INIT();
+
+
+	while(1){
+
+		if(!READ_PIN(GPIOA, pin4))
+		{
+			delay(1, U_us, clk);
+			//=========PRINT===========
+			while( (*POV_STRING[INDEX])!=0)
+			{
+				for(int j=0;j<5;j++)
+				{
+					for (int i = 0; i < 8; i++)
+					{
+						if((*POV_STRING[INDEX])[i][j]){
+							sendColor(arr[INDEX][0],arr[INDEX][1],arr[INDEX][2]);//time --> 40us
+						}
+						else{
+							sendColor(0,0,0);//time --> 40us
+						}
+
+					}//time --> 450us
+					delay(TIME_DELAY, U_us, clk);//note time mine 55 us
+				}
+				INDEX++;
+			}
+		}
+		else
+		{
+			for (int i = 0; i < 8; i++)
+			{
+				sendColor(0,0,0);//time --> 40us
+			}
+			delay(TIME_DELAY, U_us, clk);
+		}
+		INDEX=0;
+	}
+}

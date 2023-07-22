@@ -1,36 +1,10 @@
-15:02:06 **** Incremental Build of configuration Debug for project led_control ****
+13:28:29 **** Incremental Build of configuration Debug for project led_control ****
 make -j16 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/led fan/code/led_control/STM32f103c8_DRIVERS/STM32f013c8_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-In file included from ../Src/main.c:9:0:
-C:/Users/20102/Desktop/led fan/code/led_control/STM32f103c8_DRIVERS/STM32f013c8_drivers/inc/WS2812b_LED.h:135:16: warning: 'C' defined but not used [-Wunused-variable]
- static uint8_t C[8][5] = {
-                ^
-C:/Users/20102/Desktop/led fan/code/led_control/STM32f103c8_DRIVERS/STM32f013c8_drivers/inc/WS2812b_LED.h:125:16: warning: 'S' defined but not used [-Wunused-variable]
- static uint8_t S[8][5] = {
-                ^
-C:/Users/20102/Desktop/led fan/code/led_control/STM32f103c8_DRIVERS/STM32f013c8_drivers/inc/WS2812b_LED.h:75:16: warning: 'M' defined but not used [-Wunused-variable]
- static uint8_t M[8][5] = {
-                ^
-C:/Users/20102/Desktop/led fan/code/led_control/STM32f103c8_DRIVERS/STM32f013c8_drivers/inc/WS2812b_LED.h:45:16: warning: 'O' defined but not used [-Wunused-variable]
- static uint8_t O[8][5] = {
-                ^
-C:/Users/20102/Desktop/led fan/code/led_control/STM32f103c8_DRIVERS/STM32f013c8_drivers/inc/WS2812b_LED.h:30:17: warning: 'arr' defined but not used [-Wunused-variable]
- static uint16_t arr[3][8]={
-                 ^~~
-arm-none-eabi-gcc -o "led_control.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\led fan\code\led_control\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="led_control.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: led_control.axf
- 
-arm-none-eabi-objdump -h -S  led_control.axf  > "led_control.list"
-arm-none-eabi-objcopy  -O binary  led_control.axf  "led_control.bin"
 arm-none-eabi-size   led_control.axf 
    text	   data	    bss	    dec	    hex	filename
-   6636	    544	   1784	   8964	   2304	led_control.axf
+   6704	    620	   1780	   9104	   2390	led_control.axf
 Finished building: default.size.stdout
  
-Finished building: led_control.bin
-Finished building: led_control.list
- 
- 
 
-15:02:07 Build Finished. 0 errors, 5 warnings. (took 885ms)
+13:28:29 Build Finished. 0 errors, 0 warnings. (took 241ms)
 

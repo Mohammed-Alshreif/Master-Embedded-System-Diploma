@@ -6,6 +6,13 @@
  */
 #include "WS2812b_LED.h"
 #define clk 36000000
+
+//=====================================================
+
+static uint8_t INDEX;
+
+//=====================================================
+
 //=====================================================
 
 void sendByte(uint8_t byte) {
@@ -39,4 +46,72 @@ void WS2812b_LED_INIT(){
 	MCAL_speed_init(CLK_SORC_IN_CLK8MHz, mood_FAST_MOOD_36MHzCORE);
 	pinmode(WS2812b_LED_PORT, WS2812b_LED_PIN,GPIO_MODE_OUTPUT_push_pull_Speed50);
 	pinmode(WS2812b_SENSOR_PORT,WS2812b_SENSOR_PIN,GPIO_MODE_INPUT_PU);
+}
+//===============================================================
+void WS2812b_print_srting(uint8_t (*(POV_STRING[]))[8][5],uint8_t color[][3]){
+	if(!READ_PIN(WS2812b_SENSOR_PORT, WS2812b_SENSOR_PIN))
+	{
+		//=========PRINT===========
+		while( (*POV_STRING[INDEX])!=0)
+		{
+			for(int j=0;j<5;j++)
+			{
+				for (int i = 0; i < 8; i++)
+				{
+					if((*POV_STRING[INDEX])[i][j]){
+						sendColor(color[INDEX][0],color[INDEX][1],color[INDEX][2]);//time --> 40us
+					}
+					else{
+						sendColor(0,0,0);//time --> 40us
+					}
+
+				}//time --> 450us
+				delay(TIME_DELAY, U_us, clk);//note time mine 55 us
+			}
+			INDEX++;
+		}
+	}
+	else
+	{
+		for (int i = 0; i < 8; i++)
+		{
+			sendColor(0,0,0);//time --> 40us
+		}
+		delay(TIME_DELAY, U_us, clk);
+	}
+	INDEX=0;
+
+}
+
+void WS2812b_Graphics_Print(uint8_t PHOTO_ARR[8][125]){
+	if(!READ_PIN(WS2812b_SENSOR_PORT, WS2812b_SENSOR_PIN))
+	{
+		//=========PRINT===========
+
+		for(int j=0;j<125;j++)
+		{
+			for (int i = 0; i < 8; i++)
+			{
+				if(PHOTO_ARR[i][j]){
+					sendColor(227,255,80);//time --> 40us
+				}
+				else
+				{
+					sendColor(0,0,0);//time --> 40us
+				}
+
+			}//time --> 450us
+			delay(TIME_DELAY, U_us, clk);//note time mine 55 us
+		}
+		INDEX++;
+	}
+
+	else
+	{
+		for (int i = 0; i < 8; i++)
+		{
+			sendColor(0,0,0);//time --> 40us
+		}
+		delay(TIME_DELAY, U_us, clk);
+	}
 }

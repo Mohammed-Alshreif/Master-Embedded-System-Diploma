@@ -10,7 +10,7 @@
 
 #include "STM32_TIMERS_DRIVER.h"
 #include "stm32_speed_DRIVER.h"
-
+#define TIME_DELAY 60 //mine 60us
 
 //======
 #define WS2812b_LED_PORT GPIOA
@@ -27,10 +27,6 @@
 
 
 
-static uint16_t arr[3][8]={
-		{155,0,0,255,0,0,50,20},
-		{155,155,0,0,255,0,50,100},
-		{0,0,255,155,0,155,34,55}};
 
 static uint8_t A[8][5] = {
 		{1, 1, 1, 1, 1},
@@ -193,5 +189,7 @@ static uint8_t P[8][5] =  {
 void WS2812b_LED_INIT();
 
 void sendColor(uint8_t r, uint8_t g, uint8_t b);
+void WS2812b_print_srting(uint8_t (*(POV_STRING[]))[8][5],uint8_t color[][3]);
+void WS2812b_Graphics_Print(uint8_t PHOTO_ARR[8][125]);
 
 #endif /* STM32F013C8_DRIVERS_INC_WS2812B_LED_H_ */
