@@ -1,10 +1,20 @@
-13:28:29 **** Incremental Build of configuration Debug for project led_control ****
+12:33:27 **** Incremental Build of configuration Debug for project led_control ****
 make -j16 all 
+arm-none-eabi-gcc "../STM32f103c8_DRIVERS/STM32f013c8_drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/led fan/code/led_control/STM32f103c8_DRIVERS/STM32f013c8_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c8_DRIVERS/STM32f013c8_drivers/STM32_TIMERS_DRIVER.d" -MT"STM32f103c8_DRIVERS/STM32f013c8_drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c8_DRIVERS/STM32f013c8_drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc -o "led_control.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\led fan\code\led_control\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="led_control.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: led_control.axf
+ 
+arm-none-eabi-objdump -h -S  led_control.axf  > "led_control.list"
+arm-none-eabi-objcopy  -O binary  led_control.axf  "led_control.bin"
 arm-none-eabi-size   led_control.axf 
    text	   data	    bss	    dec	    hex	filename
-   6704	    620	   1780	   9104	   2390	led_control.axf
+   7516	    748	   1796	  10060	   274c	led_control.axf
 Finished building: default.size.stdout
  
+Finished building: led_control.bin
+ 
+Finished building: led_control.list
+ 
 
-13:28:29 Build Finished. 0 errors, 0 warnings. (took 241ms)
+12:33:28 Build Finished. 0 errors, 0 warnings. (took 910ms)
 

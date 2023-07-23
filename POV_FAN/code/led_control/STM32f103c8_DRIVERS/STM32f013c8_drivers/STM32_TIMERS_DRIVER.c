@@ -452,7 +452,9 @@ void delay(float time,uint8_t U,uint32_t clk){
 	delay_flag=1;
 	NVIC_TIM2_global_interrupt_Enable;
 	while(delay_flag){
-
+		if((!(delay_TIMER->TIMx_CR1 & 1)||(delay_TIMER->TIMx_ARR==0)||((NVIC_ISER0>>28)&1)==0)){
+			delay_flag=0;
+		}
 	}
 }
 
