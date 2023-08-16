@@ -6,7 +6,10 @@
  */
 
 #include "stm32_speed_DRIVER.h"
-
+#define FLASH_BASE_ADDR     0x40022000
+#define FLASH_ACR_OFFSET    0x00
+#define FLASH_ACR          (*(volatile unsigned int*)(FLASH_BASE_ADDR + FLASH_ACR_OFFSET))
+#define FLASH_ACR_LATENCY_Pos 0
 void MCAL_speed_init(uint8_t CLK_SORC,uint8_t mood){
 	if(CLK_SORC==CLK_SORC_IN_CLK8MHz){
 		if(mood==mood_FAST_MOOD_36MHzCORE){
@@ -135,13 +138,6 @@ void MCAL_speed_init(uint8_t CLK_SORC,uint8_t mood){
 	else{
 		if(mood==mood_FAST_MOOD_72MHzCORE36MHzpref){
 
-			//			Bit 18 HSEBYP: External high-speed clock bypass
-			//			Set and cleared by software to bypass the oscillator with an external clock. The external
-			//			clock must be enabled with the HSEON bit set, to be used by the device. The HSEBYP bit
-			//			can be written only if the HSE oscillator is disabled.
-			//			0: external 4-16 MHz oscillator not bypassed
-			//			1: external 4-16 MHz oscillator bypassed with external clock
-			RCC->RCC_CR &=~(1<<18);
 
 			//			Bit 16 HSEON: HSE clock enable
 			//			Set and cleared by software.
@@ -149,7 +145,31 @@ void MCAL_speed_init(uint8_t CLK_SORC,uint8_t mood){
 			//			bit cannot be reset if the HSE oscillator is used directly or indirectly as the system clock.
 			//			0: HSE oscillator OFF
 			//			1: HSE oscillator ON
-			RCC->RCC_CR|=(1<<16);
+			RCC->RCC_CR |= (1 << 16);
+			//			Bit 17 HSERDY: External high-speed clock ready flag
+			//			Set by hardware to indicate that the HSE oscillator is stable. This bit needs 6 cycles of the
+			//			HSE oscillator clock to fall down after HSEON reset.
+			//			0: HSE oscillator not ready
+			//			1: HSE oscillator ready
+			while (!(RCC->RCC_CR & (1 << 17)));
+
+
+
+			//			Bit 18 HSEBYP: External high-speed clock bypass
+			//			Set and cleared by software to bypass the oscillator with an external clock. The external
+			//			clock must be enabled with the HSEON bit set, to be used by the device. The HSEBYP bit
+			//			can be written only if the HSE oscillator is disabled.
+			//			0: external 4-16 MHz oscillator not bypassed
+			//			1: external 4-16 MHz oscillator bypassed with external clock
+			//===RCC->RCC_CR &=~(1<<18);
+
+			//			Bit 16 HSEON: HSE clock enable
+			//			Set and cleared by software.
+			//			Cleared by hardware to stop the HSE oscillator when entering Stop or Standby mode. This
+			//			bit cannot be reset if the HSE oscillator is used directly or indirectly as the system clock.
+			//			0: HSE oscillator OFF
+			//			1: HSE oscillator ON
+			//===RCC->RCC_CR|=(1<<16);
 
 			//			Bit 17 PLLXTPRE: HSE divider for PLL entry
 			//			Set and cleared by software to divide HSE before PLL entry. This bit can be written only
@@ -173,9 +193,23 @@ void MCAL_speed_init(uint8_t CLK_SORC,uint8_t mood){
 			//			0: PLL OFF
 			//			1: PLL ON
 			RCC->RCC_CR |=(1<<24);//pll on
+			while (!(RCC->RCC_CR & (1 << 25)));
+
+
+//			Bits 2:0 LATENCY: Latency
+//			These bits represent the ratio of the SYSCLK (system clock) period to the Flash access
+//			time.
+//			000 Zero wait state, if 0 < SYSCLK≤ 24 MHz
+//			001 One wait state, if 24 MHz < SYSCLK ≤ 48 MHz
+//			010 Two wait states, if 48 MHz < SYSCLK ≤72 MHz
+			// Configure Flash memory latency
+			FLASH_ACR &= ~(0x7 << FLASH_ACR_LATENCY_Pos); // Clear LATENCY bits
+			FLASH_ACR |= (2 << FLASH_ACR_LATENCY_Pos); // Set latency to 2 wait states for 72 MHz
+
 
 			RCC->RCC_CFGR &=~(0b11<<0);
 			RCC->RCC_CFGR |=(0b10<<0);//10: PLL selected as system clock
+
 
 			//			HPRE[3:0]: AHB prescaler
 			//			Set and cleared by software to control AHB clock division factor.
@@ -212,7 +246,78 @@ void MCAL_speed_init(uint8_t CLK_SORC,uint8_t mood){
 
 
 		}
-		else if (mood_SLOW_MOOD_8MHzCORE){
+		else if (mood==mood_FAST_MOOD_72MHzCORE72MHzpref){
+
+			//			Bit 16 HSEON: HSE clock enable
+			//			Set and cleared by software.
+			//			Cleared by hardware to stop the HSE oscillator when entering Stop or Standby mode. This
+			//			bit cannot be reset if the HSE oscillator is used directly or indirectly as the system clock.
+			//			0: HSE oscillator OFF
+			//			1: HSE oscillator ON
+			RCC->RCC_CR |= (1 << 16);
+			//			Bit 17 HSERDY: External high-speed clock ready flag
+			//			Set by hardware to indicate that the HSE oscillator is stable. This bit needs 6 cycles of the
+			//			HSE oscillator clock to fall down after HSEON reset.
+			//			0: HSE oscillator not ready
+			//			1: HSE oscillator ready
+			while (!(RCC->RCC_CR & (1 << 17)));
+
+
+
+			//			Bit 18 HSEBYP: External high-speed clock bypass
+			//			Set and cleared by software to bypass the oscillator with an external clock. The external
+			//			clock must be enabled with the HSEON bit set, to be used by the device. The HSEBYP bit
+			//			can be written only if the HSE oscillator is disabled.
+			//			0: external 4-16 MHz oscillator not bypassed
+			//			1: external 4-16 MHz oscillator bypassed with external clock
+			//===RCC->RCC_CR &=~(1<<18);
+
+			//			Bit 16 HSEON: HSE clock enable
+			//			Set and cleared by software.
+			//			Cleared by hardware to stop the HSE oscillator when entering Stop or Standby mode. This
+			//			bit cannot be reset if the HSE oscillator is used directly or indirectly as the system clock.
+			//			0: HSE oscillator OFF
+			//			1: HSE oscillator ON
+			//===RCC->RCC_CR|=(1<<16);
+
+			//			Bit 17 PLLXTPRE: HSE divider for PLL entry
+			//			Set and cleared by software to divide HSE before PLL entry. This bit can be written only
+			//			when PLL is disabled.
+			//			0: HSE clock not divided
+			//			1: HSE clock divided by 2
+
+			//			Bit 16 PLLSRC: PLL entry clock source
+			//			Set and cleared by software to select PLL clock source. This bit can be written only when
+			//			PLL is disabled.
+			//			0: HSI oscillator clock / 2 selected as PLL input clock
+			//			1: HSE oscillator clock selected as PLL input clock
+			RCC->RCC_CFGR|=(1<<16);
+
+			RCC->RCC_CFGR|=(0b0111<<18);//0111: PLL input clock x 9
+
+			//Bit 24 PLLON: PLL enable
+			//			Set and cleared by software to enable PLL.
+			//			Cleared by hardware when entering Stop or Standby mode. This bit can not be reset if the
+			//			PLL clock is used as system clock or is selected to become the system clock.
+			//			0: PLL OFF
+			//			1: PLL ON
+			RCC->RCC_CR |=(1<<24);//pll on
+			while (!(RCC->RCC_CR & (1 << 25)));
+
+
+//			Bits 2:0 LATENCY: Latency
+//			These bits represent the ratio of the SYSCLK (system clock) period to the Flash access
+//			time.
+//			000 Zero wait state, if 0 < SYSCLK≤ 24 MHz
+//			001 One wait state, if 24 MHz < SYSCLK ≤ 48 MHz
+//			010 Two wait states, if 48 MHz < SYSCLK ≤72 MHz
+			// Configure Flash memory latency
+			FLASH_ACR &= ~(0x7 << FLASH_ACR_LATENCY_Pos); // Clear LATENCY bits
+			FLASH_ACR |= (2 << FLASH_ACR_LATENCY_Pos); // Set latency to 2 wait states for 72 MHz
+
+
+			RCC->RCC_CFGR &=~(0b11<<0);
+			RCC->RCC_CFGR |=(0b10<<0);//10: PLL selected as system clock
 
 		}
 		else{

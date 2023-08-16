@@ -20,6 +20,8 @@
 #define mood_defult_MOOD_8MHzCORE 1
 #define mood_SLOW_MOOD_8MHzCORE 2
 #define mood_FAST_MOOD_72MHzCORE36MHzpref 3
+#define mood_FAST_MOOD_72MHzCORE72MHzpref 4
+
 void MCAL_speed_init(uint8_t CLK_SORC ,uint8_t mood);
 
 #endif /* STM32F103C6_DRIVERS_INC_STM32_SPEED_DRIVER_H_ */
