@@ -1,0 +1,1353 @@
+12:51:51 **** Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../STM32_Drivers/CLICK_MODE.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/CLICK_MODE.d" -MT"STM32_Drivers/CLICK_MODE.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/CLICK_MODE.o"
+arm-none-eabi-gcc "../STM32_Drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/EEPROM.d" -MT"STM32_Drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/EEPROM.o"
+arm-none-eabi-gcc "../STM32_Drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/FIFO.d" -MT"STM32_Drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/FIFO.o"
+arm-none-eabi-gcc "../STM32_Drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/GPIO_DRIVER.d" -MT"STM32_Drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../STM32_Drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/I2C_LCD.d" -MT"STM32_Drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../STM32_Drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/LCD.d" -MT"STM32_Drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/LCD.o"
+arm-none-eabi-gcc "../STM32_Drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/LIFO.d" -MT"STM32_Drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/LIFO.o"
+arm-none-eabi-gcc "../STM32_Drivers/MPU6050.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/MPU6050.d" -MT"STM32_Drivers/MPU6050.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/MPU6050.o"
+arm-none-eabi-gcc "../STM32_Drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/STM32_I2C_DRIVER.d" -MT"STM32_Drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../STM32_Drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/STM32_TIMERS_DRIVER.d" -MT"STM32_Drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../STM32_Drivers/Triac_drimmer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/Triac_drimmer.d" -MT"STM32_Drivers/Triac_drimmer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/Triac_drimmer.o"
+arm-none-eabi-gcc "../STM32_Drivers/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/keypad.d" -MT"STM32_Drivers/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/keypad.o"
+../STM32_Drivers/I2C_LCD.c: In function 'I2C_LCD_write_FLOATnumber':
+../STM32_Drivers/I2C_LCD.c:114:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt(num,digit,text);
+  ^~~~
+../STM32_Drivers/STM32_I2C_DRIVER.c: In function 'I2C_GetFlagStatus':
+../STM32_Drivers/STM32_I2C_DRIVER.c:119:20: warning: variable 'dummy_Read' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t dummy_Read;
+                    ^~~~~~~~~~
+../STM32_Drivers/LCD.c: In function 'LCD_write_FLOATnumber':
+../STM32_Drivers/LCD.c:118:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt(num,digit,text);
+  ^~~~
+../STM32_Drivers/Triac_drimmer.c: In function 'Drimmer_init':
+../STM32_Drivers/Triac_drimmer.c:22:55: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(Drimer_POART,ZERO_CROS_PIN,EXTI_Trigger_Rising, zero_cross_ISR);
+                                                       ^~~~~~~~~~~~~~
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/Triac_drimmer.h:11,
+                 from ../STM32_Drivers/Triac_drimmer.c:9:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+arm-none-eabi-gcc "../STM32_Drivers/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/stm32_speed_DRIVER.d" -MT"STM32_Drivers/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../STM32_Drivers/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/stm32f103c6_ADC.d" -MT"STM32_Drivers/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../STM32_Drivers/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/stm32f103c6_ISR_DRIVER.d" -MT"STM32_Drivers/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../STM32_Drivers/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/stm32f103c6_SPI_DRIVER.d" -MT"STM32_Drivers/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/stm32f103c6_SPI_DRIVER.o"
+arm-none-eabi-gcc "../STM32_Drivers/stm32f103c6_USART_SRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/stm32f103c6_USART_SRIVER.d" -MT"STM32_Drivers/stm32f103c6_USART_SRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/stm32f103c6_USART_SRIVER.o"
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c: In function 'USART1_IRQHandler':
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:272:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d=USART1->USART_DR;
+                      ^
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:277:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART1->USART_DR;
+                     ^
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c: In function 'USART2_IRQHandler':
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:353:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d =USART2->USART_DR;
+                      ^
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:358:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART2->USART_DR;
+                     ^
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c: In function 'USART3_IRQHandler':
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:434:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d =USART3->USART_DR;
+                      ^
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:439:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART3->USART_DR;
+                     ^
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.elf
+ 
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.elf 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.elf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.elf  "ISO_B-ISO_P-SMART_BMS.bin"
+   text	   data	    bss	    dec	    hex	filename
+   3300	     40	   1744	   5084	   13dc	ISO_B-ISO_P-SMART_BMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+12:53:56 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../STM32_Drivers/ALSHREIF_RTOS/RTOS_CORTEX_M3_PORTING.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/ALSHREIF_RTOS/RTOS_CORTEX_M3_PORTING.d" -MT"STM32_Drivers/ALSHREIF_RTOS/RTOS_CORTEX_M3_PORTING.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/ALSHREIF_RTOS/RTOS_CORTEX_M3_PORTING.o"
+arm-none-eabi-gcc "../STM32_Drivers/ALSHREIF_RTOS/RTOS_FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/ALSHREIF_RTOS/RTOS_FIFO.d" -MT"STM32_Drivers/ALSHREIF_RTOS/RTOS_FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/ALSHREIF_RTOS/RTOS_FIFO.o"
+arm-none-eabi-gcc "../STM32_Drivers/ALSHREIF_RTOS/SCEDULER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/ALSHREIF_RTOS/SCEDULER.d" -MT"STM32_Drivers/ALSHREIF_RTOS/SCEDULER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/ALSHREIF_RTOS/SCEDULER.o"
+arm-none-eabi-gcc "../STM32_Drivers/CLICK_MODE.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/CLICK_MODE.d" -MT"STM32_Drivers/CLICK_MODE.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/CLICK_MODE.o"
+arm-none-eabi-gcc "../STM32_Drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/EEPROM.d" -MT"STM32_Drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/EEPROM.o"
+arm-none-eabi-gcc "../STM32_Drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/FIFO.d" -MT"STM32_Drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/FIFO.o"
+arm-none-eabi-gcc "../STM32_Drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/GPIO_DRIVER.d" -MT"STM32_Drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../STM32_Drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/I2C_LCD.d" -MT"STM32_Drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../STM32_Drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/LCD.d" -MT"STM32_Drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/LCD.o"
+arm-none-eabi-gcc "../STM32_Drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/LIFO.d" -MT"STM32_Drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/LIFO.o"
+arm-none-eabi-gcc "../STM32_Drivers/MPU6050.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/MPU6050.d" -MT"STM32_Drivers/MPU6050.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/MPU6050.o"
+arm-none-eabi-gcc "../STM32_Drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/STM32_I2C_DRIVER.d" -MT"STM32_Drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../STM32_Drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/STM32_TIMERS_DRIVER.d" -MT"STM32_Drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../STM32_Drivers/Triac_drimmer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/Triac_drimmer.d" -MT"STM32_Drivers/Triac_drimmer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/Triac_drimmer.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/GPIO_DRIVER.h:11:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:14,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_FIFO.h:10,
+                 from ../STM32_Drivers/ALSHREIF_RTOS/RTOS_FIFO.c:9:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_FIFO.h:10,
+                 from ../STM32_Drivers/ALSHREIF_RTOS/RTOS_FIFO.c:9:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+../STM32_Drivers/ALSHREIF_RTOS/RTOS_FIFO.c: In function 'OS_FIFO_ENQUEUE':
+../STM32_Drivers/ALSHREIF_RTOS/RTOS_FIFO.c:47:17: warning: comparison between pointer and integer
+  if (fifo->tail == (((unsigned int)fifo->base + (4*fifo->lenght )) - 4 ))
+                 ^~
+../STM32_Drivers/ALSHREIF_RTOS/RTOS_FIFO.c: In function 'OS_FIFO_DEQUEUE':
+../STM32_Drivers/ALSHREIF_RTOS/RTOS_FIFO.c:75:17: warning: comparison between pointer and integer
+  if (fifo->head == (((unsigned int)fifo->base + (4*fifo->lenght )) - 4 ))
+                 ^~
+arm-none-eabi-gcc "../STM32_Drivers/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/keypad.d" -MT"STM32_Drivers/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/keypad.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/GPIO_DRIVER.h:11:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:14,
+                 from ../STM32_Drivers/ALSHREIF_RTOS/RTOS_CORTEX_M3_PORTING.c:7:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from ../STM32_Drivers/ALSHREIF_RTOS/RTOS_CORTEX_M3_PORTING.c:7:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc "../STM32_Drivers/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/stm32_speed_DRIVER.d" -MT"STM32_Drivers/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/stm32_speed_DRIVER.o"
+../STM32_Drivers/I2C_LCD.c: In function 'I2C_LCD_write_FLOATnumber':
+../STM32_Drivers/I2C_LCD.c:114:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt(num,digit,text);
+  ^~~~
+../STM32_Drivers/LCD.c: In function 'LCD_write_FLOATnumber':
+../STM32_Drivers/LCD.c:118:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt(num,digit,text);
+  ^~~~
+arm-none-eabi-gcc "../STM32_Drivers/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/stm32f103c6_ADC.d" -MT"STM32_Drivers/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/stm32f103c6_ADC.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/GPIO_DRIVER.h:11:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:14,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../STM32_Drivers/ALSHREIF_RTOS/SCEDULER.c:8:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../STM32_Drivers/ALSHREIF_RTOS/SCEDULER.c:8:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+../STM32_Drivers/ALSHREIF_RTOS/SCEDULER.c: In function 'ALSHREIF_RTOS_CREAT_TASK_FRAM':
+../STM32_Drivers/ALSHREIF_RTOS/SCEDULER.c:72:25: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  TASK->_PSP_STACK_CURENT=TASK->_PSP_STACK_TOP;
+                         ^
+arm-none-eabi-gcc "../STM32_Drivers/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/stm32f103c6_ISR_DRIVER.d" -MT"STM32_Drivers/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../STM32_Drivers/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/stm32f103c6_SPI_DRIVER.d" -MT"STM32_Drivers/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/stm32f103c6_SPI_DRIVER.o"
+../STM32_Drivers/STM32_I2C_DRIVER.c: In function 'I2C_GetFlagStatus':
+../STM32_Drivers/STM32_I2C_DRIVER.c:119:20: warning: variable 'dummy_Read' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t dummy_Read;
+                    ^~~~~~~~~~
+arm-none-eabi-gcc "../STM32_Drivers/stm32f103c6_USART_SRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/stm32f103c6_USART_SRIVER.d" -MT"STM32_Drivers/stm32f103c6_USART_SRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/stm32f103c6_USART_SRIVER.o"
+../STM32_Drivers/Triac_drimmer.c: In function 'Drimmer_init':
+../STM32_Drivers/Triac_drimmer.c:22:55: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(Drimer_POART,ZERO_CROS_PIN,EXTI_Trigger_Rising, zero_cross_ISR);
+                                                       ^~~~~~~~~~~~~~
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/Triac_drimmer.h:11,
+                 from ../STM32_Drivers/Triac_drimmer.c:9:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c: In function 'USART1_IRQHandler':
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:272:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d=USART1->USART_DR;
+                      ^
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:277:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART1->USART_DR;
+                     ^
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c: In function 'USART2_IRQHandler':
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:353:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d =USART2->USART_DR;
+                      ^
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:358:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART2->USART_DR;
+                     ^
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c: In function 'USART3_IRQHandler':
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:434:22: warning: unused variable 'd' [-Wunused-variable]
+    volatile uint16_t d =USART3->USART_DR;
+                      ^
+../STM32_Drivers/stm32f103c6_USART_SRIVER.c:439:21: warning: unused variable 'w' [-Wunused-variable]
+   volatile uint16_t w =USART3->USART_DR;
+                     ^
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.elf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.elf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.elf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4656	     40	   2632	   7328	   1ca0	ISO_B-ISO_P-SMART_BMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+12:55:04 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/GPIO_DRIVER.h:11:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:14,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:19:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:19:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+STM32_Drivers/ALSHREIF_RTOS/SCEDULER.o: In function `ALSHREIF_RTOS_CREAT_TASK':
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/Debug/../STM32_Drivers/ALSHREIF_RTOS/SCEDULER.c:113: undefined reference to `_end_heap'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:51: ISO_B-ISO_P-SMART_BMS.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+14:15:04 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/GPIO_DRIVER.h:11:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:14,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:9:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc/STM32f103c6.h:31:0: warning: "NVIC_BASE" redefined
+ #define NVIC_BASE             0xE000E100UL
+ 
+In file included from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS/ARMCM3.h:98:0,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/RTOS_CORTEX_M3_PORTING.h:10,
+                 from C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC/SCEDULER.h:10,
+                 from ../Src/main.c:9:
+C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS/core_cm3.h:1389:0: note: this is the location of the previous definition
+ #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address */
+ 
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.elf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.elf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.elf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7484	     40	   2904	  10428	   28bc	ISO_B-ISO_P-SMART_BMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+15:43:37 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.elf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.elf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.elf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7140	     40	   2632	   9812	   2654	ISO_B-ISO_P-SMART_BMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+15:44:11 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.elf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.elf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.elf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7140	     40	   2632	   9812	   2654	ISO_B-ISO_P-SMART_BMS.elf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+15:44:48 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+   7140	     40	   2632	   9812	   2654	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+15:48:18 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+   7140	     40	   2632	   9812	   2654	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+ 
+15:50:15 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+   7140	     40	   2632	   9812	   2654	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+15:52:05 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+   7604	     40	   2632	  10276	   2824	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+15:52:16 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+   7604	     40	   2632	  10276	   2824	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+15:52:52 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+   7604	     40	   2632	  10276	   2824	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+15:53:32 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+   7604	     40	   2632	  10276	   2824	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+16:11:03 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+   7604	     40	   2632	  10276	   2824	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+16:34:18 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  14212	    140	   2660	  17012	   4274	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+16:38:06 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20768	    140	   2660	  23568	   5c10	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+16:40:23 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  14212	    140	   2660	  17012	   4274	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+16:41:23 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20520	    140	   2660	  23320	   5b18	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+16:44:27 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../STM32_Drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32_Drivers/I2C_LCD.d" -MT"STM32_Drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32_Drivers/I2C_LCD.o"
+../STM32_Drivers/I2C_LCD.c: In function 'I2C_LCD_write_FLOATnumber':
+../STM32_Drivers/I2C_LCD.c:114:2: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  gcvt(num,digit,text);
+  ^~~~
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20520	    140	   2660	  23320	   5b18	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+16:44:46 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20768	    140	   2660	  23568	   5c10	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+16:45:09 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20768	    140	   2660	  23568	   5c10	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+16:45:55 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20784	    140	   2660	  23584	   5c20	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+16:49:51 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20808	    140	   2660	  23608	   5c38	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+16:52:23 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20832	    140	   2660	  23632	   5c50	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:02:32 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20792	    140	   2660	  23592	   5c28	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:03:08 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20792	    140	   2660	  23592	   5c28	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:27:33 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20856	    140	   2668	  23664	   5c70	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:28:09 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20864	    140	   2668	  23672	   5c78	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:30:06 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20896	    140	   2668	  23704	   5c98	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:30:37 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20896	    140	   2668	  23704	   5c98	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:31:46 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20896	    140	   2668	  23704	   5c98	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:32:31 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20896	    140	   2676	  23712	   5ca0	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:33:51 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20888	    140	   2676	  23704	   5c98	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:34:46 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20896	    140	   2676	  23712	   5ca0	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:35:08 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20872	    140	   2676	  23688	   5c88	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:36:21 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20536	    140	   2676	  23352	   5b38	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:37:13 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20528	    140	   2684	  23352	   5b38	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:38:31 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20896	    140	   2676	  23712	   5ca0	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:44:39 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21016	    140	   2676	  23832	   5d18	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:49:25 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21016	    140	   2676	  23832	   5d18	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:50:21 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  20792	    140	   2660	  23592	   5c28	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:52:13 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21016	    140	   2676	  23832	   5d18	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+17:56:57 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21136	    140	   2684	  23960	   5d98	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+18:00:00 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21280	    140	   2684	  24104	   5e28	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+18:01:52 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21480	    140	   2684	  24304	   5ef0	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+18:02:27 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21520	    140	   2684	  24344	   5f18	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+18:18:13 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21520	    140	   2684	  24344	   5f18	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+18:32:41 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:45:3: error: 'min' undeclared (first use in this function); did you mean 'main'?
+   min=ACTUAL_CELL_VOLTAGE[0];
+   ^~~
+   main
+../Src/main.c:45:3: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:52:3: error: 'VOLT_MAIN' undeclared (first use in this function); did you mean 'VOLT_MIN'?
+   VOLT_MAIN/=4.0;
+   ^~~~~~~~~
+   VOLT_MIN
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:32:51 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21656	    140	   2684	  24480	   5fa0	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+18:35:25 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21560	    140	   2684	  24384	   5f40	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+18:37:32 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21560	    140	   2684	  24384	   5f40	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+18:37:37 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21560	    140	   2684	  24384	   5f40	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+18:39:01 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21568	    140	   2684	  24392	   5f48	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+18:47:12 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21576	    140	   2684	  24400	   5f50	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:00:59 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21600	    140	   2684	  24424	   5f68	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:02:08 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21616	    140	   2684	  24440	   5f78	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:02:16 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21592	    140	   2684	  24416	   5f60	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:02:51 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21592	    140	   2684	  24416	   5f60	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:04:30 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21592	    140	   2684	  24416	   5f60	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:08:16 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21608	    140	   2684	  24432	   5f70	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:28:33 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:57:50: error: 'i' undeclared (first use in this function)
+    if((VOLT_MIN_ADDRES==3)&&(ACTUAL_CELL_VOLTAGE[i]<4.4)){
+                                                  ^
+../Src/main.c:57:50: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:28:50 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21600	    140	   2692	  24432	   5f70	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:29:03 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21600	    140	   2692	  24432	   5f70	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:36:02 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21704	    140	   2692	  24536	   5fd8	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:36:38 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21704	    140	   2692	  24536	   5fd8	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+19:39:54 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21200	    140	   2692	  24032	   5de0	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:48:13 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:43:7: warning: statement with no effect [-Wunused-value]
+    avr/2;
+    ~~~^~
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21232	    140	   2692	  24064	   5e00	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:48:21 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21240	    140	   2692	  24072	   5e08	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
+19:51:11 **** Incremental Build of configuration Debug for project ISO_B-ISO_P-SMART_BMS ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/CMSIS" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/ALSHREIF_RTOS/INC" -I"C:/E/embedded/test/final simulation code for my assignments/ISO_B-ISO_P-SMART_BMS/ISO_B-ISO_P-SMART_BMS/STM32_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ISO_B-ISO_P-SMART_BMS.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\ISO_B-ISO_P-SMART_BMS\ISO_B-ISO_P-SMART_BMS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ISO_B-ISO_P-SMART_BMS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ISO_B-ISO_P-SMART_BMS.axf
+ 
+arm-none-eabi-objdump -h -S  ISO_B-ISO_P-SMART_BMS.axf  > "ISO_B-ISO_P-SMART_BMS.list"
+arm-none-eabi-objcopy  -O binary  ISO_B-ISO_P-SMART_BMS.axf  "ISO_B-ISO_P-SMART_BMS.bin"
+arm-none-eabi-size   ISO_B-ISO_P-SMART_BMS.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21744	    140	   2692	  24576	   6000	ISO_B-ISO_P-SMART_BMS.axf
+Finished building: default.size.stdout
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.bin
+ 
+Finished building: ISO_B-ISO_P-SMART_BMS.list
+ 
