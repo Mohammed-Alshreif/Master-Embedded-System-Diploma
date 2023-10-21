@@ -1,0 +1,45 @@
+10:53:23 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/test/final simulation code for my assignments/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:156:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/E/embedded/test/final simulation code for my assignments/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:157:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/E/embedded/test/final simulation code for my assignments/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:158:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/E/embedded/test/final simulation code for my assignments/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:1:
+C:/E/embedded/test/final simulation code for my assignments/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  10608	     40	   1752	  12400	   3070	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+
+10:53:24 Build Finished. 0 errors, 3 warnings. (took 889ms)
+

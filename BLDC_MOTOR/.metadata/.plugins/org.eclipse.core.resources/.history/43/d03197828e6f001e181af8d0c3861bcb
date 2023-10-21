@@ -1,0 +1,167 @@
+#include "STM32_TIMERS_DRIVER.h"
+#include "stm32_speed_DRIVER.h"
+#include "stm32f103c6_ISR_DRIVER.h"
+#include "stm32f103c6_ADC.h"
+#define  clk 36000000
+void state();
+void NextStep();
+uint8_t MOTOR_state =0;
+uint8_t hall1state;
+uint8_t hall2state;
+uint8_t hall3state;
+
+uint32_t adcread;
+void s1(){
+	hall1state=READ_PIN(GPIOA, pin0);
+	NextStep();
+}
+void s2(){
+	hall2state=READ_PIN(GPIOA, pin1);
+	NextStep();
+}
+void s3(){
+	hall3state=READ_PIN(GPIOA, pin2);
+	NextStep();
+}
+
+void NextStep() {
+	if ((hall1state == 1) && (hall2state == 0) && (hall3state == 1)) {
+		MOTOR_state = 0;
+	}
+	if ((hall1state == 0) && (hall2state == 0) && (hall3state == 1)) {
+		MOTOR_state = 1;
+	}
+	if ((hall1state == 0) && (hall2state == 1) && (hall3state == 1)) {
+		MOTOR_state = 2;
+	}
+	if ((hall1state == 0) && (hall2state == 1) && (hall3state == 0)) {
+		MOTOR_state = 3;
+	}
+	if ((hall1state == 1) && (hall2state == 1) && (hall3state == 0)) {
+		MOTOR_state = 4;
+	}
+	if ((hall1state == 1) && (hall2state == 0) && (hall3state == 0)) {
+		MOTOR_state = 5;
+	}
+
+	state();
+}
+
+
+void wate(){
+	//A h
+	pinwrite(GPIOB, pin0,LOW);
+	pinwrite(GPIOB, pin1,HIGH);
+	//B floating
+	pinwrite(GPIOB, pin10,LOW);
+	pinwrite(GPIOB, pin7,HIGH);
+	//C LOW
+	pinwrite(GPIOB, pin8,LOW);
+	pinwrite(GPIOB, pin5,HIGH);
+	TIMER_ISR(TIM3,500, U_us, clk, state);//remove
+}
+void state(){
+	switch (MOTOR_state) {
+	case 0:
+		//MOTOR_state++;
+		//A h
+		pinwrite(GPIOB, pin0,HIGH);
+		pinwrite(GPIOB, pin1,HIGH);
+		//B floating
+		pinwrite(GPIOB, pin10,LOW);
+		pinwrite(GPIOB, pin7,HIGH);
+		//C LOW
+		pinwrite(GPIOB, pin8,LOW);
+		pinwrite(GPIOB, pin5,LOW);
+		break;
+
+	case 1:
+		//MOTOR_state++;
+		//A floating
+		pinwrite(GPIOB, pin0,LOW);
+		pinwrite(GPIOB, pin1,HIGH);
+		//B h
+		pinwrite(GPIOB, pin10,HIGH);
+		pinwrite(GPIOB, pin7,HIGH);
+		//C LOW
+		pinwrite(GPIOB, pin8,LOW);
+		pinwrite(GPIOB, pin5,LOW);
+		break;
+
+	case 2:
+		//MOTOR_state++;
+		//A l
+		pinwrite(GPIOB, pin0,LOW);
+		pinwrite(GPIOB, pin1,LOW);
+		//B h
+		pinwrite(GPIOB, pin10,HIGH);
+		pinwrite(GPIOB, pin7,HIGH);
+		//C floating
+		pinwrite(GPIOB, pin8,LOW);
+		pinwrite(GPIOB, pin5,HIGH);
+		break;
+
+	case 3:
+		//MOTOR_state++;
+		//A l
+		pinwrite(GPIOB, pin0,LOW);
+		pinwrite(GPIOB, pin1,LOW);
+		//B floating
+		pinwrite(GPIOB, pin10,LOW);
+		pinwrite(GPIOB, pin7,HIGH);
+		//C h
+		pinwrite(GPIOB, pin8,HIGH);
+		pinwrite(GPIOB, pin5,HIGH);
+		break;
+
+	case 4:
+		//MOTOR_state++;
+		//A floating
+		pinwrite(GPIOB, pin0,LOW);
+		pinwrite(GPIOB, pin1,HIGH);
+		//B l
+		pinwrite(GPIOB, pin10,LOW);
+		pinwrite(GPIOB, pin7,LOW);
+		//C h
+		pinwrite(GPIOB, pin8,HIGH);
+		pinwrite(GPIOB, pin5,HIGH);
+		break;
+
+	case 5:
+		//MOTOR_state=0;
+		//A h
+		pinwrite(GPIOB, pin0,HIGH);
+		pinwrite(GPIOB, pin1,HIGH);
+		//B l
+		pinwrite(GPIOB, pin10,LOW);
+		pinwrite(GPIOB, pin7,LOW);
+		//C floating
+		pinwrite(GPIOB, pin8,LOW);
+		pinwrite(GPIOB, pin5,HIGH);
+		break;
+	}
+	TIMER_ISR(TIM3,adcread, U_us, clk, wate);
+
+}
+
+int main (){
+	MCAL_speed_init(CLK_SORC_IN_CLK8MHz, mood_FAST_MOOD_36MHzCORE);
+	pinmode(GPIOB, pin0,GPIO_MODE_OUTPUT_push_pull_Speed10);
+	pinmode(GPIOB, pin1,GPIO_MODE_OUTPUT_push_pull_Speed10);
+	pinmode(GPIOB, pin10,GPIO_MODE_OUTPUT_push_pull_Speed10);
+	pinmode(GPIOB, pin7,GPIO_MODE_OUTPUT_push_pull_Speed10);
+	pinmode(GPIOB, pin8,GPIO_MODE_OUTPUT_push_pull_Speed10);
+	pinmode(GPIOB, pin5,GPIO_MODE_OUTPUT_push_pull_Speed10);
+	ADC_INIT(ADC1, ADC_STATE_START);
+	EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+	EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+	EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+	NextStep();
+	//TIMER_ISR(TIM3,1, U_ms, clk, state);
+
+	while(1){
+		adcread=2*ADC_READ(ADC1, ADC_pin_PA4);
+		delay(200, U_ms, clk);
+	}
+
+}
