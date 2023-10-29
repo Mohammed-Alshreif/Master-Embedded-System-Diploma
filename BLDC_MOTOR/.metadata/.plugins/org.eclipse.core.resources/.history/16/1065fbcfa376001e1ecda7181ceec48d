@@ -325,7 +325,7 @@ int main (){
 	BLDC_init();
 
 	while(1){
-		delay(270, U_ms, clk);
+		delay(300, U_ms, clk);
 		//direction
 		if(READ_PIN(GPIOA, pin8)==0){
 			MOTOR_DIRECTION=1;

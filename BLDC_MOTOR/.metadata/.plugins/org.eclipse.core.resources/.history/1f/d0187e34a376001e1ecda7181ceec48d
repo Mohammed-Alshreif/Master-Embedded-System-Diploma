@@ -325,7 +325,7 @@ int main (){
 	BLDC_init();
 
 	while(1){
-		delay(270, U_ms, clk);
+		delay(190, U_ms, clk);
 		//direction
 		if(READ_PIN(GPIOA, pin8)==0){
 			MOTOR_DIRECTION=1;
@@ -353,7 +353,7 @@ int main (){
 		}
 
 		if(MOTOR_SPEED_RPM<adcread){
-			MOTOR_PWM+=(error/8);
+			MOTOR_PWM+=(error/11);
 			if(MOTOR_PWM>=MAX_PWM){
 				MOTOR_PWM=MAX_PWM;
 			}

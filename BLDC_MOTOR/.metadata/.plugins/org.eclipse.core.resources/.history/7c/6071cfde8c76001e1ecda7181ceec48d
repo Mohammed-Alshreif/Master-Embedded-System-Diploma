@@ -31,7 +31,7 @@ uint8_t MOTOR_state =0;              //motor state
 uint8_t MOTOR_DIRECTION;            //motor direction
 
 uint32_t adcread;
-int encoder_pulses,MOTOR_SPEED_RPM,last_read_motor_speed,error,MOTOR_PWM;
+int encoder_pulses,MOTOR_SPEED_RPM,last_read_motor_speed,error,MOTOR_PWM,integrator;
 uint32_t TIME_CALC;
 
 uint8_t buf[7];
@@ -325,7 +325,7 @@ int main (){
 	BLDC_init();
 
 	while(1){
-		delay(270, U_ms, clk);
+		delay(190, U_ms, clk);
 		//direction
 		if(READ_PIN(GPIOA, pin8)==0){
 			MOTOR_DIRECTION=1;
@@ -353,13 +353,15 @@ int main (){
 		}
 
 		if(MOTOR_SPEED_RPM<adcread){
-			MOTOR_PWM+=(error/8);
+			integrator+=(error/8);
+			MOTOR_PWM=integrator+error;
 			if(MOTOR_PWM>=MAX_PWM){
 				MOTOR_PWM=MAX_PWM;
 			}
 		}
 		else if(MOTOR_SPEED_RPM>adcread){
-			MOTOR_PWM-=(error/8);
+			integrator-=(error/8);
+			MOTOR_PWM=integrator-error;
 			if(MOTOR_PWM<=5){
 				MOTOR_PWM=5;
 			}

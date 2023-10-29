@@ -71,6 +71,8 @@ void s2(){
 	}
 	else{
 		TIME_CALC=TIME_CALCULATION(clk, TIMER_STOP);
+		MOTOR_SPEED_RPM=600000000/(TIME_CALC*NUM_OF_HALLSENSOR_PULS);
+		TIME_CALC=0;
 		flag_SPEED=0;
 	}
 
@@ -325,7 +327,7 @@ int main (){
 	BLDC_init();
 
 	while(1){
-		delay(270, U_ms, clk);
+		delay(180, U_ms, clk);
 		//direction
 		if(READ_PIN(GPIOA, pin8)==0){
 			MOTOR_DIRECTION=1;
@@ -336,8 +338,7 @@ int main (){
 
 		//read speed value
 		adcread=ADC_READ(ADC1, ADC_pin_PA5)/2;
-		MOTOR_SPEED_RPM=600000000/(TIME_CALC*NUM_OF_HALLSENSOR_PULS);
-		TIME_CALC=0;
+
 
 		//filter
 		if( (abs(MOTOR_SPEED_RPM-last_read_motor_speed))>2000 ){
