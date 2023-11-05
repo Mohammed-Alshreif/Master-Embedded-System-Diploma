@@ -152,9 +152,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>243</LineNumber>
+          <LineNumber>78</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134221198</Address>
+          <Address>134219752</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -163,7 +163,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>C:\E\embedded\test\final simulation code for my assignments\BLDC_MOTOR\BLDC_MOTOR\Src\main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\BLDC_MOTOR\../Src/main.c\243</Expression>
+          <Expression>\\BLDC_MOTOR\../Src/main.c\78</Expression>
         </Bp>
       </Breakpoint>
       <Tracepoint>

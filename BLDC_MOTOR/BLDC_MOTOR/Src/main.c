@@ -21,6 +21,7 @@ void NextStep_NORMAL();				 //what is the next step
 void NextStep_REVERES();			 //what is the next step reveres the motor direction
 void MOTOR_STOP();                   //stop the motor
 void BLDC_init();
+void read_string();
 //*******************************************************
 
 uint8_t hall1state=1;                 //hall sensor
@@ -37,6 +38,10 @@ uint32_t TIME_CALC;
 uint8_t buf[7];
 uint8_t stop_flage,flag_SPEED;
 uint8_t HALL2READ;
+
+unsigned char ch;
+char string_data[10];
+uint8_t serial_flag=0,index1;
 //*******************************************************
 //===================== -INTERRUPT- =====================
 //*******************************************************
@@ -298,7 +303,7 @@ void BLDC_init(){
 	EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
 	EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
 	EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
-	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_9, stop_bits_2, baud_rate_9600, parity_even,clk);
+	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_8, stop_bits_1, baud_rate_9600, parity_none,clk);
 	pinmode(GPIOA, pin8,GPIO_MODE_INPUT_PU);
 
 	if(READ_PIN(GPIOA, pin8)==0){
@@ -315,6 +320,27 @@ void BLDC_init(){
 	for(int i=0;i<100;i++){
 		MOTOR_PWM+=1;
 		delay(2, U_ms, clk);
+	}
+	USART_READ_INTERRUPT_EN(USART1, read_string);
+}
+void read_string (){
+
+	USART_READ(USART1,&ch);
+
+	if(ch=='$'){
+		serial_flag=1;
+		index1=0;
+	}
+	if(ch=='e'){
+		serial_flag=0;
+		string_data[index1]='\n';
+		string_data[index1+1]=0;
+
+	}
+
+	if(serial_flag==1){
+		string_data[index1]=ch;
+		index1++;
 	}
 }
 //*******************************************************
@@ -335,12 +361,13 @@ int main (){
 		}
 
 		//read speed value
-		adcread=ADC_READ(ADC1, ADC_pin_PA5)/2;
+		adcread=atoi(string_data+1)*10;//ADC_READ(ADC1, ADC_pin_PA5)/2;
+
 		MOTOR_SPEED_RPM=600000000/(TIME_CALC*NUM_OF_HALLSENSOR_PULS);
 		TIME_CALC=0;
 
 		//filter
-		if( (abs(MOTOR_SPEED_RPM-last_read_motor_speed))>2000 ){
+		if( (abs(MOTOR_SPEED_RPM-last_read_motor_speed))>2100 ){
 			MOTOR_SPEED_RPM=last_read_motor_speed;
 		}
 		else {
@@ -370,7 +397,7 @@ int main (){
 		sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
 		USART_SEND_STRING(USART1,buf);
 		delay(3, U_ms, clk);
-		USART_SEND_STRING(USART1," RPM\n");
+		USART_SEND_STRING(USART1," RPM \n");
 
 	}
 

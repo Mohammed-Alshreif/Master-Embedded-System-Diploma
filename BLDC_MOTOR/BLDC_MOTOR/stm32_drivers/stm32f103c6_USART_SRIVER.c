@@ -264,7 +264,7 @@ void USART1_IRQHandler(){
 
 		GP_reseve_Callback[0]();
 
-		for(long i=0;i<(20000);i++);
+		//for(long i=0;i<(20000);i++);
 		//pinwrite(GPIOB, pin1,LOW);
 		arr[0]->USART_SR &=~(1<<5);//clear
 		//arr[0]->USART_CR1 &=~Received_data_ready_to_be_read;
@@ -345,7 +345,7 @@ void USART2_IRQHandler(){
 		//pinwrite(GPIOB, pin1,HIGH);
 
 		GP_reseve_Callback[1]();
-		for(long i=0;i<(20000);i++);
+		//for(long i=0;i<(20000);i++);
 		//pinwrite(GPIOB, pin1,LOW);
 		arr[1]->USART_SR &=~(1<<5);//clear
 		//arr[1]->USART_CR1 &=~Received_data_ready_to_be_read;
@@ -426,10 +426,10 @@ void USART3_IRQHandler(){
 		//pinwrite(GPIOB, pin1,HIGH);
 
 		GP_reseve_Callback[2]();
-		for(long i=0;i<(20000);i++);
-		//pinwrite(GPIOB, pin1,LOW);
+		//for(long i=0;i<(20000);i++);
+
 		arr[2]->USART_SR &=~(1<<5);//clear
-		//arr[2]->USART_CR1 &=~Received_data_ready_to_be_read;
+
 		if(((arr[2]->USART_SR>>3)&1)|1){
 			volatile uint16_t d =USART3->USART_DR;
 			arr[2]->USART_SR &=~(1<<5);
@@ -439,6 +439,5 @@ void USART3_IRQHandler(){
 		volatile uint16_t w =USART3->USART_DR;
 		arr[2]->USART_SR &=~(1<<5);
 	}
-	//	_delay_ms(500);
-	//	pinwrite(GPIOB, pin1,LOW);
+
 }
