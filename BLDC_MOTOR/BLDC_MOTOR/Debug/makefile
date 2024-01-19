@@ -46,8 +46,8 @@ BLDC_MOTOR.bin \
 all: BLDC_MOTOR.axf secondary-outputs
 
 # Tool invocations
-BLDC_MOTOR.axf: $(OBJS) $(USER_OBJS) C:\E\embedded\test\final\ simulation\ code\ for\ my\ assignments\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld
-	arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+BLDC_MOTOR.axf: $(OBJS) $(USER_OBJS) C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld
+	arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

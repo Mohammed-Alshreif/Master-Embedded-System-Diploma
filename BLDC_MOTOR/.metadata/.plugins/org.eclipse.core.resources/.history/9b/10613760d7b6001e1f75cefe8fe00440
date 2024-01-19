@@ -13,7 +13,7 @@
 #define clk 36000000                 //system clock
 #define NUM_OF_HALLSENSOR_PULS 30    //pulses per rotation
 #define MAX_PWM 2000                 //max motor PWM high
-#define MOTOR_PWM_LOW 800            //motor PWM LOW
+#define MOTOR_PWM_LOW 600            //motor PWM LOW
 #define MAX_SPEED 2300              //MAX_SPEED
 
 //*******************************************************

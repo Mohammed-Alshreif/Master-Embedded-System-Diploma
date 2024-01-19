@@ -399,14 +399,8 @@ int main (){
 				MOTOR_PWM=5;
 			}
 		}
-		else{//error=0
-			if(SET_MOTOR_SPEED==0){
-				MOTOR_PWM=2;
-			}
-			else{
-				MOTOR_PWM=MOTOR_PWM;
-			}
-
+		else{
+			MOTOR_PWM=2;
 		}
 
 

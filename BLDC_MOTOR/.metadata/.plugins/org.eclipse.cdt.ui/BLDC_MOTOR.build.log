@@ -1,10 +1,10 @@
-18:40:55 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+17:00:26 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
 make -j16 all 
 arm-none-eabi-size   BLDC_MOTOR.axf 
    text	   data	    bss	    dec	    hex	filename
-  15428	    508	   1828	  17764	   4564	BLDC_MOTOR.axf
+  17500	    508	   1828	  19836	   4d7c	BLDC_MOTOR.axf
 Finished building: default.size.stdout
  
 
-18:40:55 Build Finished. 0 errors, 0 warnings. (took 294ms)
+17:00:26 Build Finished. 0 errors, 0 warnings. (took 294ms)
 
