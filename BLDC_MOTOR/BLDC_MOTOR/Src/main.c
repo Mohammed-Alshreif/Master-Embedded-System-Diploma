@@ -15,7 +15,7 @@
 #define MAX_PWM 2000                 //max motor PWM high
 #define MOTOR_PWM_LOW 800            //motor PWM LOW
 #define MAX_SPEED 2300              //MAX_SPEED
-
+#define Ki_INV 5.0
 //*******************************************************
 void state();                        //action of the next state
 void wate();                         //make the 3 phases floating so it make the low side of pwm
@@ -47,6 +47,8 @@ uint8_t HALL2READ;
 unsigned char ch;
 char string_data[10];
 uint8_t serial_flag=0,index1;
+//=================
+uint8_t system_count =0;
 //*******************************************************
 //===================== -INTERRUPT- =====================
 //*******************************************************
@@ -80,7 +82,7 @@ void s2(){
 		flag_SPEED=1;
 	}
 	else{
-		TIME_CALC=TIME_CALCULATION(clk, TIMER_STOP);
+		MOTOR_SPEED_RPM=600000000/(TIME_CALCULATION(clk, TIMER_STOP)*NUM_OF_HALLSENSOR_PULS);//read the actual speed //60second *(1000000 micro seconds)*(10 increase the scale)
 		flag_SPEED=0;
 	}
 
@@ -353,25 +355,14 @@ int main (){
 	BLDC_init();
 
 	while(1){
-		delay(270, U_ms, clk);
-		//******************************
-		//======== -direction- ========
-		//******************************
-		if(string_data[1]=='1'){
-			MOTOR_DIRECTION=1;
-		}
-		else {
-			MOTOR_DIRECTION=0;
-		}
+		delay(90, U_ms, clk);
+		system_count++;
 		//******************************
 		//======== -speed- ============
 		//******************************
 		//read speed value
 		//$.direction.speed.s
-		SET_MOTOR_SPEED=atoi(string_data+2)*10;//reat user set point speed
-
-		MOTOR_SPEED_RPM=600000000/(TIME_CALC*NUM_OF_HALLSENSOR_PULS);//read the actual speed
-		TIME_CALC=0;
+		SET_MOTOR_SPEED=atoi(string_data+3)*10;//reat user set point speed
 
 		//(filter) if actual speed is hire than 2300/10 RPM make speed 2300
 		//to remove hall effect noise
@@ -388,13 +379,13 @@ int main (){
 		error=abs(MOTOR_SPEED_RPM-SET_MOTOR_SPEED);
 
 		if(MOTOR_SPEED_RPM<SET_MOTOR_SPEED){
-			MOTOR_PWM+=(error/8.0);
+			MOTOR_PWM+=(error/Ki_INV);
 			if(MOTOR_PWM>=MAX_PWM){
 				MOTOR_PWM=MAX_PWM;
 			}
 		}
 		else if(MOTOR_SPEED_RPM>SET_MOTOR_SPEED){
-			MOTOR_PWM-=(error/8.0);
+			MOTOR_PWM-=(error/Ki_INV);
 			if(MOTOR_PWM<=5){
 				MOTOR_PWM=5;
 			}
@@ -409,12 +400,25 @@ int main (){
 
 		}
 
+		//******************************
+		//======== -direction- ========
+		//******************************
+		if(string_data[2]=='1'){//if motor 2 string_data[0]
+			MOTOR_DIRECTION=0;
+		}
+		else {
+			MOTOR_DIRECTION=1;
+		}
 
-		//display
-		sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
-		USART_SEND_STRING(USART1,buf);
-		delay(3, U_ms, clk);
-		USART_SEND_STRING(USART1," RPM \n");
+		if(system_count>1){
+			//display
+			sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+			USART_SEND_STRING(USART1,buf);
+			delay(3, U_ms, clk);
+			USART_SEND_STRING(USART1," RPM \n");
+			system_count=0;
+		}
+		MOTOR_SPEED_RPM=0;
 
 	}
 

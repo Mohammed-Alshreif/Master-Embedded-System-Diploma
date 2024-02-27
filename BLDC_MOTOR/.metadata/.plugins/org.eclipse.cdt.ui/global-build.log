@@ -26225,3 +26225,2233 @@ arm-none-eabi-size   BLDC_MOTOR.axf
   17500	    508	   1828	  19836	   4d7c	BLDC_MOTOR.axf
 Finished building: default.size.stdout
  
+09:53:28 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:308:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:309:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:328:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:414:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+            ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:417:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING(USART1," RPM \n");
+                            ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17500	    508	   1828	  19836	   4d7c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+09:53:48 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17500	    508	   1828	  19836	   4d7c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+11:55:35 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:308:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:309:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:328:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:414:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+            ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:417:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING(USART1," RPM \n");
+                            ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17500	    508	   1828	  19836	   4d7c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+18:52:16 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:308:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:309:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:328:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:414:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+            ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:417:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING(USART1," RPM \n");
+                            ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17500	    508	   1828	  19836	   4d7c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:22:04 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:308:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:309:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:328:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:414:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+            ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:417:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING(USART1," RPM \n");
+                            ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17500	    508	   1828	  19836	   4d7c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:26:15 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:308:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:309:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:328:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:414:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+            ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:417:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING(USART1," RPM \n");
+                            ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17500	    508	   1828	  19836	   4d7c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:27:41 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:308:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:309:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:328:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:414:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+            ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:417:28: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING(USART1," RPM \n");
+                            ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17500	    508	   1828	  19836	   4d7c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:30:36 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:418:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:421:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17532	    508	   1828	  19868	   4d9c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:31:07 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:418:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:421:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17524	    508	   1828	  19860	   4d94	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:31:27 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:418:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:421:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17532	    508	   1828	  19868	   4d9c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:37:29 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:420:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:423:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17540	    508	   1828	  19876	   4da4	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:39:21 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:418:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:421:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17532	    508	   1828	  19868	   4d9c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:44:43 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:420:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:423:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17536	    508	   1828	  19872	   4da0	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:48:13 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:313:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:331:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:419:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:422:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17524	    508	   1828	  19860	   4d94	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:53:19 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:313:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:331:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:419:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:422:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17476	    508	   1828	  19812	   4d64	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:54:08 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:313:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:331:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:419:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:422:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17524	    508	   1828	  19860	   4d94	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+19:59:53 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:313:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:331:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:419:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:419:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long int' [-Wformat=]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+                   ~^  ~~~~~~~~~~~~~~~~~~
+                   %ld
+../Src/main.c:422:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17524	    508	   1828	  19860	   4d94	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+20:01:14 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:418:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:418:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long int' [-Wformat=]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+                   ~^  ~~~~~~~~~~~~~~~~~~
+                   %ld
+../Src/main.c:421:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17524	    508	   1828	  19860	   4d94	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+20:02:05 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:313:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:314:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:332:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:419:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:419:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long int' [-Wformat=]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+                   ~^  ~~~~~~~~~~~~~~~~~~
+                   %ld
+../Src/main.c:422:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17532	    508	   1828	  19868	   4d9c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+20:02:50 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:418:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:421:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17532	    508	   1828	  19868	   4d9c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+20:06:47 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:418:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:421:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17532	    508	   1828	  19868	   4d9c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+20:08:05 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:418:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:421:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17532	    508	   1828	  19868	   4d9c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+20:38:18 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32_drivers/CLICK_MODE.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/CLICK_MODE.d" -MT"stm32_drivers/CLICK_MODE.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/CLICK_MODE.o"
+arm-none-eabi-gcc "../stm32_drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/STM32_TIMERS_DRIVER.d" -MT"stm32_drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/Triac_drimmer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/Triac_drimmer.d" -MT"stm32_drivers/Triac_drimmer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/Triac_drimmer.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../stm32_drivers/Triac_drimmer.c: In function 'Drimmer_init':
+../stm32_drivers/Triac_drimmer.c:22:55: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(Drimer_POART,ZERO_CROS_PIN,EXTI_Trigger_Rising, zero_cross_ISR);
+                                                       ^~~~~~~~~~~~~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/Triac_drimmer.h:11,
+                 from ../stm32_drivers/Triac_drimmer.c:9:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:418:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:421:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  18396	    508	   1840	  20744	   5108	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+20:40:09 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32_drivers/CLICK_MODE.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/CLICK_MODE.d" -MT"stm32_drivers/CLICK_MODE.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/CLICK_MODE.o"
+arm-none-eabi-gcc "../stm32_drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/STM32_TIMERS_DRIVER.d" -MT"stm32_drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../stm32_drivers/Triac_drimmer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32_drivers/Triac_drimmer.d" -MT"stm32_drivers/Triac_drimmer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32_drivers/Triac_drimmer.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../stm32_drivers/Triac_drimmer.c: In function 'Drimmer_init':
+../stm32_drivers/Triac_drimmer.c:22:55: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(Drimer_POART,ZERO_CROS_PIN,EXTI_Trigger_Rising, zero_cross_ISR);
+                                                       ^~~~~~~~~~~~~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/Triac_drimmer.h:11,
+                 from ../stm32_drivers/Triac_drimmer.c:9:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:418:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:421:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17532	    508	   1828	  19868	   4d9c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+20:43:54 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:417:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:420:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17512	    508	   1828	  19848	   4d88	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+20:45:28 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:417:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:420:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17516	    508	   1828	  19852	   4d8c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+20:46:25 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:417:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:420:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17516	    508	   1828	  19852	   4d8c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+20:46:57 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:417:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:420:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17516	    508	   1828	  19852	   4d8c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+21:07:34 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:313:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:314:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:332:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:423:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:426:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17580	    508	   1836	  19924	   4dd4	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+21:09:10 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:418:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:421:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17532	    508	   1828	  19868	   4d9c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+21:11:26 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:415:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:418:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17516	    508	   1828	  19852	   4d8c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+21:14:40 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17516	    508	   1828	  19852	   4d8c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+21:15:33 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:415:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:418:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17516	    508	   1828	  19852	   4d8c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+21:43:49 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:415:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:418:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17516	    508	   1828	  19852	   4d8c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
+21:46:31 **** Incremental Build of configuration Debug for project BLDC_MOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'BLDC_init':
+../Src/main.c:310:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin0,EXTI_Trigger_RisingAndFalling, s1);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:311:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin1,EXTI_Trigger_RisingAndFalling, s2);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c:312:50: warning: passing argument 4 of 'EXTI' from incompatible pointer type [-Wincompatible-pointer-types]
+  EXTI(GPIOA, pin2,EXTI_Trigger_RisingAndFalling, s3);
+                                                  ^~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:18:0,
+                 from ../Src/main.c:6:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_ISR_DRIVER.h:71:6: note: expected 'void (*)(interrupt_data *, uint8_t) {aka void (*)(struct <anonymous> *, unsigned char)}' but argument is of type 'void (*)()'
+ void EXTI(GPIO_typeDef* PORTx ,uint16_t pin,uint16_t triggercase,void(*function_addres)(interrupt_data* isr_data,uint8_t interupt_num));
+      ^~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:330:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:415:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+    sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+             ^~~
+In file included from C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/STM32_TIMERS_DRIVER.h:11:0,
+                 from ../Src/main.c:6:
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int sprintf (char *__restrict, const char *__restrict, ...)
+     ^~~~~~~
+../Src/main.c:418:29: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING' differ in signedness [-Wpointer-sign]
+    USART_SEND_STRING(USART1," RPM \n");
+                             ^~~~~~~~~
+In file included from ../Src/main.c:10:0:
+C:/Users/20102/Desktop/BLDC_MOTOR/BLDC_MOTOR/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:114:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC_MOTOR.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20102\Desktop\BLDC_MOTOR\BLDC_MOTOR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC_MOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC_MOTOR.axf
+ 
+arm-none-eabi-objdump -h -S  BLDC_MOTOR.axf  > "BLDC_MOTOR.list"
+arm-none-eabi-objcopy  -O binary  BLDC_MOTOR.axf  "BLDC_MOTOR.bin"
+arm-none-eabi-size   BLDC_MOTOR.axf 
+   text	   data	    bss	    dec	    hex	filename
+  17516	    508	   1828	  19852	   4d8c	BLDC_MOTOR.axf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC_MOTOR.bin
+ 
+Finished building: BLDC_MOTOR.list
+ 
