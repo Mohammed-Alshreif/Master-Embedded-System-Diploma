@@ -1,0 +1,10 @@
+core_cm3.h:1641:22:__NVIC_SetPriority	16	static
+core_cm3.h:1840:26:SysTick_Config	16	static
+RTOS_CORTEX_M3_PORTING.c:11:6:HardFault_Handler	4	static
+RTOS_CORTEX_M3_PORTING.c:14:6:MemManage_Handler	4	static
+RTOS_CORTEX_M3_PORTING.c:17:6:BusFault_Handler	4	static
+RTOS_CORTEX_M3_PORTING.c:20:6:UsageFault_Handler	4	static
+RTOS_CORTEX_M3_PORTING.c:25:6:HARD_WARE_INIT	24	static
+RTOS_CORTEX_M3_PORTING.c:54:29:SVC_Handler	0	static,ignoring_inline_asm
+RTOS_CORTEX_M3_PORTING.c:67:6:OS_TRIGDER_PENDSV	4	static
+RTOS_CORTEX_M3_PORTING.c:71:6:TIMER_START	8	static

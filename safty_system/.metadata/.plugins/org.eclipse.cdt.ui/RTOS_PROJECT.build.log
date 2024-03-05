@@ -1,0 +1,10 @@
+18:23:34 **** Incremental Build of configuration Debug for project RTOS_PROJECT ****
+make -j16 all 
+arm-none-eabi-size   RTOS_PROJECT.axf 
+   text	   data	    bss	    dec	    hex	filename
+  21352	    144	   2928	  24424	   5f68	RTOS_PROJECT.axf
+Finished building: default.size.stdout
+ 
+
+18:23:35 Build Finished. 0 errors, 0 warnings. (took 757ms)
+

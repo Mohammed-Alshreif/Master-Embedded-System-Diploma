@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="pin10"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="pin10"/>
+			<item value="pin0"/>
+			<item value="pin1"/>
+			<item value="Buzzer_DURATION"/>
+			<item value="MOTOR_TEMP"/>
+			<item value="hock"/>
+			<item value="log"/>
+			<item value="tick"/>
+			<item value="sort1"/>
+			<item value="@context tasks"/>
+			<item value="SysTick_Config"/>
+			<item value="systick"/>
+			<item value="system"/>
+			<item value="_STATIC"/>
+			<item value="_PSP_STACK_CURENT"/>
+		</list>
+		<list key="replacehistory">
+			<item value="RELAY_Charge"/>
+			<item value="RELAY_MOTORS"/>
+			<item value="RELAY_PRAIN"/>
+			<item value="Buzzer_DURATION_HIGH"/>
+			<item value="HOOK"/>
+			<item value="OS_CONTROL.CURENT_TASK-&gt;_PSP_STACK_CURENT"/>
+			<item value="TASK3"/>
+			<item value="TASK2"/>
+			<item value="void"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1009"/>
+		<item key="DIALOG_Y_ORIGIN" value="161"/>
+		<item key="DIALOG_WIDTH" value="277"/>
+		<item key="DIALOG_HEIGHT" value="370"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-24|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>
