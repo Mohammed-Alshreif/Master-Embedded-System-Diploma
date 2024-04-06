@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="MOTOR_SPEED_RPM"/>
+		<item key="selection" value="GPIOA"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="GPIOA"/>
+			<item value="pin2"/>
 			<item value="MOTOR_SPEED_RPM"/>
 			<item value="adcread"/>
 			<item value="MOTOR_PWM"/>
@@ -20,7 +22,6 @@
 			<item value="target_position"/>
 			<item value="pin4"/>
 			<item value="pin3"/>
-			<item value="pin2"/>
 		</list>
 		<list key="replacehistory">
 			<item value="SET_MOTOR_SPEED"/>
