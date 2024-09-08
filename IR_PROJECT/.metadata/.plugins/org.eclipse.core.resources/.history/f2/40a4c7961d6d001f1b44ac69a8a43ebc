@@ -1,0 +1,92 @@
+/*
+ * IR_NEC.c
+ *
+ *  Created on: Sep 6, 2024
+ *      Author: 20102
+ */
+#include "IR_NEC.h"
+//=================================
+uint8_t IR_flag1,IR_REPEAT_FLAG;
+uint16_t IR_TIME_DURATION[70],IR_BUFFER1;
+uint8_t IR_TIME_INDEX=0;
+
+typedef struct {
+	uint32_t IR_DATABuffer;
+	uint8_t IR_address ;
+	uint8_t invertedAddress ;
+	uint8_t command ;
+	uint8_t invertedCommand;
+	uint8_t IR_REPEAT_FLAG;
+}IR;
+IR IR1;
+//=================================
+//=================================
+void IR_NEC_init(GPIO_typeDef* GPIOx,uint16_t pin){
+	pinmode( GPIOC,pin3,GPIO_MODE_OUTPUT_push_pull_Speed2);
+	EXTI(GPIOx,pin,EXTI_Trigger_Falling, IR_TIME_READ);
+}
+void IR_TIME_READ(){
+
+	switch (IR_flag1) {
+	case 0://start the timer
+		TIME_CALCULATION(clk, TIMER_STOP);
+		TIME_CALCULATION(clk, TIMER_START);
+		IR_flag1=1;
+		IR_BUFFER1=0;
+		IR_TIME_INDEX=0;
+		IR_REPEAT_FLAG=0;
+		break;
+	case 1:
+		IR_BUFFER1=TIME_CALCULATION(clk, TIMER_STOP);
+		if(IR_BUFFER1>=IR_start_Duration_min && IR_BUFFER1<=IR_start_Duration_max) //start NEC
+		{
+			TIME_CALCULATION(clk, TIMER_START);//turn on the timer to calculate the next pit
+			IR_flag1=2; //goto NEC capture
+			IR_TIME_DURATION[0]=IR_BUFFER1;
+			IR_BUFFER1=0;
+			pinwrite(GPIOC, pin13,LOW);
+
+		}
+		else{//not start the NEC protocol
+			IR_flag1=0;
+			IR_TIME_INDEX=0;
+			TIME_CALCULATION(clk, TIMER_STOP);
+			//Dedicate the REPEAT message
+			if(IR_BUFFER1>=11000 && IR_BUFFER1<11600){
+				IR1.IR_REPEAT_FLAG=1;
+			}
+		}
+		break;
+	case 2://NEC capture
+		IR_TIME_DURATION[++IR_TIME_INDEX]=TIME_CALCULATION(clk, TIMER_STOP);
+		TIME_CALCULATION(clk, TIMER_START);
+		if(IR_TIME_INDEX>31){
+			IR_TIME_INDEX=0;
+			IR_flag1=0;
+			TIME_CALCULATION(clk, TIMER_STOP);
+			pinwrite(GPIOC, pin13,HIGH);
+		}
+		break;
+	}
+
+}
+void IR_CONVERT_READ(){
+	IR1.IR_DATABuffer=0;
+	for(int i=0;i<32;i++){
+		if(IR_TIME_DURATION[i]>IR_MIN_LOW_DURATION){
+			// Detected a logical '1'
+			IR1.IR_DATABuffer <<= 1;
+			IR1.IR_DATABuffer |= 1;
+		}
+		else{
+			// Detected a logical '0'
+			IR1.IR_DATABuffer <<= 1;
+		}
+	}
+
+	IR1.IR_address=(IR1.IR_DATABuffer >> 24) & 0xFF; // Extract 8-bit address
+	IR1.invertedAddress = (IR1.IR_DATABuffer >> 16) & 0xFF;  // Extract inverted address
+
+	IR1.command = (IR1.IR_DATABuffer >> 8) & 0xFF;  // Extract 8-bit command
+	IR1.invertedCommand = IR1.IR_DATABuffer & 0xFF;  // Extract inverted command
+}

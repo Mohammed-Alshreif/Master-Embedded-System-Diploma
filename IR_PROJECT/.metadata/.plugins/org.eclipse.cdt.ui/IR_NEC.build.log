@@ -1,0 +1,20 @@
+16:47:00 **** Incremental Build of configuration Debug for project IR_NEC ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/IR_PROJECT/IR_NEC/STM32_DRIVERS/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "IR_NEC.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\IR_PROJECT\IR_NEC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IR_NEC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IR_NEC.axf
+ 
+arm-none-eabi-objdump -h -S  IR_NEC.axf  > "IR_NEC.list"
+arm-none-eabi-objcopy  -O binary  IR_NEC.axf  "IR_NEC.bin"
+arm-none-eabi-size   IR_NEC.axf 
+   text	   data	    bss	    dec	    hex	filename
+  16096	    140	   1932	  18168	   46f8	IR_NEC.axf
+Finished building: default.size.stdout
+ 
+Finished building: IR_NEC.bin
+ 
+Finished building: IR_NEC.list
+ 
+
+16:47:01 Build Finished. 0 errors, 0 warnings. (took 869ms)
+

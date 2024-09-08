@@ -1,0 +1,5 @@
+IR_NEC.c:19:6:IR_NEC_init	24	static
+IR_NEC.c:24:6:IR_TIME_READ	8	static
+IR_NEC.c:69:4:IR_CONVERT_READ	24	static
+IR_NEC.c:91:6:IR_SEND	48	static
+IR_NEC.c:136:6:IR_send_bit	24	static

@@ -1,0 +1,90 @@
+/**
+ ******************************************************************************
+ * @file           : main.c
+ * @author         : MOHAMMED ADEL ALSHREIF
+ * @brief          : IR smart home
+
+ ******************************************************************************
+ */
+
+#include "stm32_speed_DRIVER.h"
+#include "I2C_LCD.h"
+#include "STM32_TIMERS_DRIVER.h"
+#include "stm32f103c6_ISR_DRIVER.h"
+#define clk 36000000
+#define address 0x3f
+//=================================
+uint8_t IR_flag1,IR_STARTREAD=0;
+uint16_t time_duration[70],IR_BUFFER1;
+uint8_t IR_TIME_INDEX=0;
+uint32_t data=1;
+//============================================================================
+void IR_TIME_READ(){
+
+	switch (IR_flag1) {
+	case 0:
+		TIME_CALCULATION(clk, TIMER_STOP);
+		TIME_CALCULATION(clk, TIMER_START);
+		IR_flag1=1;
+		IR_BUFFER1=0;
+		IR_TIME_INDEX=0;
+		pinwrite(GPIOC, pin13,LOW);
+		break;
+	case 1:
+		IR_BUFFER1=TIME_CALCULATION(clk, TIMER_STOP);
+		if(IR_BUFFER1>=8800 && IR_BUFFER1<=14000) //start NEC
+		{
+			TIME_CALCULATION(clk, TIMER_START);//turn on the timer to calculate the next pit
+			IR_flag1=2; //goto NEC capture
+			time_duration[0]=IR_BUFFER1;
+			IR_BUFFER1=0;
+		}
+		else{//not start the NEC protocol
+			IR_flag1=0;
+			IR_TIME_INDEX=0;
+			TIME_CALCULATION(clk, TIMER_STOP);
+		}
+		break;
+	case 2://NEC capture
+		time_duration[++IR_TIME_INDEX]=TIME_CALCULATION(clk, TIMER_STOP);
+		pinwrite(GPIOC, pin13,HIGH);
+		TIME_CALCULATION(clk, TIMER_START);
+		if(IR_TIME_INDEX>31){
+			IR_TIME_INDEX=0;
+			IR_flag1=0;
+			TIME_CALCULATION(clk, TIMER_STOP);
+		}
+		break;
+	}
+
+}
+int main(void)
+{
+	MCAL_speed_init(CLK_SORC_EX_CLK8MHz, mood_FAST_MOOD_72MHzCORE36MHzpref);
+	delay(200, U_ms,clk);
+	I2C_LCD_Init(I2C1,address,clk);
+	I2C_LCD_write_string(I2C1,"MLS,SLM",address);
+	I2C_LCD_setcerser(I2C1, address,1,0);
+	delay(1000, U_ms,clk);
+	I2C_LCD_write_string(I2C1,"catcoty",address);
+	pinmode(GPIOC, pin13, GPIO_MODE_OUTPUT_push_pull_Speed2);
+	EXTI(GPIOB, pin0,EXTI_Trigger_Falling, IR_TIME_READ);
+	I2C_LCD_clear(I2C1, address);
+	I2C_LCD_setcerser(I2C1, address,0,0);
+	while(1){
+		I2C_LCD_setcerser(I2C1, address,0,0);
+		for(int i=1;i<10;i++){
+			if(time_duration[i]>2000){
+				data=(data)*10+1;
+			}
+			else{
+				data=(data)*10;
+			}
+		}
+		I2C_LCD_write_INTnumber(I2C1, address,(int)data);
+		data=1;
+		delay(500, U_ms, clk);
+		I2C_LCD_clear(I2C1, address);
+
+	}
+}

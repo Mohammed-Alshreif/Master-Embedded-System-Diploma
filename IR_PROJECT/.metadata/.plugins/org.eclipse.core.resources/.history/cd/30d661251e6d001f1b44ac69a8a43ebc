@@ -1,0 +1,20 @@
+/*
+ * IR_NEC.h
+ *
+ *  Created on: Sep 6, 2024
+ *      Author: 20102
+ */
+
+#ifndef INC_IR_NEC_H_
+#define INC_IR_NEC_H_
+#include "STM32_TIMERS_DRIVER.h"
+#include "stm32f103c6_ISR_DRIVER.h"
+#define clk 36000000
+//=================================
+#define IR_start_Duration_max 14000 //us
+#define IR_start_Duration_min 12000 //us
+#define IR_MIN_LOW_DURATION    1500 //us
+void IR_NEC_init(GPIO_typeDef* GPIOx,uint16_t pin);
+
+
+#endif /* INC_IR_NEC_H_ */
