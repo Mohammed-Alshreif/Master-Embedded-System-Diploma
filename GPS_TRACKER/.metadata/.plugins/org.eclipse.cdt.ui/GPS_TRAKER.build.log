@@ -1,0 +1,39 @@
+17:33:51 **** Incremental Build of configuration Debug for project GPS_TRAKER ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/GPS_TRAKER/GPS_TRAKER/STM32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:65:3: warning: implicit declaration of function 'Display' [-Wimplicit-function-declaration]
+   Display();
+   ^~~~~~~
+../Src/main.c: In function 'read_string':
+../Src/main.c:80:20: warning: passing argument 2 of 'USART_READ' from incompatible pointer type [-Wincompatible-pointer-types]
+  USART_READ(USART1,&ch);
+                    ^
+In file included from ../Src/main.c:22:0:
+C:/E/embedded/test/final simulation code for my assignments/GPS_TRAKER/GPS_TRAKER/STM32_drivers/inc/stm32f103c6_USART_SRIVER.h:115:6: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'unsigned char *'
+ void USART_READ(USART_typeDef* USARTx,uint16_t* data);
+      ^~~~~~~~~~
+../Src/main.c: At top level:
+../Src/main.c:160:6: warning: conflicting types for 'Display'
+ void Display(){
+      ^~~~~~~
+../Src/main.c:65:3: note: previous implicit declaration of 'Display' was here
+   Display();
+   ^~~~~~~
+arm-none-eabi-gcc -o "GPS_TRAKER.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\GPS_TRAKER\GPS_TRAKER\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPS_TRAKER.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPS_TRAKER.axf
+ 
+arm-none-eabi-objdump -h -S  GPS_TRAKER.axf  > "GPS_TRAKER.list"
+arm-none-eabi-objcopy  -O binary  GPS_TRAKER.axf  "GPS_TRAKER.bin"
+arm-none-eabi-size   GPS_TRAKER.axf 
+   text	   data	    bss	    dec	    hex	filename
+  31152	    524	   1960	  33636	   8364	GPS_TRAKER.axf
+Finished building: default.size.stdout
+ 
+Finished building: GPS_TRAKER.bin
+ 
+Finished building: GPS_TRAKER.list
+ 
+
+17:33:54 Build Finished. 0 errors, 3 warnings. (took 2s.645ms)
+

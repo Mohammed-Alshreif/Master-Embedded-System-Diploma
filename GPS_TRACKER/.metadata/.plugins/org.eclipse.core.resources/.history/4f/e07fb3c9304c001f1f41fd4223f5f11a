@@ -1,0 +1,120 @@
+/**
+ ******************************************************************************
+ * @file           : main.c
+ * @author         : Mohammed Adel Alshreif
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * <h2><center>&copy; Copyright (c) 2024 STMicroelectronics.
+ * All rights reserved.</center></h2>
+ *
+ * This software component is licensed by ST under BSD 3-Clause license,
+ * the "License"; You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at:
+ *                        opensource.org/licenses/BSD-3-Clause
+ *
+ ******************************************************************************
+ */
+
+#include "I2C_LCD.h"
+#include "STM32_TIMERS_DRIVER.h"
+#include "stm32f103c6_USART_SRIVER.h"
+#include "math.h"
+#include <string.h>
+#define clk 8000000                 //system clock
+#define address 0x3f
+char *token;
+char * tokens[7];
+unsigned char ch;
+char string_data[50],GPS_data[50];
+uint8_t tokens_count=0,COM_COUNT=0,data_flage=0,serial_flag=0,index1;
+uint16_t GPS_data_COUNT=0,coma_count=0;
+uint32_t Longitude,Latitude;
+float deg_Longitude,deg_Latitude,Decimal_degrees_Latitude,Decimal_degrees_Longitude;
+void read_string ();
+//*******************************************************
+//======================= -main- ========================
+//*******************************************************
+int main(void)
+{
+	delay(200, U_ms,8000000);
+	I2C_LCD_Init(I2C1,address);
+	I2C_LCD_write_string(I2C1,"SANDY",address);
+	I2C_LCD_setcerser(I2C1, address,1,0);
+	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_8, stop_bits_1, baud_rate_9600, parity_none,clk);
+	USART_READ_INTERRUPT_EN(USART1, read_string);
+	pinmode(GPIOC, pin13, GPIO_MODE_OUTPUT_push_pull_Speed2);
+	pinwrite(GPIOC, pin13,LOW);
+	while(1){
+
+
+
+		// Get the first token
+		token = strtok(GPS_data, ",");
+
+		// Walk through other tokens
+		tokens_count=0;
+		while (token != NULL) {
+			tokens[tokens_count++] = strtok(NULL, ",");
+		}
+
+		Longitude=atoi(tokens[3]);
+		Latitude=atoi(tokens[1]);
+		I2C_LCD_setcerser(I2C1, address,0,0);
+		I2C_LCD_write_INTnumber(I2C1,address,Longitude);
+		deg_Longitude=(Longitude*100-atof(tokens[3])/60.0);
+		deg_Latitude=(Latitude*100-atof(tokens[3])/60.0);
+
+		Decimal_degrees_Longitude=Longitude+deg_Longitude;
+		Decimal_degrees_Latitude=Latitude+deg_Latitude;
+
+		//I2C_LCD_write_FLOATnumber(I2C1,address,Decimal_degrees_Longitude,3);
+		I2C_LCD_setcerser(I2C1, address,0,0);
+
+	}
+}
+//*******************************************************
+//==================== -READ_DATA- ======================
+//*******************************************************
+void read_string (){
+
+	USART_READ(USART1,&ch);
+	if(data_flage==0){
+		if(ch=='$'){
+			serial_flag=1;
+			index1=0;
+			pinwrite(GPIOC, pin13,LOW);
+		}
+
+		if(serial_flag==1){
+			string_data[index1]=ch;
+			index1++;
+
+			if(ch==','){
+				string_data[index1]=0;
+				if(strncmp(string_data,"$GPRMC,",7)==0){
+					pinwrite(GPIOC, pin13,HIGH);
+					data_flage=1;
+				}
+				serial_flag=0;
+				index1=0;
+			}
+		}
+	}
+	else{
+		string_data[index1]=ch;
+		index1++;
+		if(ch==','){
+			COM_COUNT++;
+			if(COM_COUNT==5){
+				string_data[index1]=0;
+				strcpy(GPS_data,string_data);
+				index1=0;
+				COM_COUNT=0;
+				data_flage=0;
+			}
+		}
+	}
+
+}
