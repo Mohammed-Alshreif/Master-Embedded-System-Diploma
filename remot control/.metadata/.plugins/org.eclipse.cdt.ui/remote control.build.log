@@ -1,0 +1,35 @@
+10:30:20 **** Incremental Build of configuration Debug for project remote control ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/test/final simulation code for my assignments/remot control/remote control/stm32_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:96:42: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING_UNinterrupted' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING_UNinterrupted(USART1,result);
+                                          ^~~~~~
+In file included from ../Src/main.c:5:0:
+C:/E/embedded/test/final simulation code for my assignments/remot control/remote control/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:116:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING_UNinterrupted(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:97:42: warning: pointer targets in passing argument 2 of 'USART_SEND_STRING_UNinterrupted' differ in signedness [-Wpointer-sign]
+   USART_SEND_STRING_UNinterrupted(USART1,"m\n");
+                                          ^~~~~
+In file included from ../Src/main.c:5:0:
+C:/E/embedded/test/final simulation code for my assignments/remot control/remote control/stm32_drivers/inc/stm32f103c6_USART_SRIVER.h:116:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void USART_SEND_STRING_UNinterrupted(USART_typeDef* USARTx,uint8_t* data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "remote control.axf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\test\final simulation code for my assignments\remot control\remote control\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="remote control.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: remote control.axf
+ 
+arm-none-eabi-objdump -h -S  remote\ control.axf  > "remote control.list"
+arm-none-eabi-objcopy  -O binary  remote\ control.axf  "remote control.bin"
+arm-none-eabi-size   remote\ control.axf 
+   text	   data	    bss	    dec	    hex	filename
+  10176	    140	   1884	  12200	   2fa8	remote control.axf
+Finished building: default.size.stdout
+ 
+Finished building: remote control.bin
+ 
+Finished building: remote control.list
+ 
+
+10:30:20 Build Finished. 0 errors, 2 warnings. (took 840ms)
+

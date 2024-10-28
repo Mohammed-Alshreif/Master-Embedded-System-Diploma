@@ -1,0 +1,60 @@
+#include "STM32_TIMERS_DRIVER.h"
+#include "stm32_speed_DRIVER.h"
+#include "stm32f103c6_ISR_DRIVER.h"
+#include "stm32f103c6_ADC.h"
+#include "stm32f103c6_USART_SRIVER.h"
+#include "math.h"
+#include <string.h>
+//=======================================================
+#define clk 36000000                 //system clock
+#define joystickRight_X		 ADC_pin_PA1
+#define joystickRight_Y 	 ADC_pin_PA2
+#define joystickLEFT_X   	 ADC_pin_PA0
+#define joystickLEFT_Y   	 ADC_pin_PA3
+#define Potentiometer_RIGHT  ADC_pin_PA4
+#define Potentiometer_LEFT   ADC_pin_PA5
+
+
+uint8_t buf[30];
+uint16_t joystick[4];
+uint16_t Potentiometer[2];
+uint16_t offset=0;
+char result[100];
+
+int main(void)
+{
+	MCAL_speed_init(CLK_SORC_IN_CLK8MHz, mood_FAST_MOOD_36MHzCORE);
+	pinmode(GPIOA, pin8,GPIO_MODE_INPUT_PU);
+	ADC_INIT(ADC1, ADC_STATE_START);
+	USART_INIT(USART1, mode_RX_TX_ENABLE, word_length_8, stop_bits_1, baud_rate_9600, parity_none,clk);
+	while(1){
+		joystick[0]=ADC_READ(ADC1, joystickRight_X)/4;
+		joystick[1]=ADC_READ(ADC1, joystickRight_Y)/4;
+		joystick[2]=ADC_READ(ADC1, joystickLEFT_X)/4;
+		joystick[3]=ADC_READ(ADC1, joystickLEFT_Y)/4;
+		Potentiometer[0]=ADC_READ(ADC1, Potentiometer_RIGHT)/4;
+		Potentiometer[1]=ADC_READ(ADC1, Potentiometer_LEFT)/4;
+
+
+
+		for (int i = 0; i < 4; i++) {
+			offset += sprintf(result + offset, "%u,", joystick[i]);
+		}
+		for (int i = 0; i < 2; i++) {
+			offset += sprintf(result + offset, "%u", Potentiometer[i]);
+			if (i < 3) {  // Add comma after each element except the last
+				offset += sprintf(result + offset, ",");
+			}
+		}
+		offset=0;
+		//sprintf (buf, "%d",MOTOR_SPEED_RPM/10);
+		//USART_SEND_STRING(USART1,buf);
+		//delay(30, U_ms, clk);
+		USART_SEND_STRING_UNinterrupted(USART1,result);
+		USART_SEND_STRING_UNinterrupted(USART1,"m\n");
+		//delay(1, U_ms, clk);
+
+		delay(5, U_ms, clk);
+
+	}
+}
