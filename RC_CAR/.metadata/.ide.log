@@ -1,0 +1,9 @@
+2024-10-28 11:26:55,502 [INFO] Activator:178 - 
+
+
+2024-10-28 11:26:55,502 [INFO] Activator:179 - !SESSION log4j initialized
+2024-10-28 11:28:13,526 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.8.4
+2024-10-28 11:28:13,526 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.8.3
+2024-10-28 11:28:13,536 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.8.2
+2024-10-28 11:28:13,536 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.8.1
+2024-10-28 11:28:13,536 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] withoutVersionV1.8.0

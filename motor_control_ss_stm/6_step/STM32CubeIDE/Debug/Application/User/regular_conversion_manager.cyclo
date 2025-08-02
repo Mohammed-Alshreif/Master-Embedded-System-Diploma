@@ -1,0 +1,7 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/regular_conversion_manager.c:179:9:RCM_RegisterRegConv	36
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/regular_conversion_manager.c:146:9:RCM_RegisterRegConv_WithCB	2
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/regular_conversion_manager.c:246:10:RCM_ExecRegularConv	3
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/regular_conversion_manager.c:275:6:RCM_RequestUserConv	2
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/regular_conversion_manager.c:296:10:RCM_GetUserConv	2
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/regular_conversion_manager.c:314:6:RCM_ExecUserConv	3
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/regular_conversion_manager.c:339:21:RCM_GetUserConvState	1

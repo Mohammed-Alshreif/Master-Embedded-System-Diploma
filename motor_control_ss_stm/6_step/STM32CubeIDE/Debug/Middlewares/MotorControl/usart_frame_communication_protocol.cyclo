@@ -1,0 +1,8 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/usart_frame_communication_protocol.c:64:13:UFCP_Init	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/usart_frame_communication_protocol.c:151:13:UFCP_TX_IRQ_Handler	6
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/usart_frame_communication_protocol.c:224:16:UFCP_Receive	3
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/usart_frame_communication_protocol.c:246:16:UFCP_Send	11
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/usart_frame_communication_protocol.c:74:15:UFCP_RX_IRQ_Handler	8
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/usart_frame_communication_protocol.c:201:13:UFCP_OVR_IRQ_Handler	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/usart_frame_communication_protocol.c:214:13:UFCP_TIMEOUT_IRQ_Handler	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/usart_frame_communication_protocol.c:274:13:UFCP_AbortReceive	1

@@ -1,0 +1,14 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:224:13:R3_2_GetPhaseCurrents	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:376:6:R3_2_HFCurrentsPolarizationAB	4	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:405:6:R3_2_HFCurrentsPolarizationC	4	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:596:10:R3_2_SetADCSampPointPolarization	4	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:613:17:R3_2_SetADCSampPointSectX	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:77:13:R3_2_Init	12	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:431:13:R3_2_TurnOnLowSides	4	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:468:13:R3_2_SwitchOnPWM	16	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:523:13:R3_2_SwitchOffPWM	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:137:13:R3_2_CurrentReadingPolarization	32	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:558:10:R3_2_WriteTIMRegisters	4	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:679:15:R3_2_TIMx_UP_IRQHandler	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:713:14:R3_2_BRK_IRQHandler	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/F1xx/Src/r3_2_f1xx_pwm_curr_fdbk.c:733:17:R3_2_IsOverCurrentOccurred	0	static

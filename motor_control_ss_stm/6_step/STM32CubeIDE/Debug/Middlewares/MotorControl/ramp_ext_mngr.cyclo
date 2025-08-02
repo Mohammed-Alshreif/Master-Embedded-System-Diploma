@@ -1,0 +1,7 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/ramp_ext_mngr.c:44:6:REMNG_Init	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/ramp_ext_mngr.c:72:16:REMNG_Calc	3
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/ramp_ext_mngr.c:199:16:REMNG_GetValue	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/ramp_ext_mngr.c:218:13:REMNG_RampCompleted	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/ramp_ext_mngr.c:233:13:REMNG_StopRamp	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/ramp_ext_mngr.c:246:17:getScalingFactor	4
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/ramp_ext_mngr.c:120:13:REMNG_ExecRamp	3

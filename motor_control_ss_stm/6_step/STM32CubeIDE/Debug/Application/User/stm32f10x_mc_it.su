@@ -1,0 +1,8 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/stm32f10x_mc_it.c:71:6:ADC1_2_IRQHandler	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/stm32f10x_mc_it.c:92:6:TIM1_UP_IRQHandler	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/stm32f10x_mc_it.c:110:6:TIM1_BRK_IRQHandler	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/stm32f10x_mc_it.c:135:6:TIM2_IRQHandler	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/stm32f10x_mc_it.c:179:6:USART3_IRQHandler	24	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/stm32f10x_mc_it.c:231:6:HardFault_Handler	16	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/stm32f10x_mc_it.c:279:6:SysTick_Handler	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/stm32f10x_mc_it.c:306:6:EXTI15_10_IRQHandler	0	static

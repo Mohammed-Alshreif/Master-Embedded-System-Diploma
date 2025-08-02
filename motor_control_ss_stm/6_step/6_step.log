@@ -1,0 +1,18 @@
+2025-08-02 12:29:03,156 DEBUG [Main.lambda$run$0] Arguments: [-ioc, C:\Users\20102\Desktop\motor_control_ss_stm\6_step\6_step.ioc, -xdm, C:\Users\20102\Desktop\motor_control_ss_stm\6_step\6_step.wb_def]
+2025-08-02 12:29:03,163 DEBUG [ArgsValue.readPropertiesFile] [AppConfig] pack.source = "C:\Program Files (x86)\STMicroelectronics\MC_SDK_5.4.8\Middlewares\ST\MotorControl" 
+2025-08-02 12:29:03,163 DEBUG [ArgsValue.readPropertiesFile] [UserConfig] do not exist in "C:\Users\20102\.st_motor_control\wb2mx.properties" 
+2025-08-02 12:29:03,163 DEBUG [ArgsValue.getConfigProperties] pack.source = "../../../../Middlewares/ST/MotorControl"
+2025-08-02 12:29:03,177 DEBUG [ArgsValue.lambda$retrieve$2] CLI_ARG[xdm]: C:\Users\20102\Desktop\motor_control_ss_stm\6_step\6_step.wb_def
+2025-08-02 12:29:03,177 DEBUG [ArgsValue.lambda$retrieve$2] CLI_ARG[ioc]: C:\Users\20102\Desktop\motor_control_ss_stm\6_step\6_step.ioc
+2025-08-02 12:29:03,179 DEBUG [ArgsValue.retrieve] {xdm=C:\Users\20102\Desktop\motor_control_ss_stm\6_step\6_step.wb_def, updftl=templates/wb_ioc_mc-middleware.ftl, mx_timeout=-1, exp=templates/wb-defines_where_and_what.txt, ioc=C:\Users\20102\Desktop\motor_control_ss_stm\6_step\6_step.ioc, pack=../../../../Middlewares/ST/MotorControl, ftl=templates/wb_ioc_template.ftl}
+2025-08-02 12:29:03,304 DEBUG [Main.run] Targeted MCU family = F1
+2025-08-02 12:29:03,352 DEBUG [Main.run] Minimum associated CubeMx to the `F1` targeted MCU family is `4.25.0-a0`
+2025-08-02 12:29:03,379 DEBUG [WindowsCubeMxFinder.lambda$findThem$2] Found 64-bit subkey HKEY_LOCAL_MACHINE\~~~\Uninstall\STM32CubeMX
+2025-08-02 12:29:03,395 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
+2025-08-02 12:29:03,395 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
+2025-08-02 12:29:03,427 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
+2025-08-02 12:29:03,427 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
+2025-08-02 12:29:03,451 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
+2025-08-02 12:29:03,451 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
+2025-08-02 12:29:06,870 WARN  [Main.lambda$run$0] Aborted by the user
+2025-08-02 12:29:06,890 DEBUG [Main.lambda$run$0] System exists with return code 4

@@ -1,0 +1,9 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/motor_control_protocol.c:165:13:MCP_ReceivedFrame	75
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/motor_control_protocol.c:137:13:MCP_WaitNextFrame	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/motor_control_protocol.c:100:13:MCP_Init	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/motor_control_protocol.c:127:13:MCP_OnTimeOut	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/motor_control_protocol.c:152:13:MCP_SentFrame	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/motor_control_protocol.c:642:13:MCP_SendOverrunMessage	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/motor_control_protocol.c:653:13:MCP_SendTimeoutMessage	1
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/motor_control_protocol.c:664:13:MCP_SendATRMessage	3
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/Src/motor_control_protocol.c:705:13:MCP_SendBadCRCMessage	1

@@ -1,0 +1,283 @@
+11:30:29 **** Build of configuration Debug for project RC_CAR ****
+make -j16 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "RC_CAR.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\E\embedded\مجلد جديد\Master-Embedded-System-Diploma\RC_CAR\RC_CAR\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RC_CAR.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.4.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208\tools\arm-none-eabi\bin\ld.exe: cannot open linker script file C:\E\embedded\???????? ????????\Master-Embedded-System-Diploma\RC_CAR\RC_CAR\STM32F103C8TX_FLASH.ld: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:49: RC_CAR.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+11:30:47 **** Incremental Build of configuration Debug for project RC_CAR ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32drivers/CLICK_MODE.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/CLICK_MODE.d" -MT"stm32drivers/CLICK_MODE.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/CLICK_MODE.o"
+arm-none-eabi-gcc "../stm32drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/EEPROM.d" -MT"stm32drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/EEPROM.o"
+arm-none-eabi-gcc "../stm32drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/FIFO.d" -MT"stm32drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/FIFO.o"
+arm-none-eabi-gcc "../stm32drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/GPIO_DRIVER.d" -MT"stm32drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/I2C_LCD.d" -MT"stm32drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../stm32drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/LCD.d" -MT"stm32drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/LCD.o"
+arm-none-eabi-gcc "../stm32drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/LIFO.d" -MT"stm32drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/LIFO.o"
+arm-none-eabi-gcc "../stm32drivers/MPU6050.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/MPU6050.d" -MT"stm32drivers/MPU6050.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/MPU6050.o"
+arm-none-eabi-gcc "../stm32drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/STM32_I2C_DRIVER.d" -MT"stm32drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/STM32_TIMERS_DRIVER.d" -MT"stm32drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/Triac_drimmer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/Triac_drimmer.d" -MT"stm32drivers/Triac_drimmer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/Triac_drimmer.o"
+arm-none-eabi-gcc "../stm32drivers/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/keypad.d" -MT"stm32drivers/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/keypad.o"
+arm-none-eabi-gcc "../stm32drivers/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32_speed_DRIVER.d" -MT"stm32drivers/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_ADC.d" -MT"stm32drivers/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_ISR_DRIVER.d" -MT"stm32drivers/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_SPI_DRIVER.d" -MT"stm32drivers/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_SPI_DRIVER.o"
+../stm32drivers/EEPROM.c:8:10: fatal error: EEPROM.h: No such file or directory
+ #include "EEPROM.h"
+          ^~~~~~~~~~
+compilation terminated.
+../stm32drivers/LIFO.c:8:10: fatal error: LIFO.h: No such file or directory
+ #include "LIFO.h"
+          ^~~~~~~~
+../stm32drivers/Triac_drimmer.c:9:10: fatal error: Triac_drimmer.h: No such file or directory
+ #include "Triac_drimmer.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+compilation terminated.
+../stm32drivers/stm32f103c6_ISR_DRIVER.c:8:10: fatal error: stm32f103c6_ISR_DRIVER.h: No such file or directory
+ #include "stm32f103c6_ISR_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../stm32drivers/keypad.c:2:10: fatal error: keypad.h: No such file or directory
+ #include "keypad.h"
+          ^~~~~~~~~~
+compilation terminated.
+../stm32drivers/GPIO_DRIVER.c:1:10: fatal error: STM32f103c6.h: No such file or directory
+ #include "STM32f103c6.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+../stm32drivers/FIFO.c:7:10: fatal error: FIFO.h: No such file or directory
+ #include "FIFO.h"
+          ^~~~~~~~
+compilation terminated.
+../stm32drivers/stm32_speed_DRIVER.c:8:10: fatal error: stm32_speed_DRIVER.h: No such file or directory
+ #include "stm32_speed_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../stm32drivers/CLICK_MODE.c:8:10: fatal error: CLICK_MODE.h: No such file or directory
+ #include "CLICK_MODE.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+../stm32drivers/STM32_I2C_DRIVER.c:9:10: fatal error: STM32_I2C_DRIVER.h: No such file or directory
+ #include "STM32_I2C_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../stm32drivers/stm32f103c6_ADC.c:8:10: fatal error: stm32f103c6_ADC.h: No such file or directory
+ #include "stm32f103c6_ADC.h"
+          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+../stm32drivers/I2C_LCD.c:8:10: fatal error: I2C_LCD.h: No such file or directory
+ #include "I2C_LCD.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [stm32drivers/subdir.mk:86: stm32drivers/Triac_drimmer.o] Error 1
+make: *** Waiting for unfinished jobs....
+../stm32drivers/stm32f103c6_SPI_DRIVER.c:7:10: fatal error: stm32f103c6_SPI_DRIVER.h: No such file or directory
+ #include "stm32f103c6_SPI_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [stm32drivers/subdir.mk:68: stm32drivers/EEPROM.o] Error 1
+make: *** [stm32drivers/subdir.mk:78: stm32drivers/LIFO.o] Error 1
+../stm32drivers/STM32_TIMERS_DRIVER.c:8:10: fatal error: STM32_TIMERS_DRIVER.h: No such file or directory
+ #include "STM32_TIMERS_DRIVER.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [stm32drivers/subdir.mk:94: stm32drivers/stm32f103c6_ISR_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:82: stm32drivers/STM32_I2C_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:88: stm32drivers/keypad.o] Error 1
+make: *** [stm32drivers/subdir.mk:66: stm32drivers/CLICK_MODE.o] Error 1
+../stm32drivers/LCD.c:8:10: fatal error: LCD.h: No such file or directory
+ #include "LCD.h"
+          ^~~~~~~
+compilation terminated.
+make: *** [stm32drivers/subdir.mk:92: stm32drivers/stm32f103c6_ADC.o] Error 1
+make: *** [stm32drivers/subdir.mk:90: stm32drivers/stm32_speed_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:72: stm32drivers/GPIO_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:70: stm32drivers/FIFO.o] Error 1
+make: *** [stm32drivers/subdir.mk:96: stm32drivers/stm32f103c6_SPI_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:74: stm32drivers/I2C_LCD.o] Error 1
+make: *** [stm32drivers/subdir.mk:84: stm32drivers/STM32_TIMERS_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:76: stm32drivers/LCD.o] Error 1
+../stm32drivers/MPU6050.c:9:10: fatal error: MPU6050.h: No such file or directory
+ #include "MPU6050.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [stm32drivers/subdir.mk:80: stm32drivers/MPU6050.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+11:31:34 **** Incremental Build of configuration Debug for project RC_CAR ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32drivers/CLICK_MODE.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/CLICK_MODE.d" -MT"stm32drivers/CLICK_MODE.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/CLICK_MODE.o"
+arm-none-eabi-gcc "../stm32drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/EEPROM.d" -MT"stm32drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/EEPROM.o"
+arm-none-eabi-gcc "../stm32drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/FIFO.d" -MT"stm32drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/FIFO.o"
+arm-none-eabi-gcc "../stm32drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/GPIO_DRIVER.d" -MT"stm32drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/I2C_LCD.d" -MT"stm32drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../stm32drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/LCD.d" -MT"stm32drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/LCD.o"
+arm-none-eabi-gcc "../stm32drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/LIFO.d" -MT"stm32drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/LIFO.o"
+arm-none-eabi-gcc "../stm32drivers/MPU6050.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/MPU6050.d" -MT"stm32drivers/MPU6050.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/MPU6050.o"
+arm-none-eabi-gcc "../stm32drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/STM32_I2C_DRIVER.d" -MT"stm32drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/STM32_TIMERS_DRIVER.d" -MT"stm32drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/Triac_drimmer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/Triac_drimmer.d" -MT"stm32drivers/Triac_drimmer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/Triac_drimmer.o"
+arm-none-eabi-gcc "../stm32drivers/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/keypad.d" -MT"stm32drivers/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/keypad.o"
+arm-none-eabi-gcc "../stm32drivers/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32_speed_DRIVER.d" -MT"stm32drivers/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_ADC.d" -MT"stm32drivers/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_ISR_DRIVER.d" -MT"stm32drivers/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I../Inc -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_SPI_DRIVER.d" -MT"stm32drivers/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_SPI_DRIVER.o"
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:66: stm32drivers/CLICK_MODE.o] Error 1
+make: *** Waiting for unfinished jobs....
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:70: stm32drivers/FIFO.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:74: stm32drivers/I2C_LCD.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:68: stm32drivers/EEPROM.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:76: stm32drivers/LCD.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:86: stm32drivers/Triac_drimmer.o] Error 1
+make: *** [stm32drivers/subdir.mk:80: stm32drivers/MPU6050.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:94: stm32drivers/stm32f103c6_ISR_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:72: stm32drivers/GPIO_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:84: stm32drivers/STM32_TIMERS_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:78: stm32drivers/LIFO.o] Error 1
+make: *** [stm32drivers/subdir.mk:92: stm32drivers/stm32f103c6_ADC.o] Error 1
+make: *** [stm32drivers/subdir.mk:90: stm32drivers/stm32_speed_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:96: stm32drivers/stm32f103c6_SPI_DRIVER.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:82: stm32drivers/STM32_I2C_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:88: stm32drivers/keypad.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+11:32:11 **** Incremental Build of configuration Debug for project RC_CAR ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32drivers/CLICK_MODE.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/CLICK_MODE.d" -MT"stm32drivers/CLICK_MODE.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/CLICK_MODE.o"
+arm-none-eabi-gcc "../stm32drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/EEPROM.d" -MT"stm32drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/EEPROM.o"
+arm-none-eabi-gcc "../stm32drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/FIFO.d" -MT"stm32drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/FIFO.o"
+arm-none-eabi-gcc "../stm32drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/GPIO_DRIVER.d" -MT"stm32drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/I2C_LCD.d" -MT"stm32drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../stm32drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/LCD.d" -MT"stm32drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/LCD.o"
+arm-none-eabi-gcc "../stm32drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/LIFO.d" -MT"stm32drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/LIFO.o"
+arm-none-eabi-gcc "../stm32drivers/MPU6050.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/MPU6050.d" -MT"stm32drivers/MPU6050.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/MPU6050.o"
+arm-none-eabi-gcc "../stm32drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/STM32_I2C_DRIVER.d" -MT"stm32drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/STM32_TIMERS_DRIVER.d" -MT"stm32drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/Triac_drimmer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/Triac_drimmer.d" -MT"stm32drivers/Triac_drimmer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/Triac_drimmer.o"
+arm-none-eabi-gcc "../stm32drivers/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/keypad.d" -MT"stm32drivers/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/keypad.o"
+arm-none-eabi-gcc "../stm32drivers/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32_speed_DRIVER.d" -MT"stm32drivers/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_ADC.d" -MT"stm32drivers/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_ISR_DRIVER.d" -MT"stm32drivers/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_SPI_DRIVER.d" -MT"stm32drivers/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_SPI_DRIVER.o"
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:66: stm32drivers/CLICK_MODE.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [stm32drivers/subdir.mk:70: stm32drivers/FIFO.o] Error 1
+make: *** [stm32drivers/subdir.mk:76: stm32drivers/LCD.o] Error 1
+make: *** [stm32drivers/subdir.mk:74: stm32drivers/I2C_LCD.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:78: stm32drivers/LIFO.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:84: stm32drivers/STM32_TIMERS_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:68: stm32drivers/EEPROM.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:96: stm32drivers/stm32f103c6_SPI_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:72: stm32drivers/GPIO_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:92: stm32drivers/stm32f103c6_ADC.o] Error 1
+make: *** [stm32drivers/subdir.mk:94: stm32drivers/stm32f103c6_ISR_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:80: stm32drivers/MPU6050.o] Error 1
+make: *** [stm32drivers/subdir.mk:82: stm32drivers/STM32_I2C_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:86: stm32drivers/Triac_drimmer.o] Error 1
+make: *** [stm32drivers/subdir.mk:88: stm32drivers/keypad.o] Error 1
+make: *** [stm32drivers/subdir.mk:90: stm32drivers/stm32_speed_DRIVER.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+11:33:00 **** Incremental Build of configuration Debug for project RC_CAR ****
+make -j16 all 
+arm-none-eabi-gcc "../stm32drivers/CLICK_MODE.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/CLICK_MODE.d" -MT"stm32drivers/CLICK_MODE.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/CLICK_MODE.o"
+arm-none-eabi-gcc "../stm32drivers/EEPROM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/EEPROM.d" -MT"stm32drivers/EEPROM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/EEPROM.o"
+arm-none-eabi-gcc "../stm32drivers/FIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/FIFO.d" -MT"stm32drivers/FIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/FIFO.o"
+arm-none-eabi-gcc "../stm32drivers/GPIO_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/GPIO_DRIVER.d" -MT"stm32drivers/GPIO_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/GPIO_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/I2C_LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/I2C_LCD.d" -MT"stm32drivers/I2C_LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/I2C_LCD.o"
+arm-none-eabi-gcc "../stm32drivers/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/LCD.d" -MT"stm32drivers/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/LCD.o"
+arm-none-eabi-gcc "../stm32drivers/LIFO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/LIFO.d" -MT"stm32drivers/LIFO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/LIFO.o"
+arm-none-eabi-gcc "../stm32drivers/MPU6050.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/MPU6050.d" -MT"stm32drivers/MPU6050.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/MPU6050.o"
+arm-none-eabi-gcc "../stm32drivers/STM32_I2C_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/STM32_I2C_DRIVER.d" -MT"stm32drivers/STM32_I2C_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/STM32_I2C_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/STM32_TIMERS_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/STM32_TIMERS_DRIVER.d" -MT"stm32drivers/STM32_TIMERS_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/STM32_TIMERS_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/Triac_drimmer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/Triac_drimmer.d" -MT"stm32drivers/Triac_drimmer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/Triac_drimmer.o"
+arm-none-eabi-gcc "../stm32drivers/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/keypad.d" -MT"stm32drivers/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/keypad.o"
+arm-none-eabi-gcc "../stm32drivers/stm32_speed_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32_speed_DRIVER.d" -MT"stm32drivers/stm32_speed_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32_speed_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_ADC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_ADC.d" -MT"stm32drivers/stm32f103c6_ADC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_ADC.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_ISR_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_ISR_DRIVER.d" -MT"stm32drivers/stm32f103c6_ISR_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_ISR_DRIVER.o"
+arm-none-eabi-gcc "../stm32drivers/stm32f103c6_SPI_DRIVER.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -c -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I"C:/E/embedded/مجلد جديد/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"stm32drivers/stm32f103c6_SPI_DRIVER.d" -MT"stm32drivers/stm32f103c6_SPI_DRIVER.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "stm32drivers/stm32f103c6_SPI_DRIVER.o"
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:66: stm32drivers/CLICK_MODE.o] Error 1
+make: *** Waiting for unfinished jobs....
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:68: stm32drivers/EEPROM.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:76: stm32drivers/LCD.o] Error 1
+make: *** [stm32drivers/subdir.mk:72: stm32drivers/GPIO_DRIVER.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:78: stm32drivers/LIFO.o] Error 1
+make: *** [stm32drivers/subdir.mk:86: stm32drivers/Triac_drimmer.o] Error 1
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+cc1.exe: error: C:/E/embedded/???????? ????????/Master-Embedded-System-Diploma/RC_CAR/RC_CAR/stm32drivers/inc: Invalid argument
+make: *** [stm32drivers/subdir.mk:74: stm32drivers/I2C_LCD.o] Error 1
+make: *** [stm32drivers/subdir.mk:70: stm32drivers/FIFO.o] Error 1
+make: *** [stm32drivers/subdir.mk:84: stm32drivers/STM32_TIMERS_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:96: stm32drivers/stm32f103c6_SPI_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:92: stm32drivers/stm32f103c6_ADC.o] Error 1
+make: *** [stm32drivers/subdir.mk:90: stm32drivers/stm32_speed_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:80: stm32drivers/MPU6050.o] Error 1
+make: *** [stm32drivers/subdir.mk:94: stm32drivers/stm32f103c6_ISR_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:82: stm32drivers/STM32_I2C_DRIVER.o] Error 1
+make: *** [stm32drivers/subdir.mk:88: stm32drivers/keypad.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.

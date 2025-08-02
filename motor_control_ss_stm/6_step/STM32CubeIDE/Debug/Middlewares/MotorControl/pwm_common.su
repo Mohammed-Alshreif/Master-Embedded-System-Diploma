@@ -1,0 +1,2 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/pwm_common.c:76:13:startTimers	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/pwm_common.c:108:13:waitForPolarizationEnd	16	static

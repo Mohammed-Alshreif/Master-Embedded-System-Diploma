@@ -1,0 +1,4 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/dac_common_ui.c:62:13:DAC_SetChannelConfig	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/dac_common_ui.c:78:26:DAC_GetChannelConfig	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/dac_common_ui.c:91:13:DAC_SetUserChannelValue	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/6_step/MCSDK_v5.4.8-Full/MotorControl/MCSDK/UILibrary/Src/dac_common_ui.c:104:16:DAC_GetUserChannelValue	0	static
