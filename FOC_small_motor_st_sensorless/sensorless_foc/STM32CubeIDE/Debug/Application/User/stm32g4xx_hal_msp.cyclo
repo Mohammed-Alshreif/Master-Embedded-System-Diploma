@@ -1,0 +1,12 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:65:6:HAL_MspInit	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:95:6:HAL_ADC_MspInit	7
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:176:6:HAL_ADC_MspDeInit	5
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:245:6:HAL_CORDIC_MspInit	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:267:6:HAL_CORDIC_MspDeInit	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:289:6:HAL_DAC_MspInit	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:322:6:HAL_DAC_MspDeInit	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:350:6:HAL_TIM_Base_MspInit	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:366:6:HAL_TIM_MspPostInit	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:411:6:HAL_TIM_Base_MspDeInit	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:437:6:HAL_UART_MspInit	3
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/stm32g4xx_hal_msp.c:484:6:HAL_UART_MspDeInit	2

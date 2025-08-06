@@ -1,0 +1,13 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:131:13:ICS_ADCxInit	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:354:13:ICS_GetPhaseCurrents	12	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:427:17:ICS_WriteTIMRegisters	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:464:13:ICS_HFCurrentsPolarization	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:74:13:ICS_Init	24	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:499:13:ICS_TurnOnLowSides	4	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:543:13:ICS_SwitchOnPWM	16	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:604:13:ICS_SwitchOffPWM	4	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:270:13:ICS_CurrentReadingPolarization	24	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:662:15:ICS_TIMx_UP_IRQHandler	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:690:15:ICS_BRK2_IRQHandler	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:718:15:ICS_BRK_IRQHandler	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/G4xx/Src/ics_g4xx_pwm_curr_fdbk.c:735:17:ICS_IsOverCurrentOccurred	0	static

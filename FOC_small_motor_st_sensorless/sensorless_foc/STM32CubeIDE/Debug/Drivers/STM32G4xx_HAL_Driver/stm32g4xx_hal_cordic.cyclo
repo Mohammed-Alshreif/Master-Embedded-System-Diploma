@@ -1,0 +1,17 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:325:13:HAL_CORDIC_MspInit	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:201:19:HAL_CORDIC_Init	3
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:340:13:HAL_CORDIC_MspDeInit	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:268:19:HAL_CORDIC_DeInit	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:558:19:HAL_CORDIC_Configure	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:605:19:HAL_CORDIC_Calculate	18
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:699:19:HAL_CORDIC_CalculateZO	16
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:792:19:HAL_CORDIC_Calculate_IT	7
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:884:19:HAL_CORDIC_Calculate_DMA	16
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:1052:13:HAL_CORDIC_ErrorCallback	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:1320:13:CORDIC_DMAError	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:1068:13:HAL_CORDIC_CalculateCpltCallback	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:1260:13:CORDIC_DMAInCplt	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:1292:13:CORDIC_DMAOutCplt	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:1101:6:HAL_CORDIC_IRQHandler	7
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:1172:25:HAL_CORDIC_GetState	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c:1185:10:HAL_CORDIC_GetError	1

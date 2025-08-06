@@ -1,0 +1,15 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:88:13:RUC_Init	4	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:124:13:RUC_Clear	24	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:177:13:RUC_OTF_Exec	16	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:406:13:RUC_Exec	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:456:13:RUC_Completed	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:471:13:RUC_Stop	16	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:492:13:RUC_FirstAccelerationStageReached	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:512:13:RUC_SetPhaseDurationms	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:526:13:RUC_SetPhaseFinalMecSpeedUnit	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:540:13:RUC_SetPhaseFinalTorque	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:552:17:RUC_GetPhaseDurationms	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:564:16:RUC_GetPhaseFinalMecSpeedUnit	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:576:16:RUC_GetPhaseFinalTorque	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:586:16:RUC_GetNumberOfPhases	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/revup_ctrl.c:596:13:RUC_Get_SCLowsideOTF_Status	0	static

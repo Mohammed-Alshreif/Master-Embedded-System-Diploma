@@ -1,0 +1,7 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/mc_math.c:57:20:MCM_Clarke	16	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/mc_math.c:280:24:MCM_Trig_Functions	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/mc_math.c:126:13:MCM_Park	32	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/mc_math.c:230:20:MCM_Rev_Park	32	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/mc_math.c:310:16:MCM_Sqrt	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/mc_math.c:359:16:MCM_PhaseComputation	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/mc_math.c:378:17:MCM_floatToIntBit	8	static

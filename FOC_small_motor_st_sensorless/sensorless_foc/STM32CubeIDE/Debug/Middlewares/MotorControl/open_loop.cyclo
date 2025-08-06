@@ -1,0 +1,5 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/open_loop.c:47:13:OL_Init	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/open_loop.c:58:13:OL_VqdConditioning	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/open_loop.c:74:13:OL_UpdateVoltage	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/open_loop.c:84:13:OL_Calc	3
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/open_loop.c:106:13:OL_VF	1

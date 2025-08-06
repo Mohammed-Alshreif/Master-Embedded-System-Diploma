@@ -1,0 +1,10 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c:62:16:SPD_GetElAngle	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c:77:16:SPD_GetMecAngle	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c:87:16:SPD_GetAvrgMecSpeedUnit	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c:100:16:SPD_GetElSpeedDpp	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c:120:16:SPD_GetInstElSpeedDpp	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c:135:13:SPD_Check	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c:169:13:SPD_IsMecSpeedReliable	8
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c:254:16:SPD_GetS16Speed	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c:269:16:SPD_GetElToMecRatio	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/MCSDK_v5.4.8-Full/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c:281:13:SPD_SetElToMecRatio	1

@@ -1,0 +1,14 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:41:6:UI_TaskInit	64	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:61:13:UI_Scheduler	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:79:13:UI_DACUpdate	16	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:87:13:MC_SetDAC	4	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:92:13:MC_SetUserDAC	4	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:97:22:GetDAC	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:102:23:GetMCP	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:107:13:UI_IdleTimeHasElapsed	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:117:13:UI_SetIdleTime	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:122:13:UI_SerialCommunicationTimeOutHasElapsed	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:133:13:UI_SerialCommunicationATRTimeHasElapsed	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:144:13:UI_SerialCommunicationTimeOutStop	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:149:13:UI_SerialCommunicationTimeOutStart	0	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/ui_task.c:154:13:UI_HandleStartStopButton_cb	8	static

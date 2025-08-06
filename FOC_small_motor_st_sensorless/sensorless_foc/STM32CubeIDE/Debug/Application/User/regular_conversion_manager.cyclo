@@ -1,0 +1,10 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/regular_conversion_manager.c:200:9:RCM_RegisterRegConv	38
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/regular_conversion_manager.c:167:9:RCM_RegisterRegConv_WithCB	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/regular_conversion_manager.c:281:10:RCM_ExecRegularConv	18
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/regular_conversion_manager.c:387:6:RCM_RequestUserConv	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/regular_conversion_manager.c:408:10:RCM_GetUserConv	2
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/regular_conversion_manager.c:426:6:RCM_ExecUserConv	4
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/regular_conversion_manager.c:457:21:RCM_GetUserConvState	1
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/regular_conversion_manager.c:479:6:RCM_PauseRegularConv	3
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/regular_conversion_manager.c:523:6:RCM_ExecNextConv	3
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/regular_conversion_manager.c:565:6:RCM_ReadOngoingConv	3

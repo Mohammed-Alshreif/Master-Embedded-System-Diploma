@@ -1,0 +1,9 @@
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/motor_control_protocol.c:165:13:MCP_ReceivedFrame	80	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/motor_control_protocol.c:137:13:MCP_WaitNextFrame	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/motor_control_protocol.c:100:13:MCP_Init	24	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/motor_control_protocol.c:127:13:MCP_OnTimeOut	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/motor_control_protocol.c:152:13:MCP_SentFrame	8	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/motor_control_protocol.c:642:13:MCP_SendOverrunMessage	16	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/motor_control_protocol.c:653:13:MCP_SendTimeoutMessage	16	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/motor_control_protocol.c:664:13:MCP_SendATRMessage	48	static
+C:/Users/20102/Desktop/motor_control_ss_stm/FOC_small_motor_st_sensorless/sensorless_foc/Src/motor_control_protocol.c:705:13:MCP_SendBadCRCMessage	16	static
